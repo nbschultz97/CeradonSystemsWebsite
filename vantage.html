@@ -23,13 +23,14 @@
         theme: {
           extend: {
             colors: {
-              ink: '#0b0d10',
-              'steel-900': '#1b1f24',
-              'steel-700': '#2c3238',
-              'steel-500': '#3c444d',
-              silver: '#b8bdc5',
-              white: '#e7eaee',
-              'ceradon-blue': '#1e57c8'
+              ink: '#04070d',
+              'steel-900': '#0b1220',
+              'steel-700': '#18243a',
+              'steel-500': '#2a3a55',
+              silver: '#c5cbd6',
+              white: '#f4f6fb',
+              'ceradon-blue': '#2b78ff',
+              'ceradon-sky': '#56b7ff'
             },
             fontFamily: {
               sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif']
@@ -58,8 +59,23 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main>
-      <section class="border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
-        <div class="mx-auto max-w-7xl px-4 py-16">
+      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
+        <div class="absolute inset-0 pointer-events-none">
+          <svg class="absolute -bottom-20 -left-28 hidden lg:block h-[26rem] w-[26rem] opacity-40" viewBox="0 0 480 480" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="vantageStroke" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#2b78ff" stop-opacity="0.1" />
+                <stop offset="100%" stop-color="#56b7ff" stop-opacity="0.6" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#vantageStroke)" stroke-linecap="round" stroke-width="20">
+              <path d="M40 320C160 252 236 172 320 88" />
+              <path d="M20 356C148 268 236 168 356 60" opacity="0.6" />
+              <path d="M0 392C132 292 236 172 388 36" opacity="0.4" />
+            </g>
+          </svg>
+        </div>
+        <div class="relative mx-auto max-w-7xl px-4 py-16">
           <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:items-center">
             <div class="space-y-6">
               <span class="tag">Vantage Platform</span>

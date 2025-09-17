@@ -4,13 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#0b0d10',
-        'steel-900': '#1b1f24',
-        'steel-700': '#2c3238',
-        'steel-500': '#3c444d',
-        silver: '#b8bdc5',
-        white: '#e7eaee',
-        'ceradon-blue': '#1e57c8'
+        ink: '#04070d',
+        'steel-900': '#0b1220',
+        'steel-700': '#18243a',
+        'steel-500': '#2a3a55',
+        silver: '#c5cbd6',
+        white: '#f4f6fb',
+        'ceradon-blue': '#2b78ff',
+        'ceradon-sky': '#56b7ff'
       },
       fontFamily: {
         sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif']

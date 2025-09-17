@@ -1,15 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-  <title id="title">Ceradon Shield Mark</title>
-  <desc id="desc">Shield emblem with stylised eagle wings in Ceradon blue</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Ceradon Systems Crest</title>
+  <desc id="desc">Dark shield with a silver falcon and Ceradon blue strike bands</desc>
   <defs>
-    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e57c8" />
-      <stop offset="100%" stop-color="#0d2d73" />
+    <linearGradient id="shieldBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#101728" />
+      <stop offset="100%" stop-color="#05070d" />
+    </linearGradient>
+    <linearGradient id="shieldEdge" x1="30%" y1="10%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#223044" />
+      <stop offset="100%" stop-color="#121a2c" />
+    </linearGradient>
+    <linearGradient id="innerGlow" x1="28%" y1="18%" x2="84%" y2="86%">
+      <stop offset="0%" stop-color="#1b2539" />
+      <stop offset="100%" stop-color="#060910" />
+    </linearGradient>
+    <linearGradient id="stripeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2b78ff" />
+      <stop offset="100%" stop-color="#56b7ff" />
+    </linearGradient>
+    <linearGradient id="headFill" x1="32%" y1="12%" x2="72%" y2="88%">
+      <stop offset="0%" stop-color="#f6f8fd" />
+      <stop offset="100%" stop-color="#bac3d5" />
+    </linearGradient>
+    <linearGradient id="headShade" x1="24%" y1="0%" x2="90%" y2="90%">
+      <stop offset="0%" stop-color="#c5cddb" />
+      <stop offset="100%" stop-color="#7f8797" />
     </linearGradient>
   </defs>
-  <rect width="256" height="256" rx="32" fill="#0b0d10" />
-  <path fill="url(#shieldGradient)" d="M128 32 64 56v74c0 52 33.4 90.2 64 94 30.6-3.8 64-42 64-94V56L128 32z" />
-  <path fill="#e7eaee" d="M92 104c18 8 26 12 36 12s18-4 36-12l12 18c-20 10-32 14-48 14s-28-4-48-14l12-18z" opacity="0.85" />
-  <path fill="#b8bdc5" d="M128 70c-18 0-36 6-48 12l10 18c14-8 24-12 38-12s24 4 38 12l10-18c-12-6-30-12-48-12z" />
-  <path fill="#e7eaee" d="M128 138c-10 0-20-2-30-6l-10 16c14 8 26 12 40 12s26-4 40-12l-10-16c-10 4-20 6-30 6z" opacity="0.75" />
+  <rect width="512" height="512" rx="64" fill="#03050a" />
+  <path d="M256 32 96 104v164c0 120 82 212 160 240 78-28 160-120 160-240V104L256 32z" fill="url(#shieldBase)" stroke="url(#shieldEdge)" stroke-width="10" stroke-linejoin="round" />
+  <path d="M256 64 128 120v140c0 94 60 176 128 204 68-28 128-110 128-204V120L256 64z" fill="url(#innerGlow)" opacity="0.82" />
+  <g transform="translate(0 -4)">
+    <path d="M360 214c-10-32-32-68-78-90-50-22-122-6-162 46-18 24-26 52-26 80 0 12 2 24 4 34l44 24 18-46c16-38 48-60 88-60 30 0 56 16 66 40l-58 36 88 14 44-34c8-8 10-20-4-32-14-12-24-28-22-34z" fill="url(#headFill)" />
+    <path d="M190 198c18-30 54-48 92-44 34 4 60 22 76 52 4 10 2 20-6 28-32 26-78 40-118 40-42 0-80-12-112-30 0-12 4-30 16-46 16-20 32-32 52-40z" fill="url(#headShade)" opacity="0.45" />
+    <path d="M356 258c-20 8-42 12-64 12-22 0-52-6-80-18l-12 32c42 16 88 20 128 12 26-6 44-16 60-28l-32-10z" fill="#5a6274" opacity="0.35" />
+    <path d="M308 180c-8-10-22-18-36-18-10 0-20 4-30 12 28 2 46 12 58 28l36 18c0-14-12-30-28-40z" fill="#707889" opacity="0.4" />
+    <path d="M352 232c8 10 2 24-10 32-20 12-46 18-74 18-36 0-72-10-96-20 0-12 4-24 10-34 18 12 40 20 62 22 30 2 60-4 84-18 12-8 18-8 24 0z" fill="#eceff6" opacity="0.35" />
+    <path d="M348 268c-28 22-64 34-102 34-42 0-82-12-112-34 2 12 6 22 10 30 32 18 66 28 102 28 38 0 74-12 110-38l-8-20z" fill="#afb7c7" opacity="0.25" />
+    <path d="M360 214c-4-10-12-22-22-32-6 6-18 10-32 10-8 0-16-2-22-4-18-6-36-4-50 4 32 2 60 18 74 40 20 32 12 60-4 78 34-10 60-30 74-52 8-12 8-26 0-44z" fill="#dfe5f1" opacity="0.6" />
+    <path d="M338 208c-4-14-18-24-36-24-14 0-28 6-38 16l-22 22c22 10 46 14 72 12 12-2 22-8 24-16z" fill="#1a2030" opacity="0.45" />
+    <path d="M372 248c-10-10-8-28 6-44 8 10 12 18 14 24 2 10-2 18-10 22l-10-2z" fill="#5c6474" opacity="0.4" />
+    <path d="M330 214c8 4 12 12 10 18-2 6-8 10-16 10-8 0-18-4-28-12 10-12 24-16 34-16z" fill="#151b27" opacity="0.75" />
+    <circle cx="320" cy="214" r="8" fill="#07090f" />
+    <circle cx="322" cy="212" r="3" fill="#f6f8fd" />
+    <path d="M348 234c-10 8-24 14-40 18-18 4-36 4-54 2-22-2-44-10-66-22l-6 16c28 16 58 26 88 28 28 0 54-6 76-18 12-6 20-14 24-22-6-2-14-2-22-2z" fill="#c7cede" opacity="0.35" />
+  </g>
+  <g fill="none" stroke="url(#stripeGradient)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M132 326c60 48 148 58 228 28" stroke-width="28" opacity="0.85" />
+    <path d="M148 368c54 40 134 48 204 26" stroke-width="24" opacity="0.7" />
+    <path d="M170 408c46 32 110 38 166 22" stroke-width="20" opacity="0.55" />
+  </g>
 </svg>
