@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title id="title">Tripod Deployment Placeholder</title>
+  <desc id="desc">Abstract depiction of a tripod sensing node.</desc>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e57c8" />
+      <stop offset="100%" stop-color="#0b0d10" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="24" fill="#1b1f24" />
+  <path d="M240 72 180 240h24l36-96 36 96h24z" fill="url(#grad1)" />
+  <circle cx="240" cy="120" r="34" fill="#0b0d10" stroke="#e7eaee" stroke-width="4" />
+  <text x="40" y="280" font-family="'Inter','Segoe UI',sans-serif" font-size="28" fill="#e7eaee" letter-spacing="4">TRIPOD NODE</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 420" role="img" aria-labelledby="title desc">
+  <title id="title">Founder Portrait Placeholder</title>
+  <desc id="desc">Minimal silhouette of a person in tactical attire.</desc>
+  <rect width="360" height="420" rx="32" fill="#0b0d10" />
+  <circle cx="180" cy="140" r="72" fill="#1b1f24" stroke="#1e57c8" stroke-width="6" />
+  <path d="M116 320c0-64 32-96 64-96s64 32 64 96l-16 40H132z" fill="#1b1f24" stroke="#3c444d" stroke-width="4" />
+  <path d="M140 188c24 24 56 24 80 0" fill="none" stroke="#e7eaee" stroke-width="6" stroke-linecap="round" />
+  <text x="40" y="372" font-family="'Inter','Segoe UI',sans-serif" font-size="24" fill="#b8bdc5" letter-spacing="6">FOUNDER</text>
+</svg>

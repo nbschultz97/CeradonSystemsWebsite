@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title id="title">UGV Payload Placeholder</title>
+  <desc id="desc">Abstract unmanned ground vehicle silhouette.</desc>
+  <rect width="480" height="320" rx="24" fill="#1b1f24" />
+  <path d="M120 220h240l24-56-24-56H120l-24 56z" fill="#0b0d10" stroke="#1e57c8" stroke-width="6" />
+  <rect x="160" y="120" width="160" height="60" rx="16" fill="#1e57c8" opacity="0.75" />
+  <circle cx="168" cy="236" r="32" fill="#0b0d10" stroke="#e7eaee" stroke-width="6" />
+  <circle cx="312" cy="236" r="32" fill="#0b0d10" stroke="#e7eaee" stroke-width="6" />
+  <text x="40" y="280" font-family="'Inter','Segoe UI',sans-serif" font-size="28" fill="#e7eaee" letter-spacing="4">UGV / UAS</text>
+</svg>

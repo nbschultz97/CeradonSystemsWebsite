@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Vantage Crest</title>
+  <desc id="desc">Shield with angular radar bands for the Vantage product mark</desc>
+  <rect width="256" height="256" rx="32" fill="#0b0d10" />
+  <path fill="#1e57c8" d="M128 28 60 54v82c0 54 34 99 68 104 34-5 68-50 68-104V54L128 28z" />
+  <path fill="#0d2d73" d="M128 36 76 56v76c0 44 26 82 52 92 26-10 52-48 52-92V56l-52-20z" />
+  <path fill="#e7eaee" d="M76 120c34 18 52 22 52 22s18-4 52-22l16 28c-40 22-56 26-68 26s-28-4-68-26l16-28z" opacity="0.85" />
+  <path fill="none" stroke="#b8bdc5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M92 96c18 10 36 16 36 16s18-6 36-16" />
+  <path fill="none" stroke="#e7eaee" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" d="M100 76c16 8 28 12 28 12s12-4 28-12" />
+</svg>
