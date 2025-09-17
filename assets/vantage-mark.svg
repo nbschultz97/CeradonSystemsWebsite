@@ -1,10 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
-  <title id="title">Vantage Crest</title>
-  <desc id="desc">Shield with angular radar bands for the Vantage product mark</desc>
-  <rect width="256" height="256" rx="32" fill="#0b0d10" />
-  <path fill="#1e57c8" d="M128 28 60 54v82c0 54 34 99 68 104 34-5 68-50 68-104V54L128 28z" />
-  <path fill="#0d2d73" d="M128 36 76 56v76c0 44 26 82 52 92 26-10 52-48 52-92V56l-52-20z" />
-  <path fill="#e7eaee" d="M76 120c34 18 52 22 52 22s18-4 52-22l16 28c-40 22-56 26-68 26s-28-4-68-26l16-28z" opacity="0.85" />
-  <path fill="none" stroke="#b8bdc5" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M92 96c18 10 36 16 36 16s18-6 36-16" />
-  <path fill="none" stroke="#e7eaee" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" d="M100 76c16 8 28 12 28 12s12-4 28-12" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Vantage Scanner Crest</title>
+  <desc id="desc">Angular shield with radiating Ceradon blue bands forming a V</desc>
+  <defs>
+    <linearGradient id="shieldBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111a2c" />
+      <stop offset="100%" stop-color="#05070d" />
+    </linearGradient>
+    <linearGradient id="shieldEdge" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#203047" />
+      <stop offset="100%" stop-color="#0d1421" />
+    </linearGradient>
+    <linearGradient id="bandGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2b78ff" />
+      <stop offset="100%" stop-color="#56b7ff" />
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#56b7ff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#56b7ff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="48" fill="#03050a" />
+  <path d="M256 28 92 96v172c0 118 96 214 164 242 68-28 164-124 164-242V96L256 28z" fill="url(#shieldBase)" stroke="url(#shieldEdge)" stroke-width="12" stroke-linejoin="round" />
+  <path d="M256 68 136 120v140c0 96 72 178 120 200 48-22 120-104 120-200V120L256 68z" fill="#0b1220" opacity="0.8" />
+  <circle cx="256" cy="160" r="152" fill="url(#coreGlow)" />
+  <g fill="none" stroke="url(#bandGradient)" stroke-linecap="round" stroke-width="26">
+    <path d="M156 212c38 56 70 108 100 170 4 8 12 12 20 12s16-4 20-12c30-62 62-114 100-170" opacity="0.85" />
+    <path d="M136 250c40 52 76 108 108 170 4 8 12 12 20 12s16-4 20-12c32-62 68-118 108-170" opacity="0.55" />
+    <path d="M116 288c40 56 80 118 120 184 4 6 12 10 20 10s16-4 20-10c40-66 80-128 120-184" opacity="0.35" />
+  </g>
+  <path d="M256 152c-28 0-52 16-64 40l64 162 64-162c-12-24-36-40-64-40z" fill="#e6ebf5" opacity="0.16" />
+  <path d="M256 184c-16 0-30 10-38 24l38 98 38-98c-8-14-22-24-38-24z" fill="#56b7ff" opacity="0.12" />
 </svg>

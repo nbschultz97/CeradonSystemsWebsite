@@ -23,13 +23,14 @@
         theme: {
           extend: {
             colors: {
-              ink: '#0b0d10',
-              'steel-900': '#1b1f24',
-              'steel-700': '#2c3238',
-              'steel-500': '#3c444d',
-              silver: '#b8bdc5',
-              white: '#e7eaee',
-              'ceradon-blue': '#1e57c8'
+              ink: '#04070d',
+              'steel-900': '#0b1220',
+              'steel-700': '#18243a',
+              'steel-500': '#2a3a55',
+              silver: '#c5cbd6',
+              white: '#f4f6fb',
+              'ceradon-blue': '#2b78ff',
+              'ceradon-sky': '#56b7ff'
             },
             fontFamily: {
               sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif']
@@ -58,8 +59,22 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main>
-      <section class="relative overflow-hidden">
-        <div class="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(30,87,200,0.18),_transparent_55%)] pointer-events-none"></div>
+      <section class="relative overflow-hidden hero-splash">
+        <div class="absolute inset-0 pointer-events-none">
+          <svg class="absolute -top-32 -right-40 hidden lg:block h-[34rem] w-[34rem] opacity-60" viewBox="0 0 640 640" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="heroStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2b78ff" stop-opacity="0.75" />
+                <stop offset="100%" stop-color="#56b7ff" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke="url(#heroStroke)" stroke-linecap="round" stroke-width="26">
+              <path d="M96 472C256 360 352 232 440 120" opacity="0.35" />
+              <path d="M56 536C240 392 344 236 484 104" opacity="0.55" />
+              <path d="M24 584C224 420 360 232 520 84" opacity="0.8" />
+            </g>
+          </svg>
+        </div>
         <div class="relative mx-auto max-w-7xl px-4 py-20">
           <div class="hero-grid">
             <div class="space-y-8">
