@@ -69,10 +69,10 @@
               </div>
               <img src="/assets/logo-mark.svg" alt="Ceradon Systems mark" class="h-24 w-24 sm:h-32 sm:w-32" />
               <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[color:var(--white)] leading-tight">
-                Trusted RF Sensing for the Edge.
+                Vantage Scanner: Through-wall pose intelligence.
               </h1>
               <p class="max-w-2xl text-lg text-subtle">
-                Ceradon Systems builds passive, through-wall human sensing and RF awareness tools for mission-critical operations.
+                Ceradon Systems delivers a modular Wi-Fi CSI stack that captures, cleans, and renders human skeletal poses in denied spaces while staying passive and offline-first.
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <a href="/vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
@@ -96,7 +96,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold text-[color:var(--white)]">Passive by Design</h3>
-                    <p class="text-sm text-subtle">Zero-emission CSI sensing keeps teams concealed while mapping human activity.</p>
+                    <p class="text-sm text-subtle">Zero-emission CSI sensing keeps teams concealed while mapping skeletal posture and intent.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -107,7 +107,7 @@
                   </div>
                   <div>
                     <h3 class="font-semibold text-[color:var(--white)]">Edge-Ready & Offline</h3>
-                    <p class="text-sm text-subtle">Runs on low-power compute with local storage, CLI automation, and resilient workflows.</p>
+                    <p class="text-sm text-subtle">Runs on low-power compute with local storage, CLI automation, and resilient pose pipelines.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -224,6 +224,61 @@
               </div>
               <h3 class="text-xl font-semibold text-[color:var(--white)]">UGV / UAS Payload</h3>
               <p class="text-sm text-subtle">Mobile reconnaissance with shared mesh telemetry for multi-angle confirmation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
+            <div class="space-y-6">
+              <span class="tag">Pose Intelligence Pipeline</span>
+              <h2 class="section-heading text-3xl">CSI-to-skeleton in four disciplined stages</h2>
+              <ol class="space-y-4 text-sm text-subtle">
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">1.</span> <span class="max-w-xl">Passive radios capture raw CSI streams alongside inertial references without emitting a single watt of additional RF.</span></li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">2.</span> <span class="max-w-xl">Edge DSP modules denoise, calibrate, and align subcarriers in real time, prepping tensors for pose estimators on Pi or Jetson hardware.</span></li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">3.</span> <span class="max-w-xl">Quantized pose networks infer skeletal joints, body orientation, and stability states with deterministic latency budgets.</span></li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">4.</span> <span class="max-w-xl">Structured outputs feed mission overlays, haptic alerts, and scripted CLI tasks without ever calling back to cloud services.</span></li>
+              </ol>
+              <p class="text-sm text-subtle">Each stage is modular, so supporting features—RSSI logging, mobility cues, device fingerprinting—slot in without disrupting the pose estimator.</p>
+            </div>
+            <div class="card-glass p-6 space-y-4">
+              <h3 class="text-2xl font-semibold text-[color:var(--white)]">Edge Toolchain</h3>
+              <ul class="space-y-3 text-sm text-subtle">
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Hardened CLI orchestrates capture, inference, and export with signed configs for air-gapped kits.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Offline schema-validated JSON, CSV, and SQLite stores keep telemetry auditable.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Plugin-ready visualization layers reserve real estate for future skeletal overlays.</li>
+              </ul>
+              <a href="/technology.html" class="btn btn-secondary text-sm uppercase tracking-wide">Review the architecture</a>
+            </div>
+          </div>
+          <div class="gradient-divider"></div>
+          <div class="space-y-6">
+            <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div class="max-w-3xl space-y-3">
+                <span class="tag">Operator Workflow</span>
+                <h2 class="section-heading text-3xl">Built for small teams under time pressure</h2>
+                <p class="text-subtle">Every kit ships with a predictable flow—capture, verify, act—so operators can trust the pose feed without babysitting hardware.</p>
+              </div>
+              <a href="/contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Schedule a dry run</a>
+            </div>
+            <div class="grid gap-6 md:grid-cols-3">
+              <div class="card-glass p-6 space-y-3">
+                <span class="badge">1. Capture</span>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Deploy &amp; calibrate</h3>
+                <p class="text-sm text-subtle">Autotuned CSI capture with on-device health checks and OUI-cached spectrum intel.</p>
+              </div>
+              <div class="card-glass p-6 space-y-3">
+                <span class="badge">2. Verify</span>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Confirm pose confidence</h3>
+                <p class="text-sm text-subtle">Live CLI summaries and optional HUD show skeleton stability, mobility state, and direction of travel.</p>
+              </div>
+              <div class="card-glass p-6 space-y-3">
+                <span class="badge">3. Act</span>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Disseminate securely</h3>
+                <p class="text-sm text-subtle">Encrypted exports drop into ATAK, C2, or mission replay tools without exposing raw data.</p>
+              </div>
             </div>
           </div>
         </div>
