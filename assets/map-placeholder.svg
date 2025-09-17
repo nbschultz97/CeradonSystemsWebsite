@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title id="title">Map Placeholder</title>
+  <desc id="desc">Abstract grid map with highlighted operating region.</desc>
+  <rect width="480" height="320" rx="24" fill="#0b0d10" />
+  <path d="M48 80h384v160H48z" fill="#1b1f24" stroke="#1e57c8" stroke-width="4" />
+  <g stroke="#3c444d" stroke-width="2" opacity="0.6">
+    <path d="M96 80v160" />
+    <path d="M144 80v160" />
+    <path d="M192 80v160" />
+    <path d="M240 80v160" />
+    <path d="M288 80v160" />
+    <path d="M336 80v160" />
+    <path d="M384 80v160" />
+    <path d="M48 120h384" />
+    <path d="M48 160h384" />
+    <path d="M48 200h384" />
+    <path d="M48 240h384" />
+  </g>
+  <circle cx="280" cy="170" r="38" fill="#1e57c8" opacity="0.6" />
+  <circle cx="280" cy="170" r="14" fill="#e7eaee" />
+  <text x="60" y="272" font-family="'Inter','Segoe UI',sans-serif" font-size="24" fill="#e7eaee" letter-spacing="4">WASHINGTON DC AO</text>
+</svg>

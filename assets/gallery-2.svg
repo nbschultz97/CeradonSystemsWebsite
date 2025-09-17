@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="title desc">
+  <title id="title">Handheld Interface Placeholder</title>
+  <desc id="desc">Abstract handheld controller with pose overlay.</desc>
+  <rect width="480" height="320" rx="24" fill="#1b1f24" />
+  <rect x="120" y="60" width="240" height="200" rx="32" fill="#0b0d10" stroke="#1e57c8" stroke-width="6" />
+  <path d="M180 108h120v6H180zm0 36h120v6H180zm0 36h120v6H180z" fill="#1e57c8" opacity="0.6" />
+  <path d="M260 110c-8 0-16 6-18 14s-12 14-20 20v26l14 14h60l14-14v-26c-8-6-18-12-20-20s-10-14-18-14-12 4-12 4-4-4-12-4z" fill="#e7eaee" opacity="0.6" />
+  <text x="40" y="280" font-family="'Inter','Segoe UI',sans-serif" font-size="28" fill="#e7eaee" letter-spacing="4">HANDHELD UI</text>
+</svg>

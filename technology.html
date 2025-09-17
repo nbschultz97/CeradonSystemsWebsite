@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Technology | Ceradon Systems</title>
+    <meta name="description" content="Understand the passive Wi-Fi CSI technology powering Vantage and why zero-emission sensing matters for mission-critical teams." />
+    <meta property="og:title" content="Technology | Ceradon Systems" />
+    <meta property="og:description" content="Explore passive Wi-Fi CSI sensing, roadmap milestones, and how Vantage stays secure and ethical in contested environments." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ceradonsystems.com/technology.html" />
+    <meta property="og:image" content="/assets/logo-mark.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Technology | Ceradon Systems" />
+    <meta name="twitter:description" content="Explore passive Wi-Fi CSI sensing, roadmap milestones, and how Vantage stays secure and ethical in contested environments." />
+    <meta name="twitter:image" content="/assets/logo-mark.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0b0d10',
+              'steel-900': '#1b1f24',
+              'steel-700': '#2c3238',
+              'steel-500': '#3c444d',
+              silver: '#b8bdc5',
+              white: '#e7eaee',
+              'ceradon-blue': '#1e57c8'
+            },
+            fontFamily: {
+              sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="/"><img class="hidden sm:block h-10" src="/assets/logo-horizontal.svg" alt="Ceradon Systems logo"/>
+                   <img class="sm:hidden h-10" src="/assets/logo-mark.svg" alt="Ceradon Systems mark"/></a>
+        <nav class="hidden md:flex gap-6">
+          <!-- add active link state using aria-current="page" -->
+          <a href="/" class="navlink">Home</a>
+          <a href="/vantage.html" class="navlink">Vantage</a>
+          <a href="/technology.html" class="navlink">Technology</a>
+          <a href="/company.html" class="navlink">Company</a>
+          <a href="/careers.html" class="navlink">Careers</a>
+          <a href="/contact.html" class="btn btn-primary">Contact</a>
+        </nav>
+        <button class="md:hidden" aria-label="Open menu" data-open-menu>☰</button>
+      </div>
+      <!-- mobile panel injected by /src/ui.js -->
+    </header>
+    <main>
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-12">
+        <div class="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
+          <div class="space-y-6">
+            <span class="tag">Channel State Information (CSI)</span>
+            <h1 class="text-4xl font-bold text-[color:var(--white)]">Plain-language CSI: reading human movement from Wi-Fi</h1>
+            <p class="text-subtle text-lg">Every Wi-Fi packet carries rich multipath data. Vantage captures those channel variations, denoises them, and feeds them into pose inference models—creating a live skeletal overlay without ever illuminating the target.</p>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="shadow-border rounded-xl p-4">
+                <h3 class="font-semibold text-[color:var(--white)]">Passive capture</h3>
+                <p class="text-sm text-subtle">We only listen. Commodity radios observe the environment’s response to existing Wi-Fi, keeping teams dark.</p>
+              </div>
+              <div class="shadow-border rounded-xl p-4">
+                <h3 class="font-semibold text-[color:var(--white)]">Pose-first pipeline</h3>
+                <p class="text-sm text-subtle">All feature extraction—from motion vectors to behavior scoring—supports the skeletal pose estimator.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-glass p-8 space-y-4">
+            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Why passive matters</h2>
+            <ul class="space-y-3 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> No new emissions means no EM signature to detect or jam.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Operates under EMCON policies and inside RF-denied structures.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Works where cameras fail—smoke, darkness, or obscured LoS.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="space-y-6">
+          <h2 class="section-heading text-3xl">Sensor Comparison</h2>
+          <div class="overflow-x-auto">
+            <table class="table-dark text-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Attribute</th>
+                  <th scope="col">Cameras</th>
+                  <th scope="col">Radar</th>
+                  <th scope="col">Vantage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Line of Sight</th>
+                  <td>Requires clear LoS.</td>
+                  <td>Limited through-wall performance.</td>
+                  <td>Sees through walls using ambient Wi-Fi.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Emissions</th>
+                  <td>Visible-light signature.</td>
+                  <td>Active RF emissions.</td>
+                  <td>Zero-emission passive capture.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Detectability</th>
+                  <td>Easily spotted or blinded.</td>
+                  <td>Detectable with RF sweeps.</td>
+                  <td>Covert; matches local Wi-Fi noise floor.</td>
+                </tr>
+                <tr>
+                  <th scope="row">SWaP-C</th>
+                  <td>Varies; often high power draw.</td>
+                  <td>Bulky arrays and high power use.</td>
+                  <td>Runs on Pi/Jetson-class compute under 25 W.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Cost</th>
+                  <td>High for rugged PTZ systems.</td>
+                  <td>High procurement and sustainment.</td>
+                  <td>COTS radios with software-defined capability.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="space-y-6 relative">
+          <h2 class="section-heading text-3xl">Roadmap</h2>
+          <div class="relative pl-6 timeline">
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">MVP</h3>
+              <p class="text-sm text-subtle">Single-node CSI capture with live pose skeleton overlay and mission logging.</p>
+            </div>
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Multi-node Mesh</h3>
+              <p class="text-sm text-subtle">Cooperative nodes fuse CSI for volumetric pose tracking and coverage resiliency.</p>
+            </div>
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">ATAK Plugin</h3>
+              <p class="text-sm text-subtle">Live overlays pushed to ATAK with pose states, alerts, and mission playback.</p>
+            </div>
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Platform Integrations</h3>
+              <p class="text-sm text-subtle">APIs for C2 suites, digital twins, and robotic controllers with pose metadata.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-glass p-8 space-y-4">
+          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Security & Ethics</h2>
+          <p class="text-subtle">Vantage never records video or audio. All processing stays local, logs are redacted for PII, and exports are encrypted. Passive sensing respects privacy while giving teams the pose intelligence needed to reduce collateral risk.</p>
+          <ul class="space-y-3 text-sm text-subtle">
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Signed firmware, secure boot, and tamper logging for field hardware.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Role-based access for dashboards and CLI tooling.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Export controls built-in for coalition sharing agreements.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/80]">
+      <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="/assets/logo-mark.svg" alt="Ceradon Systems mark" class="h-12 w-12" />
+            <div>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Passive RF sensing for decisive teams.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-sm text-subtle">
+            <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
+            <span aria-hidden="true">/</span>
+            <a href="#" class="hover:text-[color:var(--white)]">LinkedIn</a>
+            <span aria-hidden="true">/</span>
+            <a href="#" class="hover:text-[color:var(--white)]">Secure Brief</a>
+          </div>
+        </div>
+        <div class="footer-links" data-footer-links></div>
+        <div class="text-xs text-subtle">© <span data-year></span> Ceradon Systems. All rights reserved.</div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

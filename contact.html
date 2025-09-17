@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Ceradon Systems</title>
+    <meta name="description" content="Contact Ceradon Systems for Vantage demos, partnerships, or secure briefings." />
+    <meta property="og:title" content="Contact | Ceradon Systems" />
+    <meta property="og:description" content="Reach out to Ceradon Systems for Vantage demos, partnerships, or secure briefings." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ceradonsystems.com/contact.html" />
+    <meta property="og:image" content="/assets/logo-mark.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact | Ceradon Systems" />
+    <meta name="twitter:description" content="Reach out to Ceradon Systems for Vantage demos, partnerships, or secure briefings." />
+    <meta name="twitter:image" content="/assets/logo-mark.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              ink: '#0b0d10',
+              'steel-900': '#1b1f24',
+              'steel-700': '#2c3238',
+              'steel-500': '#3c444d',
+              silver: '#b8bdc5',
+              white: '#e7eaee',
+              'ceradon-blue': '#1e57c8'
+            },
+            fontFamily: {
+              sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="/"><img class="hidden sm:block h-10" src="/assets/logo-horizontal.svg" alt="Ceradon Systems logo"/>
+                   <img class="sm:hidden h-10" src="/assets/logo-mark.svg" alt="Ceradon Systems mark"/></a>
+        <nav class="hidden md:flex gap-6">
+          <!-- add active link state using aria-current="page" -->
+          <a href="/" class="navlink">Home</a>
+          <a href="/vantage.html" class="navlink">Vantage</a>
+          <a href="/technology.html" class="navlink">Technology</a>
+          <a href="/company.html" class="navlink">Company</a>
+          <a href="/careers.html" class="navlink">Careers</a>
+          <a href="/contact.html" class="btn btn-primary">Contact</a>
+        </nav>
+        <button class="md:hidden" aria-label="Open menu" data-open-menu>☰</button>
+      </div>
+      <!-- mobile panel injected by /src/ui.js -->
+    </header>
+    <main>
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="card-glass p-8 space-y-6">
+            <div class="flex items-center gap-4">
+              <img src="/assets/logo-mark.svg" alt="Ceradon Systems mark" class="h-16 w-16" />
+              <div>
+                <h1 class="text-3xl font-bold text-[color:var(--white)]">Contact Ceradon Systems</h1>
+                <p class="text-sm text-subtle">Trusted RF sensing for the edge.</p>
+              </div>
+            </div>
+            <p class="text-subtle">Send us your mission profile, deployment questions, or partnership inquiries. We operate on secure, offline-friendly channels.</p>
+            <div class="space-y-2 text-sm text-subtle">
+              <p><strong class="text-[color:var(--white)]">Email:</strong> <a href="mailto:contact@ceradonsystems.com" class="text-[color:var(--ceradon-blue)]">contact@ceradonsystems.com</a></p>
+              <p><strong class="text-[color:var(--white)]">Signal:</strong> Available on request.</p>
+            </div>
+          </div>
+          <form class="card-glass p-8 space-y-4" data-contact-form>
+            <div>
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div>
+              <label for="company">Company / Unit</label>
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="Organization" />
+            </div>
+            <div>
+              <label for="email">Email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.mil" />
+            </div>
+            <div>
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="4" required placeholder="Mission needs, timeline, requested capabilities..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary text-sm uppercase tracking-wide">Copy &amp; Launch Mail</button>
+            <p class="text-xs text-subtle" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div class="card-glass p-6 space-y-3">
+            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Operations Hub</h2>
+            <p class="text-sm text-subtle">Ceradon Systems operates from a secure facility with dedicated RF labs and integration bays. Visits by appointment only.</p>
+            <p class="text-sm text-subtle">Washington, D.C. Metro Area (secure coordinates shared post-NDA).</p>
+          </div>
+          <div class="card-glass p-4">
+            <img src="/assets/map-placeholder.svg" alt="Map placeholder" loading="lazy" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/80]">
+      <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="/assets/logo-mark.svg" alt="Ceradon Systems mark" class="h-12 w-12" />
+            <div>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Passive RF sensing for decisive teams.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-sm text-subtle">
+            <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
+            <span aria-hidden="true">/</span>
+            <a href="#" class="hover:text-[color:var(--white)]">LinkedIn</a>
+            <span aria-hidden="true">/</span>
+            <a href="#" class="hover:text-[color:var(--white)]">Secure Brief</a>
+          </div>
+        </div>
+        <div class="footer-links" data-footer-links></div>
+        <div class="text-xs text-subtle">© <span data-year></span> Ceradon Systems. All rights reserved.</div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
