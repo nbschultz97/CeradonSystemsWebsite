@@ -71,11 +71,13 @@ function buildMobileNav(header) {
   overlay.className = 'fixed inset-0 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200 md:hidden';
   overlay.setAttribute('aria-hidden', 'true');
   overlay.dataset.menuOverlay = '';
+  overlay.style.zIndex = '60';
 
   const panel = document.createElement('nav');
   panel.className = 'fixed top-0 right-0 bottom-0 w-80 max-w-[90%] bg-[color:var(--steel-900)] border-l border-[color:var(--steel-700)] shadow-2xl translate-x-full transition-transform duration-200 md:hidden flex flex-col';
   panel.setAttribute('aria-hidden', 'true');
   panel.dataset.menuPanel = '';
+  panel.style.zIndex = '70';
   panel.innerHTML = `
     <div class="px-6 py-5 flex items-center justify-between border-b border-[color:var(--steel-700)]">
       <img class="h-10" src="/assets/logo-mark.svg" alt="Ceradon Systems mark" />
@@ -100,8 +102,8 @@ function buildMobileNav(header) {
     navContainer.appendChild(link);
   });
 
-  header.appendChild(overlay);
-  header.appendChild(panel);
+  document.body.appendChild(overlay);
+  document.body.appendChild(panel);
   return { overlay, panel };
 }
 
