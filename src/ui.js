@@ -80,7 +80,7 @@ function buildMobileNav(header) {
   panel.style.zIndex = '70';
   panel.innerHTML = `
     <div class="px-6 py-5 flex items-center justify-between border-b border-[color:var(--steel-700)]">
-      <img class="h-10" src="/assets/logo-mark.svg" alt="Ceradon Systems mark" />
+      <img class="h-10" src="/assets/Square_Logo.PNG" alt="Ceradon Systems mark" />
       <button class="text-2xl" aria-label="Close menu" data-close-menu>&times;</button>
     </div>
     <div class="flex-1 overflow-y-auto px-6 py-6">
