@@ -43,8 +43,8 @@
   <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
     <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
-        <a href="index.html"><img class="hidden sm:block h-10" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems logo"/>
-                   <img class="sm:hidden h-10" src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark"/></a>
+        <a href="index.html"><img class="hidden sm:block h-10 logo-glow" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems logo"/>
+                   <img class="sm:hidden h-10 logo-glow" src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark"/></a>
         <nav class="hidden md:flex gap-6">
           <!-- add active link state using aria-current="page" -->
           <a href="index.html" class="navlink">Home</a>
@@ -54,7 +54,7 @@
           <a href="careers.html" class="navlink">Careers</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
         </nav>
-        <button class="md:hidden" aria-label="Open menu" data-open-menu>☰</button>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
       </div>
       <!-- mobile panel injected by /src/ui.js -->
     </header>
@@ -77,7 +77,7 @@
       <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark" class="h-12 w-12" />
+            <img src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" />
             <div>
               <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
               <p class="text-sm text-subtle">Passive RF sensing for decisive teams.</p>
