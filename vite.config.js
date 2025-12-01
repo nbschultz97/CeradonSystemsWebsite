@@ -5,11 +5,13 @@ const rootDir = process.cwd();
 
 export default defineConfig({
   root: rootDir,
+  assetsInclude: ['**/*.PNG'],
   build: {
     rollupOptions: {
       input: {
         main: resolve(rootDir, 'index.html'),
         vantage: resolve(rootDir, 'vantage.html'),
+        architect: resolve(rootDir, 'architect.html'),
         technology: resolve(rootDir, 'technology.html'),
         company: resolve(rootDir, 'company.html'),
         ip: resolve(rootDir, 'ip.html'),
