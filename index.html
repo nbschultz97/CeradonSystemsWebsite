@@ -48,6 +48,7 @@
         <nav class="hidden md:flex gap-6">
           <!-- add active link state using aria-current="page" -->
           <a href="index.html#top" class="navlink">Home</a>
+          <a href="index.html#vantage" class="navlink">Vantage</a>
           <a href="index.html#products" class="navlink">Products</a>
           <a href="index.html#technology" class="navlink">Technology</a>
           <a href="index.html#contact" class="btn btn-primary">Contact</a>
@@ -135,6 +136,83 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="vantage" class="relative border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div class="space-y-4">
+              <span class="tag">Vantage Scanner</span>
+              <h2 class="section-heading text-3xl">Pose-first through-wall awareness kit</h2>
+              <p class="text-subtle max-w-3xl">
+                Vantage uses Wi-Fi CSI to drive pose estimation, then layers in presence, motion vectors, and sector labels so
+                operators see posture, intent, and movement through walls. Everything runs offline on Pi or Jetson-class edge compute.
+              </p>
+              <div class="flex flex-wrap gap-3">
+                <span class="badge">Pose inference core</span>
+                <span class="badge">CSI-first pipeline</span>
+                <span class="badge">Offline + mesh ready</span>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
+                <a href="#contact" class="btn btn-secondary text-sm uppercase tracking-wide">Talk with Ceradon</a>
+              </div>
+            </div>
+            <div class="card-glass p-8 space-y-4">
+              <div class="flex items-center gap-3">
+                <img src="./assets/VantageLong.PNG" alt="Vantage shield" class="h-14 w-14 image-surface" />
+                <div>
+                  <p class="text-sm text-subtle">Pose-focused stack</p>
+                  <p class="font-semibold text-[color:var(--white)]">Human truth through any wall</p>
+                </div>
+              </div>
+              <ul class="product-bullets">
+                <li>CSI ingest → denoise → skeletal overlay with posture-aware alerts.</li>
+                <li>Local JSON/CSV/SQLite logs plus ATAK-ready feeds for teams.</li>
+                <li>Emission control modes keep kits passive during staging and entry.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <p class="tag">Product Lines</p>
+            <div class="grid gap-6 md:grid-cols-3">
+              <article class="product-card">
+                <div class="product-card__header">
+                  <h3 class="product-title">Tripod Node</h3>
+                  <p class="product-tagline">Directional coverage for long-duration overwatch.</p>
+                </div>
+                <ul class="product-bullets">
+                  <li>Calibrated antenna maps for sectorized presence and pose overlays.</li>
+                  <li>Low-drift clocks and CSI health checks for stable skeletal output.</li>
+                  <li>Quiet batteries and DC input paths for discreet rooftop or window setups.</li>
+                </ul>
+              </article>
+              <article class="product-card">
+                <div class="product-card__header">
+                  <h3 class="product-title">Handheld</h3>
+                  <p class="product-tagline">Quick-look posture with silent alerts for breaching teams.</p>
+                </div>
+                <ul class="product-bullets">
+                  <li>HUD bands reserved for skeletal overlays and motion vectors.</li>
+                  <li>Haptic-ready event bus for discreet posture or movement cues.</li>
+                  <li>Offline cache of IEEE OUI data for fast device attribution on scene.</li>
+                </ul>
+              </article>
+              <article class="product-card">
+                <div class="product-card__header">
+                  <h3 class="product-title">UGV / UAS Payload</h3>
+                  <p class="product-tagline">Modular payload for remote sensing in denied corridors.</p>
+                </div>
+                <ul class="product-bullets">
+                  <li>Jetson / Pi-ready CSI ingest with quantized pose nets to stay within thermal caps.</li>
+                  <li>Directional distance/direction labels aligned for future skeletal overlays.</li>
+                  <li>ATAK/KML exports and local replay for after-action reconstruction.</li>
+                </ul>
+              </article>
             </div>
           </div>
         </div>
