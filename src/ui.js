@@ -84,7 +84,7 @@ function buildMobileNav(header) {
   panel.innerHTML = `
     <div class="mobile-menu-hero">
       <div class="mobile-menu-hero__image">
-        <img class="logo-glow" src="/assets/VantageLong.PNG" alt="Vantage mark" />
+        <img class="logo-glow" src="./assets/VantageLong.PNG" alt="Vantage mark" />
       </div>
       <div class="mobile-menu-hero__text">
         <p class="label">Vantage Scanner</p>
