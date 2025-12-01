@@ -158,6 +158,40 @@
           </div>
         </div>
 
+        <div class="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+          <div class="space-y-6">
+            <h2 class="section-heading text-3xl">Operational Stack</h2>
+            <p class="text-subtle max-w-3xl">Built for embedded teams that need deterministic behavior. Every module stays lean so future skeletal overlays render without starving CSI ingest.</p>
+            <div class="grid gap-4 md:grid-cols-2">
+              <div class="card-glass p-4 space-y-2">
+                <h3 class="font-semibold text-[color:var(--white)]">RF Front-End</h3>
+                <p class="text-sm text-subtle">Intel 5300 / AX210 profiles, calibrated antenna maps, and OUI-cached spectrum intel for quick device attribution.</p>
+              </div>
+              <div class="card-glass p-4 space-y-2">
+                <h3 class="font-semibold text-[color:var(--white)]">Pose Core</h3>
+                <p class="text-sm text-subtle">WiPose / PassiveWiFiPose-ready tensors with quantized weights to keep Jetson Nano and Pi 5 within thermal limits.</p>
+              </div>
+              <div class="card-glass p-4 space-y-2">
+                <h3 class="font-semibold text-[color:var(--white)]">Telemetry</h3>
+                <p class="text-sm text-subtle">Schema-validated JSON, CSV, and SQLite logs with hash-chained records for chain-of-custody.</p>
+              </div>
+              <div class="card-glass p-4 space-y-2">
+                <h3 class="font-semibold text-[color:var(--white)]">Visualization</h3>
+                <p class="text-sm text-subtle">Reserved HUD bands for skeletal overlays, mobility vectors, and direction/distance labels without redrawing the full scene.</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-glass p-6 space-y-4">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Hardening &amp; Ops</h3>
+            <ul class="space-y-3 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Offline update bundles signed for air-gapped kits.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Configurable emissions lock to keep radios passive during staging.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> CLI health checks for CSI packet loss, clock drift, and thermal margins.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Export profiles for ATAK, KML, and offline replay without cloud calls.</li>
+            </ul>
+          </div>
+        </div>
+
         <div class="space-y-6">
           <h2 class="section-heading text-3xl">Media Gallery</h2>
           <div class="media-grid">
