@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ceradon Systems | COTS RF Sensing & UxS Design Tools</title>
-    <meta name="description" content="Ceradon builds software tools that help teams design, simulate, and sustain RF-driven sensors and unmanned systems using off-the-shelf hardware." />
-    <meta property="og:title" content="Ceradon Systems | COTS RF Sensing & UxS Design Tools" />
-    <meta property="og:description" content="Plan, model, and sustain RF sensing nodes and unmanned systems built from commodity hardware." />
+    <title>Ceradon Systems | Passive RF Sensing & UxS Planning</title>
+    <meta name="description" content="Ceradon builds passive RF sensing (Vantage) and a UxS planning stack (Architect) that turn COTS chaos into mission-aligned kits." />
+    <meta property="og:title" content="Ceradon Systems | Passive RF Sensing & UxS Planning" />
+    <meta property="og:description" content="Passive RF sensing and a UxS planning stack that align COTS hardware to real missions." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ceradonsystems.com/" />
     <meta property="og:image" content="./assets/Square_Logo.PNG" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ceradon Systems | COTS RF Sensing & UxS Design Tools" />
-    <meta name="twitter:description" content="Ceradon builds software tools that help teams design, simulate, and sustain RF-driven sensors and unmanned systems using off-the-shelf hardware." />
+    <meta name="twitter:title" content="Ceradon Systems | Passive RF Sensing & UxS Planning" />
+    <meta name="twitter:description" content="Passive RF sensing (Vantage) and a UxS planning stack (Architect) that turn COTS chaos into mission-aligned kits." />
     <meta name="twitter:image" content="./assets/Square_Logo.PNG" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -48,10 +48,11 @@
         <nav class="hidden md:flex gap-6">
           <!-- add active link state using aria-current="page" -->
           <a href="index.html#top" class="navlink">Home</a>
-          <a href="index.html#vantage" class="navlink">Vantage</a>
-          <a href="index.html#products" class="navlink">Products</a>
-          <a href="index.html#technology" class="navlink">Technology</a>
-          <a href="index.html#contact" class="btn btn-primary">Contact</a>
+          <a href="vantage.html" class="navlink">Vantage</a>
+          <a href="architect.html" class="navlink">Architect Stack</a>
+          <a href="technology.html" class="navlink">Technology</a>
+          <a href="company.html" class="navlink">Company</a>
+          <a href="contact.html" class="btn btn-primary">Contact</a>
         </nav>
         <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
       </div>
@@ -79,18 +80,16 @@
             <div class="space-y-8">
               <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-4 py-2 text-xs tracking-[0.3em] uppercase text-[color:var(--silver)]">
                 <span class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)]"></span>
-                COTS RF + Autonomy
+                Passive RF + UxS Planning
               </div>
               <img src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark" class="h-24 w-24 sm:h-32 sm:w-32 image-surface" />
-              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[color:var(--white)] leading-tight">
-                Software that turns COTS RF gear into mission-ready sensing and UxS kits.
-              </h1>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[color:var(--white)] leading-tight">Ceradon Systems</h1>
               <p class="max-w-2xl text-lg text-subtle">
-                Ceradon builds software tools that help teams design, simulate, and sustain RF-driven sensors and unmanned systems using Raspberry Pis, Linux hosts, commercial radios, antennas, and fieldable payloads.
+                Passive RF sensing and UxS planning for small teams. Vantage gives you zero-emission through-wall awareness. The Architect Stack plans the drones, nodes, and kits that carry it.
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#products" class="btn btn-primary text-sm uppercase tracking-wide">Explore products</a>
-                <a href="#technology" class="btn btn-secondary text-sm uppercase tracking-wide">Learn more</a>
+                <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
+                <a href="architect.html" class="btn btn-secondary text-sm uppercase tracking-wide">Explore Architect Stack</a>
               </div>
             </div>
             <div class="card-glass p-8 space-y-6">
@@ -137,6 +136,75 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <div class="space-y-4">
+            <p class="tag">The planning gap in COTS robotics</p>
+            <h2 class="section-heading text-3xl">Why planning tools matter</h2>
+            <p class="text-subtle max-w-4xl">
+              The COTS drone and robotics market is overflowing with good hardware: frames, radios, 3D printers, batteries, flight controllers, software stacks. Hobbyists don’t plan at the scale that defense, security, and critical-infrastructure teams do.
+            </p>
+          </div>
+          <div class="grid gap-6 lg:grid-cols-2">
+            <div class="card-glass p-6 space-y-3">
+              <p class="text-subtle">Units have to answer questions that consumer tools were never built for:</p>
+              <ul class="list-disc pl-5 space-y-2 text-subtle">
+                <li>What can we build with what’s on the shelf right now?</li>
+                <li>How far, how long, and with which payloads can it realistically operate?</li>
+                <li>How many nodes, relays, and batteries do we need to cover a block, facility, or corridor?</li>
+                <li>What does that translate to in rucks, weight, and sustainment for a real team?</li>
+              </ul>
+            </div>
+            <div class="card-glass p-6 space-y-4">
+              <p class="text-subtle">
+                Traditional ERPs cover vehicles, maintenance, and logistics. Nothing equivalent exists for small unmanned systems built from COTS parts. Ceradon’s Architect Stack fills that seam—a lean, offline-first planner for drones, nodes, and kits.
+              </p>
+              <p class="text-subtle">
+                Start from mission, inventory, RF environment, or SWaP limits. The stack propagates those constraints into feasible unmanned packages teams can stage today.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="space-y-3">
+            <p class="tag">Two product lines, one mission</p>
+            <h2 class="section-heading text-3xl">Passive RF sensing + UxS planning</h2>
+            <p class="text-subtle max-w-3xl">
+              Ceradon builds passive RF sensing and a UxS planning stack that turns COTS chaos into mission-aligned kits.
+            </p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Vantage – Passive RF Human Sensing</h3>
+                <p class="product-tagline">Turns commodity Wi-Fi into through-wall human presence, pose, and motion intelligence with zero additional emissions.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Through-wall presence and pose states.</li>
+                <li>Tripod nodes, handheld kits, UGV/UAS payloads.</li>
+                <li>Edge-only pipelines, CSI/telemetry logging, ATAK-ready exports.</li>
+              </ul>
+              <a class="btn btn-secondary mt-4 inline-flex" href="vantage.html">Explore Vantage</a>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Architect Stack – UxS Planning Toolkit</h3>
+                <p class="product-tagline">Plan nodes, drones, RF coverage, and kits around real inventory and mission constraints.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Node, UxS, Mesh, Mission, and KitSmith tools.</li>
+                <li>Start from mission, inventory, RF environment, or SWaP limits.</li>
+                <li>Propagates constraints into feasible unmanned packages.</li>
+              </ul>
+              <a class="btn btn-secondary mt-4 inline-flex" href="architect.html">Explore Architect Stack</a>
+            </article>
           </div>
         </div>
       </section>

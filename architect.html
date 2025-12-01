@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Architect Stack | Ceradon Systems</title>
+    <meta name="description" content="Architect is a UxS planning toolkit that turns real COTS inventory into nodes, drones, meshes, and kits aligned to mission constraints." />
+    <meta property="og:title" content="Architect Stack | Ceradon Systems" />
+    <meta property="og:description" content="Plan nodes, drones, RF coverage, and sustainment kits from any starting constraint—mission, inventory, RF, or SWaP." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ceradonsystems.com/architect.html" />
+    <meta property="og:image" content="./assets/Square_Logo.PNG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Architect Stack | Ceradon Systems" />
+    <meta name="twitter:description" content="A lean, offline-first planner for COTS unmanned systems and RF nodes." />
+    <meta name="twitter:image" content="./assets/Square_Logo.PNG" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              ink: '#04070d',
+              'steel-900': '#0b1220',
+              'steel-700': '#18243a',
+              'steel-500': '#2a3a55',
+              silver: '#c5cbd6',
+              white: '#f4f6fb',
+              'ceradon-blue': '#2b78ff',
+              'ceradon-sky': '#56b7ff'
+            },
+            fontFamily: {
+              sans: ['Inter', 'Segoe UI', 'system-ui', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="index.html"><img class="hidden sm:block h-10 logo-glow" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems logo"/>
+                   <img class="sm:hidden h-10 logo-glow" src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark"/></a>
+        <nav class="hidden md:flex gap-6">
+          <!-- add active link state using aria-current="page" -->
+          <a href="index.html" class="navlink">Home</a>
+          <a href="vantage.html" class="navlink">Vantage</a>
+          <a href="architect.html" class="navlink">Architect Stack</a>
+          <a href="technology.html" class="navlink">Technology</a>
+          <a href="company.html" class="navlink">Company</a>
+          <a href="contact.html" class="btn btn-primary">Contact</a>
+        </nav>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
+      </div>
+      <!-- mobile panel injected by /src/ui.js -->
+    </header>
+    <main>
+      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
+        <div class="relative mx-auto max-w-7xl px-4 py-16">
+          <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+            <div class="space-y-6">
+              <span class="tag">Architect Stack</span>
+              <h1 class="text-4xl font-bold text-[color:var(--white)]">A UxS planning toolkit for COTS hardware.</h1>
+              <p class="text-lg text-subtle">Architect sits between spreadsheets and enterprise logistics systems. It turns real inventory—frames, radios, batteries, 3D printers, compute—into concrete node, drone, and kit designs tied to a specific mission.</p>
+              <p class="text-subtle">Inventory → Node designs → Drone designs → Mesh layout → Kits and sustainment.</p>
+              <div class="flex flex-wrap gap-3">
+                <span class="badge">Offline-first</span>
+                <span class="badge">Explainable rules</span>
+                <span class="badge">Mission-aligned</span>
+              </div>
+            </div>
+            <div class="card-glass p-8 space-y-4">
+              <p class="text-sm text-subtle">Go from RFIs to repeatable answers with small, focused tools that respect austere, air-gapped deployments.</p>
+              <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Talk with Ceradon</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+        <div class="space-y-3">
+          <p class="tag">Tool family</p>
+          <h2 class="section-heading text-3xl">Small tools for nodes, platforms, and kits</h2>
+          <p class="text-subtle max-w-3xl">Each module is scoped so small teams can mix and match without dragging a full ERP into the field.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="product-card">
+            <div class="product-card__header">
+              <h3 class="product-title">Node Architect</h3>
+              <p class="product-tagline">Designs COTS RF/sensor nodes from compute, radios, antennas, and power.</p>
+            </div>
+            <ul class="product-bullets">
+              <li>Estimates draw, runtime, and RF role classes.</li>
+              <li>Applies LOS/NLOS assumptions explicitly.</li>
+            </ul>
+          </article>
+          <article class="product-card">
+            <div class="product-card__header">
+              <h3 class="product-title">UxS Architect</h3>
+              <p class="product-tagline">Builds multirotor, fixed-wing, and ground platforms around chosen nodes.</p>
+            </div>
+            <ul class="product-bullets">
+              <li>Checks all-up weight and thrust-to-weight.</li>
+              <li>Validates endurance and payload fit against mission profiles.</li>
+            </ul>
+          </article>
+          <article class="product-card">
+            <div class="product-card__header">
+              <h3 class="product-title">Mesh Architect</h3>
+              <p class="product-tagline">Rough RF coverage planner to highlight relay requirements.</p>
+            </div>
+            <ul class="product-bullets">
+              <li>Maps which links likely hold by band, power, and environment.</li>
+              <li>Flags where repeaters are needed.</li>
+            </ul>
+          </article>
+          <article class="product-card">
+            <div class="product-card__header">
+              <h3 class="product-title">Mission Architect</h3>
+              <p class="product-tagline">Mission-first planner that starts from task, environment, and endurance.</p>
+            </div>
+            <ul class="product-bullets">
+              <li>Pulls candidate node and platform templates.</li>
+              <li>Feeds Mesh Architect for coverage validation.</li>
+            </ul>
+          </article>
+          <article class="product-card">
+            <div class="product-card__header">
+              <h3 class="product-title">KitSmith</h3>
+              <p class="product-tagline">Turns final architectures into rucks, boxes, and sustainment plans.</p>
+            </div>
+            <ul class="product-bullets">
+              <li>Generates BOMs, per-operator weight, and battery counts.</li>
+              <li>Exports 24/48/72-hour sustainment views.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-8">
+          <div class="space-y-3">
+            <p class="tag">Planning flows</p>
+            <h2 class="section-heading text-3xl">Plan from any starting point</h2>
+            <p class="text-subtle max-w-3xl">Architect doesn’t lock you into a single workflow. Any constraint can drive the rest.</p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="font-semibold text-[color:var(--white)]">Mission-first</h3>
+              <p class="text-subtle text-sm">Start in Mission Architect, define task, environment, and endurance → pull candidate nodes/airframes → validate coverage in Mesh Architect → export kits with KitSmith.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="font-semibold text-[color:var(--white)]">Inventory-first</h3>
+              <p class="text-subtle text-sm">Begin with what’s on the shelf → Node/UxS Architect show what’s realistically buildable → Mesh and KitSmith wrap those into coverage and sustainment plans.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="font-semibold text-[color:var(--white)]">Constraint-first</h3>
+              <p class="text-subtle text-sm">Set strict SWaP or power limits in KitSmith → push those constraints back into Node/UxS Architect so only feasible designs are considered.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="font-semibold text-[color:var(--white)]">RF-first</h3>
+              <p class="text-subtle text-sm">Start from the RF environment in Mesh Architect (urban canyons, indoor, rural) → that dictates node classes, relay count, and platform roles.</p>
+            </div>
+          </div>
+          <p class="text-subtle max-w-4xl">The output is always the same: a set of concrete node and UxS configurations tied to a mission, with known battery demand and packing lists.</p>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+        <div class="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+          <div class="space-y-4">
+            <p class="tag">Status and deployment</p>
+            <h2 class="section-heading text-3xl">Built for labs and offline kits</h2>
+            <p class="text-subtle">Architect is being built as a local, offline web toolset backed by simple JSON catalogs and explainable physics/RF rules.</p>
+            <ul class="space-y-3 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Runs on a small server or lab machine, no cloud dependencies.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Inventory and blueprint libraries live as plain-text data.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Early versions are available as open-source prototypes for labs that want to experiment and contribute.</li>
+            </ul>
+          </div>
+          <div class="card-glass p-8 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Who it’s for</h3>
+            <p class="text-subtle text-sm">Small technical teams responsible for rapid unmanned builds and sustainment in contested or air-gapped environments.</p>
+            <p class="text-subtle text-sm">Planners who need repeatable answers without surrendering control to opaque scoring systems.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/80]">
+      <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" />
+            <div>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Passive RF sensing and UxS planning.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-sm text-subtle">
+            <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
+            <span aria-hidden="true">/</span>
+            <a href="#" class="hover:text-[color:var(--white)]">LinkedIn</a>
+            <span aria-hidden="true">/</span>
+            <a href="#" class="hover:text-[color:var(--white)]">Secure Brief</a>
+          </div>
+        </div>
+        <div class="footer-links" data-footer-links></div>
+        <div class="text-xs text-subtle">© <span data-year></span> Ceradon Systems. All rights reserved.</div>
+      </div>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
