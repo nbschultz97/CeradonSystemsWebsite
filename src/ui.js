@@ -1,5 +1,6 @@
 const NAV_ITEMS = [
   { label: 'Home', href: 'index.html#top' },
+  { label: 'Vantage', href: 'index.html#vantage' },
   { label: 'Products', href: 'index.html#products' },
   { label: 'Technology', href: 'index.html#technology' },
   { label: 'Contact', href: 'index.html#contact', isCTA: true }
@@ -7,6 +8,7 @@ const NAV_ITEMS = [
 
 const FOOTER_LINKS = [
   { label: 'Home', href: 'index.html' },
+  { label: 'Vantage', href: 'index.html#vantage' },
   { label: 'Products', href: 'index.html#products' },
   { label: 'Technology', href: 'index.html#technology' },
   { label: 'Contact', href: 'index.html#contact' },
