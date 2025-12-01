@@ -1,20 +1,15 @@
 const NAV_ITEMS = [
-  { label: 'Home', href: 'index.html' },
-  { label: 'Vantage', href: 'vantage.html' },
-  { label: 'Technology', href: 'technology.html' },
-  { label: 'Company', href: 'company.html' },
-  { label: 'Careers', href: 'careers.html' },
-  { label: 'Contact', href: 'contact.html', isCTA: true }
+  { label: 'Home', href: 'index.html#top' },
+  { label: 'Products', href: 'index.html#products' },
+  { label: 'Technology', href: 'index.html#technology' },
+  { label: 'Contact', href: 'index.html#contact', isCTA: true }
 ];
 
 const FOOTER_LINKS = [
   { label: 'Home', href: 'index.html' },
-  { label: 'Vantage', href: 'vantage.html' },
-  { label: 'Technology', href: 'technology.html' },
-  { label: 'Company', href: 'company.html' },
-  { label: 'IP & Compliance', href: 'ip.html' },
-  { label: 'Careers', href: 'careers.html' },
-  { label: 'Contact', href: 'contact.html' },
+  { label: 'Products', href: 'index.html#products' },
+  { label: 'Technology', href: 'index.html#technology' },
+  { label: 'Contact', href: 'index.html#contact' },
   { label: 'Privacy', href: 'privacy.html' }
 ];
 
@@ -39,7 +34,7 @@ function normalisePath(pathname) {
 }
 
 function setActiveStates() {
-  const current = normalisePath(window.location.pathname);
+  const current = `${normalisePath(window.location.pathname)}${window.location.hash || ''}`;
   const links = document.querySelectorAll('a[href]');
   links.forEach((link) => {
     const rawHref = link.getAttribute('href') || '';
@@ -58,7 +53,8 @@ function setActiveStates() {
         return;
       }
       const linkPath = normalisePath(url.pathname);
-      if (linkPath === current) {
+      const linkTarget = `${linkPath}${url.hash || ''}`;
+      if (linkTarget === current) {
         link.setAttribute('aria-current', 'page');
       } else if (link.hasAttribute('aria-current')) {
         link.removeAttribute('aria-current');
@@ -259,7 +255,7 @@ async function handleContactSubmit(event) {
     }
   }
 
-  const mailto = new URL('mailto:contact@ceradonsystems.com');
+  const mailto = new URL('mailto:info@ceradonsystems.com');
   mailto.searchParams.set('subject', 'Ceradon Inquiry');
   mailto.searchParams.set('body', composed);
   window.location.href = mailto.toString();

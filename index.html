@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ceradon Systems | Trusted RF Sensing for the Edge</title>
-    <meta name="description" content="Ceradon Systems delivers passive RF sensing, human detection, and edge-ready awareness tools for decisive teams in denied environments." />
-    <meta property="og:title" content="Ceradon Systems | Trusted RF Sensing for the Edge" />
-    <meta property="og:description" content="Passive, through-wall human sensing built for mission-critical operations." />
+    <title>Ceradon Systems | COTS RF Sensing & UxS Design Tools</title>
+    <meta name="description" content="Ceradon builds software tools that help teams design, simulate, and sustain RF-driven sensors and unmanned systems using off-the-shelf hardware." />
+    <meta property="og:title" content="Ceradon Systems | COTS RF Sensing & UxS Design Tools" />
+    <meta property="og:description" content="Plan, model, and sustain RF sensing nodes and unmanned systems built from commodity hardware." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ceradonsystems.com/" />
     <meta property="og:image" content="./assets/Square_Logo.PNG" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ceradon Systems | Trusted RF Sensing for the Edge" />
-    <meta name="twitter:description" content="Passive, through-wall human sensing built for mission-critical operations." />
+    <meta name="twitter:title" content="Ceradon Systems | COTS RF Sensing & UxS Design Tools" />
+    <meta name="twitter:description" content="Ceradon builds software tools that help teams design, simulate, and sustain RF-driven sensors and unmanned systems using off-the-shelf hardware." />
     <meta name="twitter:image" content="./assets/Square_Logo.PNG" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -47,19 +47,17 @@
                    <img class="sm:hidden h-10 logo-glow" src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark"/></a>
         <nav class="hidden md:flex gap-6">
           <!-- add active link state using aria-current="page" -->
-          <a href="index.html" class="navlink">Home</a>
-          <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="technology.html" class="navlink">Technology</a>
-          <a href="company.html" class="navlink">Company</a>
-          <a href="careers.html" class="navlink">Careers</a>
-          <a href="contact.html" class="btn btn-primary">Contact</a>
+          <a href="index.html#top" class="navlink">Home</a>
+          <a href="index.html#products" class="navlink">Products</a>
+          <a href="index.html#technology" class="navlink">Technology</a>
+          <a href="index.html#contact" class="btn btn-primary">Contact</a>
         </nav>
         <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
       </div>
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main>
-      <section class="relative overflow-hidden hero-splash">
+      <section id="top" class="relative overflow-hidden hero-splash">
         <div class="absolute inset-0 pointer-events-none">
           <svg class="absolute -top-32 -right-40 hidden lg:block h-[34rem] w-[34rem] opacity-60" viewBox="0 0 640 640" aria-hidden="true" focusable="false">
             <defs>
@@ -80,26 +78,26 @@
             <div class="space-y-8">
               <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-4 py-2 text-xs tracking-[0.3em] uppercase text-[color:var(--silver)]">
                 <span class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)]"></span>
-                Passive RF Situational Awareness
+                COTS RF + Autonomy
               </div>
               <img src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark" class="h-24 w-24 sm:h-32 sm:w-32 image-surface" />
               <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[color:var(--white)] leading-tight">
-                Vantage Scanner: Through-wall pose intelligence.
+                Software that turns COTS RF gear into mission-ready sensing and UxS kits.
               </h1>
               <p class="max-w-2xl text-lg text-subtle">
-                Ceradon Systems delivers a modular Wi-Fi CSI stack that captures, cleans, and renders human skeletal poses in denied spaces while staying passive and offline-first.
+                Ceradon builds software tools that help teams design, simulate, and sustain RF-driven sensors and unmanned systems using Raspberry Pis, Linux hosts, commercial radios, antennas, and fieldable payloads.
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
-                <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
-                <a href="contact.html" class="btn btn-secondary text-sm uppercase tracking-wide">Contact Ceradon</a>
+                <a href="#products" class="btn btn-primary text-sm uppercase tracking-wide">Explore products</a>
+                <a href="#technology" class="btn btn-secondary text-sm uppercase tracking-wide">Learn more</a>
               </div>
             </div>
             <div class="card-glass p-8 space-y-6">
               <div class="space-y-2">
-                <p class="tag">Edge Native</p>
-                <h2 class="text-2xl font-semibold text-[color:var(--white)]">Mission profile aware from day zero</h2>
+                <p class="tag">Design. Simulate. Field.</p>
+                <h2 class="text-2xl font-semibold text-[color:var(--white)]">Built for small, technical teams</h2>
                 <p class="text-subtle">
-                  Built to operate in contested, GNSS-denied, and austere conditions without radiating or depending on cloud services.
+                  Plan RF sensing nodes, unmanned ground and air platforms, and mesh links before anyone buys hardware. Keep every design software-defined, portable, and ready for austere deployments.
                 </p>
               </div>
               <div class="space-y-4">
@@ -110,8 +108,8 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-[color:var(--white)]">Passive by Design</h3>
-                    <p class="text-sm text-subtle">Zero-emission CSI sensing keeps teams concealed while mapping skeletal posture and intent.</p>
+                    <h3 class="font-semibold text-[color:var(--white)]">COTS-first kits</h3>
+                    <p class="text-sm text-subtle">Model Raspberry Pis, Linux laptops, WiFi and LoRa radios, COTS antennas, sensors, and power stacks without bespoke silicon.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -121,8 +119,8 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-[color:var(--white)]">Edge-Ready & Offline</h3>
-                    <p class="text-sm text-subtle">Runs on low-power compute with local storage, CLI automation, and resilient pose pipelines.</p>
+                    <h3 class="font-semibold text-[color:var(--white)]">RF sensing & UxS focus</h3>
+                    <p class="text-sm text-subtle">Explore roles from WiFi recon and mesh relays to UGV/UAS payloads and telemetry backbones.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -132,8 +130,8 @@
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-[color:var(--white)]">COTS Hardware</h3>
-                    <p class="text-sm text-subtle">Deploy on Intel AX210, handheld kits, UGVs, or UAS payloads without custom silicon.</p>
+                    <h3 class="font-semibold text-[color:var(--white)]">Simulation-first</h3>
+                    <p class="text-sm text-subtle">Estimate power, runtime, and link budgets before kits leave the bench, with exports ready for mission rehearsals.</p>
                   </div>
                 </div>
               </div>
@@ -142,41 +140,133 @@
         </div>
       </section>
 
+      <section id="products" class="relative border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/65]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="space-y-3 max-w-3xl">
+            <span class="tag">Product Suite</span>
+            <h2 class="section-heading text-3xl">Tools that design, simulate, and sustain COTS RF systems</h2>
+            <p class="text-subtle">Mix and match Linux hosts, radios, antennas, sensors, batteries, and payloads. Each product stays modular so teams can test ideas quickly and field reliable kits.</p>
+          </div>
+          <div class="products-grid">
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Ceradon Node Architect</h3>
+                <p class="product-tagline">Design COTS RF and sensor nodes in minutes.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Combine Linux hosts (Pis, NUCs, laptops), radios, antennas, batteries, and sensors.</li>
+                <li>Estimate power, runtime, and rough link ranges for different environments.</li>
+                <li>Quickly see what roles a node can support: WiFi recon, LoRa telemetry, FPV relay, experimental CSI, etc.</li>
+              </ul>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Ceradon UxS Architect</h3>
+                <p class="product-tagline">Build unmanned ground and air platforms from off-the-shelf parts.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Configure UGV/UAS frames with payloads, radios, and compute modules.</li>
+                <li>See weight, power, and endurance impacts of different payload stacks.</li>
+                <li>Explore roles like recon, relay, sensing, and decoy platforms.</li>
+              </ul>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Ceradon Mesh Architect</h3>
+                <p class="product-tagline">Plan how your nodes, drones, and controllers talk.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Model multi-node WiFi, LoRa, and FPV links in simple urban or rural layouts.</li>
+                <li>Get rough link-quality and coverage estimates using your chosen COTS hardware.</li>
+                <li>Identify which nodes should act as relays, gateways, or sensor endpoints.</li>
+              </ul>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Ceradon KitSmith</h3>
+                <p class="product-tagline">Turn designs into operator-ready kits.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Convert node and UxS designs into packing lists, weights, and power plans.</li>
+                <li>Plan batteries, spares, and sustainment timelines for single operators or teams.</li>
+                <li>Export simple checklists for training and field use.</li>
+              </ul>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Mission Architect</h3>
+                <p class="product-tagline">Tie platforms, sensors, and comms into a single mission plan.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Start from common mission patterns (urban building, rural OP, convoy support, etc.).</li>
+                <li>Assign nodes and unmanned systems to roles, positions, and phases of the mission.</li>
+                <li>Generate concise mission cards that describe setup, employment, and success criteria.</li>
+              </ul>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Ceradon Distiller</h3>
+                <p class="product-tagline">Turn raw notes and logs into lessons learned.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Structure After-Action Review inputs into issues, causes, and recommended fixes.</li>
+                <li>Tag findings by environment, kit, and mission type.</li>
+                <li>Feed insights back into how you design nodes, meshes, and missions.</li>
+              </ul>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <div class="flex items-center justify-between gap-3">
+                  <h3 class="product-title">Telemetry Forge</h3>
+                  <span class="status-pill">In Development</span>
+                </div>
+                <p class="product-tagline">One telemetry language for all your systems.</p>
+              </div>
+              <ul class="product-bullets">
+                <li>Define standard JSON/topic schemas for RF, sensor, and platform data.</li>
+                <li>Generate code stubs and documentation for new integrations.</li>
+                <li>Keep multi-vendor, multi-platform stacks speaking the same data dialect.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="relative">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
           <div class="grid gap-10 md:grid-cols-2">
             <div class="card-glass p-8 space-y-4">
-              <span class="tag">Passive RF Intelligence</span>
-              <h2 class="section-heading text-3xl">Operate with complete discretion</h2>
+              <span class="tag">Customers</span>
+              <h2 class="section-heading text-3xl">For small defense, security, and infrastructure teams</h2>
               <p class="text-subtle">
-                Vantage senses human presence, pose, and movement through dense structures by leveraging commodity Wi-Fi CSI. No illumination, no additional RF signature, and no dependency on cameras.
+                Ceradon tools keep teams moving fast without custom silicon or cloud lock-in. Model RF sensing kits, unmanned systems, and mesh layouts on everyday gear, then hand operators clean build sheets and mission cards.
               </p>
               <ul class="space-y-3 text-subtle">
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Multi-room awareness from a single node</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Real-time posture inference pipeline ready for pose overlays</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Hardened CLI for scripted operations and logging</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> COTS hardware assumptions: Raspberry Pis, Linux laptops, WiFi/LoRa radios, antennas, and payload sensors.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Unmanned focus: UGV/UAS roles, mesh telemetry, and ground controllers.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Mission design: simple exports for rehearsals, dry runs, and field use.</li>
               </ul>
             </div>
             <div class="card-glass p-8 space-y-4">
-              <span class="tag">Edge Deployment</span>
-              <h2 class="section-heading text-3xl">Designed for denied environments</h2>
-              <p class="text-subtle">Offline-first workflows, on-device data stores, and encrypted exports keep missions uncompromised.</p>
+              <span class="tag">Technology</span>
+              <h2 class="section-heading text-3xl">Software-defined from idea to sustainment</h2>
+              <p class="text-subtle">Every product keeps the planning loop offline-first and repeatable, so teams can iterate without connectivity or bespoke fabrication.</p>
               <div class="grid gap-4 sm:grid-cols-2">
                 <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Rapid Setup</h3>
-                  <p class="text-sm text-subtle">Tooling packages nodes in under ten minutes with reproducible configs.</p>
+                  <h3 class="font-semibold text-[color:var(--white)]">Model first</h3>
+                  <p class="text-sm text-subtle">Check power, weight, and runtime before committing to a kit.</p>
                 </div>
                 <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Self-Healing</h3>
-                  <p class="text-sm text-subtle">Automated monitoring restarts CSI capture and inference pipelines as needed.</p>
+                  <h3 class="font-semibold text-[color:var(--white)]">Mesh-aware</h3>
+                  <p class="text-sm text-subtle">Plan WiFi, LoRa, and FPV paths to keep operators connected.</p>
                 </div>
                 <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Secure Logs</h3>
-                  <p class="text-sm text-subtle">Signed JSON/CSV outputs with schema validation for rapid intelligence handoff.</p>
+                  <h3 class="font-semibold text-[color:var(--white)]">Role-driven</h3>
+                  <p class="text-sm text-subtle">Assign nodes to recon, relay, sensing, or decoy duties with clarity.</p>
                 </div>
                 <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Modular APIs</h3>
-                  <p class="text-sm text-subtle">Extensible interface ready for skeletal pose overlays and mesh coordination.</p>
+                  <h3 class="font-semibold text-[color:var(--white)]">Sustainment ready</h3>
+                  <p class="text-sm text-subtle">Packaging, spares, and exports stay aligned as designs evolve.</p>
                 </div>
               </div>
             </div>
@@ -185,19 +275,20 @@
           <div class="gradient-divider"></div>
 
           <div class="relative overflow-hidden rounded-2xl border border-[color:var(--steel-700)] bg-[color:var(--steel-900)/70]">
-            <a href="vantage.html" class="block p-8 md:p-12">
+            <div class="block p-8 md:p-12">
               <div class="absolute inset-0 opacity-10 bg-cover bg-right" style="background-image: url('./assets/VantageLong.PNG');"></div>
               <div class="relative space-y-4 max-w-3xl">
-                <span class="tag">Product Spotlight</span>
-                <h2 class="text-3xl md:text-4xl font-semibold text-[color:var(--white)]">Vantage transforms ambient Wi-Fi into tactical intelligence.</h2>
-                <p class="text-subtle">Track occupants through walls, capture behavioral cues, and feed posture intelligence into existing C2 platforms without alerting adversaries.</p>
-                <span class="inline-flex items-center gap-2 text-[color:var(--ceradon-blue)] font-semibold">Dive into Vantage
-                  <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
-                  </svg>
-                </span>
+                <span class="tag">Design Philosophy</span>
+                <h2 class="text-3xl md:text-4xl font-semibold text-[color:var(--white)]">Treat RF sensing and autonomy like software.</h2>
+                <p class="text-subtle">Model, simulate, and document everything before buying parts. Swap in new radios, antennas, batteries, or payloads without rewriting the plan.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="badge">COTS hardware inventory</span>
+                  <span class="badge">Offline-first</span>
+                  <span class="badge">CLI + exports</span>
+                  <span class="badge">Operator-friendly outputs</span>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
@@ -206,11 +297,11 @@
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
           <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
             <div class="max-w-2xl space-y-4">
-              <span class="tag">Deployment Options</span>
-              <h2 class="section-heading text-3xl">Adapt Vantage to any mission profile</h2>
-              <p class="text-subtle">Tripod ISR node for static coverage, handheld teams for breaching, or UGV/UAS payloads for standoff detection—all sharing the same inference core.</p>
+              <span class="tag">Operational Fit</span>
+              <h2 class="section-heading text-3xl">Map hardware choices to missions</h2>
+              <p class="text-subtle">Model how COTS parts behave in different roles so operators know what to pack, how long it will last, and which links keep the team connected.</p>
             </div>
-            <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Mission Brief</a>
+            <a href="#contact" class="btn btn-primary text-sm uppercase tracking-wide">Talk with Ceradon</a>
           </div>
           <div class="grid gap-6 md:grid-cols-3">
             <div class="card-glass p-6 space-y-3">
@@ -219,8 +310,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m6-6-6 6-6-6" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Tripod ISR Node</h3>
-              <p class="text-sm text-subtle">Extended overwatch with replaceable power packs and multi-sector monitoring.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Static nodes</h3>
+              <p class="text-sm text-subtle">Tripod or rooftop kits with clear runtimes, swap plans, and sector coverage.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
               <div class="h-12 w-12 image-surface rounded-full bg-[color:var(--steel-700)]/70 flex items-center justify-center">
@@ -228,8 +319,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 7h16M4 12h10m-6 5h6" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Handheld Breach Kit</h3>
-              <p class="text-sm text-subtle">Rapid entry support with haptic alerts for presence, pose, and motion vectors.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Mobile teams</h3>
+              <p class="text-sm text-subtle">Handheld or packable kits with mesh-aware telemetry and quick setup steps.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
               <div class="h-12 w-12 image-surface rounded-full bg-[color:var(--steel-700)]/70 flex items-center justify-center">
@@ -237,63 +328,108 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="m5 11 7-7 7 7m-7-7v18" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">UGV / UAS Payload</h3>
-              <p class="text-sm text-subtle">Mobile reconnaissance with shared mesh telemetry for multi-angle confirmation.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">UGV / UAS payloads</h3>
+              <p class="text-sm text-subtle">Compute, radio, and payload swaps that show weight, endurance, and link impacts.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
+      <section id="technology" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
             <div class="space-y-6">
-              <span class="tag">Pose Intelligence Pipeline</span>
-              <h2 class="section-heading text-3xl">CSI-to-skeleton in four disciplined stages</h2>
-              <ol class="space-y-4 text-sm text-subtle">
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">1.</span> <span class="max-w-xl">Passive radios capture raw CSI streams alongside inertial references without emitting a single watt of additional RF.</span></li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">2.</span> <span class="max-w-xl">Edge DSP modules denoise, calibrate, and align subcarriers in real time, prepping tensors for pose estimators on Pi or Jetson hardware.</span></li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">3.</span> <span class="max-w-xl">Quantized pose networks infer skeletal joints, body orientation, and stability states with deterministic latency budgets.</span></li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">4.</span> <span class="max-w-xl">Structured outputs feed mission overlays, haptic alerts, and scripted CLI tasks without ever calling back to cloud services.</span></li>
-              </ol>
-              <p class="text-sm text-subtle">Each stage is modular, so supporting features—RSSI logging, mobility cues, device fingerprinting—slot in without disrupting the pose estimator.</p>
+              <span class="tag">Technology / Philosophy</span>
+              <h2 class="section-heading text-3xl">COTS hardware. Software-defined planning. Mission clarity.</h2>
+              <p class="text-subtle">Ceradon products keep everything grounded in commodity gear—Raspberry Pis, Linux laptops, commercial WiFi and LoRa radios, COTS antennas, and modular sensors. Teams model first, buy second.</p>
+              <p class="text-subtle">Each workflow is built for small teams who need to move fast, test ideas, and field functional prototypes without custom boards or exotic platforms.</p>
+              <ul class="product-bullets">
+                <li>Software-defined layouts capture power, weight, runtime, and link budgets before procurement.</li>
+                <li>Mesh-aware planning covers WiFi, LoRa, FPV, and hybrid paths with exportable checklists.</li>
+                <li>Offline-first so rehearsals, training, and deployments work without cloud or connectivity.</li>
+                <li>Outputs stay concise—mission cards, packing lists, and configs ready for operators.</li>
+              </ul>
             </div>
             <div class="card-glass p-6 space-y-4">
-              <h3 class="text-2xl font-semibold text-[color:var(--white)]">Edge Toolchain</h3>
-              <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Hardened CLI orchestrates capture, inference, and export with signed configs for air-gapped kits.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Offline schema-validated JSON, CSV, and SQLite stores keep telemetry auditable.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Plugin-ready visualization layers reserve real estate for future skeletal overlays.</li>
-              </ul>
-              <a href="technology.html" class="btn btn-secondary text-sm uppercase tracking-wide">Review the architecture</a>
+              <h3 class="text-2xl font-semibold text-[color:var(--white)]">Design-to-field rhythm</h3>
+              <ol class="space-y-4 text-sm text-subtle">
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">1.</span> <span class="max-w-xl">Capture your available COTS parts and constraints—compute, radios, antennas, batteries, sensors.</span></li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">2.</span> <span class="max-w-xl">Model nodes, unmanned platforms, and mesh links with power and endurance estimates.</span></li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">3.</span> <span class="max-w-xl">Assign roles by mission phase and environment, keeping exports synced for rehearsals.</span></li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">4.</span> <span class="max-w-xl">Package sustainment—batteries, spares, timelines—so teams know how long each kit will run.</span></li>
+              </ol>
+              <p class="text-sm text-subtle">Everything stays modular, so switching radios, payloads, or endurance assumptions is a data change—not a redesign.</p>
             </div>
           </div>
           <div class="gradient-divider"></div>
           <div class="space-y-6">
             <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div class="max-w-3xl space-y-3">
-                <span class="tag">Operator Workflow</span>
-                <h2 class="section-heading text-3xl">Built for small teams under time pressure</h2>
-                <p class="text-subtle">Every kit ships with a predictable flow—capture, verify, act—so operators can trust the pose feed without babysitting hardware.</p>
+                <span class="tag">Workflow</span>
+                <h2 class="section-heading text-3xl">Design, simulate, package, and sustain</h2>
+                <p class="text-subtle">Ceradon outputs keep operators aligned—whether they are fielding a single node, a mesh of UGVs, or mixed UAS relays.</p>
               </div>
-              <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Schedule a dry run</a>
+              <a href="#contact" class="btn btn-primary text-sm uppercase tracking-wide">Request a walkthrough</a>
             </div>
             <div class="grid gap-6 md:grid-cols-3">
               <div class="card-glass p-6 space-y-3">
-                <span class="badge">1. Capture</span>
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Deploy &amp; calibrate</h3>
-                <p class="text-sm text-subtle">Autotuned CSI capture with on-device health checks and OUI-cached spectrum intel.</p>
+                <span class="badge">1. Design</span>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Model &amp; validate</h3>
+                <p class="text-sm text-subtle">Select COTS parts, test layouts, and confirm power and link viability early.</p>
               </div>
               <div class="card-glass p-6 space-y-3">
-                <span class="badge">2. Verify</span>
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Confirm pose confidence</h3>
-                <p class="text-sm text-subtle">Live CLI summaries and optional HUD show skeleton stability, mobility state, and direction of travel.</p>
+                <span class="badge">2. Package</span>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Ready operators</h3>
+                <p class="text-sm text-subtle">Auto-generate packing lists, mounting notes, and step-by-step setup guides.</p>
               </div>
               <div class="card-glass p-6 space-y-3">
-                <span class="badge">3. Act</span>
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Disseminate securely</h3>
-                <p class="text-sm text-subtle">Encrypted exports drop into ATAK, C2, or mission replay tools without exposing raw data.</p>
+                <span class="badge">3. Sustain</span>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Run &amp; adapt</h3>
+                <p class="text-sm text-subtle">Track batteries, spares, and telemetry so teams can extend missions or pivot roles.</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/70]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start">
+            <div class="space-y-4">
+              <span class="tag">Contact</span>
+              <h2 class="section-heading text-3xl">Talk with Ceradon</h2>
+              <p class="text-subtle">Share what you need to design or field—RF sensing nodes, unmanned platforms, mesh telemetry, or sustainment plans. We will respond with the right mix of tools.</p>
+              <div class="flex flex-col gap-2 text-subtle">
+                <div class="flex items-center gap-2">
+                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
+                  </svg>
+                  <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a>
+                </div>
+                <p class="text-sm">Prefer a brief? Send your constraints and timelines—no classified details required.</p>
+              </div>
+            </div>
+            <div class="card-glass p-6">
+              <form class="space-y-4" data-contact-form>
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" required />
+                </div>
+                <div>
+                  <label for="company">Organization</label>
+                  <input id="company" name="company" type="text" placeholder="Team or organization" />
+                </div>
+                <div>
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required />
+                </div>
+                <div>
+                  <label for="message">What do you want to build?</label>
+                  <textarea id="message" name="message" rows="4" placeholder="RF sensing nodes, UGV/UAS payloads, mesh telemetry, sustainment needs..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full">Start the conversation</button>
+                <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
+              </form>
             </div>
           </div>
         </div>
@@ -311,7 +447,7 @@
             </div>
           </div>
           <div class="flex gap-4 text-sm text-subtle">
-            <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
+            <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a>
             <span aria-hidden="true">/</span>
             <a href="#" class="hover:text-[color:var(--white)]">LinkedIn</a>
             <span aria-hidden="true">/</span>
