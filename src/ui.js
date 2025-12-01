@@ -1,4 +1,4 @@
-import emblemLogo from '../assets/Emblem.PNG';
+import emblemLogo from '../assets/Square_Logo.PNG';
 
 const NAV_ITEMS = [
   { label: 'Home', href: 'index.html#top' },
