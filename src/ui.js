@@ -84,11 +84,7 @@ function buildMobileNav(header) {
   panel.innerHTML = `
     <div class="mobile-menu-hero">
       <div class="mobile-menu-hero__image">
-        <img class="logo-glow" src="./assets/VantageLong.PNG" alt="Vantage mark" />
-      </div>
-      <div class="mobile-menu-hero__text">
-        <p class="label">Vantage Scanner</p>
-        <p class="caption">Pose-first awareness kit</p>
+        <img class="logo-glow" src="./assets/logo-mark.svg" alt="Ceradon Systems logo" />
       </div>
       <button class="text-2xl icon-button" aria-label="Close menu" data-close-menu>&times;</button>
     </div>
