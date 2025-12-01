@@ -1,21 +1,21 @@
 const NAV_ITEMS = [
-  { label: 'Home', href: '/' },
-  { label: 'Vantage', href: '/vantage.html' },
-  { label: 'Technology', href: '/technology.html' },
-  { label: 'Company', href: '/company.html' },
-  { label: 'Careers', href: '/careers.html' },
-  { label: 'Contact', href: '/contact.html', isCTA: true }
+  { label: 'Home', href: 'index.html' },
+  { label: 'Vantage', href: 'vantage.html' },
+  { label: 'Technology', href: 'technology.html' },
+  { label: 'Company', href: 'company.html' },
+  { label: 'Careers', href: 'careers.html' },
+  { label: 'Contact', href: 'contact.html', isCTA: true }
 ];
 
 const FOOTER_LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'Vantage', href: '/vantage.html' },
-  { label: 'Technology', href: '/technology.html' },
-  { label: 'Company', href: '/company.html' },
-  { label: 'IP & Compliance', href: '/ip.html' },
-  { label: 'Careers', href: '/careers.html' },
-  { label: 'Contact', href: '/contact.html' },
-  { label: 'Privacy', href: '/privacy.html' }
+  { label: 'Home', href: 'index.html' },
+  { label: 'Vantage', href: 'vantage.html' },
+  { label: 'Technology', href: 'technology.html' },
+  { label: 'Company', href: 'company.html' },
+  { label: 'IP & Compliance', href: 'ip.html' },
+  { label: 'Careers', href: 'careers.html' },
+  { label: 'Contact', href: 'contact.html' },
+  { label: 'Privacy', href: 'privacy.html' }
 ];
 
 const focusableSelector = [
@@ -29,10 +29,13 @@ const focusableSelector = [
 
 function normalisePath(pathname) {
   if (!pathname) return '/';
-  if (pathname === '/') return '/';
-  const parts = pathname.split('?')[0];
-  if (parts === '/index.html') return '/';
-  return parts.replace(/\/+/g, '/');
+  const parts = pathname.split('?')[0].replace(/\/+/g, '/');
+  if (parts === '/') return '/';
+  if (parts.endsWith('/index.html')) {
+    const trimmed = parts.slice(0, -'index.html'.length);
+    return trimmed || '/';
+  }
+  return parts;
 }
 
 function setActiveStates() {
@@ -47,7 +50,7 @@ function setActiveStates() {
       return;
     }
     try {
-      const url = new URL(rawHref, window.location.origin);
+      const url = new URL(rawHref, window.location.href);
       if (url.origin !== window.location.origin) {
         if (link.hasAttribute('aria-current')) {
           link.removeAttribute('aria-current');
@@ -80,7 +83,7 @@ function buildMobileNav(header) {
   panel.style.zIndex = '70';
   panel.innerHTML = `
     <div class="px-6 py-5 flex items-center justify-between border-b border-[color:var(--steel-700)]">
-      <img class="h-10" src="/assets/Square_Logo.PNG" alt="Ceradon Systems mark" />
+      <img class="h-10" src="./assets/Square_Logo.PNG" alt="Ceradon Systems mark" />
       <button class="text-2xl" aria-label="Close menu" data-close-menu>&times;</button>
     </div>
     <div class="flex-1 overflow-y-auto px-6 py-6">
