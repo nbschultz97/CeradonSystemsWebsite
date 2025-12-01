@@ -84,7 +84,7 @@ function buildMobileNav(header) {
   panel.innerHTML = `
     <div class="mobile-menu-hero">
       <div class="mobile-menu-hero__image">
-        <img class="logo-glow" src="./assets/logo-mark.svg" alt="Ceradon Systems logo" />
+        <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems logo" />
       </div>
       <button class="text-2xl icon-button" aria-label="Close menu" data-close-menu>&times;</button>
     </div>
