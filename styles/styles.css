@@ -339,6 +339,25 @@ img.image-surface {
   overflow: hidden;
 }
 
+.card-glass > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card-glass p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+
+.card-glass .flex-1 {
+  overflow-wrap: anywhere;
+  min-width: 0;
+  width: 0; /* Force flex item to shrink */
+}
+
 .card-glass::before {
   content: '';
   position: absolute;
@@ -346,6 +365,7 @@ img.image-surface {
   background: radial-gradient(circle at top right, rgba(86, 183, 255, 0.18), transparent 55%);
   opacity: 0.7;
   pointer-events: none;
+  z-index: 0;
 }
 
 .table-dark {
