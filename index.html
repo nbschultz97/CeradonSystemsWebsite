@@ -383,6 +383,22 @@
               </ul>
             </article>
           </div>
+
+          <div class="space-y-4">
+            <h3 class="text-2xl font-semibold text-[color:var(--white)]">Live demo tools (access-code gated)</h3>
+            <p class="text-subtle">
+              Ceradon hosts live, access-code-gated demos of the Architect Stack for qualified teams. Use the links below with a demo code, or <a href="#contact" class="text-[color:var(--ceradon-blue)] hover:text-[color:var(--white)]">contact us</a> to request access.
+            </p>
+            <ul class="demo-links list-disc pl-5 text-subtle space-y-2">
+              <li><a href="https://architect.ceradonsystems.com/" target="_blank" rel="noopener" class="hover:text-[color:var(--white)]">Architect Stack Hub</a></li>
+              <li><a href="https://mission.ceradonsystems.com/" target="_blank" rel="noopener" class="hover:text-[color:var(--white)]">Mission Architect</a></li>
+              <li><a href="https://node.ceradonsystems.com/" target="_blank" rel="noopener" class="hover:text-[color:var(--white)]">Node Architect</a></li>
+              <li><a href="https://uxs.ceradonsystems.com/" target="_blank" rel="noopener" class="hover:text-[color:var(--white)]">UxS Architect</a></li>
+              <li><a href="https://mesh.ceradonsystems.com/" target="_blank" rel="noopener" class="hover:text-[color:var(--white)]">Mesh Architect</a></li>
+              <li><a href="https://kitsmith.ceradonsystems.com/" target="_blank" rel="noopener" class="hover:text-[color:var(--white)]">KitSmith</a></li>
+            </ul>
+            <p class="text-subtle">Request a demo code and we will provision access aligned to your mission profile and constraints.</p>
+          </div>
         </div>
       </section>
 
@@ -523,7 +539,10 @@
                 <h2 class="section-heading text-3xl">Design, simulate, package, and sustain</h2>
                 <p class="text-subtle">Ceradon outputs keep operators aligned—whether they are fielding a single node, a mesh of UGVs, or mixed UAS relays.</p>
               </div>
-              <a href="#contact" class="btn btn-primary text-sm uppercase tracking-wide">Request a walkthrough</a>
+              <div class="space-y-2">
+                <a href="#contact" class="btn btn-primary text-sm uppercase tracking-wide">Request a walkthrough or demo access</a>
+                <p class="text-sm text-subtle">You can also request live demo access codes for Vantage and the Architect Stack tools.</p>
+              </div>
             </div>
             <div class="grid gap-6 md:grid-cols-3">
               <div class="card-glass p-6 space-y-3">
@@ -552,13 +571,17 @@
             <div class="space-y-4">
               <span class="tag">Contact</span>
               <h2 class="section-heading text-3xl">Talk with Ceradon</h2>
+              <p class="text-subtle">Use this form to outline what you want to design or field, and optionally request live demo access codes for Vantage and the Architect Stack tools. No classified details required.</p>
               <p class="text-subtle">Share what you need to design or field—RF sensing nodes, unmanned platforms, mesh telemetry, or sustainment plans. We will respond with the right mix of tools.</p>
               <div class="flex flex-col gap-2 text-subtle">
                 <div class="flex items-center gap-2">
                   <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
                   </svg>
-                  <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a>
+                  <div>
+                    <p>General inquiries: <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a></p>
+                    <p>Demo access and pilots: <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a></p>
+                  </div>
                 </div>
                 <p class="text-sm">Prefer a brief? Send your constraints and timelines—no classified details required.</p>
               </div>
@@ -578,8 +601,8 @@
                   <input id="email" name="email" type="email" placeholder="you@example.com" required />
                 </div>
                 <div>
-                  <label for="message">What do you want to build?</label>
-                  <textarea id="message" name="message" rows="4" placeholder="RF sensing nodes, UGV/UAS payloads, mesh telemetry, sustainment needs..." required></textarea>
+                  <label for="message">What do you want to build or demo?</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Example: Request a demo code for Architect Stack (Node + Mesh for urban OP), plus rough mission constraints." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-full">Start the conversation</button>
                 <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
@@ -602,6 +625,8 @@
           </div>
           <div class="flex gap-4 text-sm text-subtle">
             <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a>
+            <span aria-hidden="true">/</span>
+            <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
             <span aria-hidden="true">/</span>
             <a href="#" class="hover:text-[color:var(--white)]">LinkedIn</a>
             <span aria-hidden="true">/</span>
