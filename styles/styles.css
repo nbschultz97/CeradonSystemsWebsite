@@ -568,6 +568,10 @@ footer a:focus-visible {
   }
 }
 
+.demo-links li + li {
+  margin-top: 0.35rem;
+}
+
 .media-grid {
   display: grid;
   gap: 1.5rem;
