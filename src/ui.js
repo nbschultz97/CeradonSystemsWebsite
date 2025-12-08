@@ -2,6 +2,8 @@ import emblemLogo from '../assets/Emblem.PNG';
 
 const NAV_ITEMS = [
   { label: 'Home', href: 'index.html#top' },
+  { label: 'Products', href: 'index.html#products' },
+  { label: 'Use Cases', href: 'index.html#use-cases' },
   { label: 'Vantage', href: 'vantage.html' },
   { label: 'Architect Stack', href: 'architect.html' },
   { label: 'Technology', href: 'technology.html' },
@@ -272,9 +274,9 @@ async function handleContactSubmit(event) {
 }
 
 function initContactForm() {
-  const form = document.querySelector('[data-contact-form]');
-  if (!form) return;
-  form.addEventListener('submit', handleContactSubmit);
+  const forms = document.querySelectorAll('[data-contact-form]');
+  if (!forms.length) return;
+  forms.forEach((form) => form.addEventListener('submit', handleContactSubmit));
 }
 
 export function initUI() {
