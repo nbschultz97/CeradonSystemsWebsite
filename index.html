@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ceradon Systems | Architect Stack for Small UxS</title>
-    <meta name="description" content="Planning, design, and mission tools for low-cost, COTS-heavy unmanned systems in cold, remote environments." />
-    <meta property="og:title" content="Ceradon Systems | Architect Stack for Small UxS" />
-    <meta property="og:description" content="Planning, design, and mission tools for small unmanned systems operating in austere environments." />
+    <title>Ceradon Systems | Passive RF Sensing & UxS Planning</title>
+    <meta name="description" content="Ceradon builds passive RF sensing (Vantage) and a UxS planning stack (Architect) that turn COTS chaos into mission-aligned kits." />
+    <meta property="og:title" content="Ceradon Systems | Passive RF Sensing & UxS Planning" />
+    <meta property="og:description" content="Passive RF sensing and a UxS planning stack that align COTS hardware to real missions." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ceradonsystems.com/" />
     <meta property="og:image" content="./assets/Square_Logo.PNG" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ceradon Systems | Architect Stack for Small UxS" />
-    <meta name="twitter:description" content="Planning, design, and mission tools for small unmanned systems operating in austere environments." />
+    <meta name="twitter:title" content="Ceradon Systems | Passive RF Sensing & UxS Planning" />
+    <meta name="twitter:description" content="Passive RF sensing (Vantage) and a UxS planning stack (Architect) that turn COTS chaos into mission-aligned kits." />
     <meta name="twitter:image" content="./assets/Square_Logo.PNG" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -54,8 +54,6 @@
         <nav class="hidden md:flex gap-6">
           <!-- add active link state using aria-current="page" -->
           <a href="index.html#top" class="navlink">Home</a>
-          <a href="index.html#products" class="navlink">Products</a>
-          <a href="index.html#use-cases" class="navlink">Use Cases</a>
           <a href="vantage.html" class="navlink">Vantage</a>
           <a href="architect.html" class="navlink">Architect Stack</a>
           <a href="technology.html" class="navlink">Technology</a>
@@ -92,19 +90,14 @@
               </div>
               <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-4 py-2 text-xs tracking-[0.3em] uppercase text-[color:var(--silver)]">
                 <span class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)]"></span>
-                Planning + Mission Tools
+                Passive RF + UxS Planning
               </div>
-              <div class="space-y-3">
-                <h1 class="text-3xl md:text-4xl font-semibold text-[color:var(--white)] leading-tight">
-                  Planning, design, and mission tools for small UxS in austere environments.
-                </h1>
-                <p class="max-w-2xl text-lg text-subtle">
-                  Built for low-cost, COTS-heavy, often 3D-printed unmanned systems operating in cold-weather, mountainous, remote areas. The Architect Stack keeps every node, mesh, and mission aligned without exposing sensitive details.
-                </p>
-              </div>
+              <p class="max-w-2xl text-lg text-subtle">
+                Passive RF sensing and UxS planning for small teams. Vantage gives you zero-emission through-wall awareness. The Architect Stack plans the drones, nodes, and kits that carry it.
+              </p>
               <div class="flex flex-col sm:flex-row gap-4">
-                <a href="https://architect.ceradonsystems.com/" class="btn btn-primary text-sm uppercase tracking-wide">Explore Architect Stack</a>
-                <a href="#demo-access" class="btn btn-secondary text-sm uppercase tracking-wide">Request a Demo Code</a>
+                <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
+                <a href="architect.html" class="btn btn-secondary text-sm uppercase tracking-wide">Explore Architect Stack</a>
               </div>
             </div>
             <div class="card-glass p-8 space-y-6">
@@ -112,7 +105,7 @@
                 <p class="tag">Design. Simulate. Field.</p>
                 <h2 class="text-2xl font-semibold text-[color:var(--white)]">Built for small, technical teams</h2>
                 <p class="text-subtle">
-                  Plan RF sensing nodes, unmanned ground and air platforms, and mesh links before anyone buys hardware. Keep designs software-defined, printable, and ready for cold, mountainous deployments.
+                  Plan RF sensing nodes, unmanned ground and air platforms, and mesh links before anyone buys hardware. Keep every design software-defined, portable, and ready for austere deployments.
                 </p>
               </div>
               <div class="space-y-4">
@@ -186,71 +179,6 @@
         </div>
       </section>
 
-      <section id="architect-stack" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/45]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
-          <div class="space-y-3">
-            <p class="tag">Architect Stack</p>
-            <h2 class="section-heading text-3xl">One mission file, five tools</h2>
-            <p class="text-subtle max-w-4xl">
-              Architect keeps every design and mission tied to a single MissionProject file. Model inventory, pick nodes, assign platforms, sketch meshes, package kits, and hand off a mission brief without leaking real-world unit details.
-            </p>
-          </div>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <article class="product-card">
-              <div class="product-card__header">
-                <h3 class="product-title">Node Architect</h3>
-                <p class="product-tagline">Combine COTS compute, radios, power, and sensors into deployable nodes.</p>
-              </div>
-            </article>
-            <article class="product-card">
-              <div class="product-card__header">
-                <h3 class="product-title">UxS Architect</h3>
-                <p class="product-tagline">Assemble small ground and air platforms with weight, payload, and endurance impacts in view.</p>
-              </div>
-            </article>
-            <article class="product-card">
-              <div class="product-card__header">
-                <h3 class="product-title">Mesh Architect</h3>
-                <p class="product-tagline">Rough out line-of-sight and backhaul meshes for cold, obstructed terrain.</p>
-              </div>
-            </article>
-            <article class="product-card">
-              <div class="product-card__header">
-                <h3 class="product-title">Mission Architect</h3>
-                <p class="product-tagline">Assign nodes, relays, and platforms to phases while keeping the MissionProject source of truth intact.</p>
-              </div>
-            </article>
-            <article class="product-card">
-              <div class="product-card__header">
-                <h3 class="product-title">KitSmith</h3>
-                <p class="product-tagline">Translate designs into pack lists, weights, and sustainment plans for small teams.</p>
-              </div>
-            </article>
-          </div>
-          <div class="shadow-border rounded-2xl border border-[color:var(--steel-700)] bg-[color:var(--steel-900)/70] p-6 space-y-4">
-            <h3 class="text-xl font-semibold text-[color:var(--white)]">How the pieces connect</h3>
-            <div class="grid gap-3 md:grid-cols-[repeat(11,minmax(0,1fr))] items-center text-sm text-subtle">
-              <div class="col-span-2 shadow-border rounded-lg border border-[color:var(--steel-700)]/80 bg-[color:var(--steel-900)/80] p-3 text-center">Inventory</div>
-              <div class="hidden md:flex items-center justify-center">→</div>
-              <div class="col-span-2 shadow-border rounded-lg border border-[color:var(--steel-700)]/80 bg-[color:var(--steel-900)/80] p-3 text-center">Nodes</div>
-              <div class="hidden md:flex items-center justify-center">→</div>
-              <div class="col-span-2 shadow-border rounded-lg border border-[color:var(--steel-700)]/80 bg-[color:var(--steel-900)/80] p-3 text-center">Platforms</div>
-              <div class="hidden md:flex items-center justify-center">→</div>
-              <div class="col-span-1 shadow-border rounded-lg border border-[color:var(--steel-700)]/80 bg-[color:var(--steel-900)/80] p-3 text-center">Mesh</div>
-              <div class="hidden md:flex items-center justify-center">→</div>
-              <div class="col-span-1 shadow-border rounded-lg border border-[color:var(--steel-700)]/80 bg-[color:var(--steel-900)/80] p-3 text-center">Kits</div>
-              <div class="hidden md:flex items-center justify-center">→</div>
-              <div class="col-span-1 shadow-border rounded-lg border border-[color:var(--steel-700)]/80 bg-[color:var(--steel-900)/80] p-3 text-center">Mission</div>
-            </div>
-            <p class="text-sm text-subtle">Every stage reads and writes the same MissionProject file so teams can iterate without breaking the chain.</p>
-            <div class="flex flex-col sm:flex-row gap-3">
-              <a href="https://architect.ceradonsystems.com/" class="btn btn-primary text-sm uppercase tracking-wide">Open Architect Stack</a>
-              <a href="#demo-access" class="btn btn-secondary text-sm uppercase tracking-wide">Request Demo Access Code</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="space-y-3">
@@ -285,30 +213,6 @@
               </ul>
               <a class="btn btn-secondary mt-4 inline-flex" href="architect.html">Explore Architect Stack</a>
             </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="use-cases" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-8">
-          <div class="space-y-3 max-w-4xl">
-            <p class="tag">Use Cases</p>
-            <h2 class="section-heading text-3xl">Built for austere, small-team missions</h2>
-            <p class="text-subtle">Architect and Vantage stay lean for cold-weather, high-altitude, and remote deployments where connectivity and logistics are tight.</p>
-          </div>
-          <div class="grid gap-6 md:grid-cols-3">
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Austere environments</h3>
-              <p class="text-sm text-subtle">Plan heaters, batteries, and mesh resiliency for snow, ice, and mountain passes without assuming resupply.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Small UxS planning</h3>
-              <p class="text-sm text-subtle">Align low-cost, 3D-printed or COTS-heavy airframes with the radios and payloads they can realistically lift and power.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Training &amp; experimentation</h3>
-              <p class="text-sm text-subtle">Run repeatable mission reps with the same MissionProject file—perfect for labs, ranges, and classroom rehearsals.</p>
-            </div>
           </div>
         </div>
       </section>
@@ -498,44 +402,6 @@
         </div>
       </section>
 
-      <section id="whitefrost" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
-          <div class="space-y-3 max-w-4xl">
-            <p class="tag">Project WHITEFROST Demo</p>
-            <h2 class="section-heading text-3xl">A fictional scenario for full-stack rehearsals</h2>
-            <p class="text-subtle">
-              WHITEFROST is a fictional, cold-weather, high-altitude area of operations designed to exercise every Architect tool without referencing real units, commands, or countries.
-            </p>
-          </div>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Environment</h3>
-              <p class="text-sm text-subtle">Mountain passes, snowfields, and long ridgelines stress heaters, batteries, and mesh relay placement.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Platforms</h3>
-              <p class="text-sm text-subtle">Low-cost, 3D-printed reconnaissance quadcopters paired with COTS radios and CSI-capable payloads.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Networking</h3>
-              <p class="text-sm text-subtle">Mesh relays maintain links across saddles and valleys while minimizing emissions.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Sustainment</h3>
-              <p class="text-sm text-subtle">Partner-force teams practice resupply, battery swaps, and pack weight management with KitSmith outputs.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Full-stack exercise</h3>
-              <p class="text-sm text-subtle">Node, UxS, Mesh, Mission, and KitSmith modules all run against the WHITEFROST MissionProject for end-to-end validation.</p>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="#demo-access" class="btn btn-primary text-sm uppercase tracking-wide">Request WHITEFROST Demo Code</a>
-            <a href="https://architect.ceradonsystems.com/" class="btn btn-secondary text-sm uppercase tracking-wide">Open Architect Stack</a>
-          </div>
-        </div>
-      </section>
-
       <section class="relative">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
           <div class="grid gap-10 md:grid-cols-2">
@@ -694,48 +560,6 @@
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">Run &amp; adapt</h3>
                 <p class="text-sm text-subtle">Track batteries, spares, and telemetry so teams can extend missions or pivot roles.</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="demo-access" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/65]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-8">
-          <div class="space-y-3 max-w-3xl">
-            <p class="tag">Demo Access</p>
-            <h2 class="section-heading text-3xl">Request Architect Stack demo codes</h2>
-            <p class="text-subtle">Share your mission focus and we will return a demo access code you can use on architect.ceradonsystems.com and the related Node, Mesh, Mission, UxS, and KitSmith tools. Codes are provisioned per request—none are displayed here.</p>
-          </div>
-          <div class="grid gap-6 md:grid-cols-[1.1fr_1fr] md:items-start">
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">What you get</h3>
-              <ul class="list-disc pl-5 space-y-2 text-subtle text-sm">
-                <li>Access-code gated logins for the Architect Stack demo environment.</li>
-                <li>WHITEFROST MissionProject file to explore end-to-end planning.</li>
-                <li>Guidance on applying the tools to your own inventory and kits.</li>
-              </ul>
-              <div class="flex flex-col sm:flex-row gap-3">
-                <a href="mailto:contact@ceradonsystems.com?subject=Architect%20Stack%20Demo%20Code" class="btn btn-secondary text-sm uppercase tracking-wide">Email for a code</a>
-                <a href="#contact" class="btn btn-primary text-sm uppercase tracking-wide">Talk with Ceradon</a>
-              </div>
-            </div>
-            <div class="card-glass p-6">
-              <form class="space-y-4" data-contact-form>
-                <div>
-                  <label for="demo-name">Name</label>
-                  <input id="demo-name" name="name" type="text" placeholder="Your name" required />
-                </div>
-                <div>
-                  <label for="demo-email">Email</label>
-                  <input id="demo-email" name="email" type="email" placeholder="you@example.com" required />
-                </div>
-                <div>
-                  <label for="demo-focus">Mission focus</label>
-                  <textarea id="demo-focus" name="message" rows="4" placeholder="Example: Requesting a WHITEFROST demo code for cold-weather quad + mesh relay training." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-full">Request demo code</button>
-                <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
-              </form>
             </div>
           </div>
         </div>
