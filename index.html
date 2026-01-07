@@ -3,6 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
     <title>Ceradon Systems | Passive RF Sensing & UxS Planning</title>
     <meta name="description" content="Ceradon builds passive RF sensing (Vantage) and a UxS planning stack (Architect) that turn COTS chaos into mission-aligned kits." />
     <meta property="og:title" content="Ceradon Systems | Passive RF Sensing & UxS Planning" />
@@ -16,8 +20,39 @@
     <meta name="twitter:image" content="./assets/Square_Logo.PNG" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ceradon Systems",
+      "url": "https://ceradonsystems.com",
+      "logo": "https://ceradonsystems.com/assets/Square_Logo.PNG",
+      "description": "Passive RF sensing and UxS planning for small defense, security, and infrastructure teams",
+      "foundingDate": "2024",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "General Inquiries",
+          "email": "info@ceradonsystems.com"
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "Sales",
+          "email": "contact@ceradonsystems.com"
+        }
+      ],
+      "sameAs": [],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      }
+    }
+    </script>
   </head>
   <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:p-4 focus:bg-[color:var(--ceradon-blue)] focus:text-[color:var(--white)] focus:rounded-lg">
+      Skip to main content
+    </a>
     <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2">
@@ -41,7 +76,7 @@
       </div>
       <!-- mobile panel injected by /src/ui.js -->
     </header>
-    <main>
+    <main id="main-content">
       <section id="top" class="relative overflow-hidden hero-splash">
         <div class="absolute inset-0 pointer-events-none">
           <svg class="absolute -top-32 -right-40 hidden lg:block h-[34rem] w-[34rem] opacity-60" viewBox="0 0 640 640" aria-hidden="true" focusable="false">

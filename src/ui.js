@@ -1,5 +1,21 @@
 import emblemLogo from '../assets/Emblem.PNG';
 
+// Constants
+const Z_INDEX = {
+  OVERLAY: 60,
+  PANEL: 70,
+  SKIP_LINK: 100
+};
+
+const BREAKPOINTS = {
+  MOBILE_MENU_HIDE: 768  // md breakpoint in Tailwind
+};
+
+const TIMEOUTS = {
+  RESIZE_DEBOUNCE: 250,
+  FORM_RESET: 3000
+};
+
 const NAV_ITEMS = [
   { label: 'Home', href: 'index.html#top' },
   { label: 'Vantage', href: 'vantage.html' },
@@ -76,13 +92,13 @@ function buildMobileNav(header) {
   overlay.className = 'mobile-menu-overlay';
   overlay.setAttribute('aria-hidden', 'true');
   overlay.dataset.menuOverlay = '';
-  overlay.style.zIndex = '60';
+  overlay.style.zIndex = String(Z_INDEX.OVERLAY);
 
   const panel = document.createElement('nav');
   panel.className = 'mobile-menu-panel';
   panel.setAttribute('aria-hidden', 'true');
   panel.dataset.menuPanel = '';
-  panel.style.zIndex = '70';
+  panel.style.zIndex = String(Z_INDEX.PANEL);
   panel.innerHTML = `
     <div class="mobile-menu-hero">
       <div class="mobile-menu-hero__image">
@@ -198,6 +214,17 @@ function initMobileMenu(header) {
       openMenu();
     }
   });
+
+  // Close menu on resize to desktop size
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      if (window.innerWidth >= BREAKPOINTS.MOBILE_MENU_HIDE && panel.classList.contains('is-open')) {
+        closeMenu(null);
+      }
+    }, TIMEOUTS.RESIZE_DEBOUNCE);
+  });
 }
 
 function updateFooterYear() {
@@ -209,21 +236,30 @@ function updateFooterYear() {
 
 function populateFooterLinks() {
   const footerNav = document.querySelector('[data-footer-links]');
-  if (!footerNav) return;
+  if (!footerNav) {
+    console.warn('Footer navigation container not found');
+    return;
+  }
   if (footerNav.childElementCount) return;
-  FOOTER_LINKS.forEach((link) => {
-    const anchor = document.createElement('a');
-    anchor.href = link.href;
-    anchor.textContent = link.label;
-    anchor.className = 'hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]';
-    footerNav.appendChild(anchor);
-  });
+
+  try {
+    FOOTER_LINKS.forEach((link) => {
+      const anchor = document.createElement('a');
+      anchor.href = link.href;
+      anchor.textContent = link.label;
+      anchor.className = 'hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]';
+      footerNav.appendChild(anchor);
+    });
+  } catch (error) {
+    console.error('Failed to populate footer links:', error);
+  }
 }
 
 async function handleContactSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
   const status = form.querySelector('[data-form-status]');
+  const submitBtn = form.querySelector('button[type="submit"]');
   const name = form.querySelector('[name="name"]').value.trim();
   const company = form.querySelector('[name="company"]').value.trim();
   const email = form.querySelector('[name="email"]').value.trim();
@@ -236,6 +272,12 @@ async function handleContactSubmit(event) {
     }
     return;
   }
+
+  // Set loading state
+  const originalText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Processing...';
+  submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
 
   const composed = [
     `Name: ${name}`,
@@ -268,6 +310,14 @@ async function handleContactSubmit(event) {
       : 'Opening mail client. Copy the message manually if needed.';
     status.className = 'text-sm mt-3 text-[color:var(--ceradon-blue)]';
   }
+
+  // Reset button after a delay
+  setTimeout(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+    submitBtn.classList.remove('opacity-60', 'cursor-not-allowed');
+  }, TIMEOUTS.FORM_RESET);
+
   form.reset();
 }
 
