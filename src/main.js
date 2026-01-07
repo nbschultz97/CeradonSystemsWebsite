@@ -1,3 +1,4 @@
+import './input.css';
 import { initUI, refreshActiveStates } from './ui.js';
 
 function ready(fn) {
