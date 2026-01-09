@@ -32,7 +32,8 @@ const FOOTER_LINKS = [
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Contact', href: 'contact.html' },
-  { label: 'Privacy', href: 'privacy.html' }
+  { label: 'Privacy', href: 'privacy.html' },
+  { label: 'Disclaimer', href: 'disclaimer.html' }
 ];
 
 const focusableSelector = [
@@ -341,4 +342,3 @@ export function initUI() {
 export function refreshActiveStates() {
   setActiveStates();
 }
-

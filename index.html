@@ -105,7 +105,7 @@
                 Passive RF + UxS Planning
               </div>
               <p class="max-w-2xl text-lg text-subtle">
-                Passive RF sensing and UxS planning for small teams. Vantage gives you zero-emission through-wall awareness. The Architect Stack plans the drones, nodes, and kits that carry it.
+                Passive RF sensing and UxS planning for small teams. Vantage provides zero-emission through-wall awareness. The Architect Stack helps plan drones, nodes, and kits with offline-first workflows.
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
@@ -181,7 +181,7 @@
             </div>
             <div class="card-glass p-6 space-y-4">
               <p class="text-subtle">
-                Traditional ERPs cover vehicles, maintenance, and logistics. Nothing equivalent exists for small unmanned systems built from COTS parts. Ceradon’s Architect Stack fills that seam—a lean, offline-first planner for drones, nodes, and kits.
+                Traditional ERPs cover vehicles, maintenance, and logistics. Nothing equivalent exists for small unmanned systems built from COTS parts. The Architect Stack fills that seam—a lean, offline-first planner for drones, nodes, and kits. Architect Stack is maintained as an open-source project by Noah Schultz (individual).
               </p>
               <p class="text-subtle">
                 Start from mission, inventory, RF environment, or SWaP limits. The stack propagates those constraints into feasible unmanned packages teams can stage today.
@@ -194,37 +194,61 @@
       <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="space-y-3">
-            <p class="tag">Two product lines, one mission</p>
-            <h2 class="section-heading text-3xl">Passive RF sensing + UxS planning</h2>
+            <p class="tag">Two product lines</p>
+            <h2 class="section-heading text-3xl">Architect Stack (Planning Tools) + Vantage (Sensing)</h2>
             <p class="text-subtle max-w-3xl">
-              Ceradon builds passive RF sensing and a UxS planning stack that turns COTS chaos into mission-aligned kits.
+              Two distinct efforts: an open-source planning stack for COTS robotics and a separate passive RF sensing platform.
             </p>
           </div>
           <div class="grid gap-6 md:grid-cols-2">
             <article class="product-card">
               <div class="product-card__header">
-                <h3 class="product-title">Vantage – Passive RF Human Sensing</h3>
-                <p class="product-tagline">Turns commodity Wi-Fi into through-wall human presence, pose, and motion intelligence with zero additional emissions.</p>
+                <h3 class="product-title">Architect Stack (Planning Tools)</h3>
+                <p class="product-tagline">Open-source, offline-first planning tools for nodes, drones, RF coverage, and sustainment kits.</p>
               </div>
               <ul class="product-bullets">
-                <li>Through-wall presence and pose states.</li>
-                <li>Tripod nodes, handheld kits, UGV/UAS payloads.</li>
-                <li>Edge-only pipelines, CSI/telemetry logging, ATAK-ready exports.</li>
-              </ul>
-              <a class="btn btn-secondary mt-4 inline-flex" href="vantage.html">Explore Vantage</a>
-            </article>
-            <article class="product-card">
-              <div class="product-card__header">
-                <h3 class="product-title">Architect Stack – UxS Planning Toolkit</h3>
-                <p class="product-tagline">Plan nodes, drones, RF coverage, and kits around real inventory and mission constraints.</p>
-              </div>
-              <ul class="product-bullets">
-                <li>Node, UxS, Mesh, Mission, and KitSmith tools.</li>
-                <li>Start from mission, inventory, RF environment, or SWaP limits.</li>
-                <li>Propagates constraints into feasible unmanned packages.</li>
+                <li><strong>What it does:</strong> Models inventory, power, and mission constraints.</li>
+                <li>Builds node/UxS designs and RF mesh layouts.</li>
+                <li>Exports kit plans and sustainment checklists.</li>
               </ul>
               <a class="btn btn-secondary mt-4 inline-flex" href="architect.html">Explore Architect Stack</a>
             </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Vantage (Sensing)</h3>
+                <p class="product-tagline">Passive Wi-Fi CSI sensing for presence, pose, and movement awareness through walls.</p>
+              </div>
+              <ul class="product-bullets">
+                <li><strong>What it does:</strong> Extracts CSI features for pose-first sensing.</li>
+                <li>Runs offline on Pi/Jetson-class edge compute.</li>
+                <li>Exports local telemetry and replayable logs.</li>
+              </ul>
+              <a class="btn btn-secondary mt-4 inline-flex" href="vantage.html">Explore Vantage</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <div class="space-y-3">
+            <p class="tag">Open-source projects</p>
+            <h2 class="section-heading text-3xl">Open-source projects</h2>
+            <p class="text-subtle max-w-3xl">
+              Architect Stack is maintained as an open-source project by Noah Schultz (individual). Vantage is a separate sensing effort focused on CSI-based pose detection.
+            </p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Architect Stack repositories</h3>
+              <p class="text-sm text-subtle">Planning tools, schemas, and offline-first workflows for COTS robotics.</p>
+              <a href="https://github.com/noahschultz/architect-stack" class="text-sm text-[color:var(--ceradon-blue)]">github.com/noahschultz/architect-stack</a>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Vantage (separate sensing effort)</h3>
+              <p class="text-sm text-subtle">Passive RF sensing focused on CSI-based pose estimation. Not part of Architect Stack.</p>
+              <a href="vantage.html" class="text-sm text-[color:var(--ceradon-blue)]">Explore Vantage details</a>
+            </div>
           </div>
         </div>
       </section>
@@ -246,7 +270,7 @@
               </div>
               <div class="flex flex-col sm:flex-row gap-3">
                 <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
-                <a href="#contact" class="btn btn-secondary text-sm uppercase tracking-wide">Talk with Ceradon</a>
+                <a href="#contact" class="btn btn-secondary text-sm uppercase tracking-wide">Contact</a>
               </div>
             </div>
             <div class="card-glass p-8 space-y-4">
@@ -316,7 +340,7 @@
           <div class="products-grid">
             <article class="product-card">
               <div class="product-card__header">
-                <h3 class="product-title">Ceradon Node Architect</h3>
+                <h3 class="product-title">Node Architect</h3>
                 <p class="product-tagline">Design COTS RF and sensor nodes in minutes.</p>
               </div>
               <ul class="product-bullets">
@@ -327,7 +351,7 @@
             </article>
             <article class="product-card">
               <div class="product-card__header">
-                <h3 class="product-title">Ceradon UxS Architect</h3>
+                <h3 class="product-title">UxS Architect</h3>
                 <p class="product-tagline">Build unmanned ground and air platforms from off-the-shelf parts.</p>
               </div>
               <ul class="product-bullets">
@@ -338,7 +362,7 @@
             </article>
             <article class="product-card">
               <div class="product-card__header">
-                <h3 class="product-title">Ceradon Mesh Architect</h3>
+                <h3 class="product-title">Mesh Architect</h3>
                 <p class="product-tagline">Plan how your nodes, drones, and controllers talk.</p>
               </div>
               <ul class="product-bullets">
@@ -349,7 +373,7 @@
             </article>
             <article class="product-card">
               <div class="product-card__header">
-                <h3 class="product-title">Ceradon KitSmith</h3>
+                <h3 class="product-title">KitSmith</h3>
                 <p class="product-tagline">Turn designs into operator-ready kits.</p>
               </div>
               <ul class="product-bullets">
@@ -371,7 +395,7 @@
             </article>
             <article class="product-card">
               <div class="product-card__header">
-                <h3 class="product-title">Ceradon Distiller</h3>
+                <h3 class="product-title">Distiller</h3>
                 <p class="product-tagline">Turn raw notes and logs into lessons learned.</p>
               </div>
               <ul class="product-bullets">
@@ -531,8 +555,8 @@
                 <p class="text-subtle">Ceradon outputs keep operators aligned—whether they are fielding a single node, a mesh of UGVs, or mixed UAS relays.</p>
               </div>
               <div class="space-y-2">
-                <a href="#contact" class="btn btn-primary text-sm uppercase tracking-wide">Request a walkthrough or demo access</a>
-                <p class="text-sm text-subtle">We’ll provision browser-based, access-code-gated demos of Vantage and the Architect Stack that match your mission profile—no classified details required.</p>
+                <a href="https://architect.ceradonsystems.com/" class="btn btn-primary text-sm uppercase tracking-wide">View open demo</a>
+                <p class="text-sm text-subtle">Explore open demos and repositories for planning workflows and sensing concepts—no access codes required.</p>
               </div>
             </div>
             <div class="grid gap-6 md:grid-cols-3">
@@ -562,8 +586,8 @@
             <div class="space-y-4">
               <span class="tag">Contact</span>
               <h2 class="section-heading text-3xl">Talk with Ceradon</h2>
-              <p class="text-subtle">Use this form to outline what you want to design or field, and optionally request live demo access for Vantage and the Architect Stack tools. No classified details required.</p>
-              <p class="text-subtle">Share what you need to design or field—RF sensing nodes, unmanned platforms, mesh telemetry, or sustainment plans. We’ll respond with recommended options and provision demo access codes aligned to your constraints.</p>
+              <p class="text-subtle">Use this form to outline what you want to build or explore. For collaboration, demos, or open-source contributions, share your constraints and timeline—no classified details required.</p>
+              <p class="text-subtle">Share what you need to design or field—RF sensing nodes, unmanned platforms, mesh telemetry, or sustainment plans. We’ll respond with recommended options and point you to open demos or repos.</p>
               <div class="flex flex-col gap-2 text-subtle">
                 <div class="flex items-center gap-2">
                   <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
@@ -571,7 +595,7 @@
                   </svg>
                   <div>
                     <p>General inquiries: <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a></p>
-                    <p>Demo access and pilots: <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a></p>
+                    <p>Collaboration and demos: <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a></p>
                   </div>
                 </div>
                 <p class="text-sm">Prefer a brief? Send your constraints and timelines—no classified details required.</p>
@@ -593,7 +617,7 @@
                 </div>
                 <div>
                   <label for="message">What do you want to build or demo?</label>
-                  <textarea id="message" name="message" rows="4" placeholder="Example: Request a demo code for Architect Stack (Node + Mesh for urban OP), plus rough mission constraints." required></textarea>
+                  <textarea id="message" name="message" rows="4" placeholder="Example: Planning support for Node + Mesh in an urban block, plus rough constraints and timelines." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-full">Start the conversation</button>
                 <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
@@ -618,8 +642,14 @@
             <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a>
             <span aria-hidden="true">/</span>
             <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
+          </div>
+        </div>
         <div class="footer-links" data-footer-links></div>
-        <div class="text-xs text-subtle">© <span data-year></span> Ceradon Systems. All rights reserved.</div>
+        <div class="space-y-2 text-xs text-subtle">
+          <p>Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
+          <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
+          <p>© <span data-year></span> Ceradon Systems. All rights reserved.</p>
+        </div>
       </div>
     </footer>
     <script type="module" src="./src/main.js"></script>
