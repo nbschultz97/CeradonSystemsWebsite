@@ -1,4 +1,4 @@
-import emblemLogo from '../assets/logo-mark.svg';
+import emblemLogo from '../assets/Emblem.PNG';
 
 // Constants
 const Z_INDEX = {
