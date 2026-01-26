@@ -71,6 +71,7 @@
           <!-- add active link state using aria-current="page" -->
           <a href="index.html#top" class="navlink">Home</a>
           <a href="vantage.html" class="navlink">Vantage</a>
+          <a href="polygen.html" class="navlink">Polygen AI</a>
           <a href="architect.html" class="navlink">Architect Stack</a>
           <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink">Company</a>
@@ -199,20 +200,20 @@
       <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="space-y-3">
-            <p class="tag">Three product lines</p>
-            <h2 class="section-heading text-3xl">Aegis (Readiness) + Architect Stack (Planning) + Vantage (Sensing)</h2>
+            <p class="tag">Product Lines</p>
+            <h2 class="section-heading text-3xl">Aegis + Architect Stack + Vantage + Polygen AI</h2>
             <p class="text-subtle max-w-3xl">
-              Three complementary efforts: a proprietary execution-layer readiness system, an open-source planning stack, and a passive RF sensing platform.
+              Four complementary efforts: a proprietary execution-layer readiness system, an open-source planning stack, a passive RF sensing platform, and an AI-powered 3D model generator.
             </p>
           </div>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <article class="product-card" id="aegis">
               <div class="product-card__header">
                 <h3 class="product-title">Ceradon Aegis (Readiness)</h3>
                 <p class="product-tagline">Battery lifecycle &amp; readiness assurance for tactical uncrewed systems.</p>
               </div>
               <ul class="product-bullets">
-                <li><strong>Decisive action:</strong> “Is this specific asset safe and capable for this mission right now?”</li>
+                <li><strong>Decisive action:</strong> "Is this specific asset safe and capable for this mission right now?"</li>
                 <li>Tracks serialized battery health, voltage sag, and thermal history.</li>
                 <li>Outputs GREEN / AMBER / RED readiness status at execution time.</li>
               </ul>
@@ -241,6 +242,18 @@
                 <li>Exports local telemetry and replayable logs.</li>
               </ul>
               <a class="btn btn-secondary mt-4 inline-flex" href="vantage.html">Explore Vantage</a>
+            </article>
+            <article class="product-card">
+              <div class="product-card__header">
+                <h3 class="product-title">Polygen AI (3D Generation)</h3>
+                <p class="product-tagline">Text-to-3D model generator powered by multi-agent AI pipeline.</p>
+              </div>
+              <ul class="product-bullets">
+                <li><strong>What it does:</strong> Converts natural language to printable OpenSCAD code.</li>
+                <li>Multi-agent pipeline: Gemini (Planner) + Claude (Coder).</li>
+                <li>Browser-based WASM validation and STL export.</li>
+              </ul>
+              <a class="btn btn-secondary mt-4 inline-flex" href="https://polygen-ai.vercel.app" target="_blank" rel="noopener noreferrer">Launch Polygen AI</a>
             </article>
           </div>
         </div>
