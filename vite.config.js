@@ -1,20 +1,7 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import { readdirSync, existsSync } from 'fs';
 
 const rootDir = process.cwd();
-
-// Dynamically find all blog posts
-const blogDir = resolve(rootDir, 'blog');
-const blogEntries = {};
-
-if (existsSync(blogDir)) {
-  const blogFiles = readdirSync(blogDir).filter(f => f.endsWith('.html'));
-  blogFiles.forEach(file => {
-    const name = file === 'index.html' ? 'blog' : `blog-${file.replace('.html', '')}`;
-    blogEntries[name] = resolve(blogDir, file);
-  });
-}
 
 export default defineConfig({
   root: rootDir,
@@ -33,7 +20,7 @@ export default defineConfig({
         contact: resolve(rootDir, 'contact.html'),
         privacy: resolve(rootDir, 'privacy.html'),
         disclaimer: resolve(rootDir, 'disclaimer.html'),
-        ...blogEntries
+        blog: resolve(rootDir, 'blog/index.html')
       }
     }
   }
