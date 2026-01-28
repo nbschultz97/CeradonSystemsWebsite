@@ -1,24 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Ceradon Systems</title>
-    <meta name="description" content="Defense industry insights and analysis from Ceradon Systems">
-    <link rel="stylesheet" href="/styles/main.css">
-</head>
-<body>
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <h1>Ceradon Systems Blog</h1>
-        <p class="text-gray-600 mb-8">Defense industry insights, technology trends, and market analysis.</p>
-        
-        <div id="blog-posts">
-            <!-- Blog posts will be listed here -->
-            <p class="text-gray-500">Coming soon - stay tuned for our first posts!</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Insights | Ceradon Systems</title>
+    <meta name="description" content="Defense industry insights, technology trends, and market analysis from Ceradon Systems." />
+    <meta property="og:title" content="Insights | Ceradon Systems" />
+    <meta property="og:description" content="Weekly defense industry insights and analysis." />
+    <link rel="icon" type="image/png" href="../assets/Emblem.PNG" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <style>
+      .blog-list { display: grid; gap: 1.5rem; }
+      .blog-card { 
+        background: rgba(30, 41, 59, 0.5);
+        border: 1px solid rgba(71, 85, 105, 0.5);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        transition: border-color 0.2s;
+      }
+      .blog-card:hover { border-color: var(--ceradon-blue); }
+      .blog-card h3 { font-size: 1.25rem; color: var(--white); margin-bottom: 0.5rem; }
+      .blog-card p { color: var(--silver); font-size: 0.9rem; }
+      .blog-card .date { color: var(--steel-400); font-size: 0.8rem; margin-bottom: 0.5rem; }
+      .coming-soon { 
+        text-align: center; 
+        padding: 4rem 2rem;
+        color: var(--silver);
+      }
+    </style>
+  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="hidden md:inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow h-8" src="../assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
+          </span>
+          <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow" src="../assets/Emblem.PNG" alt="Ceradon Systems mark" />
+          </span>
+        </a>
+        <nav class="hidden md:flex gap-6">
+          <a href="../index.html" class="navlink">Home</a>
+          <a href="../vantage.html" class="navlink">Vantage</a>
+          <a href="../polygen.html" class="navlink">Polygen AI</a>
+          <a href="../architect.html" class="navlink">Architect Stack</a>
+          <a href="../technology.html" class="navlink">Technology</a>
+          <a href="../company.html" class="navlink">Company</a>
+          <a href="/blog/" class="navlink" aria-current="page">Insights</a>
+          <a href="../contact.html" class="btn btn-primary">Contact</a>
+        </nav>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
+      </div>
+    </header>
+    
+    <main>
+      <section class="relative overflow-hidden">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <div class="space-y-4 mb-12">
+            <span class="tag">Weekly Analysis</span>
+            <h1 class="text-4xl font-semibold text-[color:var(--white)]">Defense Industry Insights</h1>
+            <p class="text-subtle max-w-2xl">
+              Weekly analysis of defense technology trends, budget developments, and innovation opportunities. 
+              All content based on publicly available information.
+            </p>
+          </div>
+          
+          <div class="blog-list" id="blog-posts">
+            <div class="coming-soon">
+              <p class="text-lg mb-2">First insights coming soon</p>
+              <p class="text-sm">Check back weekly for defense industry analysis and technology trends.</p>
+            </div>
+          </div>
         </div>
-        
-        <hr class="my-8">
-        <p><a href="/">← Back to Home</a></p>
-    </div>
-</body>
+      </section>
+    </main>
+
+    <footer class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/80]">
+      <div class="mx-auto max-w-7xl px-4 py-12 space-y-6">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="../assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
+            <div>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-xs text-subtle">
+          <p>© <span data-year></span> Ceradon Systems. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>document.querySelector('[data-year]').textContent = new Date().getFullYear();</script>
+  </body>
 </html>
