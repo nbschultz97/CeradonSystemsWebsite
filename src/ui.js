@@ -23,6 +23,7 @@ const NAV_ITEMS = [
   { label: 'Architect Stack', href: 'architect.html' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
+  { label: 'Insights', href: '/blog/' },
   { label: 'Contact', href: 'contact.html', isCTA: true }
 ];
 
@@ -33,6 +34,7 @@ const FOOTER_LINKS = [
   { label: 'Architect Stack', href: 'architect.html' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
+  { label: 'Insights', href: '/blog/' },
   { label: 'Contact', href: 'contact.html' },
   { label: 'Privacy', href: 'privacy.html' },
   { label: 'Disclaimer', href: 'disclaimer.html' }
