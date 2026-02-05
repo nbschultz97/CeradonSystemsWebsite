@@ -58,10 +58,10 @@
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2">
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow h-8" src="./assets/logo-horizontal.svg" alt="Ceradon Systems" />
+            <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
           </span>
           <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow" src="./assets/logo-mark.svg" alt="Ceradon Systems mark" />
+            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems mark" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
             
@@ -93,7 +93,7 @@
           <div class="hero-grid">
             <div class="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
               <div class="logo-plate logo-plate--hero">
-                <img class="logo-glow" src="./assets/logo-mark.svg" alt="Ceradon Systems" />
+                <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
                 <h1 class="sr-only">Ceradon Systems</h1>
               </div>
               <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-4 py-2 text-xs tracking-[0.3em] uppercase text-[color:var(--silver)]">
@@ -152,37 +152,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
-          <div class="space-y-4" data-animate>
-            <p class="tag">The planning gap in COTS robotics</p>
-            <h2 class="section-heading text-3xl">Why planning tools matter</h2>
-            <p class="text-subtle max-w-4xl">
-              The COTS drone and robotics market is overflowing with good hardware: frames, radios, 3D printers, batteries, flight controllers, software stacks. Hobbyists don't plan at the scale that defense, security, and critical-infrastructure teams do.
-            </p>
-          </div>
-          <div class="grid gap-6 lg:grid-cols-2">
-            <div class="card-glass p-6 space-y-3">
-              <p class="text-subtle">Units have to answer questions that consumer tools were never built for:</p>
-              <ul class="list-disc pl-5 space-y-2 text-subtle">
-                <li>What can we build with what's on the shelf right now?</li>
-                <li>How far, how long, and with which payloads can it realistically operate?</li>
-                <li>How many nodes, relays, and batteries do we need to cover a block, facility, or corridor?</li>
-                <li>What does that translate to in rucks, weight, and sustainment for a real team?</li>
-              </ul>
-            </div>
-            <div class="card-glass p-6 space-y-4">
-              <p class="text-subtle">
-                Traditional ERPs cover vehicles, maintenance, and logistics. Nothing equivalent exists for small unmanned systems built from COTS parts. The Architect Stack fills that seam—a lean, offline-first planner for drones, nodes, and kits. Architect Stack is maintained as an open-source project by Noah Schultz (individual).
-              </p>
-              <p class="text-subtle">
-                Start from mission, inventory, RF environment, or SWaP limits. The stack propagates those constraints into feasible unmanned packages teams can stage today.
-              </p>
             </div>
           </div>
         </div>
@@ -254,155 +223,31 @@
         </div>
       </section>
 
-      <section id="vantage" class="relative border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
-          <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-            <div class="space-y-4" data-animate>
-              <span class="tag">Vantage Scanner</span>
-              <h2 class="section-heading text-3xl">Pose-first, zero-emission through-wall awareness</h2>
-              <p class="text-subtle max-w-3xl">
-                Vantage uses passive Wi-Fi CSI to detect humans and estimate pose through walls without emitting radar or visible/IR energy,
-                preserving a low-signature posture. Optimized for breach operations, site security, and covert overwatch, everything runs offline
-                on Pi or Jetson-class edge compute.
-              </p>
-              <div class="flex flex-wrap gap-3">
-                <span class="badge">Pose inference core</span>
-                <span class="badge">CSI-first pipeline</span>
-                <span class="badge">Offline + mesh ready</span>
-              </div>
-              <div class="flex flex-col sm:flex-row gap-3">
-                <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
-                <a href="#contact" class="btn btn-secondary text-sm uppercase tracking-wide">Contact</a>
-              </div>
-            </div>
-            <div class="card-glass overflow-hidden space-y-0">
-              <img src="./assets/hero-vantage.jpg" alt="Vantage passive RF sensing visualization" class="w-full h-48 object-cover" loading="lazy" />
-              <div class="p-8 space-y-4">
-                <div class="flex flex-col items-center gap-3 relative z-10">
-                  <img src="./assets/vantage-mark.svg" alt="Vantage shield" class="h-14 w-14 image-surface" loading="lazy" />
-                  <div class="text-center">
-                    <p class="text-sm text-subtle">Pose-focused stack</p>
-                    <p class="font-semibold text-[color:var(--white)]">Human truth through any wall</p>
-                  </div>
-                </div>
-                <ul class="product-bullets">
-                  <li>CSI ingest → denoise → skeletal overlay with posture-aware alerts.</li>
-                  <li>Interoperable local JSON/CSV/SQLite logs plus ATAK-ready feeds for teams.</li>
-                  <li>Emission control modes keep kits passive during staging and entry.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <p class="tag">Product Lines</p>
-            <div class="grid gap-6 md:grid-cols-3">
-              <article class="product-card">
-                <div class="product-card__header">
-                  <h3 class="product-title">Tripod Node</h3>
-                  <p class="product-tagline">Directional coverage for site security and long-duration overwatch.</p>
-                </div>
-                <ul class="product-bullets">
-                  <li>Calibrated antenna maps for sectorized presence and pose overlays.</li>
-                  <li>Low-drift clocks and CSI health checks for stable skeletal output.</li>
-                  <li>Quiet batteries and DC input paths for discreet rooftop or window setups.</li>
-                </ul>
-              </article>
-              <article class="product-card">
-                <div class="product-card__header">
-                  <h3 class="product-title">Handheld Kit</h3>
-                  <p class="product-tagline">Quick-look posture with silent alerts for breach operations.</p>
-                </div>
-                <ul class="product-bullets">
-                  <li>HUD overlays designed for skeletal posture and motion cues.</li>
-                  <li>Support for discreet operator alerts (e.g., haptic cues).</li>
-                  <li>Offline cache of IEEE OUI data for fast device attribution on scene.</li>
-                </ul>
-              </article>
-              <article class="product-card">
-                <div class="product-card__header">
-                  <h3 class="product-title">Remote Payload</h3>
-                  <p class="product-tagline">Modular payload for remote sensing and covert overwatch.</p>
-                </div>
-                <ul class="product-bullets">
-                  <li>Jetson / Pi-ready CSI ingest with quantized pose nets to stay within thermal caps.</li>
-                  <li>Directional distance/direction labels aligned for future skeletal overlays.</li>
-                  <li>ATAK/KML exports and local replay for after-action reconstruction.</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="relative">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
-          <div class="grid gap-10 md:grid-cols-2">
-            <div class="card-glass p-8 space-y-4">
-              <span class="tag" data-animate>Customers</span>
-              <h2 class="section-heading text-3xl" data-animate data-delay="100">For small defense, security, and infrastructure teams</h2>
-              <p class="text-subtle">
-                Ceradon tools keep teams moving fast without custom silicon or cloud lock-in. Model RF sensing kits, unmanned systems, and mesh layouts on everyday gear, then hand operators clean build sheets and mission cards.
-              </p>
-              <ul class="space-y-3 text-subtle">
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> COTS hardware assumptions: Raspberry Pis, Linux laptops, WiFi/LoRa radios, antennas, and payload sensors.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Unmanned focus: UGV/UAS roles, mesh telemetry, and ground controllers.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Mission design: simple exports for rehearsals, dry runs, and field use.</li>
-              </ul>
-            </div>
-            <div class="card-glass p-8 space-y-4">
-              <span class="tag">Technology</span>
-              <h2 class="section-heading text-3xl">Software-defined from idea to sustainment</h2>
-              <p class="text-subtle">Every product keeps the planning loop offline-first and repeatable, so teams can iterate without connectivity or bespoke fabrication.</p>
-              <div class="grid gap-4 sm:grid-cols-2">
-                <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Model first</h3>
-                  <p class="text-sm text-subtle">Check power, weight, and runtime before committing to a kit.</p>
-                </div>
-                <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Mesh-aware</h3>
-                  <p class="text-sm text-subtle">Plan WiFi, LoRa, and FPV paths to keep operators connected.</p>
-                </div>
-                <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Role-driven</h3>
-                  <p class="text-sm text-subtle">Assign nodes to recon, relay, sensing, or decoy duties with clarity.</p>
-                </div>
-                <div class="shadow-border rounded-xl p-4">
-                  <h3 class="font-semibold text-[color:var(--white)]">Sustainment ready</h3>
-                  <p class="text-sm text-subtle">Packaging, spares, and exports stay aligned as designs evolve.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
       <section id="technology" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
-          <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
-            <div class="space-y-6">
-              <span class="tag" data-animate>Technology / Philosophy</span>
-              <h2 class="section-heading text-3xl" data-animate data-delay="100">COTS hardware. Software-defined planning. Mission clarity.</h2>
-              <p class="text-subtle">Ceradon products keep everything grounded in commodity gear—Raspberry Pis, Linux laptops, commercial WiFi and LoRa radios, COTS antennas, and modular sensors. Teams model first, buy second.</p>
-              <p class="text-subtle">Each workflow is built for small teams who need to move fast, test ideas, and field functional prototypes without custom boards or exotic platforms.</p>
-              <p class="text-subtle">Operator-Driven Development, informed by special operations robotics experience, delivers MVPs in weeks, not months.</p>
-              <ul class="product-bullets">
-                <li>Software-defined layouts capture power, weight, runtime, and link budgets before procurement.</li>
-                <li>Mesh-aware planning covers WiFi, LoRa, FPV, and hybrid paths with exportable checklists.</li>
-                <li>Offline-first so rehearsals, training, and deployments work without cloud or connectivity.</li>
-                <li>Outputs stay concise—mission cards, packing lists, and configs ready for operators.</li>
-              </ul>
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-8">
+          <div class="space-y-3" data-animate>
+            <p class="tag">Our Approach</p>
+            <h2 class="section-heading text-3xl">COTS hardware. Software-defined planning. Mission clarity.</h2>
+            <p class="text-subtle max-w-3xl">
+              Every product is grounded in commodity gear and built for small teams who need to move fast. Operator-Driven Development delivers MVPs in weeks, not months.
+            </p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Model first</h3>
+              <p class="text-sm text-subtle">Check power, weight, and runtime before committing to a kit.</p>
             </div>
-            <div class="card-glass p-6 space-y-4">
-              <h3 class="text-2xl font-semibold text-[color:var(--white)]">Design-to-field rhythm</h3>
-              <ol class="space-y-4 text-sm text-subtle">
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">1.</span> <span class="max-w-xl">Capture your available COTS parts and constraints—compute, radios, antennas, batteries, sensors.</span></li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">2.</span> <span class="max-w-xl">Model nodes, unmanned platforms, and mesh links with power and endurance estimates.</span></li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">3.</span> <span class="max-w-xl">Assign roles by mission phase and environment, keeping exports synced for rehearsals.</span></li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">4.</span> <span class="max-w-xl">Package sustainment—batteries, spares, timelines—so teams know how long each kit will run.</span></li>
-              </ol>
-              <p class="text-sm text-subtle">Everything stays modular, so switching radios, payloads, or endurance assumptions is a data change—not a redesign.</p>
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Mesh-aware</h3>
+              <p class="text-sm text-subtle">Plan WiFi, LoRa, and FPV paths to keep operators connected.</p>
+            </div>
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Offline-first</h3>
+              <p class="text-sm text-subtle">Rehearsals, training, and deployments work without cloud or connectivity.</p>
+            </div>
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Sustainment ready</h3>
+              <p class="text-sm text-subtle">Packaging, spares, and exports stay aligned as designs evolve.</p>
             </div>
           </div>
         </div>
@@ -460,7 +305,7 @@
       <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/logo-mark.svg" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
+            <img src="./assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
             <div>
               <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
               <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
