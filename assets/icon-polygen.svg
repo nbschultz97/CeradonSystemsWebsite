@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <style>
+      .wireframe {
+        stroke: #2b78ff;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-linejoin: round;
+      }
+      .wireframe-accent {
+        stroke: #56b7ff;
+        stroke-width: 1.5;
+      }
+      .face-fill {
+        fill: #2b78ff;
+        opacity: 0.1;
+      }
+      .vertex {
+        fill: #2b78ff;
+      }
+    </style>
+  </defs>
+
+  <!-- 3D Cube Wireframe (Isometric View) -->
+
+  <!-- Back Face -->
+  <polygon class="face-fill" points="20,20 44,20 44,44 20,44"/>
+
+  <!-- Front Face -->
+  <polygon class="face-fill" points="24,24 48,24 48,48 24,48"/>
+
+  <!-- Top Face -->
+  <polygon class="face-fill" points="20,20 44,20 48,24 24,24"/>
+
+  <!-- Right Face -->
+  <polygon class="face-fill" points="44,20 48,24 48,48 44,44"/>
+
+  <!-- Wireframe Edges - Back Face -->
+  <line class="wireframe" x1="20" y1="20" x2="44" y2="20"/>
+  <line class="wireframe" x1="44" y1="20" x2="44" y2="44"/>
+  <line class="wireframe" x1="44" y1="44" x2="20" y2="44"/>
+  <line class="wireframe" x1="20" y1="44" x2="20" y2="20"/>
+
+  <!-- Wireframe Edges - Front Face -->
+  <line class="wireframe-accent" x1="24" y1="24" x2="48" y2="24"/>
+  <line class="wireframe-accent" x1="48" y1="24" x2="48" y2="48"/>
+  <line class="wireframe-accent" x1="48" y1="48" x2="24" y2="48"/>
+  <line class="wireframe-accent" x1="24" y1="48" x2="24" y2="24"/>
+
+  <!-- Connecting Edges (Depth) -->
+  <line class="wireframe" x1="20" y1="20" x2="24" y2="24"/>
+  <line class="wireframe" x1="44" y1="20" x2="48" y2="24"/>
+  <line class="wireframe" x1="44" y1="44" x2="48" y2="48"/>
+  <line class="wireframe" x1="20" y1="44" x2="24" y2="48"/>
+
+  <!-- Internal Mesh Lines -->
+  <line class="wireframe" x1="32" y1="20" x2="32" y2="44" opacity="0.5"/>
+  <line class="wireframe" x1="20" y1="32" x2="44" y2="32" opacity="0.5"/>
+  <line class="wireframe-accent" x1="36" y1="24" x2="36" y2="48" opacity="0.5"/>
+  <line class="wireframe-accent" x1="24" y1="36" x2="48" y2="36" opacity="0.5"/>
+
+  <!-- Vertices -->
+  <circle class="vertex" cx="20" cy="20" r="1.5"/>
+  <circle class="vertex" cx="44" cy="20" r="1.5"/>
+  <circle class="vertex" cx="44" cy="44" r="1.5"/>
+  <circle class="vertex" cx="20" cy="44" r="1.5"/>
+  <circle class="vertex" cx="24" cy="24" r="2"/>
+  <circle class="vertex" cx="48" cy="24" r="2"/>
+  <circle class="vertex" cx="48" cy="48" r="2"/>
+  <circle class="vertex" cx="24" cy="48" r="2"/>
+
+  <!-- Center Vertex Highlight -->
+  <circle cx="36" cy="36" r="2" fill="#56b7ff"/>
+</svg>

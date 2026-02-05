@@ -1,32 +1,189 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" role="img" aria-labelledby="title desc">
-  <title id="title">Vantage Architecture Placeholder</title>
-  <desc id="desc">Block diagram illustrating ingest, processing, and output stages.</desc>
-  <rect width="720" height="440" rx="32" fill="#0b0d10" />
-  <g fill="#1b1f24" stroke="#3c444d" stroke-width="2">
-    <rect x="48" y="80" width="180" height="120" rx="16" />
-    <rect x="270" y="80" width="180" height="120" rx="16" />
-    <rect x="492" y="80" width="180" height="120" rx="16" />
-    <rect x="160" y="256" width="180" height="120" rx="16" />
-    <rect x="380" y="256" width="180" height="120" rx="16" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      /* Dark theme colors matching site */
+      .bg { fill: #0b0d10; }
+      .module-box {
+        fill: #111a2c;
+        stroke: #2b78ff;
+        stroke-width: 2;
+        rx: 4;
+      }
+      .module-label {
+        fill: #f4f6fb;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        text-anchor: middle;
+      }
+      .module-sublabel {
+        fill: #c5cbd6;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 11px;
+        text-anchor: middle;
+      }
+      .connection {
+        stroke: #56b7ff;
+        stroke-width: 2;
+        fill: none;
+        marker-end: url(#arrowhead);
+      }
+      .connection-label {
+        fill: #56b7ff;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 10px;
+        text-anchor: middle;
+      }
+
+      /* Animated data particles */
+      @keyframes flow-1 {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+      @keyframes flow-2 {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+      @keyframes flow-3 {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+      @keyframes flow-4 {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+      @keyframes flow-5 {
+        0% { offset-distance: 0%; opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+
+      .particle {
+        fill: #2b78ff;
+        r: 3;
+      }
+      .particle-1 {
+        animation: flow-1 3s ease-in-out infinite;
+        offset-path: path('M 150 200 L 300 200');
+      }
+      .particle-2 {
+        animation: flow-2 3s ease-in-out infinite 0.6s;
+        offset-path: path('M 430 200 L 580 200');
+      }
+      .particle-3 {
+        animation: flow-3 3s ease-in-out infinite 1.2s;
+        offset-path: path('M 710 200 L 860 200');
+      }
+      .particle-4 {
+        animation: flow-4 3s ease-in-out infinite 1.8s;
+        offset-path: path('M 990 200 L 1050 150');
+      }
+      .particle-5 {
+        animation: flow-5 3s ease-in-out infinite 2.4s;
+        offset-path: path('M 990 200 L 1050 250');
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .particle {
+          animation: none;
+          display: none;
+        }
+      }
+    </style>
+
+    <!-- Arrowhead marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#56b7ff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" width="1200" height="400"/>
+
+  <!-- Pipeline Modules -->
+
+  <!-- 1. CSI Ingest -->
+  <g id="csi-ingest">
+    <rect class="module-box" x="20" y="160" width="130" height="80"/>
+    <text class="module-label" x="85" y="195">CSI Ingest</text>
+    <text class="module-sublabel" x="85" y="215">WiFi/RF Capture</text>
   </g>
-  <g fill="#e7eaee" font-family="'Inter','Segoe UI',sans-serif" font-size="24" font-weight="600">
-    <text x="68" y="152">CSI Ingest</text>
-    <text x="296" y="152">Denoise</text>
-    <text x="516" y="152">Pose Core</text>
-    <text x="188" y="328">Analytics</text>
-    <text x="416" y="328">ATAK / API</text>
+
+  <!-- 2. Denoise -->
+  <g id="denoise">
+    <rect class="module-box" x="300" y="160" width="130" height="80"/>
+    <text class="module-label" x="365" y="195">Denoise</text>
+    <text class="module-sublabel" x="365" y="215">Signal Processing</text>
   </g>
-  <g stroke="#1e57c8" stroke-width="4" stroke-linecap="round">
-    <line x1="228" y1="140" x2="270" y2="140" />
-    <line x1="450" y1="140" x2="492" y2="140" />
-    <line x1="210" y1="200" x2="210" y2="256" />
-    <line x1="510" y1="200" x2="510" y2="256" />
+
+  <!-- 3. Pose Core -->
+  <g id="pose-core">
+    <rect class="module-box" x="580" y="160" width="130" height="80"/>
+    <text class="module-label" x="645" y="195">Pose Core</text>
+    <text class="module-sublabel" x="645" y="215">Positioning Engine</text>
   </g>
-  <g fill="#b8bdc5" font-family="'Inter','Segoe UI',sans-serif" font-size="16">
-    <text x="54" y="110">AX210 / Passive Wi-Fi</text>
-    <text x="272" y="110">Filtering</text>
-    <text x="502" y="110">Pose Network</text>
-    <text x="170" y="286">Behavior Flags</text>
-    <text x="396" y="286">Mission Feeds</text>
+
+  <!-- 4. Analytics -->
+  <g id="analytics">
+    <rect class="module-box" x="860" y="160" width="130" height="80"/>
+    <text class="module-label" x="925" y="195">Analytics</text>
+    <text class="module-sublabel" x="925" y="215">AI/ML Processing</text>
+  </g>
+
+  <!-- 5. ATAK Output -->
+  <g id="atak-output">
+    <rect class="module-box" x="1050" y="100" width="130" height="60"/>
+    <text class="module-label" x="1115" y="135">ATAK</text>
+  </g>
+
+  <!-- 6. API Output -->
+  <g id="api-output">
+    <rect class="module-box" x="1050" y="220" width="130" height="60"/>
+    <text class="module-label" x="1115" y="255">REST API</text>
+  </g>
+
+  <!-- Connections -->
+  <line class="connection" x1="150" y1="200" x2="300" y2="200"/>
+  <line class="connection" x1="430" y1="200" x2="580" y2="200"/>
+  <line class="connection" x1="710" y1="200" x2="860" y2="200"/>
+  <line class="connection" x1="990" y1="200" x2="1050" y2="130"/>
+  <line class="connection" x1="990" y1="200" x2="1050" y2="250"/>
+
+  <!-- Connection Labels -->
+  <text class="connection-label" x="225" y="190">Raw CSI</text>
+  <text class="connection-label" x="505" y="190">Filtered</text>
+  <text class="connection-label" x="785" y="190">Pose Data</text>
+  <text class="connection-label" x="1020" y="155">CoT</text>
+  <text class="connection-label" x="1020" y="235">JSON</text>
+
+  <!-- Animated Data Particles -->
+  <circle class="particle particle-1" cx="0" cy="0"/>
+  <circle class="particle particle-2" cx="0" cy="0"/>
+  <circle class="particle particle-3" cx="0" cy="0"/>
+  <circle class="particle particle-4" cx="0" cy="0"/>
+  <circle class="particle particle-5" cx="0" cy="0"/>
+
+  <!-- Title/Label -->
+  <text x="600" y="40" class="module-label" style="font-size: 20px; fill: #2b78ff;">
+    Vantage Architecture Pipeline
+  </text>
+
+  <!-- Subtle grid background -->
+  <g opacity="0.05">
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="1200" y2="300" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="900" y1="0" x2="900" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
   </g>
 </svg>

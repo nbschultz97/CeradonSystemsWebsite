@@ -58,10 +58,10 @@
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2">
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
+            <img class="logo-glow h-8" src="./assets/logo-horizontal.svg" alt="Ceradon Systems" />
           </span>
           <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems mark" />
+            <img class="logo-glow" src="./assets/logo-mark.svg" alt="Ceradon Systems mark" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
             
@@ -86,25 +86,14 @@
     <main id="main-content">
       <section id="top" class="relative overflow-hidden hero-splash">
         <div class="absolute inset-0 pointer-events-none">
-          <svg class="absolute -top-32 -right-40 hidden lg:block h-[34rem] w-[34rem] opacity-60" viewBox="0 0 640 640" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="heroStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#2b78ff" stop-opacity="0.75" />
-                <stop offset="100%" stop-color="#56b7ff" stop-opacity="0" />
-              </linearGradient>
-            </defs>
-            <g fill="none" stroke="url(#heroStroke)" stroke-linecap="round" stroke-width="26">
-              <path d="M96 472C256 360 352 232 440 120" opacity="0.35" />
-              <path d="M56 536C240 392 344 236 484 104" opacity="0.55" />
-              <path d="M24 584C224 420 360 232 520 84" opacity="0.8" />
-            </g>
-          </svg>
+          <img src="./assets/hero-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20" aria-hidden="true" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/60 via-[#04070d]/40 to-[#04070d]"></div>
         </div>
         <div class="relative mx-auto max-w-7xl px-4 py-20">
           <div class="hero-grid">
             <div class="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
               <div class="logo-plate logo-plate--hero">
-                <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
+                <img class="logo-glow" src="./assets/logo-mark.svg" alt="Ceradon Systems" />
                 <h1 class="sr-only">Ceradon Systems</h1>
               </div>
               <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-4 py-2 text-xs tracking-[0.3em] uppercase text-[color:var(--silver)]">
@@ -170,7 +159,7 @@
 
       <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
-          <div class="space-y-4">
+          <div class="space-y-4" data-animate>
             <p class="tag">The planning gap in COTS robotics</p>
             <h2 class="section-heading text-3xl">Why planning tools matter</h2>
             <p class="text-subtle max-w-4xl">
@@ -201,7 +190,7 @@
 
       <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
-          <div class="space-y-3">
+          <div class="space-y-3" data-animate>
             <p class="tag">Product Lines</p>
             <h2 class="section-heading text-3xl">Aegis + Architect Stack + Vantage + Polygen AI</h2>
             <p class="text-subtle max-w-3xl">
@@ -210,6 +199,7 @@
           </div>
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             <article class="product-card" id="aegis">
+              <img src="./assets/hero-aegis.jpg" alt="Aegis battery readiness dashboard" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
               <div class="product-card__header">
                 <h3 class="product-title">Ceradon Aegis (Readiness)</h3>
                 <p class="product-tagline">Battery lifecycle &amp; readiness assurance for tactical uncrewed systems.</p>
@@ -222,6 +212,7 @@
               <p class="text-sm text-subtle mt-4">Aegis is an execution-layer tool designed to produce decisions based on real-world asset health.</p>
             </article>
             <article class="product-card">
+              <img src="./assets/hero-architect.jpg" alt="Architect Stack holographic planning" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
               <div class="product-card__header">
                 <h3 class="product-title">Architect Stack (Planning Tools)</h3>
                 <p class="product-tagline">Open-source, offline-first planning tools for nodes, drones, RF coverage, and sustainment kits.</p>
@@ -234,6 +225,7 @@
               <a class="btn btn-secondary mt-4 inline-flex" href="architect.html">Explore Architect Stack</a>
             </article>
             <article class="product-card">
+              <img src="./assets/hero-vantage.jpg" alt="Vantage through-wall sensing" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
               <div class="product-card__header">
                 <h3 class="product-title">Vantage (Sensing)</h3>
                 <p class="product-tagline">Passive Wi-Fi CSI sensing for zero-emission through-wall human detection and pose estimation.</p>
@@ -264,7 +256,7 @@
       <section id="vantage" class="relative border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-center">
-            <div class="space-y-4">
+            <div class="space-y-4" data-animate>
               <span class="tag">Vantage Scanner</span>
               <h2 class="section-heading text-3xl">Pose-first, zero-emission through-wall awareness</h2>
               <p class="text-subtle max-w-3xl">
@@ -282,19 +274,22 @@
                 <a href="#contact" class="btn btn-secondary text-sm uppercase tracking-wide">Contact</a>
               </div>
             </div>
-            <div class="card-glass p-8 space-y-4">
-              <div class="flex flex-col items-center gap-3 relative z-10">
-                <img src="./assets/Vantage.PNG" alt="Vantage shield" class="h-14 w-14 image-surface" loading="lazy" />
-                <div class="text-center">
-                  <p class="text-sm text-subtle">Pose-focused stack</p>
-                  <p class="font-semibold text-[color:var(--white)]">Human truth through any wall</p>
+            <div class="card-glass overflow-hidden space-y-0">
+              <img src="./assets/hero-vantage.jpg" alt="Vantage passive RF sensing visualization" class="w-full h-48 object-cover" loading="lazy" />
+              <div class="p-8 space-y-4">
+                <div class="flex flex-col items-center gap-3 relative z-10">
+                  <img src="./assets/vantage-mark.svg" alt="Vantage shield" class="h-14 w-14 image-surface" loading="lazy" />
+                  <div class="text-center">
+                    <p class="text-sm text-subtle">Pose-focused stack</p>
+                    <p class="font-semibold text-[color:var(--white)]">Human truth through any wall</p>
+                  </div>
                 </div>
+                <ul class="product-bullets">
+                  <li>CSI ingest → denoise → skeletal overlay with posture-aware alerts.</li>
+                  <li>Interoperable local JSON/CSV/SQLite logs plus ATAK-ready feeds for teams.</li>
+                  <li>Emission control modes keep kits passive during staging and entry.</li>
+                </ul>
               </div>
-              <ul class="product-bullets">
-                <li>CSI ingest → denoise → skeletal overlay with posture-aware alerts.</li>
-                <li>Interoperable local JSON/CSV/SQLite logs plus ATAK-ready feeds for teams.</li>
-                <li>Emission control modes keep kits passive during staging and entry.</li>
-              </ul>
             </div>
           </div>
 
@@ -343,8 +338,8 @@
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
           <div class="grid gap-10 md:grid-cols-2">
             <div class="card-glass p-8 space-y-4">
-              <span class="tag">Customers</span>
-              <h2 class="section-heading text-3xl">For small defense, security, and infrastructure teams</h2>
+              <span class="tag" data-animate>Customers</span>
+              <h2 class="section-heading text-3xl" data-animate data-delay="100">For small defense, security, and infrastructure teams</h2>
               <p class="text-subtle">
                 Ceradon tools keep teams moving fast without custom silicon or cloud lock-in. Model RF sensing kits, unmanned systems, and mesh layouts on everyday gear, then hand operators clean build sheets and mission cards.
               </p>
@@ -386,8 +381,8 @@
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
             <div class="space-y-6">
-              <span class="tag">Technology / Philosophy</span>
-              <h2 class="section-heading text-3xl">COTS hardware. Software-defined planning. Mission clarity.</h2>
+              <span class="tag" data-animate>Technology / Philosophy</span>
+              <h2 class="section-heading text-3xl" data-animate data-delay="100">COTS hardware. Software-defined planning. Mission clarity.</h2>
               <p class="text-subtle">Ceradon products keep everything grounded in commodity gear—Raspberry Pis, Linux laptops, commercial WiFi and LoRa radios, COTS antennas, and modular sensors. Teams model first, buy second.</p>
               <p class="text-subtle">Each workflow is built for small teams who need to move fast, test ideas, and field functional prototypes without custom boards or exotic platforms.</p>
               <p class="text-subtle">Operator-Driven Development, informed by special operations robotics experience, delivers MVPs in weeks, not months.</p>
@@ -464,7 +459,7 @@
       <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
+            <img src="./assets/logo-mark.svg" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
             <div>
               <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
               <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
@@ -488,5 +483,6 @@
       </div>
     </footer>
     <script type="module" src="./src/main.js"></script>
+    <script src="./src/scroll-animations.js" defer></script>
   </body>
 </html>

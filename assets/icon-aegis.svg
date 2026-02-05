@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <style>
+      .shield-outline {
+        stroke: #2b78ff;
+        stroke-width: 2;
+        fill: none;
+        stroke-linejoin: round;
+      }
+      .shield-fill {
+        fill: #2b78ff;
+        opacity: 0.15;
+      }
+      .lightning {
+        fill: #56b7ff;
+      }
+      .battery-outline {
+        stroke: #2b78ff;
+        stroke-width: 1.5;
+        fill: none;
+      }
+      .battery-level {
+        fill: #2b78ff;
+      }
+    </style>
+  </defs>
+
+  <!-- Shield Shape -->
+  <path class="shield-fill" d="M 32 8 L 48 16 L 48 32 Q 48 48, 32 56 Q 16 48, 16 32 L 16 16 Z"/>
+  <path class="shield-outline" d="M 32 8 L 48 16 L 48 32 Q 48 48, 32 56 Q 16 48, 16 32 L 16 16 Z"/>
+
+  <!-- Lightning Bolt (Power/Readiness Symbol) -->
+  <path class="lightning" d="M 34 22 L 28 32 L 32 32 L 30 42 L 36 32 L 32 32 Z"/>
+
+  <!-- Battery Indicator (top right) -->
+  <g transform="translate(38, 12)">
+    <rect class="battery-outline" x="0" y="2" width="12" height="6" rx="1"/>
+    <rect class="battery-level" x="1.5" y="3.5" width="7" height="3"/>
+    <rect x="12" y="4" width="1.5" height="2" fill="#2b78ff"/>
+  </g>
+</svg>

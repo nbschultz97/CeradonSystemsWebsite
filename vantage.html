@@ -24,10 +24,10 @@
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2">
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
+            <img class="logo-glow h-8" src="./assets/logo-horizontal.svg" alt="Ceradon Systems" />
           </span>
           <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems mark" />
+            <img class="logo-glow" src="./assets/logo-mark.svg" alt="Ceradon Systems mark" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
             
@@ -52,19 +52,8 @@
     <main id="main-content">
       <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
         <div class="absolute inset-0 pointer-events-none">
-          <svg class="absolute -bottom-20 -left-28 hidden lg:block h-[26rem] w-[26rem] opacity-40" viewBox="0 0 480 480" aria-hidden="true" focusable="false">
-            <defs>
-              <linearGradient id="vantageStroke" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#2b78ff" stop-opacity="0.1" />
-                <stop offset="100%" stop-color="#56b7ff" stop-opacity="0.6" />
-              </linearGradient>
-            </defs>
-            <g fill="none" stroke="url(#vantageStroke)" stroke-linecap="round" stroke-width="20">
-              <path d="M40 320C160 252 236 172 320 88" />
-              <path d="M20 356C148 268 236 168 356 60" opacity="0.6" />
-              <path d="M0 392C132 292 236 172 388 36" opacity="0.4" />
-            </g>
-          </svg>
+          <img src="./assets/hero-vantage.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/50 via-[#04070d]/30 to-[#04070d]"></div>
         </div>
         <div class="relative mx-auto max-w-7xl px-4 py-16">
           <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:items-center">
@@ -79,7 +68,7 @@
               </div>
             </div>
             <div class="card-glass p-8 space-y-4">
-              <img src="./assets/Vantage.PNG" alt="Vantage shield" class="h-20 w-20 image-surface" loading="lazy" />
+              <img src="./assets/vantage-mark.svg" alt="Vantage shield" class="h-20 w-20 image-surface" loading="lazy" />
               <p class="text-subtle">Every capability centers on resilient pose estimation so operators understand posture and intent before breaching.</p>
               <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
             </div>
@@ -231,7 +220,7 @@
       <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
+            <img src="./assets/logo-mark.svg" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
             <div>
               <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
               <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
@@ -253,5 +242,6 @@
       </div>
     </footer>
     <script type="module" src="./src/main.js"></script>
+    <script src="./src/scroll-animations.js" defer></script>
   </body>
 </html>
