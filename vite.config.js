@@ -17,7 +17,7 @@ try {
 
 export default defineConfig({
   root: rootDir,
-  assetsInclude: ['**/*.PNG'],
+  assetsInclude: ['**/*.PNG', '**/*.jpg'],
   build: {
     rollupOptions: {
       input: {
