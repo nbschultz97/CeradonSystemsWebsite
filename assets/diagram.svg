@@ -1,189 +1,248 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Vantage Architecture Pipeline diagram">
   <defs>
     <style>
-      /* Dark theme colors matching site */
-      .bg { fill: #0b0d10; }
-      .module-box {
-        fill: #111a2c;
+      /* Module box styling */
+      .dg-box {
+        fill: #0b1220;
         stroke: #2b78ff;
-        stroke-width: 2;
+        stroke-width: 1.5;
+        rx: 6;
+      }
+      .dg-box-inner {
+        fill: #111a2c;
+        stroke: #18243a;
+        stroke-width: 0.5;
         rx: 4;
       }
-      .module-label {
+      .dg-label {
         fill: #f4f6fb;
-        font-family: 'Inter', system-ui, sans-serif;
-        font-size: 16px;
+        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        font-size: 15px;
         font-weight: 600;
         text-anchor: middle;
       }
-      .module-sublabel {
-        fill: #c5cbd6;
-        font-family: 'Inter', system-ui, sans-serif;
-        font-size: 11px;
-        text-anchor: middle;
-      }
-      .connection {
-        stroke: #56b7ff;
-        stroke-width: 2;
-        fill: none;
-        marker-end: url(#arrowhead);
-      }
-      .connection-label {
-        fill: #56b7ff;
-        font-family: 'Inter', system-ui, sans-serif;
+      .dg-sublabel {
+        fill: #80889a;
+        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
         font-size: 10px;
         text-anchor: middle;
       }
-
-      /* Animated data particles */
-      @keyframes flow-1 {
-        0% { offset-distance: 0%; opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-      @keyframes flow-2 {
-        0% { offset-distance: 0%; opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-      @keyframes flow-3 {
-        0% { offset-distance: 0%; opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-      @keyframes flow-4 {
-        0% { offset-distance: 0%; opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-      @keyframes flow-5 {
-        0% { offset-distance: 0%; opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { offset-distance: 100%; opacity: 0; }
-      }
-
-      .particle {
+      .dg-title {
         fill: #2b78ff;
-        r: 3;
+        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        text-anchor: middle;
+        letter-spacing: 2px;
       }
-      .particle-1 {
-        animation: flow-1 3s ease-in-out infinite;
-        offset-path: path('M 150 200 L 300 200');
+      .dg-conn-label {
+        fill: #56b7ff;
+        font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        font-size: 9px;
+        text-anchor: middle;
+        letter-spacing: 1px;
+        text-transform: uppercase;
       }
-      .particle-2 {
-        animation: flow-2 3s ease-in-out infinite 0.6s;
-        offset-path: path('M 430 200 L 580 200');
+
+      /* Connection arrows */
+      .dg-conn {
+        stroke: #2b78ff;
+        stroke-width: 1.5;
+        fill: none;
+        stroke-dasharray: 4 2;
+        opacity: 0.5;
       }
-      .particle-3 {
-        animation: flow-3 3s ease-in-out infinite 1.2s;
-        offset-path: path('M 710 200 L 860 200');
+      .dg-conn-solid {
+        stroke: #2b78ff;
+        stroke-width: 2;
+        fill: none;
+        opacity: 0.3;
       }
-      .particle-4 {
-        animation: flow-4 3s ease-in-out infinite 1.8s;
-        offset-path: path('M 990 200 L 1050 150');
+
+      /* Data flow particles */
+      @keyframes dgFlow1 {
+        0% { offset-distance: 0%; opacity: 0; }
+        8% { opacity: 0.9; }
+        92% { opacity: 0.9; }
+        100% { offset-distance: 100%; opacity: 0; }
       }
-      .particle-5 {
-        animation: flow-5 3s ease-in-out infinite 2.4s;
-        offset-path: path('M 990 200 L 1050 250');
+      @keyframes dgFlow2 {
+        0% { offset-distance: 0%; opacity: 0; }
+        8% { opacity: 0.8; }
+        92% { opacity: 0.8; }
+        100% { offset-distance: 100%; opacity: 0; }
       }
+      @keyframes dgNodePulse {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 0.5; }
+      }
+
+      .dg-particle-1 {
+        animation: dgFlow1 2.5s ease-in-out infinite;
+        offset-path: path('M 155 200 L 295 200');
+      }
+      .dg-particle-2 {
+        animation: dgFlow1 2.5s ease-in-out infinite 0.5s;
+        offset-path: path('M 435 200 L 575 200');
+      }
+      .dg-particle-3 {
+        animation: dgFlow1 2.5s ease-in-out infinite 1s;
+        offset-path: path('M 715 200 L 855 200');
+      }
+      .dg-particle-4 {
+        animation: dgFlow2 2.5s ease-in-out infinite 1.5s;
+        offset-path: path('M 995 200 Q 1020 170, 1045 140');
+      }
+      .dg-particle-5 {
+        animation: dgFlow2 2.5s ease-in-out infinite 2s;
+        offset-path: path('M 995 200 Q 1020 230, 1045 250');
+      }
+      /* Secondary particles (offset timing) */
+      .dg-particle-1b {
+        animation: dgFlow1 2.5s ease-in-out infinite 1.25s;
+        offset-path: path('M 155 200 L 295 200');
+      }
+      .dg-particle-2b {
+        animation: dgFlow1 2.5s ease-in-out infinite 1.75s;
+        offset-path: path('M 435 200 L 575 200');
+      }
+      .dg-particle-3b {
+        animation: dgFlow1 2.5s ease-in-out infinite 2.25s;
+        offset-path: path('M 715 200 L 855 200');
+      }
+
+      .dg-status-pulse { animation: dgNodePulse 2s ease-in-out infinite; }
+      .dg-status-pulse-d { animation: dgNodePulse 2s ease-in-out infinite 0.5s; }
+      .dg-status-pulse-d2 { animation: dgNodePulse 2s ease-in-out infinite 1s; }
+      .dg-status-pulse-d3 { animation: dgNodePulse 2s ease-in-out infinite 1.5s; }
 
       @media (prefers-reduced-motion: reduce) {
-        .particle {
-          animation: none;
+        .dg-particle-1, .dg-particle-2, .dg-particle-3,
+        .dg-particle-4, .dg-particle-5,
+        .dg-particle-1b, .dg-particle-2b, .dg-particle-3b,
+        .dg-status-pulse, .dg-status-pulse-d,
+        .dg-status-pulse-d2, .dg-status-pulse-d3 {
+          animation: none !important;
           display: none;
         }
       }
     </style>
 
-    <!-- Arrowhead marker -->
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#56b7ff"/>
+    <!-- Arrowhead -->
+    <marker id="dgArrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#2b78ff" opacity="0.6"/>
     </marker>
+
+    <!-- Module box glow -->
+    <filter id="dgBoxGlow" x="-8%" y="-8%" width="116%" height="116%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
   <!-- Background -->
-  <rect class="bg" width="1200" height="400"/>
+  <rect width="1200" height="400" fill="#04070d" rx="8"/>
 
-  <!-- Pipeline Modules -->
-
-  <!-- 1. CSI Ingest -->
-  <g id="csi-ingest">
-    <rect class="module-box" x="20" y="160" width="130" height="80"/>
-    <text class="module-label" x="85" y="195">CSI Ingest</text>
-    <text class="module-sublabel" x="85" y="215">WiFi/RF Capture</text>
-  </g>
-
-  <!-- 2. Denoise -->
-  <g id="denoise">
-    <rect class="module-box" x="300" y="160" width="130" height="80"/>
-    <text class="module-label" x="365" y="195">Denoise</text>
-    <text class="module-sublabel" x="365" y="215">Signal Processing</text>
-  </g>
-
-  <!-- 3. Pose Core -->
-  <g id="pose-core">
-    <rect class="module-box" x="580" y="160" width="130" height="80"/>
-    <text class="module-label" x="645" y="195">Pose Core</text>
-    <text class="module-sublabel" x="645" y="215">Positioning Engine</text>
-  </g>
-
-  <!-- 4. Analytics -->
-  <g id="analytics">
-    <rect class="module-box" x="860" y="160" width="130" height="80"/>
-    <text class="module-label" x="925" y="195">Analytics</text>
-    <text class="module-sublabel" x="925" y="215">AI/ML Processing</text>
-  </g>
-
-  <!-- 5. ATAK Output -->
-  <g id="atak-output">
-    <rect class="module-box" x="1050" y="100" width="130" height="60"/>
-    <text class="module-label" x="1115" y="135">ATAK</text>
-  </g>
-
-  <!-- 6. API Output -->
-  <g id="api-output">
-    <rect class="module-box" x="1050" y="220" width="130" height="60"/>
-    <text class="module-label" x="1115" y="255">REST API</text>
-  </g>
-
-  <!-- Connections -->
-  <line class="connection" x1="150" y1="200" x2="300" y2="200"/>
-  <line class="connection" x1="430" y1="200" x2="580" y2="200"/>
-  <line class="connection" x1="710" y1="200" x2="860" y2="200"/>
-  <line class="connection" x1="990" y1="200" x2="1050" y2="130"/>
-  <line class="connection" x1="990" y1="200" x2="1050" y2="250"/>
-
-  <!-- Connection Labels -->
-  <text class="connection-label" x="225" y="190">Raw CSI</text>
-  <text class="connection-label" x="505" y="190">Filtered</text>
-  <text class="connection-label" x="785" y="190">Pose Data</text>
-  <text class="connection-label" x="1020" y="155">CoT</text>
-  <text class="connection-label" x="1020" y="235">JSON</text>
-
-  <!-- Animated Data Particles -->
-  <circle class="particle particle-1" cx="0" cy="0"/>
-  <circle class="particle particle-2" cx="0" cy="0"/>
-  <circle class="particle particle-3" cx="0" cy="0"/>
-  <circle class="particle particle-4" cx="0" cy="0"/>
-  <circle class="particle particle-5" cx="0" cy="0"/>
-
-  <!-- Title/Label -->
-  <text x="600" y="40" class="module-label" style="font-size: 20px; fill: #2b78ff;">
-    Vantage Architecture Pipeline
-  </text>
-
-  <!-- Subtle grid background -->
-  <g opacity="0.05">
+  <!-- Subtle background grid -->
+  <g opacity="0.03">
     <line x1="0" y1="100" x2="1200" y2="100" stroke="#2b78ff" stroke-width="0.5"/>
     <line x1="0" y1="200" x2="1200" y2="200" stroke="#2b78ff" stroke-width="0.5"/>
     <line x1="0" y1="300" x2="1200" y2="300" stroke="#2b78ff" stroke-width="0.5"/>
-    <line x1="300" y1="0" x2="300" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
     <line x1="600" y1="0" x2="600" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
-    <line x1="900" y1="0" x2="900" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="400" stroke="#2b78ff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text class="dg-title" x="600" y="42">VANTAGE ARCHITECTURE PIPELINE</text>
+
+  <!-- Pipeline connection lines -->
+  <g marker-end="url(#dgArrow)">
+    <line class="dg-conn-solid" x1="155" y1="200" x2="290" y2="200"/>
+    <line class="dg-conn-solid" x1="435" y1="200" x2="570" y2="200"/>
+    <line class="dg-conn-solid" x1="715" y1="200" x2="850" y2="200"/>
+    <line class="dg-conn-solid" x1="995" y1="200" x2="1045" y2="140"/>
+    <line class="dg-conn-solid" x1="995" y1="200" x2="1045" y2="253"/>
+  </g>
+
+  <!-- Connection labels -->
+  <text class="dg-conn-label" x="222" y="188">Raw CSI</text>
+  <text class="dg-conn-label" x="502" y="188">Filtered</text>
+  <text class="dg-conn-label" x="782" y="188">Pose Data</text>
+  <text class="dg-conn-label" x="1024" y="158">CoT</text>
+  <text class="dg-conn-label" x="1024" y="242">JSON</text>
+
+  <!-- Module 1: CSI Ingest -->
+  <g filter="url(#dgBoxGlow)">
+    <rect class="dg-box" x="20" y="160" width="135" height="80"/>
+    <rect class="dg-box-inner" x="24" y="164" width="127" height="72"/>
+    <text class="dg-label" x="87" y="197">CSI Ingest</text>
+    <text class="dg-sublabel" x="87" y="216">WiFi / RF Capture</text>
+    <!-- Status dot -->
+    <circle cx="40" cy="177" r="3" fill="#2b78ff" class="dg-status-pulse"/>
+  </g>
+
+  <!-- Module 2: Denoise -->
+  <g filter="url(#dgBoxGlow)">
+    <rect class="dg-box" x="300" y="160" width="135" height="80"/>
+    <rect class="dg-box-inner" x="304" y="164" width="127" height="72"/>
+    <text class="dg-label" x="367" y="197">Denoise</text>
+    <text class="dg-sublabel" x="367" y="216">Signal Processing</text>
+    <circle cx="320" cy="177" r="3" fill="#2b78ff" class="dg-status-pulse-d"/>
+  </g>
+
+  <!-- Module 3: Pose Core -->
+  <g filter="url(#dgBoxGlow)">
+    <rect class="dg-box" x="580" y="160" width="135" height="80"/>
+    <rect class="dg-box-inner" x="584" y="164" width="127" height="72"/>
+    <text class="dg-label" x="647" y="197">Pose Core</text>
+    <text class="dg-sublabel" x="647" y="216">Positioning Engine</text>
+    <circle cx="600" cy="177" r="3" fill="#56b7ff" class="dg-status-pulse-d2"/>
+  </g>
+
+  <!-- Module 4: Analytics -->
+  <g filter="url(#dgBoxGlow)">
+    <rect class="dg-box" x="860" y="160" width="135" height="80"/>
+    <rect class="dg-box-inner" x="864" y="164" width="127" height="72"/>
+    <text class="dg-label" x="927" y="197">Analytics</text>
+    <text class="dg-sublabel" x="927" y="216">AI / ML Processing</text>
+    <circle cx="880" cy="177" r="3" fill="#56b7ff" class="dg-status-pulse-d3"/>
+  </g>
+
+  <!-- Module 5: ATAK Output -->
+  <g filter="url(#dgBoxGlow)">
+    <rect class="dg-box" x="1050" y="105" width="130" height="65"/>
+    <rect class="dg-box-inner" x="1054" y="109" width="122" height="57"/>
+    <text class="dg-label" x="1115" y="138">ATAK</text>
+    <text class="dg-sublabel" x="1115" y="154">Cursor on Target</text>
+  </g>
+
+  <!-- Module 6: REST API Output -->
+  <g filter="url(#dgBoxGlow)">
+    <rect class="dg-box" x="1050" y="225" width="130" height="65"/>
+    <rect class="dg-box-inner" x="1054" y="229" width="122" height="57"/>
+    <text class="dg-label" x="1115" y="258">REST API</text>
+    <text class="dg-sublabel" x="1115" y="274">JSON Endpoint</text>
+  </g>
+
+  <!-- Data flow particles -->
+  <circle class="dg-particle-1" cx="0" cy="0" r="3" fill="#2b78ff"/>
+  <circle class="dg-particle-1b" cx="0" cy="0" r="2" fill="#56b7ff"/>
+  <circle class="dg-particle-2" cx="0" cy="0" r="3" fill="#2b78ff"/>
+  <circle class="dg-particle-2b" cx="0" cy="0" r="2" fill="#56b7ff"/>
+  <circle class="dg-particle-3" cx="0" cy="0" r="3" fill="#2b78ff"/>
+  <circle class="dg-particle-3b" cx="0" cy="0" r="2" fill="#56b7ff"/>
+  <circle class="dg-particle-4" cx="0" cy="0" r="2.5" fill="#56b7ff"/>
+  <circle class="dg-particle-5" cx="0" cy="0" r="2.5" fill="#56b7ff"/>
+
+  <!-- Bottom info bar -->
+  <g opacity="0.3">
+    <line x1="40" y1="350" x2="1160" y2="350" stroke="#18243a" stroke-width="1"/>
+    <text x="600" y="375" fill="#80889a" font-family="'Inter', system-ui, sans-serif" font-size="10" text-anchor="middle" letter-spacing="3">CERADON SYSTEMS · VANTAGE · PASSIVE POSE INTELLIGENCE</text>
   </g>
 </svg>
