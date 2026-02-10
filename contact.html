@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact | Ceradon Systems</title>
+    <meta name="description" content="Contact Ceradon Systems for collaboration, demos, or open-source contributions." />
+    <meta property="og:title" content="Contact | Ceradon Systems" />
+    <meta property="og:description" content="Reach out for collaboration, demos, or open-source contributions." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ceradonsystems.com/contact.html" />
+    <meta property="og:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact | Ceradon Systems" />
+    <meta name="twitter:description" content="Reach out for collaboration, demos, or open-source contributions." />
+    <meta name="twitter:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
+    <link rel="canonical" href="https://ceradonsystems.com/contact.html" />
+    <link rel="icon" type="image/png" href="./assets/Emblem.PNG" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2">
+          <span class="hidden md:inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
+          </span>
+          <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems mark" />
+          </span>
+          <span class="hidden lg:flex flex-col leading-tight">
+            
+            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 · UEI UZA9PFJ9RDL6</span>
+          </span>
+        </a>
+        <nav class="hidden md:flex gap-6" aria-label="Main navigation">
+          <!-- add active link state using aria-current="page" -->
+          <a href="index.html" class="navlink">Home</a>
+          <a href="vantage.html" class="navlink">Vantage</a>
+          <a href="polygen.html" class="navlink">Polygen AI</a>
+          <a href="architect.html" class="navlink">Architect Stack</a>
+          <a href="technology.html" class="navlink">Technology</a>
+          <a href="company.html" class="navlink">Company</a>
+          <a href="/blog/" class="navlink">Insights</a>
+          <a href="contact.html" class="btn btn-primary" aria-current="page">Contact</a>
+        </nav>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
+      </div>
+      <!-- mobile panel injected by /src/ui.js -->
+    </header>
+    <main id="main-content">
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+          <div class="card-glass p-8 space-y-6">
+            <div class="flex items-center gap-4">
+              <img src="./assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-16 w-16 image-surface" loading="lazy" />
+              <div>
+                <h1 class="text-3xl font-bold text-[color:var(--white)]">Contact Ceradon Systems</h1>
+                <p class="text-sm text-subtle">Founder-led, offline-first RF sensing and planning support.</p>
+              </div>
+            </div>
+            <p class="text-subtle">Send us your collaboration requests, demo questions, or open-source contribution ideas. We operate on offline-friendly channels.</p>
+            <div class="space-y-2 text-sm text-subtle">
+              <p><strong class="text-[color:var(--white)]">Email:</strong> <a href="mailto:contact@ceradonsystems.com" class="text-[color:var(--ceradon-blue)]">contact@ceradonsystems.com</a></p>
+              <p><strong class="text-[color:var(--white)]">Signal:</strong> Available on request.</p>
+            </div>
+          </div>
+          <form class="card-glass p-8 space-y-4" data-contact-form aria-label="Contact form">
+            <div>
+              <label for="contact-name" class="block mb-1">Name <span class="text-red-400" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required placeholder="Your name" aria-required="true" aria-describedby="name-hint" />
+              <span id="name-hint" class="sr-only">Enter your full name</span>
+            </div>
+            <div>
+              <label for="contact-company" class="block mb-1">Organization / Team</label>
+              <input id="contact-company" name="company" type="text" autocomplete="organization" placeholder="Organization or team" />
+            </div>
+            <div>
+              <label for="contact-email" class="block mb-1">Email <span class="text-red-400" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-required="true" aria-describedby="email-hint" />
+              <span id="email-hint" class="sr-only">Enter your email address for us to reply</span>
+            </div>
+            <div>
+              <label for="contact-message" class="block mb-1">Message <span class="text-red-400" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
+              <textarea id="contact-message" name="message" rows="4" required placeholder="Mission needs, timeline, requested capabilities..." aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary text-sm uppercase tracking-wide w-full">Copy &amp; Launch Mail</button>
+            <p class="text-xs text-subtle" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[1fr_1fr]">
+          <div class="card-glass p-6 space-y-3">
+            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Operations</h2>
+            <p class="text-sm text-subtle">Utah-based, remote-first, and appointment-only for on-site visits.</p>
+            <p class="text-sm text-subtle">Use email to coordinate collaboration or demo requests.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/80]">
+      <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="./assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
+            <div>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-sm text-subtle">
+            <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
+          </div>
+        </div>
+        <div class="footer-links" data-footer-links></div>
+        <div class="space-y-2 text-xs text-subtle">
+          <p>Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
+          <p>Ceradon Systems, LLC (Utah) · CAGE 179U9 · UEI UZA9PFJ9RDL6 · Active in SAM.gov through Dec 5, 2026.</p>
+          <p>Socio-economic status: SDVOSB · VOSB.</p>
+          <p>NAICS: 541715, 541330 · PSC: K058, AJ11.</p>
+          <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
+          <p>© <span data-year></span> Ceradon Systems. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+    <script src="./src/scroll-animations.js" defer></script>
+  </body>
+</html>

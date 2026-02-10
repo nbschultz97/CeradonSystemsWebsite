@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Vantage Scanner Crest</title>
+  <desc id="desc">Angular shield with radiating Ceradon blue bands forming a V</desc>
+  <defs>
+    <linearGradient id="shieldBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111a2c" />
+      <stop offset="100%" stop-color="#05070d" />
+    </linearGradient>
+    <linearGradient id="shieldEdge" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#203047" />
+      <stop offset="100%" stop-color="#0d1421" />
+    </linearGradient>
+    <linearGradient id="bandGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2b78ff" />
+      <stop offset="100%" stop-color="#56b7ff" />
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#56b7ff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#56b7ff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="48" fill="#03050a" />
+  <path d="M256 28 92 96v172c0 118 96 214 164 242 68-28 164-124 164-242V96L256 28z" fill="url(#shieldBase)" stroke="url(#shieldEdge)" stroke-width="12" stroke-linejoin="round" />
+  <path d="M256 68 136 120v140c0 96 72 178 120 200 48-22 120-104 120-200V120L256 68z" fill="#0b1220" opacity="0.8" />
+  <circle cx="256" cy="160" r="152" fill="url(#coreGlow)" />
+  <g fill="none" stroke="url(#bandGradient)" stroke-linecap="round" stroke-width="26">
+    <path d="M156 212c38 56 70 108 100 170 4 8 12 12 20 12s16-4 20-12c30-62 62-114 100-170" opacity="0.85" />
+    <path d="M136 250c40 52 76 108 108 170 4 8 12 12 20 12s16-4 20-12c32-62 68-118 108-170" opacity="0.55" />
+    <path d="M116 288c40 56 80 118 120 184 4 6 12 10 20 10s16-4 20-10c40-66 80-128 120-184" opacity="0.35" />
+  </g>
+  <path d="M256 152c-28 0-52 16-64 40l64 162 64-162c-12-24-36-40-64-40z" fill="#e6ebf5" opacity="0.16" />
+  <path d="M256 184c-16 0-30 10-38 24l38 98 38-98c-8-14-22-24-38-24z" fill="#56b7ff" opacity="0.12" />
+</svg>
