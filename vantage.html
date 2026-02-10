@@ -17,6 +17,9 @@
     <meta name="twitter:image" content="https://ceradonsystems.com/assets/Vantage.PNG" />
     <link rel="canonical" href="https://ceradonsystems.com/vantage.html" />
     <link rel="icon" type="image/png" href="./assets/Emblem.PNG" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <!-- Google Analytics (GA4) — Replace G-XXXXXXXXXX with your Measurement ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -100,47 +103,47 @@
       </section>
 
       <!-- CAPABILITIES — Current vs Roadmap -->
-      <section class="mx-auto max-w-7xl px-4 py-16 space-y-12">
-        <div class="space-y-6">
+      <section class="mx-auto max-w-7xl px-4 py-20 space-y-16">
+        <div class="space-y-6" data-animate>
           <h2 class="section-heading text-3xl">Capabilities</h2>
           <p class="text-subtle max-w-3xl">Current capabilities and planned roadmap. We're transparent about what's working today versus what's in development — defense buyers deserve honesty about TRL levels.</p>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="card-glass p-6 space-y-3">
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
+            <div class="card-glass p-7 space-y-3">
               <div class="flex items-center gap-2">
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">Presence Detection</h3>
                 <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
               </div>
               <p class="text-sm text-subtle">Low-latency human presence detection using CSI amplitude variance with adaptive thresholds. Works through standard drywall, wood, and concrete block.</p>
             </div>
-            <div class="card-glass p-6 space-y-3">
+            <div class="card-glass p-7 space-y-3">
               <div class="flex items-center gap-2">
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">Signal Conditioning</h3>
                 <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
               </div>
               <p class="text-sm text-subtle">Hampel filter for outlier removal + Butterworth low-pass for noise reduction. Produces clean CSI streams from commodity WiFi chipsets.</p>
             </div>
-            <div class="card-glass p-6 space-y-3">
+            <div class="card-glass p-7 space-y-3">
               <div class="flex items-center gap-2">
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">Movement Classification</h3>
                 <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
               </div>
               <p class="text-sm text-subtle">RandomForest classifier with 14-feature extraction distinguishes movement patterns. JSON-structured output for integration.</p>
             </div>
-            <div class="card-glass p-6 space-y-3">
+            <div class="card-glass p-7 space-y-3">
               <div class="flex items-center gap-2">
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">Pose States</h3>
                 <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
               </div>
               <p class="text-sm text-subtle">Standing, crouched, and prone classification using CNN-LSTM models. Planned for TRL 5 milestone with field-collected training data.</p>
             </div>
-            <div class="card-glass p-6 space-y-3">
+            <div class="card-glass p-7 space-y-3">
               <div class="flex items-center gap-2">
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">Zone / Sector Location</h3>
                 <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
               </div>
               <p class="text-sm text-subtle">Multi-node triangulation to locate subjects within sectors of a room. Requires deployed sensor mesh for spatial resolution.</p>
             </div>
-            <div class="card-glass p-6 space-y-3">
+            <div class="card-glass p-7 space-y-3">
               <div class="flex items-center gap-2">
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">ATAK Integration</h3>
                 <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
@@ -200,15 +203,15 @@
         <div class="space-y-6">
           <h2 class="section-heading text-3xl">Form Factors</h2>
           <div class="grid gap-6 lg:grid-cols-3">
-            <div class="card-glass p-6 space-y-4">
+            <div class="card-glass p-7 space-y-4">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Tripod Node</h3>
               <p class="text-sm text-subtle">Deployable mast with directional antennas for site security and long-duration coverage.</p>
             </div>
-            <div class="card-glass p-6 space-y-4">
+            <div class="card-glass p-7 space-y-4">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Handheld Kit</h3>
               <p class="text-sm text-subtle">Portable controller with quick-look presence alerts for breach teams.</p>
             </div>
-            <div class="card-glass p-6 space-y-4">
+            <div class="card-glass p-7 space-y-4">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Remote Payload</h3>
               <p class="text-sm text-subtle">Modular payload integrates with tactical robots and drones for covert overwatch.</p>
             </div>
@@ -259,49 +262,43 @@
         <!-- FAQ -->
         <div class="space-y-6" id="faq">
           <h2 class="section-heading text-3xl">Frequently Asked Questions</h2>
-          <div class="space-y-4 max-w-3xl">
+          <div class="space-y-4 max-w-3xl" data-animate-stagger>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 How does passive WiFi sensing work?
-                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+                <span class="faq-icon">+</span>
               </summary>
-              <p class="text-sm text-subtle mt-4">WiFi signals from existing access points pass through walls and reflect off objects — including human bodies. When someone moves, breathes, or changes position, the WiFi signal characteristics (Channel State Information, or CSI) change measurably. Vantage captures these CSI changes passively — it only listens to WiFi frames, never transmits. Machine learning models then classify the patterns to detect presence and movement.</p>
-            </details>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">WiFi signals from existing access points pass through walls and reflect off objects — including human bodies. When someone moves, breathes, or changes position, the WiFi signal characteristics (Channel State Information, or CSI) change measurably. Vantage captures these CSI changes passively — it only listens to WiFi frames, never transmits. Machine learning models then classify the patterns to detect presence and movement.</p></div></details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 What types of walls can it see through?
-                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+                <span class="faq-icon">+</span>
               </summary>
-              <p class="text-sm text-subtle mt-4">WiFi CSI works through most common building materials: drywall, wood framing, concrete block, brick, and glass. Performance degrades through metal-lined walls, wire mesh, or heavily reinforced concrete. The 2.4 GHz band is used by default for better wall penetration compared to 5 GHz. Real-world performance varies by wall composition, thickness, and ambient WiFi density.</p>
-            </details>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">WiFi CSI works through most common building materials: drywall, wood framing, concrete block, brick, and glass. Performance degrades through metal-lined walls, wire mesh, or heavily reinforced concrete. The 2.4 GHz band is used by default for better wall penetration compared to 5 GHz. Real-world performance varies by wall composition, thickness, and ambient WiFi density.</p></div></details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 What is the detection range?
-                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+                <span class="faq-icon">+</span>
               </summary>
-              <p class="text-sm text-subtle mt-4">Detection range depends on the ambient WiFi environment and wall composition. In typical indoor environments with standard construction, presence detection has been demonstrated at room-scale distances (3–8 meters through walls). Range extends with stronger ambient WiFi signals and directional antennas. We're conducting field validation to publish verified range specifications.</p>
-            </details>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">Detection range depends on the ambient WiFi environment and wall composition. In typical indoor environments with standard construction, presence detection has been demonstrated at room-scale distances (3–8 meters through walls). Range extends with stronger ambient WiFi signals and directional antennas. We're conducting field validation to publish verified range specifications.</p></div></details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 Does it integrate with ATAK?
-                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+                <span class="faq-icon">+</span>
               </summary>
-              <p class="text-sm text-subtle mt-4">ATAK integration is on the development roadmap. The planned implementation uses Cursor-on-Target (CoT) XML messages over multicast, allowing Vantage presence data to appear as map overlays in ATAK/WinTAK. The JSON output format is already structured to support this conversion. Contact us if ATAK integration is a priority for your evaluation.</p>
-            </details>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">ATAK integration is on the development roadmap. The planned implementation uses Cursor-on-Target (CoT) XML messages over multicast, allowing Vantage presence data to appear as map overlays in ATAK/WinTAK. The JSON output format is already structured to support this conversion. Contact us if ATAK integration is a priority for your evaluation.</p></div></details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 How is this different from Lumineye or Camero?
-                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+                <span class="faq-icon">+</span>
               </summary>
-              <p class="text-sm text-subtle mt-4">Lumineye and Camero use active radar — they transmit RF energy that bounces off targets. This works well but has two major drawbacks: (1) the emission is detectable by electronic warfare systems, compromising your position, and (2) the hardware is expensive ($5K–$85K). Vantage uses passive WiFi CSI — it only listens to existing WiFi signals and never emits. This makes it completely covert and dramatically cheaper since it runs on commodity WiFi hardware.</p>
-            </details>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">Lumineye and Camero use active radar — they transmit RF energy that bounces off targets. This works well but has two major drawbacks: (1) the emission is detectable by electronic warfare systems, compromising your position, and (2) the hardware is expensive ($5K–$85K). Vantage uses passive WiFi CSI — it only listens to existing WiFi signals and never emits. This makes it completely covert and dramatically cheaper since it runs on commodity WiFi hardware.</p></div></details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 Does it need an existing WiFi network?
-                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+                <span class="faq-icon">+</span>
               </summary>
-              <p class="text-sm text-subtle mt-4">Vantage works best with ambient WiFi signals from existing access points. In environments without WiFi infrastructure, a covert transmitter node can be deployed — but this trades some of the passive advantage. Research into exploiting other ambient RF sources (cellular, IoT) is ongoing.</p>
-            </details>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">Vantage works best with ambient WiFi signals from existing access points. In environments without WiFi infrastructure, a covert transmitter node can be deployed — but this trades some of the passive advantage. Research into exploiting other ambient RF sources (cellular, IoT) is ongoing.</p></div></details>
           </div>
         </div>
 
