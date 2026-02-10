@@ -550,6 +550,20 @@
       </div>
     </footer>
     <script type="module" src="./src/main.js"></script>
-    <script src="./src/scroll-animations.js" defer></script>
+    <script>
+    (function(){
+      var cls='is-visible';
+      function reveal(){
+        document.querySelectorAll('[data-animate],[data-animate-stagger]').forEach(function(el){
+          el.classList.add(cls);
+        });
+      }
+      if(!('IntersectionObserver' in window)){reveal();return;}
+      var obs=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add(cls);obs.unobserve(e.target);}});
+      },{rootMargin:'0px 0px -80px 0px',threshold:0.1});
+      document.querySelectorAll('[data-animate],[data-animate-stagger]').forEach(function(el){obs.observe(el);});
+    })();
+    </script>
   </body>
 </html>
