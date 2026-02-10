@@ -19,8 +19,6 @@ const TIMEOUTS = {
 const NAV_ITEMS = [
   { label: 'Home', href: 'index.html#top' },
   { label: 'Vantage', href: 'vantage.html' },
-  { label: 'Polygen AI', href: 'polygen.html' },
-  { label: 'Architect Stack', href: 'architect.html' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },
@@ -265,6 +263,49 @@ async function handleContactSubmit(event) {
   const form = event.currentTarget;
   const status = form.querySelector('[data-form-status]');
   const submitBtn = form.querySelector('button[type="submit"]');
+
+  // Check if form has a Formspree action
+  const action = form.getAttribute('action');
+  if (action && action.includes('formspree.io')) {
+    // Use Formspree via fetch
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        if (status) {
+          status.textContent = '✓ Message sent successfully! We\'ll get back to you within 24 hours.';
+          status.className = 'text-sm mt-3 text-green-400';
+        }
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = 'Something went wrong. Please email us directly at contact@ceradonsystems.com.';
+        status.className = 'text-red-400 text-sm mt-3';
+      }
+    }
+
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      submitBtn.classList.remove('opacity-60', 'cursor-not-allowed');
+    }, TIMEOUTS.FORM_RESET);
+    return;
+  }
+
+  // Fallback: mailto
   const name = form.querySelector('[name="name"]').value.trim();
   const company = form.querySelector('[name="company"]').value.trim();
   const email = form.querySelector('[name="email"]').value.trim();
@@ -278,12 +319,6 @@ async function handleContactSubmit(event) {
     return;
   }
 
-  // Set loading state
-  const originalText = submitBtn.textContent;
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Processing...';
-  submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
-
   const composed = [
     `Name: ${name}`,
     company ? `Company: ${company}` : null,
@@ -294,35 +329,15 @@ async function handleContactSubmit(event) {
     .filter(Boolean)
     .join('\n');
 
-  let copied = false;
-  if (navigator.clipboard && window.isSecureContext) {
-    try {
-      await navigator.clipboard.writeText(composed);
-      copied = true;
-    } catch (error) {
-      copied = false;
-    }
-  }
-
   const mailto = new URL('mailto:info@ceradonsystems.com');
   mailto.searchParams.set('subject', 'Ceradon Inquiry');
   mailto.searchParams.set('body', composed);
   window.location.href = mailto.toString();
 
   if (status) {
-    status.textContent = copied
-      ? 'Message copied to clipboard. Your mail client should open momentarily.'
-      : 'Opening mail client. Copy the message manually if needed.';
+    status.textContent = 'Opening mail client...';
     status.className = 'text-sm mt-3 text-[color:var(--ceradon-blue)]';
   }
-
-  // Reset button after a delay
-  setTimeout(() => {
-    submitBtn.disabled = false;
-    submitBtn.textContent = originalText;
-    submitBtn.classList.remove('opacity-60', 'cursor-not-allowed');
-  }, TIMEOUTS.FORM_RESET);
-
   form.reset();
 }
 

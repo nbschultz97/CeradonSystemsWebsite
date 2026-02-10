@@ -3,8 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contact | Ceradon Systems</title>
-    <meta name="description" content="Contact Ceradon Systems for collaboration, demos, or open-source contributions." />
+    <title>Contact | Ceradon Systems — Through-Wall Detection Demos & Partnerships</title>
+    <meta name="description" content="Contact Ceradon Systems for through-wall detection demos, defense partnerships, or collaboration. Veteran-founded SDVOSB in Utah." />
+    <!-- Google Analytics (GA4) — Replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <meta property="og:title" content="Contact | Ceradon Systems" />
     <meta property="og:description" content="Reach out for collaboration, demos, or open-source contributions." />
     <meta property="og:type" content="website" />
@@ -38,8 +46,6 @@
           <!-- add active link state using aria-current="page" -->
           <a href="index.html" class="navlink">Home</a>
           <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="polygen.html" class="navlink">Polygen AI</a>
-          <a href="architect.html" class="navlink">Architect Stack</a>
           <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
@@ -66,7 +72,8 @@
               <p><strong class="text-[color:var(--white)]">Signal:</strong> Available on request.</p>
             </div>
           </div>
-          <form class="card-glass p-8 space-y-4" data-contact-form aria-label="Contact form">
+          <form class="card-glass p-8 space-y-4" action="https://formspree.io/f/xpwdkjaq" method="POST" data-contact-form aria-label="Contact form">
+            <input type="hidden" name="_subject" value="Ceradon Website Contact" />
             <div>
               <label for="contact-name" class="block mb-1">Name <span class="text-red-400" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
               <input id="contact-name" name="name" type="text" autocomplete="name" required placeholder="Your name" aria-required="true" aria-describedby="name-hint" />
@@ -85,7 +92,7 @@
               <label for="contact-message" class="block mb-1">Message <span class="text-red-400" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
               <textarea id="contact-message" name="message" rows="4" required placeholder="Mission needs, timeline, requested capabilities..." aria-required="true"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary text-sm uppercase tracking-wide w-full">Copy &amp; Launch Mail</button>
+            <button type="submit" class="btn btn-primary text-sm uppercase tracking-wide w-full">Send Message</button>
             <p class="text-xs text-subtle" data-form-status role="status" aria-live="polite"></p>
           </form>
         </div>

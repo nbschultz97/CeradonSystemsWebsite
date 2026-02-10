@@ -7,20 +7,29 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-    <title>Ceradon Systems | Passive RF Sensing & Readiness Assurance</title>
-    <meta name="description" content="Ceradon Systems builds Vantage passive RF sensing, Aegis battery readiness assurance, and the Architect Stack planning tools for mission-aligned UxS." />
-    <meta property="og:title" content="Ceradon Systems | Passive RF Sensing & Readiness Assurance" />
-    <meta property="og:description" content="Vantage passive RF sensing, Aegis battery readiness assurance, and Architect Stack planning tools for field-ready unmanned systems." />
+    <title>Ceradon Systems | Through-Wall Detection — Passive WiFi Sensing Technology</title>
+    <meta name="description" content="Ceradon Systems builds Vantage, a passive WiFi CSI through-wall detection system. Zero emissions, 10x cheaper than radar. Veteran-founded SDVOSB defense contractor in Utah." />
+    <meta name="keywords" content="through wall detection, passive wall sensing, WiFi sensing technology, SDVOSB defense contractor Utah, Lumineye alternative, through wall radar alternative, WiFi CSI sensing" />
+    <meta property="og:title" content="Ceradon Systems | Passive Through-Wall Detection Technology" />
+    <meta property="og:description" content="Vantage detects humans through walls using passive WiFi — no emissions, no detection, 10x cheaper than radar. Veteran-founded SDVOSB." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ceradonsystems.com/" />
     <meta property="og:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ceradon Systems | Passive RF Sensing & Readiness Assurance" />
-    <meta name="twitter:description" content="Vantage passive RF sensing, Aegis battery readiness assurance, and Architect Stack planning tools for mission-aligned UxS." />
+    <meta name="twitter:title" content="Ceradon Systems | Passive Through-Wall Detection" />
+    <meta name="twitter:description" content="Vantage detects humans through walls using passive WiFi — no emissions, no detection, 10x cheaper than radar." />
     <meta name="twitter:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
     <link rel="canonical" href="https://ceradonsystems.com/" />
     <link rel="icon" type="image/png" href="./assets/Emblem.PNG" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- Google Analytics (GA4) — Replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -28,8 +37,13 @@
       "name": "Ceradon Systems, LLC",
       "url": "https://ceradonsystems.com",
       "logo": "https://ceradonsystems.com/assets/Emblem.PNG",
-      "description": "Passive RF sensing, battery readiness assurance, and UxS planning for defense, security, and infrastructure teams",
+      "description": "Veteran-founded SDVOSB building passive WiFi through-wall detection technology for defense, law enforcement, and security teams.",
       "foundingDate": "2024",
+      "founder": {
+        "@type": "Person",
+        "name": "Noah Schultz",
+        "jobTitle": "Founder & CEO"
+      },
       "contactPoint": [
         {
           "@type": "ContactPoint",
@@ -45,6 +59,7 @@
       "sameAs": ["https://github.com/nbschultz97", "https://www.linkedin.com/company/ceradon-systems", "https://www.linkedin.com/in/noah-b-schultz/"],
       "address": {
         "@type": "PostalAddress",
+        "addressRegion": "UT",
         "addressCountry": "US"
       }
     }
@@ -58,22 +73,18 @@
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2">
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
+            <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems — passive through-wall detection technology" />
           </span>
           <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems mark" />
+            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
-            
             <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 · UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
         <nav class="hidden md:flex gap-6" aria-label="Main navigation">
-          <!-- add active link state using aria-current="page" -->
           <a href="index.html#top" class="navlink">Home</a>
           <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="polygen.html" class="navlink">Polygen AI</a>
-          <a href="architect.html" class="navlink">Architect Stack</a>
           <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
@@ -81,12 +92,12 @@
         </nav>
         <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
       </div>
-      <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content">
+      <!-- HERO — Vantage-first -->
       <section id="top" class="relative overflow-hidden hero-splash">
         <div class="absolute inset-0 pointer-events-none">
-          <img src="./assets/hero-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20" aria-hidden="true" />
+          <img src="./assets/hero-vantage.jpg" alt="Through-wall detection technology visualization" class="absolute inset-0 w-full h-full object-cover opacity-20" aria-hidden="true" />
           <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/60 via-[#04070d]/40 to-[#04070d]"></div>
         </div>
         <div class="relative mx-auto max-w-7xl px-4 py-20">
@@ -94,61 +105,57 @@
             <div class="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
               <div class="logo-plate logo-plate--hero">
                 <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
-                <h1 class="sr-only">Ceradon Systems</h1>
               </div>
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[color:var(--white)] leading-tight">See through walls.<br/>Stay invisible.</h1>
               <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-4 py-2 text-xs tracking-[0.3em] uppercase text-[color:var(--silver)]">
                 <span class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)]"></span>
-                Passive RF + Readiness Assurance
+                Veteran-Founded · SDVOSB · Passive WiFi Sensing
               </div>
               <p class="max-w-2xl text-lg text-subtle">
-                Passive RF sensing and readiness assurance for small teams. Vantage provides zero-emission through-wall awareness. Aegis delivers execution-time battery readiness decisions. The Architect Stack helps plan drones, nodes, and kits with offline-first workflows.
+                <strong class="text-[color:var(--white)]">Vantage</strong> detects humans through solid walls using passive WiFi Channel State Information. No RF emissions. No chance of detection. A fraction of the cost of active radar systems like Lumineye or Camero.
               </p>
               <div class="flex flex-col sm:flex-row gap-4">
                 <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Explore Vantage</a>
-                <a href="index.html#aegis" class="btn btn-secondary text-sm uppercase tracking-wide">Explore Aegis</a>
-                <a href="architect.html" class="btn btn-secondary text-sm uppercase tracking-wide">Explore Architect Stack</a>
+                <a href="contact.html" class="btn btn-secondary text-sm uppercase tracking-wide">Request a Demo</a>
               </div>
             </div>
             <div class="card-glass p-8 space-y-6">
               <div class="space-y-2">
-                <p class="tag">Design. Simulate. Field.</p>
-                <h2 class="text-2xl font-semibold text-[color:var(--white)]">Built for small, technical teams</h2>
-                <p class="text-subtle">
-                  Plan RF sensing nodes, unmanned ground and air platforms, and mesh links before anyone buys hardware. Keep every design software-defined, portable, and ready for austere deployments.
-                </p>
+                <p class="tag">Why Passive Matters</p>
+                <h2 class="text-2xl font-semibold text-[color:var(--white)]">The covert advantage</h2>
               </div>
               <div class="space-y-4">
                 <div class="flex items-start gap-4">
-                  <div class="rounded-full bg-[color:var(--steel-700)]/70 p-3">
+                  <div class="rounded-full bg-[color:var(--steel-700)]/70 p-3 shrink-0">
                     <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m6-12-6-6-6 6" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12c1.292 4.338 5.31 7.5 10.066 7.5.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-[color:var(--white)]">COTS-first kits</h3>
-                    <p class="text-sm text-subtle">Model Raspberry Pis, Linux laptops, WiFi and LoRa radios, COTS antennas, sensors, and power stacks without bespoke silicon.</p>
+                    <h3 class="font-semibold text-[color:var(--white)]">Zero emissions</h3>
+                    <p class="text-sm text-subtle">Listens to existing WiFi signals. Emits nothing. Invisible to RF detection and electronic warfare systems.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
-                  <div class="rounded-full bg-[color:var(--steel-700)]/70 p-3">
+                  <div class="rounded-full bg-[color:var(--steel-700)]/70 p-3 shrink-0">
                     <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8h18M7 4h10m-9 16h8m-9-4h10" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-[color:var(--white)]">RF sensing & UxS focus</h3>
-                    <p class="text-sm text-subtle">Explore roles from WiFi recon and mesh relays to UGV/UAS payloads and telemetry backbones.</p>
+                    <h3 class="font-semibold text-[color:var(--white)]">10x cheaper than radar</h3>
+                    <p class="text-sm text-subtle">COTS hardware at a fraction of the $60K–$85K price tag of active through-wall radar systems.</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
-                  <div class="rounded-full bg-[color:var(--steel-700)]/70 p-3">
+                  <div class="rounded-full bg-[color:var(--steel-700)]/70 p-3 shrink-0">
                     <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h10m-4 4h10M4 18h8" />
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z" />
                     </svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-[color:var(--white)]">Simulation-first</h3>
-                    <p class="text-sm text-subtle">Estimate power, runtime, and link budgets before kits leave the bench, with exports ready for mission rehearsals.</p>
+                    <h3 class="font-semibold text-[color:var(--white)]">Networked & ATAK-ready</h3>
+                    <p class="text-sm text-subtle">Mesh-capable nodes feed CoT data to ATAK for distributed situational awareness across the team.</p>
                   </div>
                 </div>
               </div>
@@ -157,125 +164,194 @@
         </div>
       </section>
 
+      <!-- APPLICATIONS -->
       <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="space-y-3" data-animate>
-            <p class="tag">Product Lines</p>
-            <h2 class="section-heading text-3xl">Aegis + Architect Stack + Vantage + Polygen AI</h2>
+            <p class="tag">Applications</p>
+            <h2 class="section-heading text-3xl">Built for operators who need to know what's on the other side</h2>
+            <p class="text-subtle max-w-3xl">Passive through-wall detection for the teams that need it most — from military breach operations to search and rescue.</p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">🎯 Military Breach & Clearing</h3>
+              <p class="text-sm text-subtle">Know room occupancy before entry. Passive sensing means zero signature — critical in contested EW environments where active radar gets you detected.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">🚔 Law Enforcement / SWAT</h3>
+              <p class="text-sm text-subtle">Barricaded suspect standoffs, hostage rescue, warrant service. Know how many people are inside and where they are before making entry.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">🔍 Search & Rescue</h3>
+              <p class="text-sm text-subtle">Detect trapped survivors through rubble and collapsed structures. WiFi signals penetrate where cameras and thermal can't.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">🏢 Building & Facility Security</h3>
+              <p class="text-sm text-subtle">Continuous occupancy monitoring for critical infrastructure, embassies, and secure facilities without installing sensors inside.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">🛡️ Infrastructure Protection</h3>
+              <p class="text-sm text-subtle">Perimeter security for power stations, data centers, and government buildings. Detect unauthorized presence through walls passively.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">📡 SIGINT / Intelligence</h3>
+              <p class="text-sm text-subtle">Dual-use capability: WiFi CSI analysis reveals both human presence and network topology without active probing.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VANTAGE DEEP DIVE -->
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="space-y-3" data-animate>
+            <p class="tag">Vantage Platform</p>
+            <h2 class="section-heading text-3xl">How passive WiFi through-wall detection works</h2>
             <p class="text-subtle max-w-3xl">
-              Four complementary efforts: a proprietary execution-layer readiness system, an open-source planning stack, a passive RF sensing platform, and an AI-powered 3D model generator.
+              Vantage exploits WiFi Channel State Information (CSI) — the subtle signal distortions caused by human bodies in a WiFi field. When someone moves, breathes, or shifts position behind a wall, the WiFi signal changes. Vantage detects those changes passively.
             </p>
           </div>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <article class="product-card" id="aegis">
-              <img src="./assets/hero-aegis.jpg" alt="Aegis battery readiness dashboard" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">1. Listen</h3>
+              <p class="text-sm text-subtle">Captures existing WiFi frames from ambient access points. No transmitter needed.</p>
+            </div>
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">2. Extract</h3>
+              <p class="text-sm text-subtle">Pulls CSI amplitude and phase data across subcarriers using commodity WiFi chipsets.</p>
+            </div>
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">3. Classify</h3>
+              <p class="text-sm text-subtle">ML models process conditioned signals to detect presence, movement, and activity patterns.</p>
+            </div>
+            <div class="card-glass p-5 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">4. Report</h3>
+              <p class="text-sm text-subtle">Outputs presence alerts via JSON, CLI, or ATAK CoT feed in real time.</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <a href="vantage.html" class="btn btn-primary text-sm uppercase tracking-wide">Full Vantage Details →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CERADON — Credibility -->
+      <section id="why-ceradon" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="space-y-3" data-animate>
+            <p class="tag">Why Ceradon</p>
+            <h2 class="section-heading text-3xl">Veteran-founded. Operator-built. Mission-ready.</h2>
+            <p class="text-subtle max-w-3xl">Ceradon Systems is a Service-Disabled Veteran-Owned Small Business (SDVOSB) founded by a special operations intelligence professional who builds what the warfighter actually needs.</p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="card-glass p-6 space-y-3">
+              <p class="text-3xl">🇺🇸</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">SDVOSB / VOSB</h3>
+              <p class="text-sm text-subtle">Service-Disabled Veteran-Owned Small Business. Eligible for sole-source and set-aside contracts.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <p class="text-3xl">⚔️</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">Special Operations Background</h3>
+              <p class="text-sm text-subtle">Army National Guard 19th Special Forces Group (Airborne). MOS 35G — Geospatial Intelligence Imagery Analyst. USMC veteran.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <p class="text-3xl">🔒</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">Security Clearance</h3>
+              <p class="text-sm text-subtle">Active security clearance. Understands classified environments and information handling requirements.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <p class="text-3xl">🛩️</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">FAA Part 107 Certified</h3>
+              <p class="text-sm text-subtle">Licensed commercial drone pilot. Experienced with FPV, fixed-wing, and UGV platforms for ISR and sensing missions.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <p class="text-3xl">📋</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">Active in SAM.gov</h3>
+              <p class="text-sm text-subtle">CAGE 179U9 · UEI UZA9PFJ9RDL6 · NAICS 541715, 541330 · Registered through Dec 2026.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <p class="text-3xl">🎓</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">Engineering + Intel</h3>
+              <p class="text-sm text-subtle">CU Boulder MEng in progress. Combines military intelligence tradecraft with hands-on RF and software engineering.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OTHER PROJECTS (Labs) -->
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/50]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
+          <div class="space-y-3" data-animate>
+            <p class="tag">Ceradon Labs</p>
+            <h2 class="section-heading text-3xl">Other Projects</h2>
+            <p class="text-subtle max-w-3xl">Complementary tools and experiments from the Ceradon ecosystem.</p>
+          </div>
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="product-card">
+              <img src="./assets/hero-polygen.jpg" alt="Polygen AI text-to-3D model generator interface" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
               <div class="product-card__header">
-                <h3 class="product-title">Ceradon Aegis (Readiness)</h3>
-                <p class="product-tagline">Battery lifecycle &amp; readiness assurance for tactical uncrewed systems.</p>
+                <h3 class="product-title">Polygen AI</h3>
+                <p class="product-tagline">Text-to-3D model generator powered by multi-agent AI pipeline.</p>
               </div>
               <ul class="product-bullets">
-                <li><strong>Decisive action:</strong> "Is this specific asset safe and capable for this mission right now?"</li>
-                <li>Tracks serialized battery health, voltage sag, and thermal history.</li>
-                <li>Outputs GREEN / AMBER / RED readiness status at execution time.</li>
+                <li>Converts natural language to printable OpenSCAD code.</li>
+                <li>Multi-agent pipeline: Gemini + Claude.</li>
+                <li>Browser-based WASM validation and STL export.</li>
               </ul>
-              <p class="text-sm text-subtle mt-4">Aegis is an execution-layer tool designed to produce decisions based on real-world asset health.</p>
+              <a class="btn btn-secondary mt-4 inline-flex" href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer">Launch Polygen AI</a>
             </article>
             <article class="product-card">
-              <img src="./assets/hero-architect.jpg" alt="Architect Stack holographic planning" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
+              <img src="./assets/hero-architect.jpg" alt="Architect Stack offline planning tools for unmanned systems" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
               <div class="product-card__header">
-                <h3 class="product-title">Architect Stack (Planning Tools)</h3>
-                <p class="product-tagline">Open-source, offline-first planning tools for nodes, drones, RF coverage, and sustainment kits.</p>
+                <h3 class="product-title">Architect Stack</h3>
+                <p class="product-tagline">Open-source, offline-first planning tools for nodes, drones, and RF mesh layouts.</p>
               </div>
               <ul class="product-bullets">
-                <li><strong>What it does:</strong> Models inventory, power, and mission constraints.</li>
+                <li>Models inventory, power, and mission constraints.</li>
                 <li>Builds node/UxS designs and RF mesh layouts.</li>
                 <li>Exports kit plans and sustainment checklists.</li>
               </ul>
               <a class="btn btn-secondary mt-4 inline-flex" href="architect.html">Explore Architect Stack</a>
             </article>
-            <article class="product-card">
-              <img src="./assets/hero-vantage.jpg" alt="Vantage through-wall sensing" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
+            <article class="product-card" id="aegis">
+              <img src="./assets/hero-aegis.jpg" alt="Aegis battery readiness assurance dashboard for tactical drones" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
               <div class="product-card__header">
-                <h3 class="product-title">Vantage (Sensing)</h3>
-                <p class="product-tagline">Passive Wi-Fi CSI sensing for zero-emission through-wall human detection and pose estimation.</p>
+                <h3 class="product-title">Ceradon Aegis</h3>
+                <p class="product-tagline">Battery lifecycle & readiness assurance for tactical uncrewed systems.</p>
               </div>
               <ul class="product-bullets">
-                <li><strong>What it does:</strong> Extracts CSI features for pose-first sensing.</li>
-                <li>Runs offline on Pi/Jetson-class edge compute.</li>
-                <li>Exports local telemetry and replayable logs.</li>
+                <li>Tracks serialized battery health, voltage sag, and thermal history.</li>
+                <li>Outputs GREEN / AMBER / RED readiness status at execution time.</li>
+                <li>Concept stage — operational R&D in progress.</li>
               </ul>
-              <a class="btn btn-secondary mt-4 inline-flex" href="vantage.html">Explore Vantage</a>
-            </article>
-            <article class="product-card">
-              <img src="./assets/hero-polygen.jpg" alt="Polygen AI generative 3D design" class="w-full h-32 object-cover rounded-lg mb-4 opacity-80" loading="lazy" />
-              <div class="product-card__header">
-                <h3 class="product-title">Polygen AI (3D Generation)</h3>
-                <p class="product-tagline">Text-to-3D model generator powered by multi-agent AI pipeline.</p>
-              </div>
-              <ul class="product-bullets">
-                <li><strong>What it does:</strong> Converts natural language to printable OpenSCAD code.</li>
-                <li>Multi-agent pipeline: Gemini (Planner) + Claude (Coder).</li>
-                <li>Browser-based WASM validation and STL export.</li>
-              </ul>
-              <a class="btn btn-secondary mt-4 inline-flex" href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer">Launch Polygen AI</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="technology" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/55]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-8">
-          <div class="space-y-3" data-animate>
-            <p class="tag">Our Approach</p>
-            <h2 class="section-heading text-3xl">COTS hardware. Software-defined planning. Mission clarity.</h2>
-            <p class="text-subtle max-w-3xl">
-              Every product is grounded in commodity gear and built for small teams who need to move fast. Operator-Driven Development delivers MVPs in weeks, not months.
-            </p>
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div class="card-glass p-5 space-y-2">
-              <h3 class="font-semibold text-[color:var(--white)]">Model first</h3>
-              <p class="text-sm text-subtle">Check power, weight, and runtime before committing to a kit.</p>
-            </div>
-            <div class="card-glass p-5 space-y-2">
-              <h3 class="font-semibold text-[color:var(--white)]">Mesh-aware</h3>
-              <p class="text-sm text-subtle">Plan WiFi, LoRa, and FPV paths to keep operators connected.</p>
-            </div>
-            <div class="card-glass p-5 space-y-2">
-              <h3 class="font-semibold text-[color:var(--white)]">Offline-first</h3>
-              <p class="text-sm text-subtle">Rehearsals, training, and deployments work without cloud or connectivity.</p>
-            </div>
-            <div class="card-glass p-5 space-y-2">
-              <h3 class="font-semibold text-[color:var(--white)]">Sustainment ready</h3>
-              <p class="text-sm text-subtle">Packaging, spares, and exports stay aligned as designs evolve.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <!-- CONTACT CTA -->
       <section id="contact" class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/70]">
         <div class="mx-auto max-w-7xl px-4 py-16 space-y-10">
           <div class="grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-start">
             <div class="space-y-4">
               <span class="tag">Contact</span>
               <h2 class="section-heading text-3xl">Talk with Ceradon</h2>
-              <p class="text-subtle">Use this form to outline what you want to build or explore. For collaboration, demos, or open-source contributions, share your constraints and timeline—no classified details required.</p>
-              <p class="text-subtle">Share what you need to design or field—RF sensing nodes, unmanned platforms, mesh telemetry, or sustainment plans. We'll respond with recommended options and point you to open demos or repos.</p>
+              <p class="text-subtle">Interested in passive through-wall detection for your team? Whether you're a program manager, SWAT commander, or SAR coordinator — let's talk about how Vantage fits your mission.</p>
               <div class="flex flex-col gap-2 text-subtle">
                 <div class="flex items-center gap-2">
                   <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
                   </svg>
                   <div>
-                    <p>General inquiries: <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a></p>
-                    <p>Collaboration and demos: <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a></p>
+                    <p>General: <a href="mailto:info@ceradonsystems.com" class="hover:text-[color:var(--white)]">info@ceradonsystems.com</a></p>
+                    <p>Demos & partnerships: <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a></p>
                   </div>
                 </div>
-                <p class="text-sm">Prefer a brief? Send your constraints and timelines—no classified details required.</p>
               </div>
             </div>
             <div class="card-glass p-6">
-              <form class="space-y-4" data-contact-form>
+              <form class="space-y-4" action="https://formspree.io/f/xpwdkjaq" method="POST" data-contact-form>
+                <input type="hidden" name="_subject" value="Ceradon Website Inquiry" />
                 <div>
                   <label for="name">Name</label>
                   <input id="name" name="name" type="text" placeholder="Your name" required />
@@ -289,10 +365,10 @@
                   <input id="email" name="email" type="email" placeholder="you@example.com" required />
                 </div>
                 <div>
-                  <label for="message">What do you want to build or demo?</label>
-                  <textarea id="message" name="message" rows="4" placeholder="Example: Planning support for Node + Mesh in an urban block, plus rough constraints and timelines." required></textarea>
+                  <label for="message">How can we help?</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Tell us about your mission needs, timeline, or questions about Vantage." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary w-full">Start the conversation</button>
+                <button type="submit" class="btn btn-primary w-full">Send Message</button>
                 <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
               </form>
             </div>
@@ -305,10 +381,10 @@
       <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
+            <img src="./assets/Emblem.PNG" alt="Ceradon Systems" class="h-12 w-12 image-surface" loading="lazy" />
             <div>
               <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
-              <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
+              <p class="text-sm text-subtle">Passive through-wall detection technology. Veteran-founded SDVOSB.</p>
             </div>
           </div>
           <div class="flex gap-4 items-center text-sm text-subtle">
@@ -326,7 +402,6 @@
         </div>
         <div class="footer-links" data-footer-links></div>
         <div class="space-y-2 text-xs text-subtle">
-          <p>Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
           <p>Ceradon Systems, LLC (Utah) · CAGE 179U9 · UEI UZA9PFJ9RDL6 · Active in SAM.gov through Dec 5, 2026.</p>
           <p>Socio-economic status: SDVOSB · VOSB.</p>
           <p>NAICS: 541715, 541330 · PSC: K058, AJ11.</p>

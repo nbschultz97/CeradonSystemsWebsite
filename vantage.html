@@ -3,20 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vantage | Passive Through-Wall Awareness by Ceradon Systems</title>
-    <meta name="description" content="Vantage uses passive Wi-Fi CSI for zero-emission through-wall human detection and pose estimation, built for low-signature tactical awareness." />
-    <meta property="og:title" content="Vantage | Passive Through-Wall Awareness" />
-    <meta property="og:description" content="Passive Wi-Fi CSI delivers zero-emission through-wall human detection and pose estimation for low-signature teams." />
+    <title>Vantage | Passive WiFi Through-Wall Detection — Lumineye & Camero Alternative</title>
+    <meta name="description" content="Vantage is a passive WiFi CSI through-wall detection system. Zero emissions, covert operation, fraction of the cost of Lumineye or Camero radar. SDVOSB defense technology." />
+    <meta name="keywords" content="through wall detection, passive wall sensing, WiFi sensing technology, Lumineye alternative, Camero alternative, through wall radar, WiFi CSI, STTW, sense through the wall" />
+    <meta property="og:title" content="Vantage | Passive Through-Wall Detection — WiFi Sensing Technology" />
+    <meta property="og:description" content="Passive WiFi CSI delivers zero-emission through-wall human detection. 10x cheaper than active radar. The covert alternative to Lumineye and Camero." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ceradonsystems.com/vantage.html" />
     <meta property="og:image" content="https://ceradonsystems.com/assets/Vantage.PNG" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Vantage | Passive Through-Wall Awareness" />
-    <meta name="twitter:description" content="Passive Wi-Fi CSI delivers zero-emission through-wall human detection and pose estimation for low-signature teams." />
+    <meta name="twitter:title" content="Vantage | Passive Through-Wall Detection" />
+    <meta name="twitter:description" content="Passive WiFi CSI delivers zero-emission through-wall human detection. 10x cheaper than active radar." />
     <meta name="twitter:image" content="https://ceradonsystems.com/assets/Vantage.PNG" />
     <link rel="canonical" href="https://ceradonsystems.com/vantage.html" />
     <link rel="icon" type="image/png" href="./assets/Emblem.PNG" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- Google Analytics (GA4) — Replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
   </head>
   <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
     <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
@@ -27,19 +36,15 @@
             <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
           </span>
           <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
-            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems mark" />
+            <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
-            
             <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 · UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
         <nav class="hidden md:flex gap-6" aria-label="Main navigation">
-          <!-- add active link state using aria-current="page" -->
           <a href="index.html" class="navlink">Home</a>
           <a href="vantage.html" class="navlink" aria-current="page">Vantage</a>
-          <a href="polygen.html" class="navlink">Polygen AI</a>
-          <a href="architect.html" class="navlink">Architect Stack</a>
           <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
@@ -47,131 +52,170 @@
         </nav>
         <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
       </div>
-      <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content">
+      <!-- HERO -->
       <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
         <div class="absolute inset-0 pointer-events-none">
-          <img src="./assets/hero-vantage.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" />
+          <img src="./assets/hero-vantage.jpg" alt="Vantage passive through-wall detection system concept" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" />
           <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/50 via-[#04070d]/30 to-[#04070d]"></div>
         </div>
         <div class="relative mx-auto max-w-7xl px-4 py-16">
           <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:items-center">
             <div class="space-y-6">
-              <span class="tag">Vantage Platform</span>
-              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Zero-Emission Detection. Human truth through any wall.</h1>
-              <p class="text-lg text-subtle">Vantage uses passive Wi-Fi CSI to detect humans and estimate pose through walls without emitting RF energy. Zero-emission detection stays resilient in contested EW environments while keeping teams low-signature for breach operations, site security, and covert overwatch.</p>
-              <p class="text-lg text-subtle">At a fraction of the cost of active radar systems, Vantage delivers covert through-wall awareness on COTS edge hardware — deployable in minutes, not hours.</p>
+              <div class="flex items-center gap-3">
+                <span class="tag">Vantage Platform</span>
+                <span class="inline-flex items-center gap-1 rounded-full border border-yellow-500/40 bg-yellow-500/10 px-3 py-1 text-xs font-medium text-yellow-400">TRL 4 — Lab Validated</span>
+              </div>
+              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Passive through-wall detection.<br/>No emissions. No detection.</h1>
+              <p class="text-lg text-subtle">Vantage uses passive WiFi Channel State Information (CSI) to detect human presence through walls — without emitting any RF energy. Zero signature means zero detection risk in contested environments.</p>
+              <p class="text-lg text-subtle">At a fraction of the cost of active radar systems like <strong class="text-[color:var(--white)]">Camero Xaver ($60K–$85K)</strong> or handheld devices like <strong class="text-[color:var(--white)]">Lumineye ($~5K)</strong>, Vantage delivers covert through-wall awareness on COTS edge hardware.</p>
               <div class="flex flex-wrap gap-3">
-                <span class="badge">Pose inference core</span>
-                <span class="badge">Mesh-ready</span>
-                <span class="badge">Offline-first</span>
+                <span class="badge">Passive / Zero-emission</span>
+                <span class="badge">COTS hardware</span>
+                <span class="badge">ATAK-ready</span>
+                <span class="badge">Edge compute</span>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
+                <a href="#pricing" class="btn btn-secondary text-sm uppercase tracking-wide">Compare Pricing</a>
               </div>
             </div>
             <div class="card-glass p-8 space-y-4">
-              <img src="./assets/vantage-mark.svg" alt="Vantage shield" class="h-20 w-20 image-surface" loading="lazy" />
-              <p class="text-subtle">Every capability centers on resilient pose estimation so operators understand posture and intent before breaching.</p>
-              <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
+              <img src="./assets/vantage-mark.svg" alt="Vantage platform shield logo" class="h-20 w-20 image-surface" loading="lazy" />
+              <h2 class="text-xl font-semibold text-[color:var(--white)]">What works now</h2>
+              <ul class="space-y-2 text-sm text-subtle">
+                <li class="flex gap-2"><span class="text-green-400">✓</span> Presence detection via WiFi CSI</li>
+                <li class="flex gap-2"><span class="text-green-400">✓</span> Hampel + Butterworth signal conditioning</li>
+                <li class="flex gap-2"><span class="text-green-400">✓</span> 14-feature extraction pipeline</li>
+                <li class="flex gap-2"><span class="text-green-400">✓</span> RandomForest classifier</li>
+                <li class="flex gap-2"><span class="text-green-400">✓</span> Movement classification (JSON output)</li>
+                <li class="flex gap-2"><span class="text-green-400">✓</span> Runs on Raspberry Pi / Jetson</li>
+                <li class="flex gap-2"><span class="text-green-400">✓</span> CLI interface with structured logging</li>
+              </ul>
+              <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide w-full text-center">Request a Demo</a>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- CAPABILITIES — Current vs Roadmap -->
       <section class="mx-auto max-w-7xl px-4 py-16 space-y-12">
         <div class="space-y-6">
           <h2 class="section-heading text-3xl">Capabilities</h2>
-          <p class="text-subtle max-w-3xl">Each module is engineered around the pose estimation pipeline—supporting features feed richer skeletal overlays and mission telemetry while staying passive.</p>
+          <p class="text-subtle max-w-3xl">Current capabilities and planned roadmap. We're transparent about what's working today versus what's in development — defense buyers deserve honesty about TRL levels.</p>
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Presence Detection</h3>
-              <p class="text-sm text-subtle">Low-latency detection on sub-second windows with adaptive thresholds for high-clutter structures.</p>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Presence Detection</h3>
+                <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
+              </div>
+              <p class="text-sm text-subtle">Low-latency human presence detection using CSI amplitude variance with adaptive thresholds. Works through standard drywall, wood, and concrete block.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Pose States</h3>
-              <p class="text-sm text-subtle">Standing, crouched, and prone classification primes the skeletal estimator and informs ROE.</p>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Signal Conditioning</h3>
+                <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
+              </div>
+              <p class="text-sm text-subtle">Hampel filter for outlier removal + Butterworth low-pass for noise reduction. Produces clean CSI streams from commodity WiFi chipsets.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Motion Vectors</h3>
-              <p class="text-sm text-subtle">Vectorized CSI deltas map speed, direction, and acceleration to anticipate movement.</p>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Movement Classification</h3>
+                <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
+              </div>
+              <p class="text-sm text-subtle">RandomForest classifier with 14-feature extraction distinguishes movement patterns. JSON-structured output for integration.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Zone / Sector Location</h3>
-              <p class="text-sm text-subtle">Triangulate presence into sectors for rapid room clearing and follow-on skeletal overlays.</p>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Pose States</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
+              </div>
+              <p class="text-sm text-subtle">Standing, crouched, and prone classification using CNN-LSTM models. Planned for TRL 5 milestone with field-collected training data.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Behavioral Cues</h3>
-              <p class="text-sm text-subtle">Micro-Doppler patterns reveal agitation, compliance, and dwell time.</p>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Zone / Sector Location</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
+              </div>
+              <p class="text-sm text-subtle">Multi-node triangulation to locate subjects within sectors of a room. Requires deployed sensor mesh for spatial resolution.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Local Logs</h3>
-              <p class="text-sm text-subtle">Structured JSON, CLI, and GUI outputs with ATAK-ready feeds. Secure export for analytics.</p>
+              <div class="flex items-center gap-2">
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">ATAK Integration</h3>
+                <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
+              </div>
+              <p class="text-sm text-subtle">Cursor-on-Target (CoT) feeds to ATAK for real-time presence data overlaid on tactical maps. Architecture designed, integration pending.</p>
             </div>
           </div>
         </div>
 
-        <p class="text-subtle max-w-3xl">Modular form factors include Tripod Nodes, Handheld Kits, and Remote Payloads tailored for covert operations.</p>
-        <div class="grid gap-6 lg:grid-cols-3">
-          <div class="card-glass p-6 space-y-4">
-            <h3 class="text-xl font-semibold text-[color:var(--white)]">Tripod Node</h3>
-            <p class="text-sm text-subtle">Deployable mast with directional antennas for site security and long-duration coverage.</p>
+        <!-- PRICING COMPARISON -->
+        <div class="space-y-6" id="pricing">
+          <h2 class="section-heading text-3xl">Cost Comparison: Through-Wall Detection Systems</h2>
+          <p class="text-subtle max-w-3xl">Active radar through-wall systems are expensive and emit detectable RF. Vantage takes a fundamentally different approach — passive WiFi sensing at a fraction of the cost.</p>
+          <div class="overflow-x-auto">
+            <table class="table-dark text-sm">
+              <thead>
+                <tr>
+                  <th scope="col">System</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Approximate Cost</th>
+                  <th scope="col">Emissions</th>
+                  <th scope="col">Covert?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Camero Xaver 400/800</th>
+                  <td>Active UWB Radar</td>
+                  <td>$60,000 – $85,000</td>
+                  <td>Emits UWB pulses</td>
+                  <td class="text-red-400">No — detectable by EW</td>
+                </tr>
+                <tr>
+                  <th scope="row">Lumineye Lux / Lynx</th>
+                  <td>Active Radar</td>
+                  <td>~$5,000 (handheld)</td>
+                  <td>Emits radar signals</td>
+                  <td class="text-red-400">No — detectable by EW</td>
+                </tr>
+                <tr class="bg-[color:var(--ceradon-blue)]/5 border-l-2 border-[color:var(--ceradon-blue)]">
+                  <th scope="row" class="text-[color:var(--ceradon-blue)]">Ceradon Vantage</th>
+                  <td>Passive WiFi CSI</td>
+                  <td class="text-[color:var(--ceradon-blue)] font-semibold">Fraction of radar cost</td>
+                  <td class="text-green-400">Zero emissions</td>
+                  <td class="text-green-400">Yes — completely passive</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="card-glass p-6 space-y-4">
-            <h3 class="text-xl font-semibold text-[color:var(--white)]">Handheld Kit</h3>
-            <p class="text-sm text-subtle">Portable controller with quick-look pose confidence and silent alerts for breach teams.</p>
-          </div>
-          <div class="card-glass p-6 space-y-4">
-            <h3 class="text-xl font-semibold text-[color:var(--white)]">Remote Payload</h3>
-            <p class="text-sm text-subtle">Modular payload integrates with tactical robots and drones for covert overwatch and remote sensing.</p>
+          <div class="card-glass p-6 space-y-2">
+            <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">The passive advantage:</strong> Active radar systems broadcast their presence. In contested EW environments, that emission is a liability. Vantage listens to existing WiFi — it never transmits, can't be detected, and can't be jammed. For teams that need to stay invisible, that's not a feature — it's a requirement.</p>
+            <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">Looking for a Lumineye alternative?</strong> Lumineye's website is currently down. If you're evaluating through-wall detection options, Vantage offers a fundamentally different approach — passive sensing with zero emissions at lower cost.</p>
           </div>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-center">
-          <div class="space-y-6">
-            <h2 class="section-heading text-3xl">Architecture</h2>
-            <p class="text-subtle">From RF capture to pose inference, every stage runs locally. CSI ingest → denoising → skeletal estimation → redacted telemetry.</p>
-            <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Modular pipeline orchestrated with containerized microservices.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> GPU-optional inference with quantized pose networks for Jetson / Pi.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Secure local API for overlays, dashboards, and third-party integrations.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
-          <div class="space-y-6">
-            <h2 class="section-heading text-3xl">Operational Stack</h2>
-            <p class="text-subtle max-w-3xl">Built for embedded teams that need deterministic behavior. Every module stays lean so future skeletal overlays render without starving CSI ingest.</p>
-            <div class="grid gap-4 md:grid-cols-2">
-              <div class="card-glass p-4 space-y-2">
-                <h3 class="font-semibold text-[color:var(--white)]">RF Front-End</h3>
-                <p class="text-sm text-subtle">Intel 5300 / AX210 profiles, calibrated antenna maps, and OUI-cached spectrum intel for quick device attribution.</p>
-              </div>
-              <div class="card-glass p-4 space-y-2">
-                <h3 class="font-semibold text-[color:var(--white)]">Pose Core</h3>
-                <p class="text-sm text-subtle">WiPose / PassiveWiFiPose-ready tensors with quantized weights to keep Jetson Nano and Pi 5 within thermal limits.</p>
-              </div>
-              <div class="card-glass p-4 space-y-2">
-                <h3 class="font-semibold text-[color:var(--white)]">Telemetry</h3>
-                <p class="text-sm text-subtle">Schema-validated JSON, CSV, and SQLite logs with hash-chained records for chain-of-custody.</p>
-              </div>
-              <div class="card-glass p-4 space-y-2">
-                <h3 class="font-semibold text-[color:var(--white)]">Visualization</h3>
-                <p class="text-sm text-subtle">Reserved HUD bands for skeletal overlays, mobility vectors, and direction/distance labels without redrawing the full scene.</p>
-              </div>
+        <!-- FORM FACTORS -->
+        <div class="space-y-6">
+          <h2 class="section-heading text-3xl">Form Factors</h2>
+          <div class="grid gap-6 lg:grid-cols-3">
+            <div class="card-glass p-6 space-y-4">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Tripod Node</h3>
+              <p class="text-sm text-subtle">Deployable mast with directional antennas for site security and long-duration coverage.</p>
+            </div>
+            <div class="card-glass p-6 space-y-4">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Handheld Kit</h3>
+              <p class="text-sm text-subtle">Portable controller with quick-look presence alerts for breach teams.</p>
+            </div>
+            <div class="card-glass p-6 space-y-4">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Remote Payload</h3>
+              <p class="text-sm text-subtle">Modular payload integrates with tactical robots and drones for covert overwatch.</p>
             </div>
           </div>
-          <div class="card-glass p-6 space-y-4">
-            <h3 class="text-xl font-semibold text-[color:var(--white)]">Hardening &amp; Ops</h3>
-            <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Offline update bundles signed for air-gapped kits.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Configurable emissions lock to keep radios passive during staging.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> CLI health checks for CSI packet loss, clock drift, and thermal margins.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Export profiles for ATAK, KML, and offline replay without cloud calls.</li>
-            </ul>
-          </div>
         </div>
 
-
+        <!-- TECHNICAL SPECS -->
         <div class="space-y-6">
           <h2 class="section-heading text-3xl">Technical Specifications</h2>
           <div class="overflow-x-auto">
@@ -184,30 +228,88 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Hardware</th>
-                  <td>Intel AX210 / Wi-Fi 6E radios, multi-band antennas, ruggedized enclosures.</td>
+                  <th scope="row">RF Front-End</th>
+                  <td>Intel AX210 / Wi-Fi 6E, multi-band antennas, passive receive only (2.4 GHz default for through-wall).</td>
                 </tr>
                 <tr>
                   <th scope="row">Compute</th>
-                  <td>Raspberry Pi 4/5 or Jetson Nano with optional GPU acceleration for pose inference.</td>
+                  <td>Raspberry Pi 4/5 or Jetson Nano. GPU optional for advanced models.</td>
+                </tr>
+                <tr>
+                  <th scope="row">Signal Processing</th>
+                  <td>Hampel filter + Butterworth low-pass. 14-feature extraction. RandomForest classifier (CNN-LSTM on roadmap).</td>
                 </tr>
                 <tr>
                   <th scope="row">Power</th>
                   <td>DC 12–24 V input, hot-swappable battery packs, &lt; 25 W draw in continuous sensing.</td>
                 </tr>
                 <tr>
-                  <th scope="row">Interfaces</th>
-                  <td>Ethernet, Wi-Fi, secure CLI/API, ATAK plugin, optional HDMI HUD.</td>
+                  <th scope="row">Output</th>
+                  <td>Structured JSON, CLI, ATAK CoT (roadmap). SQLite logging with hash-chained records.</td>
+                </tr>
+                <tr>
+                  <th scope="row">TRL</th>
+                  <td>TRL 4 — Technology validated in lab. Presence detection and signal conditioning proven. Field validation in progress.</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
 
+        <!-- FAQ -->
+        <div class="space-y-6" id="faq">
+          <h2 class="section-heading text-3xl">Frequently Asked Questions</h2>
+          <div class="space-y-4 max-w-3xl">
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                How does passive WiFi sensing work?
+                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+              </summary>
+              <p class="text-sm text-subtle mt-4">WiFi signals from existing access points pass through walls and reflect off objects — including human bodies. When someone moves, breathes, or changes position, the WiFi signal characteristics (Channel State Information, or CSI) change measurably. Vantage captures these CSI changes passively — it only listens to WiFi frames, never transmits. Machine learning models then classify the patterns to detect presence and movement.</p>
+            </details>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                What types of walls can it see through?
+                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+              </summary>
+              <p class="text-sm text-subtle mt-4">WiFi CSI works through most common building materials: drywall, wood framing, concrete block, brick, and glass. Performance degrades through metal-lined walls, wire mesh, or heavily reinforced concrete. The 2.4 GHz band is used by default for better wall penetration compared to 5 GHz. Real-world performance varies by wall composition, thickness, and ambient WiFi density.</p>
+            </details>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                What is the detection range?
+                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+              </summary>
+              <p class="text-sm text-subtle mt-4">Detection range depends on the ambient WiFi environment and wall composition. In typical indoor environments with standard construction, presence detection has been demonstrated at room-scale distances (3–8 meters through walls). Range extends with stronger ambient WiFi signals and directional antennas. We're conducting field validation to publish verified range specifications.</p>
+            </details>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                Does it integrate with ATAK?
+                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+              </summary>
+              <p class="text-sm text-subtle mt-4">ATAK integration is on the development roadmap. The planned implementation uses Cursor-on-Target (CoT) XML messages over multicast, allowing Vantage presence data to appear as map overlays in ATAK/WinTAK. The JSON output format is already structured to support this conversion. Contact us if ATAK integration is a priority for your evaluation.</p>
+            </details>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                How is this different from Lumineye or Camero?
+                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+              </summary>
+              <p class="text-sm text-subtle mt-4">Lumineye and Camero use active radar — they transmit RF energy that bounces off targets. This works well but has two major drawbacks: (1) the emission is detectable by electronic warfare systems, compromising your position, and (2) the hardware is expensive ($5K–$85K). Vantage uses passive WiFi CSI — it only listens to existing WiFi signals and never emits. This makes it completely covert and dramatically cheaper since it runs on commodity WiFi hardware.</p>
+            </details>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                Does it need an existing WiFi network?
+                <span class="text-[color:var(--ceradon-blue)] group-open:rotate-45 transition-transform text-2xl">+</span>
+              </summary>
+              <p class="text-sm text-subtle mt-4">Vantage works best with ambient WiFi signals from existing access points. In environments without WiFi infrastructure, a covert transmitter node can be deployed — but this trades some of the passive advantage. Research into exploiting other ambient RF sources (cellular, IoT) is ongoing.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- CTA -->
         <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between card-glass p-6">
           <div>
-            <h3 class="text-2xl font-semibold text-[color:var(--white)]">Ready to see pose intelligence in action?</h3>
-            <p class="text-sm text-subtle">Schedule a controlled demonstration or request our offline briefing packet.</p>
+            <h3 class="text-2xl font-semibold text-[color:var(--white)]">Ready to evaluate passive through-wall detection?</h3>
+            <p class="text-sm text-subtle">Schedule a controlled demonstration or request our technical briefing packet.</p>
           </div>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
@@ -221,10 +323,10 @@
       <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/Emblem.PNG" alt="Ceradon Systems mark" class="h-12 w-12 image-surface" loading="lazy" />
+            <img src="./assets/Emblem.PNG" alt="Ceradon Systems" class="h-12 w-12 image-surface" loading="lazy" />
             <div>
               <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
-              <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
+              <p class="text-sm text-subtle">Passive through-wall detection technology. Veteran-founded SDVOSB.</p>
             </div>
           </div>
           <div class="flex gap-4 items-center text-sm text-subtle">
@@ -239,7 +341,6 @@
         </div>
         <div class="footer-links" data-footer-links></div>
         <div class="space-y-2 text-xs text-subtle">
-          <p>Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
           <p>Ceradon Systems, LLC (Utah) · CAGE 179U9 · UEI UZA9PFJ9RDL6 · Active in SAM.gov through Dec 5, 2026.</p>
           <p>Socio-economic status: SDVOSB · VOSB.</p>
           <p>NAICS: 541715, 541330 · PSC: K058, AJ11.</p>
