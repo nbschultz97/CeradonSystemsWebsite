@@ -2,27 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Architect Stack | Ceradon Systems</title>
-    <!-- Google Analytics (GA4) -- Replace G-XXXXXXXXXX with your Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
     <meta name="description" content="Architect is a UxS planning toolkit that turns real COTS inventory into nodes, drones, meshes, and kits aligned to mission constraints." />
     <meta property="og:title" content="Architect Stack | Ceradon Systems" />
-    <meta property="og:description" content="Plan nodes, drones, RF coverage, and sustainment kits from any starting constraint—mission, inventory, RF, or SWaP." />
+    <meta property="og:description" content="Plan nodes, drones, RF coverage, and sustainment kits from any starting constraint&mdash;mission, inventory, RF, or SWaP." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ceradonsystems.com/architect.html" />
-    <meta property="og:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
+    <meta property="og:url" content="https://www.ceradonsystems.com/architect.html" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/Emblem.PNG" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Architect Stack | Ceradon Systems" />
     <meta name="twitter:description" content="A lean, offline-first planner for COTS unmanned systems and RF nodes." />
-    <meta name="twitter:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
-    <link rel="canonical" href="https://ceradonsystems.com/architect.html" />
+    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/Emblem.PNG" />
+    <link rel="canonical" href="https://www.ceradonsystems.com/architect.html" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -37,26 +30,24 @@
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
             <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
           </span>
-          <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
+          <span class="md:hidden inline-flex logo-plate logo-plate--nav">
             <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
             
-            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 · UEI UZA9PFJ9RDL6</span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
         <nav class="hidden md:flex gap-6" aria-label="Main navigation">
           <!-- add active link state using aria-current="page" -->
           <a href="index.html" class="navlink">Home</a>
           <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="polygen.html" class="navlink">Polygen AI</a>
-          <a href="architect.html" class="navlink" aria-current="page">Architect Stack</a>
           <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
         </nav>
-        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>&#9776;</button>
       </div>
       <!-- mobile panel injected by /src/ui.js -->
     </header>
@@ -67,10 +58,10 @@
             <div class="space-y-6">
               <span class="tag">Architect Stack</span>
               <h1 class="text-4xl font-bold text-[color:var(--white)]">A UxS planning toolkit for COTS hardware.</h1>
-              <p class="text-lg text-subtle">Architect sits between spreadsheets and enterprise logistics systems. It turns real inventory—frames, radios, batteries, 3D printers, compute—into concrete node, drone, and kit designs tied to a specific mission.</p>
+              <p class="text-lg text-subtle">Architect sits between spreadsheets and enterprise logistics systems. It turns real inventory&mdash;frames, radios, batteries, 3D printers, compute&mdash;into concrete node, drone, and kit designs tied to a specific mission.</p>
               <p class="text-subtle">Offline-first by design: physics validation and mission planning run entirely in the browser with zero cloud dependencies.</p>
               <p class="text-subtle">Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
-              <p class="text-subtle">Inventory → Node designs → Drone designs → Mesh layout → Kits and sustainment.</p>
+              <p class="text-subtle">Inventory &rarr; Node designs &rarr; Drone designs &rarr; Mesh layout &rarr; Kits and sustainment.</p>
               <div class="flex flex-wrap gap-3">
                 <span class="badge">Offline-first</span>
                 <span class="badge">Explainable rules</span>
@@ -150,24 +141,24 @@
           <div class="space-y-3">
             <p class="tag">Planning flows</p>
             <h2 class="section-heading text-3xl">Plan from any starting point</h2>
-            <p class="text-subtle max-w-3xl">Architect doesn’t lock you into a single workflow. Any constraint can drive the rest.</p>
+            <p class="text-subtle max-w-3xl">Architect doesn&rsquo;t lock you into a single workflow. Any constraint can drive the rest.</p>
           </div>
           <div class="grid gap-6 md:grid-cols-2">
             <div class="card-glass p-6 space-y-3">
               <h3 class="font-semibold text-[color:var(--white)]">Mission-first</h3>
-              <p class="text-subtle text-sm">Start in Mission Architect, define task, environment, and endurance → pull candidate nodes/airframes → validate coverage in Mesh Architect → export kits with KitSmith.</p>
+              <p class="text-subtle text-sm">Start in Mission Architect, define task, environment, and endurance &rarr; pull candidate nodes/airframes &rarr; validate coverage in Mesh Architect &rarr; export kits with KitSmith.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
               <h3 class="font-semibold text-[color:var(--white)]">Inventory-first</h3>
-              <p class="text-subtle text-sm">Begin with what’s on the shelf → Node/UxS Architect show what’s realistically buildable → Mesh and KitSmith wrap those into coverage and sustainment plans.</p>
+              <p class="text-subtle text-sm">Begin with what&rsquo;s on the shelf &rarr; Node/UxS Architect show what&rsquo;s realistically buildable &rarr; Mesh and KitSmith wrap those into coverage and sustainment plans.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
               <h3 class="font-semibold text-[color:var(--white)]">Constraint-first</h3>
-              <p class="text-subtle text-sm">Set strict SWaP or power limits in KitSmith → push those constraints back into Node/UxS Architect so only feasible designs are considered.</p>
+              <p class="text-subtle text-sm">Set strict SWaP or power limits in KitSmith &rarr; push those constraints back into Node/UxS Architect so only feasible designs are considered.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
               <h3 class="font-semibold text-[color:var(--white)]">RF-first</h3>
-              <p class="text-subtle text-sm">Start from the RF environment in Mesh Architect (urban canyons, indoor, rural) → that dictates node classes, relay count, and platform roles.</p>
+              <p class="text-subtle text-sm">Start from the RF environment in Mesh Architect (urban canyons, indoor, rural) &rarr; that dictates node classes, relay count, and platform roles.</p>
             </div>
           </div>
           <p class="text-subtle max-w-4xl">The output is always the same: a set of concrete node and UxS configurations tied to a mission, with known battery demand and packing lists.</p>
@@ -181,14 +172,14 @@
             <h2 class="section-heading text-3xl">Built for labs and offline kits</h2>
             <p class="text-subtle">Architect is being built as a local, offline web toolset backed by simple JSON catalogs and explainable physics/RF rules for air-gapped and contested environments.</p>
             <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Physics validation and mission planning run entirely in the browser with zero cloud dependencies.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Inventory and blueprint libraries live as plain-text data.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Physics Validation Engine computes AUW, thrust-to-weight, and environmental derating (e.g., 40% battery capacity loss at -10°C).</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Access available for qualified defense, security, and infrastructure teams.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Physics validation and mission planning run entirely in the browser with zero cloud dependencies.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Inventory and blueprint libraries live as plain-text data.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Physics Validation Engine computes AUW, thrust-to-weight, and environmental derating (e.g., 40% battery capacity loss at -10&deg;C).</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Access available for qualified defense, security, and infrastructure teams.</li>
             </ul>
           </div>
           <div class="card-glass p-8 space-y-3">
-            <h3 class="text-xl font-semibold text-[color:var(--white)]">Who it’s for</h3>
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Who it&rsquo;s for</h3>
             <p class="text-subtle text-sm">Small technical teams responsible for rapid unmanned builds and sustainment in contested or air-gapped environments.</p>
             <p class="text-subtle text-sm">Planners who need repeatable answers without surrendering control to opaque scoring systems.</p>
           </div>
@@ -213,11 +204,11 @@
         <div class="footer-links" data-footer-links></div>
         <div class="space-y-2 text-xs text-subtle">
           <p>Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
-          <p>Ceradon Systems, LLC (Utah) · CAGE 179U9 · UEI UZA9PFJ9RDL6 · Active in SAM.gov through Dec 5, 2026.</p>
-          <p>Socio-economic status: SDVOSB · VOSB.</p>
-          <p>NAICS: 541715, 541330 · PSC: K058, AJ11.</p>
+          <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
+          <p>Socio-economic status: SDVOSB &middot; VOSB.</p>
+          <p>NAICS: 541715, 541330 &middot; PSC: K058, AJ11.</p>
           <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
-          <p>© <span data-year></span> Ceradon Systems. All rights reserved.</p>
+          <p>&copy; <span data-year></span> Ceradon Systems. All rights reserved.</p>
         </div>
       </div>
     </footer>

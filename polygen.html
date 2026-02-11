@@ -2,27 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Polygen AI | Text-to-3D Model Generator by Ceradon Systems</title>
-    <!-- Google Analytics (GA4) -- Replace G-XXXXXXXXXX with your Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
     <meta name="description" content="Polygen AI converts natural language descriptions into printable 3D models using a multi-agent AI pipeline powered by Gemini and Claude." />
     <meta property="og:title" content="Polygen AI | Text-to-3D Model Generator" />
     <meta property="og:description" content="Transform text descriptions into printable OpenSCAD models with AI-powered generation and browser-based validation." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ceradonsystems.com/polygen.html" />
-    <meta property="og:image" content="https://ceradonsystems.com/assets/polygen-hero.png" />
+    <meta property="og:url" content="https://www.ceradonsystems.com/polygen.html" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/polygen-hero.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Polygen AI | Text-to-3D Model Generator" />
     <meta name="twitter:description" content="Transform text descriptions into printable OpenSCAD models with AI-powered generation and browser-based validation." />
-    <meta name="twitter:image" content="https://ceradonsystems.com/assets/polygen-hero.png" />
-    <link rel="canonical" href="https://ceradonsystems.com/polygen.html" />
+    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/polygen-hero.png" />
+    <link rel="canonical" href="https://www.ceradonsystems.com/polygen.html" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -37,25 +30,23 @@
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
             <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
           </span>
-          <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
+          <span class="md:hidden inline-flex logo-plate logo-plate--nav">
             <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
             
-            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 · UEI UZA9PFJ9RDL6</span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
         <nav class="hidden md:flex gap-6" aria-label="Main navigation">
           <a href="index.html" class="navlink">Home</a>
           <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="polygen.html" class="navlink" aria-current="page">Polygen AI</a>
-          <a href="architect.html" class="navlink">Architect Stack</a>
           <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
         </nav>
-        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>&#9776;</button>
       </div>
     </header>
     <main id="main-content">
@@ -133,10 +124,10 @@
             <h2 class="section-heading text-3xl">Multi-Agent Pipeline</h2>
             <p class="text-subtle">Polygen uses a sophisticated multi-agent architecture where specialized AI models handle different stages of the generation process.</p>
             <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> <strong>Planner Agent (Gemini)</strong> generates a Geometric Structure Tree (GST) from your description.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> <strong>Coder Agent (Claude)</strong> converts the GST into pure OpenSCAD code.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> <strong>Browser Validator</strong> compiles via WASM for fully serverless validation.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> <strong>Closed-Loop Retry</strong> with 3-attempt system and escalating guidance on errors.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Planner Agent (Gemini)</strong> generates a Geometric Structure Tree (GST) from your description.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Coder Agent (Claude)</strong> converts the GST into pure OpenSCAD code.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Browser Validator</strong> compiles via WASM for fully serverless validation.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Closed-Loop Retry</strong> with 3-attempt system and escalating guidance on errors.</li>
             </ul>
           </div>
           <div class="card-glass p-6 space-y-4">
@@ -148,15 +139,15 @@
               </div>
               <div class="flex items-center gap-3">
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--steel-700)] flex items-center justify-center text-white font-semibold">2</span>
-                <span class="text-subtle">Planner (Gemini) → GST JSON</span>
+                <span class="text-subtle">Planner (Gemini) &rarr; GST JSON</span>
               </div>
               <div class="flex items-center gap-3">
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--steel-700)] flex items-center justify-center text-white font-semibold">3</span>
-                <span class="text-subtle">Coder (Claude) → OpenSCAD</span>
+                <span class="text-subtle">Coder (Claude) &rarr; OpenSCAD</span>
               </div>
               <div class="flex items-center gap-3">
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--steel-700)] flex items-center justify-center text-white font-semibold">4</span>
-                <span class="text-subtle">Validator (WASM) → 3D Model</span>
+                <span class="text-subtle">Validator (WASM) &rarr; 3D Model</span>
               </div>
             </div>
           </div>
@@ -202,9 +193,9 @@
                 <p class="text-3xl font-bold text-[color:var(--white)]">$0<span class="text-base font-normal text-subtle">/month</span></p>
               </div>
               <ul class="space-y-2 text-sm text-subtle">
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> 5 generations/month</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Basic templates</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> OpenSCAD export</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> 5 generations/month</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Basic templates</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> OpenSCAD export</li>
               </ul>
               <a href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full text-sm uppercase tracking-wide">Get Started</a>
             </div>
@@ -217,11 +208,11 @@
                 <p class="text-3xl font-bold text-[color:var(--white)]">$19<span class="text-base font-normal text-subtle">/month</span></p>
               </div>
               <ul class="space-y-2 text-sm text-subtle">
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> 100 generations/month</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> All templates</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> STL export</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> 3D preview</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Priority support</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> 100 generations/month</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> All templates</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> STL export</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> 3D preview</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Priority support</li>
               </ul>
               <a href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full text-sm uppercase tracking-wide">Subscribe</a>
             </div>
@@ -231,10 +222,10 @@
                 <p class="text-3xl font-bold text-[color:var(--white)]">$99<span class="text-base font-normal text-subtle">/month</span></p>
               </div>
               <ul class="space-y-2 text-sm text-subtle">
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Unlimited generations</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> API access</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Team features</li>
-                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Custom integrations</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Unlimited generations</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> API access</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Team features</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Custom integrations</li>
               </ul>
               <a href="contact.html" class="btn btn-secondary w-full text-sm uppercase tracking-wide">Contact Sales</a>
             </div>
@@ -311,11 +302,11 @@
         <div class="footer-links" data-footer-links></div>
         <div class="space-y-2 text-xs text-subtle">
           <p>Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
-          <p>Ceradon Systems, LLC (Utah) · CAGE 179U9 · UEI UZA9PFJ9RDL6 · Active in SAM.gov through Dec 5, 2026.</p>
-          <p>Socio-economic status: SDVOSB · VOSB.</p>
-          <p>NAICS: 541715, 541330 · PSC: K058, AJ11.</p>
+          <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
+          <p>Socio-economic status: SDVOSB &middot; VOSB.</p>
+          <p>NAICS: 541715, 541330 &middot; PSC: K058, AJ11.</p>
           <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
-          <p>© <span data-year></span> Ceradon Systems. All rights reserved.</p>
+          <p>&copy; <span data-year></span> Ceradon Systems. All rights reserved.</p>
         </div>
       </div>
     </footer>

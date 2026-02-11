@@ -2,27 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Technology | Ceradon Systems</title>
-    <!-- Google Analytics (GA4) -- Replace G-XXXXXXXXXX with your Measurement ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
     <meta name="description" content="Understand the passive Wi-Fi CSI technology powering Vantage and why zero-emission sensing matters for mission-critical teams." />
     <meta property="og:title" content="Technology | Ceradon Systems" />
     <meta property="og:description" content="Explore passive Wi-Fi CSI sensing, roadmap milestones, and how Vantage stays secure and ethical in contested environments." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ceradonsystems.com/technology.html" />
-    <meta property="og:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
+    <meta property="og:url" content="https://www.ceradonsystems.com/technology.html" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/Emblem.PNG" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Technology | Ceradon Systems" />
     <meta name="twitter:description" content="Explore passive Wi-Fi CSI sensing, roadmap milestones, and how Vantage stays secure and ethical in contested environments." />
-    <meta name="twitter:image" content="https://ceradonsystems.com/assets/Emblem.PNG" />
-    <link rel="canonical" href="https://ceradonsystems.com/technology.html" />
+    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/Emblem.PNG" />
+    <link rel="canonical" href="https://www.ceradonsystems.com/technology.html" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -37,26 +30,24 @@
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
             <img class="logo-glow h-8" src="./assets/Horizontal_Logo.PNG" alt="Ceradon Systems" />
           </span>
-          <span class="sm:hidden inline-flex logo-plate logo-plate--nav">
+          <span class="md:hidden inline-flex logo-plate logo-plate--nav">
             <img class="logo-glow" src="./assets/Emblem.PNG" alt="Ceradon Systems" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
             
-            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 · UEI UZA9PFJ9RDL6</span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
         <nav class="hidden md:flex gap-6" aria-label="Main navigation">
           <!-- add active link state using aria-current="page" -->
           <a href="index.html" class="navlink">Home</a>
           <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="polygen.html" class="navlink">Polygen AI</a>
-          <a href="architect.html" class="navlink">Architect Stack</a>
           <a href="technology.html" class="navlink" aria-current="page">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
         </nav>
-        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>☰</button>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>&#9776;</button>
       </div>
       <!-- mobile panel injected by /src/ui.js -->
     </header>
@@ -66,24 +57,24 @@
           <div class="space-y-6">
             <span class="tag">Channel State Information (CSI)</span>
             <h1 class="text-4xl font-bold text-[color:var(--white)]">Plain-language CSI: reading human movement from Wi-Fi</h1>
-            <p class="text-subtle text-lg">Every Wi-Fi packet carries rich multipath data. Vantage captures those channel variations, denoises them, and feeds them into pose inference models—creating a live skeletal overlay without ever illuminating the target.</p>
+            <p class="text-subtle text-lg">Every Wi-Fi packet carries rich multipath data. Vantage captures WiFi channel variations, applies signal conditioning and machine learning to classify human presence and movement &mdash; with skeletal pose estimation on the development roadmap.</p>
             <div class="grid gap-4 md:grid-cols-2">
               <div class="shadow-border rounded-xl p-4">
                 <h3 class="font-semibold text-[color:var(--white)]">Passive capture</h3>
-                <p class="text-sm text-subtle">We only listen. Commodity radios observe the environment’s response to existing Wi-Fi, keeping teams dark.</p>
+                <p class="text-sm text-subtle">We only listen. Commodity radios observe the environment&rsquo;s response to existing Wi-Fi, keeping teams dark.</p>
               </div>
               <div class="shadow-border rounded-xl p-4">
-                <h3 class="font-semibold text-[color:var(--white)]">Pose-first pipeline</h3>
-                <p class="text-sm text-subtle">All feature extraction—from motion vectors to behavior scoring—supports the skeletal pose estimator.</p>
+                <h3 class="font-semibold text-[color:var(--white)]">Detection-first pipeline</h3>
+                <p class="text-sm text-subtle">All feature extraction&mdash;from motion vectors to behavior scoring&mdash;supports presence detection today, with skeletal pose estimation planned for future releases.</p>
               </div>
             </div>
           </div>
           <div class="card-glass p-8 space-y-4">
             <h2 class="text-2xl font-semibold text-[color:var(--white)]">Why passive matters</h2>
             <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> No new emissions means no EM signature to detect or jam.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Operates under EMCON policies and inside RF-denied structures.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Works where cameras fail—smoke, darkness, or obscured LoS.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> No new emissions means no EM signature to detect or jam.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Operates under EMCON policies and inside RF-denied structures.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Works where cameras fail&mdash;smoke, darkness, or obscured LoS.</li>
             </ul>
           </div>
         </div>
@@ -149,7 +140,7 @@
             </div>
             <div class="timeline-item">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Passive Detection Expansion</h3>
-              <p class="text-sm text-subtle">Wi-Fi CSI anomaly detection for zero-emission awareness of Group 1–3 threats.</p>
+              <p class="text-sm text-subtle">Wi-Fi CSI anomaly detection for zero-emission awareness of Group 1&ndash;3 threats.</p>
             </div>
           </div>
         </div>
@@ -158,9 +149,9 @@
           <h2 class="text-2xl font-semibold text-[color:var(--white)]">Planning architecture</h2>
           <p class="text-subtle">Architect Stack is a separate, open-source planning toolset maintained by Noah Schultz (individual).</p>
           <ul class="space-y-3 text-sm text-subtle">
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Offline-first: all calculations and catalogs live on-prem.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Transparent logic: thrust-to-weight, endurance, and RF assumptions are simple and auditable.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Composable data: nodes, platforms, missions, and kits are schema-validated records labs can extend without rewrites.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Offline-first: all calculations and catalogs live on-prem.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Transparent logic: thrust-to-weight, endurance, and RF assumptions are simple and auditable.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Composable data: nodes, platforms, missions, and kits are schema-validated records labs can extend without rewrites.</li>
           </ul>
         </div>
 
@@ -168,9 +159,9 @@
           <h2 class="text-2xl font-semibold text-[color:var(--white)]">Security & Ethics</h2>
           <p class="text-subtle">Vantage never records video or audio. All processing stays local, logs are redacted for PII, and exports are encrypted. Passive sensing respects privacy while giving teams the pose intelligence needed to reduce collateral risk.</p>
           <ul class="space-y-3 text-sm text-subtle">
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Signed firmware, secure boot, and tamper logging for field hardware.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Role-based access for dashboards and CLI tooling.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">▹</span> Export-control-aware configurations for compliant sharing.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Signed firmware, secure boot, and tamper logging for field hardware.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Role-based access for dashboards and CLI tooling.</li>
+            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Export-control-aware configurations for compliant sharing.</li>
           </ul>
         </div>
       </section>
@@ -193,11 +184,11 @@
         <div class="footer-links" data-footer-links></div>
         <div class="space-y-2 text-xs text-subtle">
           <p>Architect Stack is maintained as an open-source project by Noah Schultz (individual).</p>
-          <p>Ceradon Systems, LLC (Utah) · CAGE 179U9 · UEI UZA9PFJ9RDL6 · Active in SAM.gov through Dec 5, 2026.</p>
-          <p>Socio-economic status: SDVOSB · VOSB.</p>
-          <p>NAICS: 541715, 541330 · PSC: K058, AJ11.</p>
+          <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
+          <p>Socio-economic status: SDVOSB &middot; VOSB.</p>
+          <p>NAICS: 541715, 541330 &middot; PSC: K058, AJ11.</p>
           <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
-          <p>© <span data-year></span> Ceradon Systems. All rights reserved.</p>
+          <p>&copy; <span data-year></span> Ceradon Systems. All rights reserved.</p>
         </div>
       </div>
     </footer>
