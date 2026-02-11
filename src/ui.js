@@ -1,4 +1,4 @@
-import emblemLogo from '../assets/Emblem.PNG';
+import emblemLogo from '../assets/Emblem.webp';
 
 // Constants
 const Z_INDEX = {

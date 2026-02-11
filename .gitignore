@@ -1,3 +1,5 @@
 node_modules/
 dist/
 .DS_Store
+response.json
+vantage-cap-brief.pdf
