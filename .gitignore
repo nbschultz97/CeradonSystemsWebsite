@@ -3,3 +3,8 @@ dist/
 .DS_Store
 response.json
 vantage-cap-brief.pdf
+
+# Environment variables
+.env
+.env.local
+.env.*.local
