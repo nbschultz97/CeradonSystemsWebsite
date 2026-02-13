@@ -22,6 +22,7 @@
     <meta property="og:title" content="Ceradon Systems | Passive Through-Wall Detection Technology" />
     <meta property="og:description" content="Vantage detects humans through walls using passive WiFi &mdash; no emissions, no detection, 10x cheaper than radar. Veteran-founded SDVOSB." />
     <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
     <meta property="og:url" content="https://www.ceradonsystems.com/" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -96,65 +97,6 @@
 
         <!-- Grid pattern overlay -->
         <div class="grid-bg" aria-hidden="true"></div>
-
-        <!-- WiFi signal animation -->
-        <div class="wifi-signal-animation" aria-hidden="true">
-          <svg viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Wall -->
-            <rect x="185" y="30" width="30" height="240" rx="4" fill="rgba(42,58,85,0.4)" stroke="rgba(86,183,255,0.15)" stroke-width="1"/>
-            <text x="200" y="155" text-anchor="middle" fill="rgba(86,183,255,0.2)" font-size="10" font-family="Inter, sans-serif" letter-spacing="0.1em">WALL</text>
-
-            <!-- WiFi source (left) -->
-            <circle cx="80" cy="150" r="6" fill="rgba(43,120,255,0.6)">
-              <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
-            </circle>
-
-            <!-- Signal waves passing through wall -->
-            <path d="M 100 150 Q 142 110, 185 150" stroke="rgba(86,183,255,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
-              <animate attributeName="stroke-dashoffset" values="0;-8" dur="1.5s" repeatCount="indefinite"/>
-            </path>
-            <path d="M 100 150 Q 142 150, 185 150" stroke="rgba(86,183,255,0.4)" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
-              <animate attributeName="stroke-dashoffset" values="0;-8" dur="1.2s" repeatCount="indefinite"/>
-            </path>
-            <path d="M 100 150 Q 142 190, 185 150" stroke="rgba(86,183,255,0.3)" stroke-width="1.5" fill="none" stroke-dasharray="4 4">
-              <animate attributeName="stroke-dashoffset" values="0;-8" dur="1.8s" repeatCount="indefinite"/>
-            </path>
-
-            <!-- Waves continuing through wall -->
-            <path d="M 215 150 Q 257 115, 300 150" stroke="rgba(43,120,255,0.2)" stroke-width="1" fill="none" stroke-dasharray="3 5">
-              <animate attributeName="stroke-dashoffset" values="0;-8" dur="1.5s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3s" repeatCount="indefinite"/>
-            </path>
-            <path d="M 215 150 Q 257 150, 300 150" stroke="rgba(43,120,255,0.3)" stroke-width="1" fill="none" stroke-dasharray="3 5">
-              <animate attributeName="stroke-dashoffset" values="0;-8" dur="1.2s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2.5s" repeatCount="indefinite"/>
-            </path>
-            <path d="M 215 150 Q 257 185, 300 150" stroke="rgba(43,120,255,0.2)" stroke-width="1" fill="none" stroke-dasharray="3 5">
-              <animate attributeName="stroke-dashoffset" values="0;-8" dur="1.8s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.15;0.35;0.15" dur="3.5s" repeatCount="indefinite"/>
-            </path>
-
-            <!-- Human silhouette (right of wall) -->
-            <g transform="translate(310, 110)" opacity="0.5">
-              <circle cx="12" cy="8" r="8" fill="rgba(86,183,255,0.3)"/>
-              <path d="M 12 18 L 12 50 M 12 28 L 0 38 M 12 28 L 24 38 M 12 50 L 2 68 M 12 50 L 22 68" stroke="rgba(86,183,255,0.3)" stroke-width="2" stroke-linecap="round"/>
-            </g>
-
-            <!-- Detection indicator -->
-            <circle cx="322" cy="118" r="14" fill="none" stroke="rgba(74,222,128,0.4)" stroke-width="1.5">
-              <animate attributeName="r" values="14;20;14" dur="2s" repeatCount="indefinite"/>
-              <animate attributeName="opacity" values="0.4;0;0.4" dur="2s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="322" cy="118" r="4" fill="rgba(74,222,128,0.5)">
-              <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
-            </circle>
-
-            <!-- Vantage sensor (left side) -->
-            <rect x="60" y="138" width="40" height="24" rx="4" fill="rgba(17,26,44,0.8)" stroke="rgba(43,120,255,0.3)" stroke-width="1"/>
-            <text x="80" y="154" text-anchor="middle" fill="rgba(86,183,255,0.5)" font-size="7" font-family="Inter, sans-serif" font-weight="600">VANTAGE</text>
-          </svg>
-        </div>
-
         <div class="relative mx-auto max-w-7xl px-4 py-24 lg:py-32 w-full">
           <div class="hero-grid">
             <div class="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -546,6 +488,5 @@
       </div>
     </footer>
     <script type="module" src="./src/main.js"></script>
-    <script src="./src/scroll-animations.js" defer></script>
   </body>
 </html>

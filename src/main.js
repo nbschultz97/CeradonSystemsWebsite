@@ -1,4 +1,5 @@
 import './input.css';
+import './scroll-animations.js';
 import { initUI, refreshActiveStates } from './ui.js';
 
 function ready(fn) {
