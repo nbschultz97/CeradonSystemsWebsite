@@ -8,3 +8,12 @@ vantage-cap-brief.pdf
 .env
 .env.local
 .env.*.local
+
+# Security - auto-added by Reg
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+credentials.json
+.env.local
+.env.production
