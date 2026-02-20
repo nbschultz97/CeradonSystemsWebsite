@@ -17,3 +17,5 @@ id_rsa.pub
 credentials.json
 .env.local
 .env.production
+
+*.log
