@@ -19,6 +19,8 @@ const TIMEOUTS = {
 const NAV_ITEMS = [
   { label: 'Home', href: 'index.html#top' },
   { label: 'Vantage', href: 'vantage.html' },
+  { label: 'COTS Architect', href: 'architect.html' },
+  { label: 'PolyGen AI', href: 'polygen.html' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },
