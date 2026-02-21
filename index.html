@@ -30,7 +30,10 @@
     <meta name="twitter:description" content="Vantage detects humans through walls using passive WiFi &mdash; no emissions, no detection, 10x cheaper than radar." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
     <link rel="canonical" href="https://www.ceradonsystems.com/" />
-    <link rel="icon" type="image/png" href="./assets/Emblem.webp" />    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" type="image/png" href="./assets/Emblem.webp" />
+    <link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/hero-vantage.webp" as="image" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,7 +88,7 @@
       <section id="top" class="relative overflow-hidden hero-splash min-h-[85vh] flex items-center">
         <!-- Background layers -->
         <div class="absolute inset-0 pointer-events-none">
-          <img src="./assets/hero-vantage.webp" alt="Through-wall detection technology" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" width="1920" height="1071" />
+          <img src="./assets/hero-vantage.webp" alt="Through-wall detection technology" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" width="1920" height="1071" fetchpriority="high" />
           <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/50 via-[#04070d]/30 to-[#04070d]"></div>
         </div>
 

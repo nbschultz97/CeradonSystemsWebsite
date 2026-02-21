@@ -329,7 +329,7 @@ async function handleContactSubmit(event) {
     .filter(Boolean)
     .join('\n');
 
-  const mailto = new URL('mailto:info@ceradonsystems.com');
+  const mailto = new URL('mailto:contact@ceradonsystems.com');
   mailto.searchParams.set('subject', 'Ceradon Inquiry');
   mailto.searchParams.set('body', composed);
   window.location.href = mailto.toString();
