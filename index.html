@@ -365,8 +365,32 @@
           </div>
           <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
             <article class="product-card" id="scout">
-              <div class="w-full h-36 rounded-xl mb-5 bg-gradient-to-br from-[#0a1628] to-[#1a2a4a] flex items-center justify-center border border-[color:var(--steel-600)]">
-                <svg class="h-16 w-16 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.808 3.808 9.981 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>
+              <div class="w-full h-36 rounded-xl mb-5 bg-gradient-to-br from-[#0a1628] to-[#1a2a4a] flex items-center justify-center border border-[color:var(--steel-600)] relative overflow-hidden">
+                <!-- Animated radar display -->
+                <div class="relative w-24 h-24">
+                  <!-- Radar screen background -->
+                  <div class="absolute inset-0 rounded-full border border-[color:var(--ceradon-blue)]/40 bg-gradient-radial from-[rgba(43,120,255,0.1)] to-transparent"></div>
+                  
+                  <!-- Radar rings -->
+                  <div class="absolute inset-2 rounded-full border border-[color:var(--ceradon-blue)]/25 animate-pulse"></div>
+                  <div class="absolute inset-4 rounded-full border border-[color:var(--ceradon-blue)]/20 animate-pulse" style="animation-delay: 0.5s;"></div>
+                  <div class="absolute inset-6 rounded-full border border-[color:var(--ceradon-blue)]/15 animate-pulse" style="animation-delay: 1s;"></div>
+                  
+                  <!-- Crosshair -->
+                  <div class="absolute top-0 bottom-0 left-1/2 w-px bg-[color:var(--ceradon-blue)]/30 transform -translate-x-1/2"></div>
+                  <div class="absolute left-0 right-0 top-1/2 h-px bg-[color:var(--ceradon-blue)]/30 transform -translate-y-1/2"></div>
+                  
+                  <!-- Center dot -->
+                  <div class="absolute top-1/2 left-1/2 w-2 h-2 bg-[color:var(--ceradon-blue)] rounded-full transform -translate-x-1/2 -translate-y-1/2 shadow-[0_0_8px_rgba(43,120,255,0.8)] animate-pulse"></div>
+                  
+                  <!-- Target blips -->
+                  <div class="absolute top-[20%] left-[70%] w-1 h-1 bg-[color:var(--ceradon-blue)] rounded-full animate-pulse opacity-80"></div>
+                  <div class="absolute top-[60%] left-[30%] w-1 h-1 bg-green-400 rounded-full animate-pulse opacity-70" style="animation-delay: 0.3s;"></div>
+                  <div class="absolute top-[75%] left-[65%] w-1 h-1 bg-[color:var(--ceradon-cyan)] rounded-full animate-pulse opacity-60" style="animation-delay: 0.7s;"></div>
+                </div>
+                
+                <!-- Subtle scanning effect -->
+                <div class="absolute inset-0 bg-gradient-conic from-transparent via-[rgba(43,120,255,0.1)] to-transparent opacity-50 animate-spin" style="animation-duration: 4s;"></div>
               </div>
               <div class="product-card__header">
                 <h3 class="product-title">Ceradon Scout</h3>

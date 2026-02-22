@@ -26,6 +26,322 @@
     <link rel="canonical" href="https://www.ceradonsystems.com/scout.html" />
     <link rel="icon" type="image/png" href="./assets/Emblem.webp" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <style>
+      /* Scout-specific premium styling */
+      .scout-radar-container {
+        position: relative;
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+        perspective: 1000px;
+      }
+      
+      .scout-radar-screen {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: 
+          radial-gradient(circle at center, rgba(43, 120, 255, 0.03) 0%, transparent 70%),
+          conic-gradient(from 0deg at 50% 50%, 
+            transparent 0deg, 
+            rgba(43, 120, 255, 0.1) 30deg, 
+            rgba(43, 120, 255, 0.2) 60deg, 
+            rgba(43, 120, 255, 0.15) 90deg,
+            transparent 120deg,
+            transparent 360deg);
+        border: 2px solid rgba(43, 120, 255, 0.3);
+        overflow: hidden;
+      }
+      
+      .scout-radar-grid {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+      
+      .scout-radar-ring {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgba(43, 120, 255, 0.2);
+        border-radius: 50%;
+        animation: radar-pulse 3s ease-in-out infinite;
+      }
+      
+      .scout-radar-ring:nth-child(1) { width: 25%; height: 25%; }
+      .scout-radar-ring:nth-child(2) { width: 50%; height: 50%; animation-delay: 0.5s; }
+      .scout-radar-ring:nth-child(3) { width: 75%; height: 75%; animation-delay: 1s; }
+      .scout-radar-ring:nth-child(4) { width: 100%; height: 100%; animation-delay: 1.5s; }
+      
+      .scout-radar-sweep {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, rgba(43, 120, 255, 0.8), transparent);
+        transform-origin: left center;
+        animation: radar-sweep 4s linear infinite;
+        border-radius: 1px;
+      }
+      
+      .scout-radar-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        background: var(--ceradon-blue);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 20px rgba(43, 120, 255, 0.8);
+        animation: center-glow 2s ease-in-out infinite alternate;
+      }
+      
+      .scout-radar-crosshair {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent, rgba(43, 120, 255, 0.3), transparent);
+        transform: translateX(-50%);
+      }
+      
+      .scout-radar-crosshair:nth-child(2) {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(43, 120, 255, 0.3), transparent);
+        transform: translateY(-50%);
+      }
+      
+      .scout-target {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        animation: target-pulse 2s ease-in-out infinite;
+      }
+      
+      .scout-target:nth-child(1) {
+        top: 25%;
+        left: 70%;
+        background: rgba(43, 120, 255, 0.9);
+        animation-delay: 0.3s;
+      }
+      
+      .scout-target:nth-child(2) {
+        top: 60%;
+        left: 30%;
+        background: rgba(34, 211, 238, 0.8);
+        animation-delay: 0.8s;
+      }
+      
+      .scout-target:nth-child(3) {
+        top: 75%;
+        left: 65%;
+        background: rgba(74, 222, 128, 0.7);
+        animation-delay: 1.3s;
+      }
+      
+      .scout-target-label {
+        position: absolute;
+        font-size: 9px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(43, 120, 255, 0.8);
+        white-space: nowrap;
+        animation: target-pulse 2s ease-in-out infinite;
+      }
+      
+      .scout-target-label:nth-child(1) {
+        top: 21%;
+        left: 76%;
+        color: rgba(43, 120, 255, 0.8);
+        animation-delay: 0.3s;
+      }
+      
+      .scout-target-label:nth-child(2) {
+        top: 56%;
+        left: 8%;
+        color: rgba(34, 211, 238, 0.8);
+        animation-delay: 0.8s;
+      }
+      
+      .scout-target-label:nth-child(3) {
+        top: 71%;
+        left: 71%;
+        color: rgba(74, 222, 128, 0.8);
+        animation-delay: 1.3s;
+      }
+      
+      @keyframes radar-sweep {
+        0% { transform: rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: rotate(360deg); opacity: 0; }
+      }
+      
+      @keyframes radar-pulse {
+        0%, 100% { opacity: 0.2; border-color: rgba(43, 120, 255, 0.2); }
+        50% { opacity: 0.8; border-color: rgba(43, 120, 255, 0.6); }
+      }
+      
+      @keyframes center-glow {
+        0% { box-shadow: 0 0 10px rgba(43, 120, 255, 0.5); }
+        100% { box-shadow: 0 0 30px rgba(43, 120, 255, 1), 0 0 50px rgba(43, 120, 255, 0.5); }
+      }
+      
+      @keyframes target-pulse {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      
+      /* Premium pricing cards */
+      .pricing-card {
+        position: relative;
+        background: linear-gradient(135deg,
+          rgba(17, 26, 44, 0.95) 0%,
+          rgba(24, 36, 58, 0.8) 100%);
+        border: 1px solid rgba(86, 183, 255, 0.15);
+        border-radius: 1.5rem;
+        padding: 2.5rem 2rem;
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+          0 20px 50px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(20px) saturate(130%);
+        -webkit-backdrop-filter: blur(20px) saturate(130%);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow: hidden;
+      }
+      
+      .pricing-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(43, 120, 255, 0.5), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      .pricing-card:hover::before {
+        opacity: 1;
+      }
+      
+      .pricing-card:hover {
+        transform: translateY(-8px);
+        border-color: rgba(43, 120, 255, 0.3);
+        box-shadow:
+          0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+          0 30px 70px rgba(0, 0, 0, 0.5),
+          0 0 50px rgba(43, 120, 255, 0.1);
+      }
+      
+      .pricing-card--featured {
+        border-color: rgba(43, 120, 255, 0.4);
+        background: linear-gradient(135deg,
+          rgba(43, 120, 255, 0.08) 0%,
+          rgba(17, 26, 44, 0.95) 30%,
+          rgba(24, 36, 58, 0.8) 100%);
+      }
+      
+      .pricing-card--featured::after {
+        content: 'MOST POPULAR';
+        position: absolute;
+        top: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(90deg, var(--ceradon-blue), var(--ceradon-sky));
+        color: white;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0 0 0.75rem 0.75rem;
+      }
+      
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .feature-card {
+        position: relative;
+        padding: 2rem;
+        background: linear-gradient(135deg,
+          rgba(17, 26, 44, 0.6) 0%,
+          rgba(24, 36, 58, 0.4) 100%);
+        border: 1px solid rgba(86, 183, 255, 0.1);
+        border-radius: 1.25rem;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        overflow: hidden;
+      }
+      
+      .feature-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--ceradon-blue), transparent);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      .feature-card:hover::before {
+        transform: scaleX(1);
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(86, 183, 255, 0.2);
+        background: linear-gradient(135deg,
+          rgba(17, 26, 44, 0.8) 0%,
+          rgba(24, 36, 58, 0.6) 100%);
+      }
+      
+      .feature-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1rem;
+        background: linear-gradient(135deg, rgba(43, 120, 255, 0.1), rgba(86, 183, 255, 0.05));
+        border: 1px solid rgba(43, 120, 255, 0.2);
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+      }
+      
+      .feature-card:hover .feature-icon {
+        background: linear-gradient(135deg, rgba(43, 120, 255, 0.2), rgba(86, 183, 255, 0.1));
+        border-color: rgba(43, 120, 255, 0.4);
+        transform: scale(1.05);
+      }
+      
+      @media (max-width: 768px) {
+        .scout-radar-container {
+          width: 240px;
+          height: 240px;
+        }
+      }
+    </style>
   </head>
   <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
     <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
@@ -61,315 +377,528 @@
     <main id="main-content">
 
       <!-- HERO -->
-      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
+      <section class="relative overflow-hidden border-b border-[color:var(--steel-700)]">
         <div class="grid-bg" aria-hidden="true"></div>
-        <div class="relative mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-center">
-            <div class="space-y-8">
-              <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-5 py-2.5 text-xs tracking-[0.2em] uppercase" style="backdrop-filter: blur(8px);" data-animate>
-                <span class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)] pulse-dot"></span>
-                SaaS &middot; Defense Contracting &middot; AI-Powered
+        <!-- Enhanced radar background effect -->
+        <div class="absolute inset-0 opacity-40">
+          <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-[rgba(43,120,255,0.1)] to-transparent rounded-full animate-pulse"></div>
+          <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-radial from-[rgba(86,183,255,0.08)] to-transparent rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="relative mx-auto max-w-7xl px-4 py-24 lg:py-32">
+          <div class="grid gap-16 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div class="space-y-10">
+              <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--ceradon-blue)]/30 bg-[color:var(--steel-900)/90] px-6 py-3 text-xs font-medium tracking-[0.15em] uppercase backdrop-blur-sm" data-animate>
+                <div class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)] animate-pulse shadow-[0_0_8px_rgba(43,120,255,0.6)]"></div>
+                Defense Intelligence Platform
               </div>
-              <h1 class="text-4xl md:text-5xl font-black leading-tight text-[color:var(--white)]" data-animate data-delay="100">
-                Stop missing contracts.<br/>
-                <span class="gradient-text">Scout finds them for you.</span>
-              </h1>
-              <p class="text-lg text-subtle max-w-xl leading-relaxed" data-animate data-delay="200">
-                <strong class="text-[color:var(--white)]">Ceradon Scout</strong> scans SAM.gov, Grants.gov, and SBIR.gov daily, scores opportunities with AI against your capabilities, and delivers actionable matches to your inbox every morning.
+              
+              <div class="space-y-6" data-animate data-delay="100">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.9] text-[color:var(--white)]">
+                  Stop missing<br/>
+                  <span class="gradient-text">contracts</span>
+                </h1>
+                <div class="text-xl md:text-2xl text-[color:var(--ceradon-sky)] font-medium leading-relaxed">
+                  Scout finds them for you.
+                </div>
+              </div>
+              
+              <p class="text-lg md:text-xl text-subtle max-w-2xl leading-relaxed" data-animate data-delay="200">
+                AI-powered defense opportunity scanner that monitors <strong class="text-[color:var(--white)]">SAM.gov</strong>, <strong class="text-[color:var(--white)]">Grants.gov</strong>, and <strong class="text-[color:var(--white)]">SBIR.gov</strong> 24/7. Delivers scored, actionable matches to your inbox every morning.
               </p>
-              <div class="flex flex-col sm:flex-row gap-4" data-animate data-delay="300">
-                <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-primary text-sm" target="_blank" rel="noopener noreferrer">Get Started &mdash; From $49/mo</a>
-                <a href="#how-it-works" class="btn btn-secondary text-sm">See How It Works</a>
+              
+              <div class="flex flex-col sm:flex-row gap-4 pt-4" data-animate data-delay="300">
+                <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-primary text-base px-8 py-4" target="_blank" rel="noopener noreferrer">
+                  Deploy Scout
+                  <span class="ml-2 text-sm opacity-80">→</span>
+                </a>
+                <a href="#intel" class="btn btn-secondary text-base px-8 py-4">
+                  View Intelligence
+                </a>
               </div>
-            </div>
-
-            <!-- Radar visual -->
-            <div class="card-glass p-8 flex items-center justify-center" data-animate data-delay="200">
-              <div class="relative w-64 h-64">
-                <!-- Concentric circles -->
-                <div class="absolute inset-0 rounded-full border border-[color:var(--ceradon-blue)]/20"></div>
-                <div class="absolute inset-[16%] rounded-full border border-[color:var(--ceradon-blue)]/15"></div>
-                <div class="absolute inset-[33%] rounded-full border border-[color:var(--ceradon-blue)]/10"></div>
-                <!-- Crosshair -->
-                <div class="absolute top-0 bottom-0 left-1/2 w-px bg-[color:var(--ceradon-blue)]/10"></div>
-                <div class="absolute left-0 right-0 top-1/2 h-px bg-[color:var(--ceradon-blue)]/10"></div>
-                <!-- Center dot -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-[color:var(--ceradon-blue)] shadow-[0_0_12px_rgba(0,149,255,0.6)]"></div>
-                <!-- Blips -->
-                <div class="absolute top-[22%] left-[65%] w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)] opacity-70 animate-pulse"></div>
-                <div class="absolute top-[55%] left-[25%] w-1.5 h-1.5 rounded-full bg-[color:var(--ceradon-blue)] opacity-50 animate-pulse" style="animation-delay: .5s"></div>
-                <div class="absolute top-[75%] left-[70%] w-2 h-2 rounded-full bg-green-400 opacity-80 animate-pulse" style="animation-delay: 1s"></div>
-                <!-- Labels -->
-                <span class="absolute top-[18%] left-[72%] text-[10px] text-[color:var(--ceradon-blue)]/70 uppercase tracking-wider">SAM.gov</span>
-                <span class="absolute top-[51%] left-[8%] text-[10px] text-[color:var(--ceradon-blue)]/70 uppercase tracking-wider">Grants.gov</span>
-                <span class="absolute top-[71%] left-[76%] text-[10px] text-green-400/70 uppercase tracking-wider">SBIR</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- STATS -->
-      <section class="border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)]/50" style="backdrop-filter: blur(8px);">
-        <div class="mx-auto max-w-7xl px-4 py-12">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" data-animate-stagger>
-            <div>
-              <p class="stat-number">3</p>
-              <p class="stat-label">Federal Sources Scanned</p>
-            </div>
-            <div>
-              <p class="stat-number">AI</p>
-              <p class="stat-label">Relevance Scoring</p>
-            </div>
-            <div>
-              <p class="stat-number">$49</p>
-              <p class="stat-label">Starting Price/mo</p>
-            </div>
-            <div>
-              <p class="stat-number">Daily</p>
-              <p class="stat-label">Email Digests</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- THE PROBLEM -->
-      <section class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">The Problem</p>
-            <h2 class="section-heading">Small defense businesses miss contracts every day</h2>
-            <p class="text-subtle text-lg">The government opportunity landscape is fragmented, opaque, and overwhelming. SAM.gov alone publishes thousands of notices weekly. SDVOSBs don't have BD teams to sift through it all.</p>
-          </div>
-          <div class="grid gap-5 md:grid-cols-3" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3">
-              <div class="text-3xl">⏰</div>
-              <h3 class="font-semibold text-[color:var(--white)]">Hours of Manual Searching</h3>
-              <p class="text-sm text-subtle leading-relaxed">Founders spend 5-10 hours per week scanning SAM.gov, Grants.gov, SBIR portals, and agency BAAs — time better spent building.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="text-3xl">🎯</div>
-              <h3 class="font-semibold text-[color:var(--white)]">Missed Deadlines</h3>
-              <p class="text-sm text-subtle leading-relaxed">By the time you find the opportunity, the response deadline is tomorrow. Or it already passed.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="text-3xl">🔍</div>
-              <h3 class="font-semibold text-[color:var(--white)]">Irrelevant Noise</h3>
-              <p class="text-sm text-subtle leading-relaxed">Generic keyword searches return thousands of results. 95% aren't relevant to your NAICS codes or capabilities.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- HOW IT WORKS -->
-      <section id="how-it-works" class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">How It Works</p>
-            <h2 class="section-heading">Set it up in 5 minutes. Never miss a contract again.</h2>
-          </div>
-          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">01</div>
-              <h3 class="font-bold text-[color:var(--white)]">Profile</h3>
-              <p class="text-sm text-subtle leading-relaxed">Enter your NAICS codes, set-aside status, keywords, and capability areas during onboarding.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">02</div>
-              <h3 class="font-bold text-[color:var(--white)]">Scan</h3>
-              <p class="text-sm text-subtle leading-relaxed">Scout crawls SAM.gov, Grants.gov, and SBIR.gov every day for new opportunities matching your profile.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">03</div>
-              <h3 class="font-bold text-[color:var(--white)]">Score</h3>
-              <p class="text-sm text-subtle leading-relaxed">AI scores each opportunity 0-100 based on relevance to your capabilities and generates fit analysis.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">04</div>
-              <h3 class="font-bold text-[color:var(--white)]">Deliver</h3>
-              <p class="text-sm text-subtle leading-relaxed">Top matches land in your inbox every morning with summaries, deadlines, and direct links.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEATURES -->
-      <section class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">Features</p>
-            <h2 class="section-heading">Everything a small defense business needs to compete</h2>
-          </div>
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.808 3.808 9.981 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" /></svg>
+              
+              <div class="flex items-center gap-8 pt-4 text-sm text-subtle" data-animate data-delay="400">
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-green-400"></div>
+                  <span>24/7 Monitoring</span>
                 </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Multi-Source Scanning</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">SAM.gov, Grants.gov, and SBIR.gov scanned daily. Never check three portals manually again.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v-2.25m3 2.25v-4.5m3 4.5V7.5" /></svg>
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)]"></div>
+                  <span>AI Scoring</span>
                 </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">AI Relevance Scoring</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Every opportunity scored 0-100 based on your NAICS codes, keywords, set-asides, and capability statement.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" /></svg>
+                <div class="flex items-center gap-2">
+                  <div class="w-2 h-2 rounded-full bg-[color:var(--ceradon-cyan)]"></div>
+                  <span>From $49/mo</span>
                 </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Daily Email Digests</h3>
               </div>
-              <p class="text-sm text-subtle leading-relaxed">Top matches delivered every morning with summaries, deadlines, and direct links to respond.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
+
+            <!-- Premium Radar Display -->
+            <div class="card-glass p-8 lg:p-12" data-animate data-delay="200">
+              <div class="scout-radar-container">
+                <div class="scout-radar-screen">
+                  <!-- Radar rings -->
+                  <div class="scout-radar-grid">
+                    <div class="scout-radar-ring"></div>
+                    <div class="scout-radar-ring"></div>
+                    <div class="scout-radar-ring"></div>
+                    <div class="scout-radar-ring"></div>
+                  </div>
+                  
+                  <!-- Crosshair -->
+                  <div class="scout-radar-crosshair"></div>
+                  <div class="scout-radar-crosshair"></div>
+                  
+                  <!-- Radar sweep -->
+                  <div class="scout-radar-sweep"></div>
+                  
+                  <!-- Center point -->
+                  <div class="scout-radar-center"></div>
+                  
+                  <!-- Target blips -->
+                  <div class="scout-target"></div>
+                  <div class="scout-target"></div>
+                  <div class="scout-target"></div>
+                  
+                  <!-- Labels -->
+                  <div class="scout-target-label">SAM.GOV</div>
+                  <div class="scout-target-label">GRANTS.GOV</div>
+                  <div class="scout-target-label">SBIR.GOV</div>
                 </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Capability Fit Analysis</h3>
               </div>
-              <p class="text-sm text-subtle leading-relaxed">AI-generated snippets explain exactly why each opportunity matches your company and how to position your response.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">SDVOSB Set-Aside Filtering</h3>
+              
+              <div class="mt-8 text-center">
+                <div class="text-sm font-medium text-[color:var(--ceradon-blue)] mb-2">THREAT DETECTION STATUS</div>
+                <div class="text-xs text-subtle font-mono">OPERATIONAL // ALL SYSTEMS NOMINAL</div>
               </div>
-              <p class="text-sm text-subtle leading-relaxed">Automatically surfaces SDVOSB, VOSB, 8(a), HUBZone, and other set-aside opportunities you're eligible for.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Dashboard & History</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Search, filter, and export your opportunity history. Track what you've reviewed, saved, or responded to.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- PRICING -->
-      <section id="pricing" class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl mx-auto text-center" data-animate>
-            <p class="tag">Pricing</p>
-            <h2 class="section-heading">Find one contract and it pays for years of Scout</h2>
-            <p class="text-subtle text-lg">Built for solo founders and small teams. No enterprise minimums.</p>
-          </div>
-          <div class="grid gap-5 md:grid-cols-3" data-animate-stagger>
-            <!-- Scout -->
-            <div class="card-glass p-8 space-y-6">
-              <div>
-                <h3 class="text-xl font-bold text-[color:var(--white)]">Scout</h3>
-                <p class="text-subtle text-sm mt-1">For getting started</p>
-              </div>
-              <div class="flex items-baseline gap-1">
-                <span class="text-4xl font-black text-[color:var(--white)]">$49</span>
-                <span class="text-subtle">/mo</span>
-              </div>
-              <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Up to 5 NAICS codes</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Daily email digest</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> SAM.gov + Grants.gov scanning</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Basic relevance scoring</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> SDVOSB set-aside filtering</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> 30-day history</li>
-              </ul>
-              <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-secondary w-full text-sm" target="_blank" rel="noopener noreferrer">Start Scout</a>
-            </div>
-            <!-- Commander -->
-            <div class="card-glass p-8 space-y-6 ring-2 ring-[color:var(--ceradon-blue)]/50 relative">
-              <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-[color:var(--ceradon-blue)] text-[color:var(--white)] text-xs font-bold rounded-full uppercase tracking-wider">Most Popular</div>
-              <div>
-                <h3 class="text-xl font-bold text-[color:var(--white)]">Commander</h3>
-                <p class="text-subtle text-sm mt-1">For active pursuers</p>
-              </div>
-              <div class="flex items-baseline gap-1">
-                <span class="text-4xl font-black text-[color:var(--white)]">$99</span>
-                <span class="text-subtle">/mo</span>
-              </div>
-              <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Up to 20 NAICS codes</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Daily digest + real-time alerts</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> All sources incl. SBIR.gov</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> AI relevance scoring</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> AI capability fit snippets</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> 90-day history + CSV export</li>
-              </ul>
-              <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-primary w-full text-sm" target="_blank" rel="noopener noreferrer">Start Commander</a>
-            </div>
-            <!-- Sentinel -->
-            <div class="card-glass p-8 space-y-6">
-              <div>
-                <h3 class="text-xl font-bold text-[color:var(--white)]">Sentinel</h3>
-                <p class="text-subtle text-sm mt-1">For serious BD teams</p>
-              </div>
-              <div class="flex items-baseline gap-1">
-                <span class="text-4xl font-black text-[color:var(--white)]">$199</span>
-                <span class="text-subtle">/mo</span>
-              </div>
-              <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Unlimited NAICS codes</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Priority scanning & alerts</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> All sources + custom feeds</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Advanced AI scoring & matching</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Full capability statement drafts</li>
-                <li class="flex items-start gap-2"><span class="text-[color:var(--ceradon-blue)]">✓</span> Unlimited history + API access</li>
-              </ul>
-              <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-secondary w-full text-sm" target="_blank" rel="noopener noreferrer">Start Sentinel</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHO IT'S FOR -->
-      <section class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">Built For</p>
-            <h2 class="section-heading">If you're tired of refreshing SAM.gov, this is for you</h2>
-          </div>
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="font-semibold text-[color:var(--white)]">SDVOSBs</h3>
-              <p class="text-sm text-subtle leading-relaxed">Veteran-owned businesses competing for set-aside contracts across DoD and VA.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="font-semibold text-[color:var(--white)]">Small Defense Contractors</h3>
-              <p class="text-sm text-subtle leading-relaxed">Companies without a full BD team who need to punch above their weight.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="font-semibold text-[color:var(--white)]">SBIR Seekers</h3>
-              <p class="text-sm text-subtle leading-relaxed">R&D companies hunting Phase I/II opportunities across multiple agencies.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="font-semibold text-[color:var(--white)]">GovCon Consultants</h3>
-              <p class="text-sm text-subtle leading-relaxed">Advisors who need to monitor opportunities for multiple clients efficiently.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section>
+      <!-- INTELLIGENCE BRIEF -->
+      <section id="intel" class="border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)]/30">
         <div class="mx-auto max-w-7xl px-4 py-20">
-          <div class="card-glass p-12 text-center space-y-6" data-animate>
-            <h2 class="text-3xl font-bold text-[color:var(--white)]">Stop leaving money on the table</h2>
-            <p class="text-subtle text-lg max-w-xl mx-auto">One missed contract costs more than a year of Scout. Start scanning today.</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-primary text-sm" target="_blank" rel="noopener noreferrer">Get Started &mdash; From $49/mo</a>
-              <a href="contact.html" class="btn btn-secondary text-sm">Questions? Contact Us</a>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" data-animate-stagger>
+            <div class="space-y-3">
+              <div class="stat-number">3</div>
+              <div class="stat-label">Federal Sources</div>
+            </div>
+            <div class="space-y-3">
+              <div class="stat-number">AI</div>
+              <div class="stat-label">Relevance Engine</div>
+            </div>
+            <div class="space-y-3">
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Surveillance</div>
+            </div>
+            <div class="space-y-3">
+              <div class="stat-number">$49</div>
+              <div class="stat-label">Starting Price</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- THREAT ASSESSMENT -->
+      <section class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-24 space-y-16">
+          <div class="space-y-6 max-w-3xl" data-animate>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-[color:var(--ceradon-blue)]">
+              <div class="w-2 h-2 rounded-full bg-red-400 animate-pulse"></div>
+              Threat Assessment
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-[color:var(--white)] leading-tight">
+              Small defense contractors are under constant threat
+            </h2>
+            <p class="text-xl text-subtle leading-relaxed">
+              The federal opportunity landscape is fragmented, overwhelming, and designed for large primes. 
+              SDVOSBs miss critical contracts every day because they don't have dedicated BD teams monitoring the noise.
+            </p>
+          </div>
+          
+          <div class="feature-grid" data-animate-stagger>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-3">Hours of Manual Reconnaissance</h3>
+              <p class="text-subtle leading-relaxed">Founders spend 5-10 hours weekly scanning SAM.gov, Grants.gov, and SBIR portals—time better spent on operations and development.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-3">Mission-Critical Deadlines</h3>
+              <p class="text-subtle leading-relaxed">By the time you identify the opportunity, the response window has closed. Opportunities expire before detection.</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-3">Signal vs. Noise Problem</h3>
+              <p class="text-subtle leading-relaxed">Generic keyword searches return thousands of false positives. 95% of results are irrelevant to your NAICS codes and capabilities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPERATIONAL CAPABILITIES -->
+      <section class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-24 space-y-16">
+          <div class="space-y-6 max-w-3xl" data-animate>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-[color:var(--ceradon-blue)]">
+              <div class="w-2 h-2 rounded-full bg-green-400"></div>
+              Mission Capabilities
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-[color:var(--white)] leading-tight">
+              Deploy in 5 minutes. Never miss a target again.
+            </h2>
+          </div>
+          
+          <div class="grid gap-6 lg:grid-cols-4" data-animate-stagger>
+            <div class="feature-card relative overflow-hidden">
+              <div class="absolute top-4 right-4 text-4xl font-black text-[color:var(--ceradon-blue)]/10">01</div>
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">Profile Configuration</h3>
+              <p class="text-sm text-subtle leading-relaxed">Deploy targeting parameters: NAICS codes, set-aside status, keywords, and capability profiles during initial setup.</p>
+            </div>
+            
+            <div class="feature-card relative overflow-hidden">
+              <div class="absolute top-4 right-4 text-4xl font-black text-[color:var(--ceradon-blue)]/10">02</div>
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.808 3.808 9.981 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">Continuous Surveillance</h3>
+              <p class="text-sm text-subtle leading-relaxed">Automated reconnaissance across SAM.gov, Grants.gov, and SBIR.gov every 24 hours for new opportunities matching your profile.</p>
+            </div>
+            
+            <div class="feature-card relative overflow-hidden">
+              <div class="absolute top-4 right-4 text-4xl font-black text-[color:var(--ceradon-blue)]/10">03</div>
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v-2.25m3 2.25v-4.5m3 4.5V7.5" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">Threat Analysis</h3>
+              <p class="text-sm text-subtle leading-relaxed">AI engine scores opportunities 0-100 based on relevance to your capabilities and generates tactical recommendations.</p>
+            </div>
+            
+            <div class="feature-card relative overflow-hidden">
+              <div class="absolute top-4 right-4 text-4xl font-black text-[color:var(--ceradon-blue)]/10">04</div>
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">Intelligence Delivery</h3>
+              <p class="text-sm text-subtle leading-relaxed">High-priority matches delivered to your operational inbox every morning with summaries, deadlines, and direct engagement links.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TACTICAL SPECIFICATIONS -->
+      <section class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-24 space-y-16">
+          <div class="space-y-6 max-w-3xl" data-animate>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-[color:var(--ceradon-blue)]">
+              <div class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)] animate-pulse"></div>
+              System Specifications
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-[color:var(--white)] leading-tight">
+              Everything a small defense business needs to compete
+            </h2>
+          </div>
+          
+          <div class="feature-grid" data-animate-stagger>
+            <div class="feature-card group">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304m-7.425 2.121a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.808 3.808 9.981 0 13.788M12 12h.008v.008H12V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-4">Multi-Domain Reconnaissance</h3>
+              <p class="text-subtle leading-relaxed">Comprehensive surveillance across SAM.gov, Grants.gov, and SBIR.gov. Never monitor three separate portals manually again.</p>
+            </div>
+            
+            <div class="feature-card group">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v-2.25m3 2.25v-4.5m3 4.5V7.5" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-4">AI Threat Assessment</h3>
+              <p class="text-subtle leading-relaxed">Machine learning algorithms score every opportunity 0-100 based on your NAICS codes, keywords, set-asides, and capability statement.</p>
+            </div>
+            
+            <div class="feature-card group">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-4">Secure Communications</h3>
+              <p class="text-subtle leading-relaxed">Priority targets delivered every morning via encrypted channels with tactical summaries, mission deadlines, and direct response links.</p>
+            </div>
+            
+            <div class="feature-card group">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-4">Strategic Intelligence</h3>
+              <p class="text-subtle leading-relaxed">AI-generated briefings explain exactly why each opportunity matches your capabilities and provide tactical response guidance.</p>
+            </div>
+            
+            <div class="feature-card group">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-4">Set-Aside Targeting</h3>
+              <p class="text-subtle leading-relaxed">Automated filtering for SDVOSB, VOSB, 8(a), HUBZone, and other small business set-aside opportunities you're qualified for.</p>
+            </div>
+            
+            <div class="feature-card group">
+              <div class="feature-icon">
+                <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-4">Command & Control Dashboard</h3>
+              <p class="text-subtle leading-relaxed">Search, filter, and export your complete opportunity intelligence. Track review status, saved targets, and response history.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEPLOYMENT PACKAGES -->
+      <section id="pricing" class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-24 space-y-16">
+          <div class="space-y-6 max-w-3xl mx-auto text-center" data-animate>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-[color:var(--ceradon-blue)]">
+              <div class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></div>
+              Deployment Packages
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-[color:var(--white)] leading-tight">
+              One contract pays for years of Scout
+            </h2>
+            <p class="text-xl text-subtle leading-relaxed">
+              Built for solo operators and small defense teams. No enterprise minimums.
+            </p>
+          </div>
+          
+          <div class="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto" data-animate-stagger>
+            <!-- Scout Package -->
+            <div class="pricing-card">
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-2xl font-bold text-[color:var(--white)] mb-2">Scout</h3>
+                  <p class="text-subtle text-sm">Reconnaissance Package</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <span class="text-5xl font-black text-[color:var(--white)]">$49</span>
+                  <span class="text-subtle text-lg">/mo</span>
+                </div>
+                <ul class="space-y-4 text-sm">
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Up to 5 NAICS targeting codes</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Daily intelligence briefings</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">SAM.gov + Grants.gov surveillance</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Basic relevance scoring</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">SDVOSB set-aside filtering</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">30-day mission history</span>
+                  </li>
+                </ul>
+                <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-secondary w-full text-sm py-3" target="_blank" rel="noopener noreferrer">
+                  Deploy Scout
+                </a>
+              </div>
+            </div>
+            
+            <!-- Commander Package -->
+            <div class="pricing-card pricing-card--featured">
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-2xl font-bold text-[color:var(--white)] mb-2">Commander</h3>
+                  <p class="text-subtle text-sm">Advanced Operations Package</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <span class="text-5xl font-black text-[color:var(--white)]">$99</span>
+                  <span class="text-subtle text-lg">/mo</span>
+                </div>
+                <ul class="space-y-4 text-sm">
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Up to 20 NAICS targeting codes</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Daily briefs + real-time alerts</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">All sources including SBIR.gov</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Advanced AI relevance scoring</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">AI capability matching briefs</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">90-day history + CSV export</span>
+                  </li>
+                </ul>
+                <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-primary w-full text-sm py-3" target="_blank" rel="noopener noreferrer">
+                  Deploy Commander
+                </a>
+              </div>
+            </div>
+            
+            <!-- Sentinel Package -->
+            <div class="pricing-card">
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-2xl font-bold text-[color:var(--white)] mb-2">Sentinel</h3>
+                  <p class="text-subtle text-sm">Full Spectrum Dominance</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <span class="text-5xl font-black text-[color:var(--white)]">$199</span>
+                  <span class="text-subtle text-lg">/mo</span>
+                </div>
+                <ul class="space-y-4 text-sm">
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Unlimited NAICS targeting</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Priority scanning & alerts</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">All sources + custom feeds</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">AI strategic analysis engine</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Full capability statement drafts</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">✓</span>
+                    <span class="text-subtle">Unlimited history + API access</span>
+                  </li>
+                </ul>
+                <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-secondary w-full text-sm py-3" target="_blank" rel="noopener noreferrer">
+                  Deploy Sentinel
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TARGET DEMOGRAPHICS -->
+      <section class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-24 space-y-16">
+          <div class="space-y-6 max-w-3xl" data-animate>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-[color:var(--ceradon-blue)]">
+              <div class="w-2 h-2 rounded-full bg-green-400"></div>
+              Target Demographics
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-[color:var(--white)] leading-tight">
+              If you're tired of refreshing SAM.gov, this is your solution
+            </h2>
+          </div>
+          
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="feature-card">
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">Service-Disabled Veteran-Owned Small Businesses</h3>
+              <p class="text-sm text-subtle leading-relaxed">Veteran entrepreneurs competing for set-aside contracts across DoD, VA, and civilian agencies.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">Small Defense Contractors</h3>
+              <p class="text-sm text-subtle leading-relaxed">Companies without dedicated BD teams who need to compete against larger primes.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h3 class="text-lg font-semibent text-[color:var(--white)] mb-3">SBIR/STTR Hunters</h3>
+              <p class="text-sm text-subtle leading-relaxed">R&D organizations pursuing Phase I/II opportunities across multiple federal agencies.</p>
+            </div>
+            
+            <div class="feature-card">
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">GovCon Strategic Advisors</h3>
+              <p class="text-sm text-subtle leading-relaxed">Consultants managing opportunity intelligence for multiple small business clients.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CALL TO ACTION -->
+      <section>
+        <div class="mx-auto max-w-7xl px-4 py-24">
+          <div class="card-glass p-12 lg:p-16 text-center space-y-8" data-animate>
+            <div class="space-y-6">
+              <h2 class="text-4xl md:text-5xl font-bold text-[color:var(--white)] leading-tight">
+                Stop leaving money on the table
+              </h2>
+              <p class="text-xl text-subtle leading-relaxed max-w-2xl mx-auto">
+                One missed contract costs more than a year of Scout. Deploy today and never miss another opportunity.
+              </p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-primary text-base px-8 py-4" target="_blank" rel="noopener noreferrer">
+                Deploy Scout — From $49/mo
+              </a>
+              <a href="contact.html" class="btn btn-secondary text-base px-8 py-4">
+                Request Intel Briefing
+              </a>
+            </div>
+            
+            <div class="text-xs text-subtle pt-4">
+              No contracts. No commitments. Cancel anytime.
             </div>
           </div>
         </div>
@@ -384,7 +913,7 @@
             <img src="./assets/Emblem.webp" alt="Ceradon Systems" class="h-12 w-12 image-surface" loading="lazy" width="558" height="558" />
             <div>
               <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
-              <p class="text-sm text-subtle">Passive through-wall detection. Veteran-founded SDVOSB.</p>
+              <p class="text-sm text-subtle">Defense technology solutions. Veteran-founded SDVOSB.</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-4 items-center text-sm text-subtle">
