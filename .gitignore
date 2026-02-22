@@ -1,9 +1,21 @@
 node_modules/
 dist/
 .DS_Store
+response.json
+vantage-cap-brief.pdf
 
 # Environment variables
 .env
 .env.local
+.env.*.local
+
+# Security - auto-added by Reg
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+credentials.json
+.env.local
 .env.production
-.env.*
+
+*.log

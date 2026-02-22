@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DDV7FSG1G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1DDV7FSG1G');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#04070d">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How WiFi CSI Through-Wall Detection Works: A Technical Primer | Ceradon Systems</title>
+    <meta name="description" content="A technical guide to WiFi Channel State Information (CSI) through-wall detection, explaining how passive RF sensing detects human presence behind walls without emitting signals." />
+    <meta name="keywords" content="WiFi CSI, through wall detection, passive through wall sensing, WiFi sensing technology, channel state information, passive RF sensing, through wall radar alternative, human presence detection, WiFi CSI sensing, device-free sensing" />
+    <meta property="og:title" content="How WiFi CSI Through-Wall Detection Works: A Technical Primer" />
+    <meta property="og:description" content="A technical guide to WiFi CSI through-wall detection, explaining how passive RF sensing detects humans behind walls without emitting signals." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.ceradonsystems.com/blog/2026-02-10-how-wifi-csi-through-wall-detection-works.html" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/Emblem.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How WiFi CSI Through-Wall Detection Works: A Technical Primer" />
+    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/Emblem.webp" />
+    <link rel="canonical" href="https://www.ceradonsystems.com/blog/2026-02-10-how-wifi-csi-through-wall-detection-works.html" />
+    <link rel="icon" type="image/png" href="../assets/Emblem.webp" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "How WiFi CSI Through-Wall Detection Works: A Technical Primer",
+      "description": "A technical guide to WiFi Channel State Information (CSI) through-wall detection.",
+      "datePublished": "2026-02-10",
+      "author": { "@type": "Organization", "name": "Ceradon Systems", "url": "https://ceradonsystems.com" },
+      "publisher": { "@type": "Organization", "name": "Ceradon Systems", "logo": { "@type": "ImageObject", "url": "https://ceradonsystems.com/assets/Emblem.webp" } },
+      "url": "https://www.ceradonsystems.com/blog/2026-02-10-how-wifi-csi-through-wall-detection-works.html"
+    }
+    </script>  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="hidden md:inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow" src="../assets/Horizontal_Logo.webp" alt="Ceradon Systems" style="height:2.5rem;width:auto" />
+          </span>
+          <span class="md:hidden inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow" src="../assets/Emblem.webp" alt="Ceradon Systems mark" style="height:2rem;width:auto" />
+          </span>
+        </a>
+        <nav class="hidden md:flex gap-6" aria-label="Main navigation">
+          <a href="../index.html" class="navlink">Home</a>
+          <a href="../vantage.html" class="navlink">Vantage</a>
+          <a href="../architect.html" class="navlink">COTS Architect</a>
+          <a href="../polygen.html" class="navlink">PolyGen AI</a>
+          <a href="../technology.html" class="navlink">R&amp;D</a>
+          <a href="../company.html" class="navlink">Company</a>
+          <a href="/blog/" class="navlink" aria-current="page">Insights</a>
+          <a href="../contact.html" class="btn btn-primary">Contact</a>
+        </nav>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>&#9776;</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div class="relative overflow-hidden" style="height:280px">
+        <img src="../assets/hero-vantage.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40" loading="eager" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[color:var(--ink)] via-[color:var(--ink)/60] to-transparent"></div>
+        <div class="relative mx-auto max-w-3xl px-4 flex flex-col justify-end h-full pb-8">
+          <a href="/blog/" class="tag mb-3">&larr; All Insights</a>
+          <h1 class="text-3xl md:text-4xl font-bold text-[color:var(--white)]">How WiFi CSI Through-Wall Detection Works: A Technical Primer</h1>
+          <p class="text-sm text-subtle mt-2">Published February 10, 2026 &middot; Ceradon Systems Technical Insights</p>
+        </div>
+      </div>
+      <article class="mx-auto max-w-3xl px-4 py-12 space-y-8">
+
+        <div class="space-y-6 text-subtle leading-relaxed">
+
+          <p>Every WiFi router in every building is constantly broadcasting radio waves that bounce off walls, furniture, and human bodies. Those signals carry hidden information about the physical environment. Information that, with the right processing, can reveal whether someone is standing behind a wall. This is the premise behind WiFi Channel State Information (CSI) sensing, a technology that is reshaping how defense and law enforcement think about through-wall detection.</p>
+
+          <p>This article explains the physics, the signal processing, and the real-world tradeoffs of WiFi CSI through-wall detection. It is written for operators and program managers who need to evaluate the technology, not just read about it.</p>
+
+          <!-- Section 1: What is WiFi CSI? -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">What Is WiFi Channel State Information (CSI)?</h2>
+
+          <p>Channel State Information is a fine-grained descriptor of how a wireless signal travels from transmitter to receiver. Unlike Received Signal Strength Indicator (RSSI), which is a single number representing overall signal power, CSI captures the amplitude and phase of the signal across every subcarrier in an OFDM (Orthogonal Frequency-Division Multiplexing) channel.</p>
+
+          <p>In practical terms: a standard 20 MHz WiFi channel using 802.11n contains 56 subcarriers. CSI reports amplitude and phase for each one, producing a 56-dimensional snapshot of the wireless channel roughly every millisecond. If you use a 3-antenna receiver, that becomes 168 data streams updated a thousand times per second.</p>
+
+          <p>Why does this matter? Because each subcarrier responds differently to objects in the environment. A human body, composed mostly of water and highly reflective at 2.4 and 5 GHz, creates a distinct, frequency-dependent distortion pattern. CSI captures that pattern. RSSI does not.</p>
+
+          <!-- Section 2: How It Detects Humans Through Walls -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">How WiFi CSI Detects Humans Through Walls</h2>
+
+          <p>WiFi signals at 2.4 GHz penetrate most common building materials (drywall, wood framing, concrete block, brick) with varying degrees of attenuation. When a signal passes through a wall and encounters a person on the other side, several things happen simultaneously:</p>
+
+          <ul class="product-bullets">
+            <li><strong>Reflection:</strong> The human body reflects a portion of the signal energy back. At 2.4 GHz, the human body has a reflection coefficient of roughly 0.5&ndash;0.7, making people strong reflectors relative to furniture or building materials.</li>
+            <li><strong>Multipath modification:</strong> The reflected signal combines with the direct-path signal and other reflections. When a person moves, even breathing or shifting weight, the multipath profile changes in a measurable way.</li>
+            <li><strong>Fresnel zone disturbance:</strong> When a body crosses or occupies the Fresnel zones between transmitter and receiver, it causes predictable amplitude and phase fluctuations across subcarriers.</li>
+          </ul>
+
+          <p>The key insight is that a static, empty room produces a stable CSI signature over time. When a human enters that space, the CSI pattern becomes dynamic. The variance, temporal correlation, and spectral characteristics of that dynamic pattern are what allow detection algorithms to distinguish "person present" from "empty room," even through intervening walls.</p>
+
+          <p>This approach works because the sensing system does not need to see the person. It needs only to observe the disturbance the person creates in an existing electromagnetic field.</p>
+
+          <!-- Section 3: The Signal Processing Pipeline -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">The Signal Processing Pipeline</h2>
+
+          <p>Raw CSI data is noisy. Converting it into actionable presence detection requires a multi-stage pipeline:</p>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">1. Capture</h3>
+          <p>CSI data is extracted from commodity WiFi chipsets (most commonly Intel 5300, Atheros, or Broadcom/Nexmon-patched devices) at rates of 100&ndash;1,000 packets per second. The receiver passively monitors existing WiFi traffic or beacons from access points in the environment. No modifications to the transmitting infrastructure are required.</p>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">2. Signal Conditioning</h3>
+          <p>Raw CSI contains hardware-induced phase offsets, sampling frequency offsets (SFO), and carrier frequency offsets (CFO) that must be removed before the data is useful. Standard techniques include linear phase correction across subcarriers, Hampel filtering for outlier removal, and bandpass filtering to isolate the frequency band associated with human motion (typically 0.1&ndash;2 Hz for breathing, 1&ndash;10 Hz for walking).</p>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">3. Feature Extraction</h3>
+          <p>Conditioned CSI streams are converted into features that characterize human presence. Common approaches include:</p>
+          <ul class="product-bullets">
+            <li><strong>Statistical features:</strong> Variance, kurtosis, and entropy of amplitude across subcarriers and time windows</li>
+            <li><strong>Spectral features:</strong> Power spectral density in motion-correlated frequency bands</li>
+            <li><strong>Spatial features:</strong> Cross-antenna correlation patterns that encode angle-of-arrival information</li>
+            <li><strong>Temporal features:</strong> Autocorrelation decay rates that distinguish periodic human motion (breathing, walking) from environmental noise (HVAC, machinery)</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">4. Classification</h3>
+          <p>Features are fed into a classifier (historically support vector machines or random forests, increasingly lightweight neural networks) that outputs a presence/absence determination. More advanced systems can estimate occupant count, coarse location, or activity type. Edge deployment typically uses models small enough to run on ARM-class processors in real time.</p>
+
+          <!-- Section 4: Passive vs Active Sensing -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">Passive vs. Active Sensing: Why Zero Emissions Matters</h2>
+
+          <p>This is where WiFi CSI sensing diverges fundamentally from radar-based through-wall systems. Radar systems, whether UWB, stepped-frequency, or Doppler, is an <em>active</em> technology. It emits RF energy, and that energy can be detected, located, and exploited by an adversary with basic electronic warfare (EW) equipment.</p>
+
+          <p>WiFi CSI sensing in its passive configuration emits nothing. The receiver monitors existing WiFi signals that are already present in the environment. From an electromagnetic signature perspective, the sensing system is indistinguishable from any other WiFi client device, or from no device at all, if operating in monitor mode without association.</p>
+
+          <p>This distinction has operational implications in several scenarios:</p>
+
+          <ul class="product-bullets">
+            <li><strong>Denied-emission environments:</strong> Special operations forces (SOF) operating under EMCON (emissions control) restrictions cannot use active radar. A passive WiFi CSI receiver does not violate EMCON.</li>
+            <li><strong>Covert surveillance:</strong> Law enforcement conducting pre-raid reconnaissance cannot afford to alert occupants. Active radar emissions can be detected with inexpensive SDR equipment. Passive WiFi monitoring cannot.</li>
+            <li><strong>Counter-detection resistance:</strong> In peer/near-peer conflict scenarios, adversary SIGINT systems actively scan for non-standard RF emissions. WiFi CSI sensing produces no detectable signature.</li>
+          </ul>
+
+          <!-- Section 5: What It Can and Can't Do -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">What WiFi CSI Can and Cannot Do</h2>
+
+          <p>Intellectual honesty about limitations is essential for any technology evaluator. Here is a candid assessment:</p>
+
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Capabilities (Demonstrated in Controlled Environments)</h3>
+            <ul class="product-bullets">
+              <li>Binary presence detection (occupied vs. empty) through standard building materials at ranges of 5&ndash;15 meters</li>
+              <li>Breathing detection of stationary occupants through single-layer interior walls</li>
+              <li>Occupant counting (1&ndash;3 individuals) with moderate accuracy in constrained spaces</li>
+              <li>Activity classification (stationary, walking, falling) with &gt;90% accuracy in lab settings</li>
+              <li>Real-time operation on edge hardware (Raspberry Pi-class or better)</li>
+            </ul>
+          </div>
+
+          <div class="card-glass p-6 space-y-3" style="margin-top: 1rem;">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Limitations (Current State of the Art)</h3>
+            <ul class="product-bullets">
+              <li><strong>Metal barriers:</strong> Metal walls, foil-backed insulation, and metal filing cabinets create Faraday cage effects that block or severely attenuate WiFi signals. CSI sensing does not work through solid metal.</li>
+              <li><strong>No ambient WiFi:</strong> Passive sensing requires existing WiFi signals in the environment. In truly RF-dark buildings with no access points, there is nothing to sense. Some systems address this by deploying a low-power beacon, but this trades away the passive advantage.</li>
+              <li><strong>Range constraints:</strong> Effective detection range is fundamentally limited by signal-to-noise ratio. Through-wall performance degrades significantly beyond 10&ndash;15 meters or through multiple wall layers.</li>
+              <li><strong>Environmental sensitivity:</strong> Large-scale environmental changes (HVAC activation, door opening, wind-driven movement) can cause false positives. Robust systems must distinguish environmental dynamics from human-caused dynamics.</li>
+              <li><strong>Precision localization:</strong> WiFi CSI provides coarse spatial awareness, not centimeter-level tracking. It answers "someone is in that room," not "someone is standing at coordinates X, Y."</li>
+            </ul>
+          </div>
+
+          <!-- Section 6: Comparison with Radar-Based Systems -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">Comparison with Radar-Based Through-Wall Systems</h2>
+
+          <p>WiFi CSI sensing does not replace radar. It occupies a different niche. Understanding the tradeoffs helps determine when each technology is appropriate.</p>
+
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Radar Systems (Lumineye Lux, Camero Xaver 400/800)</h3>
+            <ul class="product-bullets">
+              <li><strong>Strengths:</strong> Higher spatial resolution, works in any RF environment (does not require ambient WiFi), purpose-built hardware with mature form factors, established in DoD/LE procurement channels</li>
+              <li><strong>Weaknesses:</strong> Active emissions (detectable, violates EMCON), high unit cost ($20,000&ndash;$100,000+), requires wall contact or close proximity, limited to single-wall penetration in most cases</li>
+            </ul>
+          </div>
+
+          <div class="card-glass p-6 space-y-3" style="margin-top: 1rem;">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">WiFi CSI Sensing</h3>
+            <ul class="product-bullets">
+              <li><strong>Strengths:</strong> Zero emissions (passive), very low hardware cost (commodity WiFi chipsets), standoff capability (does not require wall contact), persistent monitoring capability, covert operation</li>
+              <li><strong>Weaknesses:</strong> Requires ambient WiFi, lower spatial resolution than radar, less mature (TRL 4&ndash;5 for operational systems), performance varies with environment</li>
+            </ul>
+          </div>
+
+          <p>The practical implication: radar excels at short-duration, high-resolution tactical queries ("show me exactly where the hostage is"). WiFi CSI excels at persistent, covert, wide-area monitoring ("tell me if anyone enters this building tonight"). The two technologies are complementary, not competitive.</p>
+
+          <!-- Section 7: Applications -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">Operational Applications</h2>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">Special Operations Forces</h3>
+          <p>Pre-assault reconnaissance in urban environments where EMCON discipline is critical. A small, passive device can confirm or deny occupancy of a target building without emitting detectable signals. Particularly valuable in denied areas where active radar use would compromise the operation.</p>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">SWAT / Law Enforcement</h3>
+          <p>Pre-raid intelligence gathering for hostage rescue, barricade situations, and warrant service. Knowing whether a building is occupied, and roughly where occupants are located, before entry reduces risk to both officers and civilians.</p>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">Search and Rescue</h3>
+          <p>Post-disaster building scanning where existing WiFi infrastructure may still be partially operational. A passive sensor could sweep collapsed structures for signs of trapped survivors without generating additional RF interference for other rescue communications.</p>
+
+          <h3 class="text-xl font-semibold text-[color:var(--white)] pt-2">Perimeter Security</h3>
+          <p>Persistent monitoring of buildings, facilities, or restricted areas using existing WiFi infrastructure. Unlike camera systems, WiFi CSI sensing is unaffected by lighting conditions, visual obstructions, or privacy concerns related to video surveillance.</p>
+
+          <!-- Section 8: The Future of WiFi Sensing -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">The Future of WiFi Sensing</h2>
+
+          <p>The field is advancing rapidly across several fronts:</p>
+
+          <ul class="product-bullets">
+            <li><strong>Pose estimation:</strong> Research groups have demonstrated coarse skeletal tracking using WiFi signals alone, reconstructing body pose through walls with deep learning models trained on synchronized WiFi CSI and camera ground truth data (Geng et al., 2022).</li>
+            <li><strong>Behavioral analysis:</strong> Beyond presence detection, emerging systems can classify activities such as sitting, walking, falling, and gesturing, enabling applications like elder care monitoring and occupant behavior profiling.</li>
+            <li><strong>WiFi 6/6E and WiFi 7:</strong> Newer standards provide wider channels (up to 320 MHz in WiFi 7), more subcarriers, and MIMO configurations that dramatically increase the spatial and temporal resolution available to CSI-based sensing.</li>
+            <li><strong>Mesh network sensing:</strong> Using multiple transmitter-receiver pairs in a mesh topology enables tomographic reconstruction of occupancy across an entire building, not just along a single link.</li>
+            <li><strong>IEEE 802.11bf (WLAN Sensing):</strong> The IEEE is actively developing a standard specifically for WiFi sensing, expected to be ratified by 2028. This will standardize CSI reporting formats and enable sensing as a native WiFi capability in commercial hardware.</li>
+          </ul>
+
+          <!-- Section 9: Ceradon's Take -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">Ceradon&rsquo;s Take</h2>
+
+          <p>Ceradon Systems is building <a href="../vantage.html" class="text-[color:var(--ceradon-blue)]">Vantage</a>, a passive WiFi CSI sensing platform designed to bring this technology from the lab to the field. Vantage implements the capture &rarr; condition &rarr; extract &rarr; classify pipeline described above on ruggedized, edge-deployable hardware that operates with zero RF emissions.</p>
+
+          <p>We are currently at TRL 4, validated in a laboratory environment with controlled testing. Our roadmap prioritizes operational reliability over feature expansion: accurate, trustworthy presence detection in real-world building environments is the foundation that everything else builds on. We are transparent about where the technology stands today, because the operators and program managers evaluating it deserve honest assessments, not marketing claims.</p>
+
+          <p>If you are evaluating through-wall sensing capabilities for defense or law enforcement applications, we welcome the conversation. <a href="../contact.html" class="text-[color:var(--ceradon-blue)]">Get in touch</a> to learn more about Vantage and how passive WiFi sensing fits into your operational architecture.</p>
+
+          <!-- Section 10: References -->
+          <h2 class="text-2xl font-semibold text-[color:var(--white)] pt-4">References</h2>
+
+          <ol class="product-bullets" style="list-style-type: decimal;">
+            <li>Ma, Y., Zhou, G., &amp; Wang, S. (2019). &ldquo;WiFi Sensing with Channel State Information: A Survey.&rdquo; <em>ACM Computing Surveys</em>, 52(3), 1&ndash;36. doi:10.1145/3310194</li>
+            <li>Wang, W., Liu, A. X., Shahzad, M., Ling, K., &amp; Lu, S. (2017). &ldquo;Understanding and Modeling of WiFi Signal Based Human Activity Recognition.&rdquo; <em>Proceedings of the 21st Annual International Conference on Mobile Computing and Networking (MobiCom)</em>. doi:10.1145/2789168.2790093</li>
+            <li>Geng, J., Huang, D., &amp; De la Torre, F. (2022). &ldquo;DensePose From WiFi.&rdquo; <em>arXiv preprint</em>, arXiv:2301.00250.</li>
+            <li>Halperin, D., Hu, W., Sheth, A., &amp; Wetherall, D. (2011). &ldquo;Tool Release: Gathering 802.11n Traces with Channel State Information.&rdquo; <em>ACM SIGCOMM Computer Communication Review</em>, 41(1), 53. doi:10.1145/1925861.1925870</li>
+            <li>Wu, D., Zhang, D., Xu, C., Wang, H., &amp; Li, X. (2017). &ldquo;Device-Free WiFi Human Sensing: From Pattern-Based to Model-Based Approaches.&rdquo; <em>IEEE Communications Magazine</em>, 55(10), 91&ndash;97. doi:10.1109/MCOM.2017.1700143</li>
+          </ol>
+
+        </div>
+
+        <div class="border-t border-[color:var(--steel-700)] pt-6 flex gap-4 text-sm">
+          <a href="/blog/" class="text-[color:var(--ceradon-blue)]">&larr; Back to All Insights</a>
+          <span class="text-subtle">|</span>
+          <a href="../index.html" class="text-[color:var(--ceradon-blue)]">Ceradon Systems Home</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/80]">
+      <div class="mx-auto max-w-7xl px-4 py-12 space-y-6">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="../assets/Emblem.webp" alt="Ceradon Systems mark" class="image-surface" loading="lazy" style="height:3rem;width:3rem" />
+            <div>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Passive RF sensing & readiness assurance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links" data-footer-links></div>
+        <div class="space-y-2 text-xs text-subtle">
+          <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
+          <p>Socio-economic status: SDVOSB &middot; VOSB.</p>
+          <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
+          <p>&copy; <span data-year></span> Ceradon Systems. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
