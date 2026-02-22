@@ -12,16 +12,16 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Technology | Ceradon Systems</title>
-    <meta name="description" content="Understand the passive Wi-Fi CSI technology powering Vantage and why zero-emission sensing matters for mission-critical teams." />
-    <meta property="og:title" content="Technology | Ceradon Systems" />
-    <meta property="og:description" content="Explore passive Wi-Fi CSI sensing, roadmap milestones, and how Vantage stays secure and ethical in contested environments." />
+    <title>R&amp;D | Ceradon Systems</title>
+    <meta name="description" content="Ceradon Systems R&amp;D roadmap — collaborative autonomy, passive detection expansion, research partnerships, and future capability areas." />
+    <meta property="og:title" content="R&amp;D | Ceradon Systems" />
+    <meta property="og:description" content="Ceradon Systems R&amp;D roadmap — collaborative autonomy, passive detection expansion, research partnerships, and future capability areas." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/technology.html" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/Emblem.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Technology | Ceradon Systems" />
-    <meta name="twitter:description" content="Explore passive Wi-Fi CSI sensing, roadmap milestones, and how Vantage stays secure and ethical in contested environments." />
+    <meta name="twitter:title" content="R&amp;D | Ceradon Systems" />
+    <meta name="twitter:description" content="Ceradon Systems R&amp;D roadmap — collaborative autonomy, passive detection expansion, research partnerships, and future capability areas." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/Emblem.webp" />
     <meta name="robots" content="index, follow" />`n    <link rel="canonical" href="https://www.ceradonsystems.com/technology.html" />    <link rel="icon" type="image/png" href="./assets/Emblem.webp" />
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -46,7 +46,9 @@
           <!-- add active link state using aria-current="page" -->
           <a href="index.html" class="navlink">Home</a>
           <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="technology.html" class="navlink" aria-current="page">Technology</a>
+          <a href="architect.html" class="navlink">COTS Architect</a>
+          <a href="polygen.html" class="navlink">PolyGen AI</a>
+          <a href="technology.html" class="navlink" aria-current="page">R&amp;D</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
@@ -57,78 +59,10 @@
     </header>
     <main id="main-content">
       <section class="mx-auto max-w-7xl px-4 py-16 space-y-12">
-        <div class="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
-          <div class="space-y-6">
-            <span class="tag">Channel State Information (CSI)</span>
-            <h1 class="text-4xl font-bold text-[color:var(--white)]">Plain-language CSI: reading human movement from Wi-Fi</h1>
-            <p class="text-subtle text-lg">Every Wi-Fi packet carries rich multipath data. Vantage captures WiFi channel variations, applies signal conditioning and machine learning to classify human presence and movement, with skeletal pose estimation on the development roadmap.</p>
-            <div class="grid gap-4 md:grid-cols-2">
-              <div class="shadow-border rounded-xl p-4">
-                <h3 class="font-semibold text-[color:var(--white)]">Passive capture</h3>
-                <p class="text-sm text-subtle">We only listen. Commodity radios observe the environment&rsquo;s response to existing Wi-Fi, keeping teams dark.</p>
-              </div>
-              <div class="shadow-border rounded-xl p-4">
-                <h3 class="font-semibold text-[color:var(--white)]">Detection-first pipeline</h3>
-                <p class="text-sm text-subtle">All feature extraction, from motion vectors to behavior scoring, supports presence detection today, with skeletal pose estimation planned for future releases.</p>
-              </div>
-            </div>
-          </div>
-          <div class="card-glass p-8 space-y-4">
-            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Why passive matters</h2>
-            <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> No new emissions means no EM signature to detect or jam.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Operates under EMCON policies and inside RF-denied structures.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Works where cameras fail: smoke, darkness, or obscured line of sight.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Sensor Comparison</h2>
-          <div class="overflow-x-auto">
-            <table class="table-dark text-sm">
-              <thead>
-                <tr>
-                  <th scope="col">Attribute</th>
-                  <th scope="col">Cameras</th>
-                  <th scope="col">Radar</th>
-                  <th scope="col">Vantage</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">Line of Sight</th>
-                  <td>Requires clear LoS.</td>
-                  <td>Limited through-wall performance.</td>
-                  <td>Sees through walls using ambient Wi-Fi.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Emissions</th>
-                  <td>Visible-light signature.</td>
-                  <td>Active RF emissions.</td>
-                  <td>Zero-emission passive capture.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Detectability</th>
-                  <td>Easily spotted or blinded.</td>
-                  <td>Detectable with RF sweeps.</td>
-                  <td>Covert; matches local Wi-Fi noise floor.</td>
-                </tr>
-                <tr>
-                  <th scope="row">SWaP-C</th>
-                  <td>Varies; often high power draw.</td>
-                  <td>Bulky arrays and high power use.</td>
-                  <td>Runs on Pi/Jetson-class compute under 25 W.</td>
-                </tr>
-                <tr>
-                  <th scope="row">Cost</th>
-                  <td>High for rugged PTZ systems.</td>
-                  <td>High procurement and sustainment.</td>
-                  <td>COTS radios with software-defined capability.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="space-y-4">
+          <span class="tag">Research &amp; Development</span>
+          <h1 class="text-4xl font-bold text-[color:var(--white)]">Where We&rsquo;re Going Next</h1>
+          <p class="text-subtle text-lg max-w-3xl">Our product pages show what Ceradon delivers today. This page shows where we&rsquo;re investing &mdash; the research threads, capability expansions, and partnerships shaping our next generation of tools.</p>
         </div>
 
         <div class="space-y-6 relative">
@@ -149,24 +83,31 @@
           </div>
         </div>
 
-        <div class="card-glass p-8 space-y-4">
-          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Planning architecture</h2>
-          <p class="text-subtle">Architect Stack is a separate, open-source planning toolset maintained by Ceradon Systems.</p>
-          <ul class="space-y-3 text-sm text-subtle">
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Offline-first: all calculations and catalogs live on-prem.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Transparent logic: thrust-to-weight, endurance, and RF assumptions are simple and auditable.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Composable data: nodes, platforms, missions, and kits are schema-validated records labs can extend without rewrites.</li>
-          </ul>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div class="card-glass p-8 space-y-4">
+            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Research Partnerships</h2>
+            <p class="text-subtle">We collaborate with academic labs and government research programs to advance passive RF sensing, autonomous systems integration, and field-deployable manufacturing.</p>
+            <ul class="space-y-3 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> SBIR/STTR-eligible across multiple DoD topics.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Open to joint research with universities and FFRDCs.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Active engagement with SOF innovation channels.</li>
+            </ul>
+          </div>
+          <div class="card-glass p-8 space-y-4">
+            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Future Capability Areas</h2>
+            <p class="text-subtle">Beyond our current product lines, we&rsquo;re exploring capabilities at the intersection of passive sensing and autonomous logistics.</p>
+            <ul class="space-y-3 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Multi-sensor fusion with CSI + acoustic + inertial data.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Edge-native ML for disconnected, contested environments.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Supply chain awareness tooling for expeditionary logistics.</li>
+            </ul>
+          </div>
         </div>
 
-        <div class="card-glass p-8 space-y-4">
-          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Security & Ethics</h2>
-          <p class="text-subtle">Vantage never records video or audio. All processing stays local, logs are redacted for PII, and exports are encrypted. Passive sensing respects privacy while giving teams the pose intelligence needed to reduce collateral risk.</p>
-          <ul class="space-y-3 text-sm text-subtle">
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Signed firmware, secure boot, and tamper logging for field hardware.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Role-based access for dashboards and CLI tooling.</li>
-            <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Export-control-aware configurations for compliant sharing.</li>
-          </ul>
+        <div class="card-glass p-8 space-y-4 text-center">
+          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Interested in Collaborating?</h2>
+          <p class="text-subtle max-w-2xl mx-auto">Whether you&rsquo;re a research lab, a defense prime, or a program office exploring new sensing modalities &mdash; we&rsquo;d like to hear from you.</p>
+          <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide inline-block">Get in Touch</a>
         </div>
       </section>
     </main>

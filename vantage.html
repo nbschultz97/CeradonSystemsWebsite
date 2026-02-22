@@ -121,7 +121,7 @@
           <a href="vantage.html" class="navlink" aria-current="page">Vantage</a>
           <a href="architect.html" class="navlink">COTS Architect</a>
           <a href="polygen.html" class="navlink">PolyGen AI</a>
-          <a href="technology.html" class="navlink">Technology</a>
+          <a href="technology.html" class="navlink">R&amp;D</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
@@ -410,6 +410,30 @@
                 <span class="faq-icon">+</span>
               </summary>
               <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">Vantage works best with ambient WiFi signals from existing access points, which are present in most urban and suburban environments. In areas without WiFi infrastructure, a covert transmitter node can be deployed to create the sensing environment.</p></div></details>
+          </div>
+        </div>
+
+        <!-- SENSOR COMPARISON -->
+        <div class="space-y-6">
+          <h2 class="section-heading text-3xl">Sensor Comparison</h2>
+          <div class="overflow-x-auto">
+            <table class="table-dark text-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Attribute</th>
+                  <th scope="col">Cameras</th>
+                  <th scope="col">Radar</th>
+                  <th scope="col">Vantage</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Line of Sight</th><td>Requires clear LoS.</td><td>Limited through-wall performance.</td><td>Sees through walls using ambient Wi-Fi.</td></tr>
+                <tr><th scope="row">Emissions</th><td>Visible-light signature.</td><td>Active RF emissions.</td><td>Zero-emission passive capture.</td></tr>
+                <tr><th scope="row">Detectability</th><td>Easily spotted or blinded.</td><td>Detectable with RF sweeps.</td><td>Covert; matches local Wi-Fi noise floor.</td></tr>
+                <tr><th scope="row">SWaP-C</th><td>Varies; often high power draw.</td><td>Bulky arrays and high power use.</td><td>Runs on Pi/Jetson-class compute under 25 W.</td></tr>
+                <tr><th scope="row">Cost</th><td>High for rugged PTZ systems.</td><td>High procurement and sustainment.</td><td>COTS radios with software-defined capability.</td></tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
