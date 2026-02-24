@@ -33,6 +33,7 @@ export default defineConfig({
         privacy: resolve(rootDir, 'privacy.html'),
         disclaimer: resolve(rootDir, 'disclaimer.html'),
         scout: resolve(rootDir, 'scout.html'),
+        aiServices: resolve(rootDir, 'ai-services.html'),
         notFound: resolve(rootDir, '404.html'),
         blog: resolve(rootDir, 'blog/index.html'),
         ...blogEntries
