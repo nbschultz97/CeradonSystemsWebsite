@@ -17,12 +17,11 @@ const TIMEOUTS = {
 };
 
 const NAV_ITEMS = [
-  { label: 'Home', href: 'index.html#top' },
   { label: 'Vantage', href: 'vantage.html' },
-  { label: 'COTS Architect', href: 'architect.html' },
-  { label: 'Ceradon Scout', href: 'scout.html' },
-  { label: 'AI Services', href: 'ai-services.html' },
-  { label: 'PolyGen AI', href: 'polygen.html' },
+  { label: 'Ceradon Scout', href: 'scout.html', group: 'Products' },
+  { label: 'Architect Stack', href: 'architect.html', group: 'Products' },
+  { label: 'PolyGen AI', href: 'polygen.html', group: 'Products' },
+  { label: 'AI Services', href: 'ai-services.html', group: 'Products' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },
@@ -30,11 +29,11 @@ const NAV_ITEMS = [
 ];
 
 const FOOTER_LINKS = [
-  { label: 'Home', href: 'index.html' },
   { label: 'Vantage', href: 'vantage.html' },
-  { label: 'AI Integration Services', href: 'ai-services.html' },
-  { label: 'Polygen AI', href: 'polygen.html' },
+  { label: 'Ceradon Scout', href: 'scout.html' },
   { label: 'Architect Stack', href: 'architect.html' },
+  { label: 'PolyGen AI', href: 'polygen.html' },
+  { label: 'AI Services', href: 'ai-services.html' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },

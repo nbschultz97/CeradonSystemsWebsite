@@ -42,15 +42,20 @@
             <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
-        <nav class="hidden md:flex gap-6" aria-label="Main navigation">
-          <!-- add active link state using aria-current="page" -->
-          <a href="index.html" class="navlink">Home</a>
+                <nav class="hidden md:flex gap-6" aria-label="Main navigation">
           <a href="vantage.html" class="navlink">Vantage</a>
-          <a href="architect.html" class="navlink">COTS Architect</a>
-          <a href="scout.html" class="navlink">Ceradon Scout</a>
-          <a href="ai-services.html" class="navlink">AI Services</a>
-          <a href="polygen.html" class="navlink">PolyGen AI</a>
-          <a href="technology.html" class="navlink">R&amp;D</a>
+          <div class="relative group">
+            <button class="navlink">Products</button>
+            <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+              <div class="bg-[#0a0f1a] border border-[#1e293b] rounded-lg py-2 min-w-[200px] shadow-xl">
+                <a href="scout.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">Ceradon Scout</a>
+                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">Architect Stack</a>
+                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">PolyGen AI</a>
+                <a href="ai-services.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">AI Services</a>
+              </div>
+            </div>
+          </div>
+          <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink" aria-current="page">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
