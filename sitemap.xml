@@ -79,8 +79,20 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://www.ceradonsystems.com/blog/2026-02-24-ai-integration-gap-why-smbs-are-stuck.html</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.ceradonsystems.com/blog/2026-02-23-pentagon-ai-showdown-anthropic-autonomous-drones.html</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.ceradonsystems.com/blog/</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
