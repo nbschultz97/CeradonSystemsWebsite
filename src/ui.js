@@ -23,7 +23,7 @@ const NAV_ITEMS = [
   { label: 'Architect Stack', href: 'architect.html', group: 'Products' },
   { label: 'PolyGen AI', href: 'polygen.html', group: 'Products' },
   { label: 'Intelligent Systems', href: 'intelligent-systems.html', group: 'Services' },
-  { label: 'R&D', href: 'technology.html' },
+  { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },
   { label: 'Contact', href: 'contact.html', isCTA: true }
@@ -36,7 +36,7 @@ const FOOTER_LINKS = [
   { label: 'Architect Stack', href: 'architect.html' },
   { label: 'PolyGen AI', href: 'polygen.html' },
   { label: 'Intelligent Systems', href: 'intelligent-systems.html' },
-  { label: 'R&D', href: 'technology.html' },
+  { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },
   { label: 'Contact', href: 'contact.html' },
