@@ -34,7 +34,7 @@ export default defineConfig({
         disclaimer: resolve(rootDir, 'disclaimer.html'),
         raptor: resolve(rootDir, 'raptor.html'),
         scout: resolve(rootDir, 'scout.html'),
-        aiServices: resolve(rootDir, 'ai-services.html'),
+        intelligentSystems: resolve(rootDir, 'intelligent-systems.html'),
         notFound: resolve(rootDir, '404.html'),
         blog: resolve(rootDir, 'blog/index.html'),
         ...blogEntries
