@@ -17,12 +17,13 @@ const TIMEOUTS = {
 };
 
 const NAV_ITEMS = [
-  { label: 'Vantage', href: 'vantage.html' },
+  { label: 'Vantage', href: 'vantage.html', group: 'Products' },
+  { label: 'RAPTOR', href: 'raptor.html', group: 'Products' },
   { label: 'Ceradon Scout', href: 'scout.html', group: 'Products' },
   { label: 'Architect Stack', href: 'architect.html', group: 'Products' },
   { label: 'PolyGen AI', href: 'polygen.html', group: 'Products' },
-  { label: 'AI Services', href: 'ai-services.html', group: 'Products' },
-  { label: 'Technology', href: 'technology.html' },
+  { label: 'AI Services', href: 'ai-services.html', group: 'Services' },
+  { label: 'R&D', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },
   { label: 'Contact', href: 'contact.html', isCTA: true }
@@ -30,11 +31,12 @@ const NAV_ITEMS = [
 
 const FOOTER_LINKS = [
   { label: 'Vantage', href: 'vantage.html' },
+  { label: 'RAPTOR', href: 'raptor.html' },
   { label: 'Ceradon Scout', href: 'scout.html' },
   { label: 'Architect Stack', href: 'architect.html' },
   { label: 'PolyGen AI', href: 'polygen.html' },
-  { label: 'AI Services', href: 'ai-services.html' },
-  { label: 'Technology', href: 'technology.html' },
+  { label: 'Services', href: 'ai-services.html' },
+  { label: 'R&D', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
   { label: 'Insights', href: '/blog/' },
   { label: 'Contact', href: 'contact.html' },
@@ -122,14 +124,83 @@ function buildMobileNav(header) {
   `;
 
   const navContainer = panel.querySelector('[data-mobile-nav]');
+
+  // Group items by their group property
+  const groups = new Map();
+  const topLevel = [];
   NAV_ITEMS.forEach((item) => {
-    const link = document.createElement('a');
-    link.href = item.href;
-    link.textContent = item.label;
-    link.className = item.isCTA
-      ? 'btn btn-primary justify-center'
-      : 'navlink text-lg';
-    navContainer.appendChild(link);
+    if (item.group) {
+      if (!groups.has(item.group)) groups.set(item.group, []);
+      groups.get(item.group).push(item);
+    } else {
+      topLevel.push(item);
+    }
+  });
+
+  // Build grouped sections first, then top-level items
+  const orderedSections = [];
+  const seenGroups = new Set();
+  NAV_ITEMS.forEach((item) => {
+    if (item.group && !seenGroups.has(item.group)) {
+      seenGroups.add(item.group);
+      orderedSections.push({ type: 'group', name: item.group, items: groups.get(item.group) });
+    } else if (!item.group) {
+      orderedSections.push({ type: 'item', item });
+    }
+  });
+
+  orderedSections.forEach((section) => {
+    if (section.type === 'group') {
+      const groupEl = document.createElement('div');
+      groupEl.className = 'mobile-nav-group';
+
+      const toggle = document.createElement('button');
+      toggle.className = 'navlink text-lg w-full flex items-center justify-between';
+      toggle.innerHTML = `<span>${section.name}</span><svg class="mobile-nav-chevron h-4 w-4 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m19 9-7 7-7-7"/></svg>`;
+      toggle.setAttribute('aria-expanded', 'false');
+
+      const submenu = document.createElement('div');
+      submenu.className = 'mobile-nav-submenu pl-4 flex flex-col gap-2 overflow-hidden';
+      submenu.style.maxHeight = '0';
+      submenu.style.opacity = '0';
+      submenu.style.transition = 'max-height 0.25s ease, opacity 0.2s ease';
+
+      section.items.forEach((item) => {
+        const link = document.createElement('a');
+        link.href = item.href;
+        link.textContent = item.label;
+        link.className = 'navlink text-base text-subtle hover:text-white';
+        submenu.appendChild(link);
+      });
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        const chevron = toggle.querySelector('.mobile-nav-chevron');
+        if (expanded) {
+          submenu.style.maxHeight = '0';
+          submenu.style.opacity = '0';
+          chevron.style.transform = 'rotate(0deg)';
+        } else {
+          submenu.style.maxHeight = submenu.scrollHeight + 'px';
+          submenu.style.opacity = '1';
+          chevron.style.transform = 'rotate(180deg)';
+        }
+      });
+
+      groupEl.appendChild(toggle);
+      groupEl.appendChild(submenu);
+      navContainer.appendChild(groupEl);
+    } else {
+      const item = section.item;
+      const link = document.createElement('a');
+      link.href = item.href;
+      link.textContent = item.label;
+      link.className = item.isCTA
+        ? 'btn btn-primary justify-center'
+        : 'navlink text-lg';
+      navContainer.appendChild(link);
+    }
   });
 
   document.body.appendChild(overlay);
