@@ -17,11 +17,11 @@ const TIMEOUTS = {
 };
 
 const NAV_ITEMS = [
-  { label: 'Vantage', href: 'vantage.html', group: 'Products' },
+  { label: 'VANTAGE', href: 'vantage.html', group: 'Products' },
   { label: 'RAPTOR', href: 'raptor.html', group: 'Products' },
   { label: 'Ceradon Scout', href: 'scout.html', group: 'Products' },
-  { label: 'Architect Stack', href: 'architect.html', group: 'Products' },
-  { label: 'PolyGen AI', href: 'polygen.html', group: 'Products' },
+  { label: 'Architect', href: 'architect.html', group: 'Products' },
+  { label: 'PolyGen', href: 'polygen.html', group: 'Products' },
   { label: 'Intelligent Systems', href: 'intelligent-systems.html', group: 'Services' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
@@ -30,11 +30,11 @@ const NAV_ITEMS = [
 ];
 
 const FOOTER_LINKS = [
-  { label: 'Vantage', href: 'vantage.html' },
+  { label: 'VANTAGE', href: 'vantage.html' },
   { label: 'RAPTOR', href: 'raptor.html' },
   { label: 'Ceradon Scout', href: 'scout.html' },
-  { label: 'Architect Stack', href: 'architect.html' },
-  { label: 'PolyGen AI', href: 'polygen.html' },
+  { label: 'Architect', href: 'architect.html' },
+  { label: 'PolyGen', href: 'polygen.html' },
   { label: 'Intelligent Systems', href: 'intelligent-systems.html' },
   { label: 'Technology', href: 'technology.html' },
   { label: 'Company', href: 'company.html' },
