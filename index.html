@@ -31,8 +31,9 @@
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
     <link rel="canonical" href="https://www.ceradonsystems.com/" />
     <link rel="icon" type="image/png" href="./assets/Emblem.webp" />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
     <link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="./assets/hero-vantage.webp" as="image" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <script type="application/ld+json">
     {
@@ -57,7 +58,7 @@
     </a>
 
     <!-- HEADER -->
-    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]" style="backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%);">
+    <header class="backdrop-blur bg-[color:var(--ink)]/80 sticky top-0 z-50 border-b border-white/[0.06]" style="backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%);">
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2">
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
@@ -67,20 +68,20 @@
             <img class="logo-glow" src="./assets/Emblem.webp" alt="Ceradon Systems" width="558" height="558" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
-            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-white/30">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
-                <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+        <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
           <div class="relative group">
             <button class="navlink">Products</button>
             <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
-              <div class="bg-[#0a0f1a] border border-[#1e293b] rounded-lg py-2 min-w-[220px] shadow-xl">
-                <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">VANTAGE <span class="text-xs text-[color:var(--ceradon-blue)]">Through-Wall</span></a>
-                <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">RAPTOR <span class="text-xs text-[color:var(--ceradon-blue)]">Edge AI Vision</span></a>
-                <a href="scout.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">SCOUT</a>
-                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">Architect</a>
-                <a href="aegis.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">AEGIS <span class="text-xs text-[color:var(--ceradon-blue)]">Counter-UAS</span></a>
-                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">PolyGen</a>
+              <div class="bg-[#080c16] border border-white/[0.06] rounded-lg py-2 min-w-[220px] shadow-2xl">
+                <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">VANTAGE <span class="text-xs text-white/30">Through-Wall</span></a>
+                <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">RAPTOR <span class="text-xs text-white/30">Edge AI Vision</span></a>
+                <a href="scout.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">SCOUT</a>
+                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">Architect</a>
+                <a href="aegis.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">AEGIS <span class="text-xs text-white/30">Counter-UAS</span></a>
+                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">PolyGen</a>
               </div>
             </div>
           </div>
@@ -97,462 +98,199 @@
     <main id="main-content">
 
       <!-- ============ HERO ============ -->
-      <section id="top" class="relative overflow-hidden hero-splash min-h-[85vh] flex items-center">
-        <!-- Background layers -->
-        <div class="absolute inset-0 pointer-events-none">
-          <img src="./assets/hero-vantage.webp" alt="Through-wall detection technology" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" width="1920" height="1071" fetchpriority="high" />
-          <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/50 via-[#04070d]/30 to-[#04070d]"></div>
-        </div>
-
-        <!-- Grid pattern overlay -->
+      <section id="top" class="relative overflow-hidden min-h-[90vh] flex items-center">
         <div class="grid-bg" aria-hidden="true"></div>
-        <div class="relative mx-auto max-w-7xl px-4 py-24 lg:py-32 w-full">
-          <div class="hero-grid">
-            <div class="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <div class="logo-plate logo-plate--hero" data-animate>
-                <img class="logo-glow" src="./assets/Emblem.webp" alt="Ceradon Systems" width="558" height="558" />
-              </div>
-
-              <h1 class="font-black leading-[1.05] tracking-tight" data-animate data-delay="100">
-                See through walls.<br/>
-                <span class="gradient-text">Stay invisible.</span>
-              </h1>
-
-              <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-5 py-2.5 text-xs tracking-[0.2em] uppercase" style="backdrop-filter: blur(8px);" data-animate data-delay="200">
-                <span class="w-2 h-2 rounded-full bg-[color:var(--ceradon-blue)] pulse-dot"></span>
-                Veteran-Founded &middot; SDVOSB &middot; Passive WiFi Sensing
-              </div>
-
-              <p class="max-w-xl text-lg leading-relaxed" data-animate data-delay="300">
-                <strong class="text-[color:var(--white)]">Vantage</strong> detects humans through solid walls using passive WiFi Channel State Information. No RF emissions. No chance of detection. A fraction of the cost of active radar systems.
-              </p>
-
-              <div class="flex flex-col sm:flex-row gap-4" data-animate data-delay="400">
-                <a href="vantage.html" class="btn btn-primary text-sm">Explore Vantage</a>
-                <a href="contact.html" class="btn btn-secondary text-sm">Request a Demo</a>
-              </div>
+        <div class="relative mx-auto max-w-7xl px-4 py-32 lg:py-40 w-full">
+          <div class="max-w-4xl space-y-8" data-animate>
+            <div class="flex items-center gap-3">
+              <span class="tag">Veteran-Founded SDVOSB</span>
+              <span class="tag">Passive WiFi Sensing</span>
             </div>
 
-            <!-- Stats / Value prop card -->
-            <div class="card-glass p-8 space-y-8" data-animate data-delay="200">
-              <div class="space-y-2">
-                <p class="tag">Why Passive Matters</p>
-                <h2 class="text-2xl font-bold">The covert advantage</h2>
-              </div>
-              <div class="space-y-6">
-                <!-- Zero emissions -->
-                <div class="flex items-start gap-4 group">
-                  <div class="rounded-xl bg-[color:var(--steel-700)]/50 p-3 shrink-0 border border-[color:var(--steel-600)] group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors duration-300">
-                    <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12c1.292 4.338 5.31 7.5 10.066 7.5.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-[color:var(--white)] mb-1">Zero emissions</h3>
-                    <p class="text-sm text-subtle leading-relaxed">Listens to existing WiFi. Emits nothing. Invisible to RF detection and EW systems.</p>
-                  </div>
-                </div>
-                <!-- 10x cheaper -->
-                <div class="flex items-start gap-4 group">
-                  <div class="rounded-xl bg-[color:var(--steel-700)]/50 p-3 shrink-0 border border-[color:var(--steel-600)] group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors duration-300">
-                    <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-[color:var(--white)] mb-1">10&times; cheaper than radar</h3>
-                    <p class="text-sm text-subtle leading-relaxed">COTS hardware. Fraction of the $60K&ndash;$85K price of active through-wall systems.</p>
-                  </div>
-                </div>
-                <!-- ATAK -->
-                <div class="flex items-start gap-4 group">
-                  <div class="rounded-xl bg-[color:var(--steel-700)]/50 p-3 shrink-0 border border-[color:var(--steel-600)] group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors duration-300">
-                    <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 0 1 7.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 0 1 1.06 0Z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 class="font-semibold text-[color:var(--white)] mb-1">Networked & ATAK-ready</h3>
-                    <p class="text-sm text-subtle leading-relaxed">Mesh-capable nodes feed CoT data for distributed situational awareness.</p>
-                  </div>
-                </div>
-              </div>
+            <h1 class="font-bold leading-[1.05] tracking-tight" data-animate data-delay="100">
+              See through walls.<br/>
+              <span class="text-white/40">Stay invisible.</span>
+            </h1>
+
+            <p class="max-w-2xl text-lg lg:text-xl leading-relaxed text-white/50" data-animate data-delay="200">
+              <strong class="text-white/90">VANTAGE</strong> detects human presence through solid walls using passive WiFi Channel State Information. Zero RF emissions. Zero chance of detection. A fraction of the cost of active radar.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2" data-animate data-delay="300">
+              <a href="vantage.html" class="btn btn-primary text-sm">Explore VANTAGE</a>
+              <a href="contact.html" class="btn btn-secondary text-sm">Request a Demo</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ STATS BAR ============ -->
-      <section class="border-t border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)]/50" style="backdrop-filter: blur(8px);">
-        <div class="mx-auto max-w-7xl px-4 py-12">
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center" data-animate-stagger>
-            <div>
-              <p class="stat-number">0</p>
-              <p class="stat-label">RF Emissions</p>
+      <!-- ============ KEY ADVANTAGES ============ -->
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] rounded-xl overflow-hidden" data-animate>
+            <div class="bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">ZERO</p>
+              <p class="text-sm text-white/40 leading-relaxed">RF emissions. Invisible to electronic warfare systems and RF detection.</p>
             </div>
-            <div>
-              <p class="stat-number">10&times;</p>
-              <p class="stat-label">Cost Reduction vs Radar</p>
+            <div class="bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">10&times;</p>
+              <p class="text-sm text-white/40 leading-relaxed">Cost reduction vs active radar. COTS hardware at a fraction of $60K&ndash;$85K systems.</p>
             </div>
-            <div>
-              <p class="stat-number">TRL 4</p>
-              <p class="stat-label">Lab Validated</p>
+            <div class="bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">TRL 4</p>
+              <p class="text-sm text-white/40 leading-relaxed">Lab validated. Active development toward operational deployment.</p>
             </div>
-            <div>
-              <p class="stat-number">SDVOSB</p>
-              <p class="stat-label">Veteran-Founded</p>
+            <div class="bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">ATAK</p>
+              <p class="text-sm text-white/40 leading-relaxed">Networked mesh nodes feed CoT data for distributed situational awareness.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ============ APPLICATIONS ============ -->
-      <section class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
+          <div class="max-w-2xl space-y-4" data-animate>
             <p class="tag">Applications</p>
-            <h2 class="section-heading">Built for operators who need to know what's on the other side</h2>
-            <p class="text-subtle text-lg">Passive through-wall detection for the teams that need it most.</p>
+            <h2 class="section-heading">Built for operators who need to know<br class="hidden lg:block"/> what's on the other side</h2>
           </div>
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Military Breach & Clearing</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Know room occupancy before entry. Passive sensing means zero signature, which is critical in contested EW environments.</p>
+          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Military Breach & Clearing</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Know room occupancy before entry. Passive sensing means zero signature in contested EW environments.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Law Enforcement / SWAT</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Barricaded suspect standoffs, hostage rescue, warrant service. Know how many people are inside before making entry.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Law Enforcement / SWAT</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Barricaded suspect standoffs, hostage rescue, warrant service. Know how many people are inside before making entry.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Search & Rescue</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Detect trapped survivors through rubble and collapsed structures. WiFi penetrates where cameras and thermal can't.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Search & Rescue</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Detect trapped survivors through rubble and collapsed structures. WiFi penetrates where cameras and thermal can't.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Building & Facility Security</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Continuous occupancy monitoring for critical infrastructure, embassies, and secure facilities.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Building & Facility Security</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Continuous occupancy monitoring for critical infrastructure, embassies, and secure facilities.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">Infrastructure Protection</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Perimeter security for power stations, data centers, and government buildings. Detect unauthorized presence passively.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Infrastructure Protection</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Perimeter security for power stations, data centers, and government buildings. Detect unauthorized presence passively.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 group">
-              <div class="flex items-center gap-3 mb-2">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-2.5 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75H6A2.25 2.25 0 0 0 3.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0 1 20.25 6v1.5m0 9V18A2.25 2.25 0 0 1 18 20.25h-1.5m-9 0H6A2.25 2.25 0 0 1 3.75 18v-1.5M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>
-                </div>
-                <h3 class="text-lg font-semibold text-[color:var(--white)]">SIGINT / Intelligence</h3>
-              </div>
-              <p class="text-sm text-subtle leading-relaxed">Dual-use: WiFi CSI reveals both human presence and network topology without active probing.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">SIGINT / Intelligence</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Dual-use: WiFi CSI reveals both human presence and network topology without active probing.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ============ HOW IT WORKS ============ -->
-      <section class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">Vantage Platform</p>
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
+          <div class="max-w-2xl space-y-4" data-animate>
+            <p class="tag">VANTAGE Platform</p>
             <h2 class="section-heading">How passive WiFi through-wall detection works</h2>
-            <p class="text-subtle text-lg">Vantage exploits WiFi Channel State Information, the subtle signal distortions caused by human bodies in a WiFi field.</p>
+            <p class="text-white/40 text-lg">VANTAGE exploits WiFi Channel State Information &mdash; the subtle signal distortions caused by human bodies in a WiFi field.</p>
           </div>
-          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">01</div>
-              <h3 class="font-bold text-[color:var(--white)]">Listen</h3>
-              <p class="text-sm text-subtle leading-relaxed">Captures existing WiFi frames from ambient access points. No transmitter needed.</p>
+          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <span class="text-xs font-semibold text-white/20 tracking-wider">01</span>
+              <h3 class="font-semibold text-white">Listen</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Captures existing WiFi frames from ambient access points. No transmitter needed.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">02</div>
-              <h3 class="font-bold text-[color:var(--white)]">Extract</h3>
-              <p class="text-sm text-subtle leading-relaxed">Pulls CSI amplitude and phase data across subcarriers using commodity WiFi chipsets.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <span class="text-xs font-semibold text-white/20 tracking-wider">02</span>
+              <h3 class="font-semibold text-white">Extract</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Pulls CSI amplitude and phase data across subcarriers using commodity WiFi chipsets.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">03</div>
-              <h3 class="font-bold text-[color:var(--white)]">Classify</h3>
-              <p class="text-sm text-subtle leading-relaxed">ML models process conditioned signals to detect presence, movement, and activity.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <span class="text-xs font-semibold text-white/20 tracking-wider">03</span>
+              <h3 class="font-semibold text-white">Classify</h3>
+              <p class="text-sm text-white/40 leading-relaxed">ML models process conditioned signals to detect presence, movement, and activity.</p>
             </div>
-            <div class="card-glass p-7 space-y-3 relative">
-              <div class="absolute top-6 right-6 text-5xl font-black text-[color:var(--ceradon-blue)]/10">04</div>
-              <h3 class="font-bold text-[color:var(--white)]">Report</h3>
-              <p class="text-sm text-subtle leading-relaxed">Outputs presence alerts via JSON, CLI, or ATAK CoT feed in real time.</p>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <span class="text-xs font-semibold text-white/20 tracking-wider">04</span>
+              <h3 class="font-semibold text-white">Report</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Outputs presence alerts via JSON, CLI, or ATAK CoT feed in real time.</p>
             </div>
           </div>
-          <div class="text-center" data-animate>
-            <a href="vantage.html" class="btn btn-primary text-sm">Full Vantage Details &rarr;</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ WHY CERADON ============ -->
-      <section id="why-ceradon" class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">Why Ceradon</p>
-            <h2 class="section-heading">Veteran-founded. Operator-built. Mission-ready.</h2>
-            <p class="text-subtle text-lg">A veteran-owned defense technology company building tools for the teams that need them most.</p>
-          </div>
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3">
-              <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 w-fit border border-[color:var(--ceradon-blue)]/15">
-                <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" /></svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">SDVOSB / VOSB</h3>
-              <p class="text-sm text-subtle leading-relaxed">Veteran-Owned Small Business. Eligible for sole-source and set-aside contracts.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 w-fit border border-[color:var(--ceradon-blue)]/15">
-                <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z" /></svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">Defense Background</h3>
-              <p class="text-sm text-subtle leading-relaxed">Founded by veterans with special operations and intelligence experience. We understand the operational environment.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 w-fit border border-[color:var(--ceradon-blue)]/15">
-                <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" /></svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">Security Cleared</h3>
-              <p class="text-sm text-subtle leading-relaxed">Team holds active clearances. Understands classified environments and information handling requirements.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 w-fit border border-[color:var(--ceradon-blue)]/15">
-                <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" /></svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">UAS Capable</h3>
-              <p class="text-sm text-subtle leading-relaxed">FAA Part 107 certified. FPV, fixed-wing, and UGV platforms for ISR and sensing missions.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 w-fit border border-[color:var(--ceradon-blue)]/15">
-                <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" /></svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">Active in SAM.gov</h3>
-              <p class="text-sm text-subtle leading-relaxed">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; NAICS 541715, 541330 &middot; Registered through Dec 2026.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 w-fit border border-[color:var(--ceradon-blue)]/15">
-                <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
-              </div>
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">Engineering + Intel</h3>
-              <p class="text-sm text-subtle leading-relaxed">Intelligence tradecraft meets RF and software engineering. We build what works in the field.</p>
-            </div>
+          <div data-animate>
+            <a href="vantage.html" class="btn btn-secondary text-sm">Full VANTAGE Details &rarr;</a>
           </div>
         </div>
       </section>
 
-      <!-- ============ AI SERVICES BANNER ============ -->
-      <section class="border-b border-[color:var(--steel-700)] bg-gradient-to-r from-[color:var(--ceradon-blue)]/5 via-transparent to-[color:var(--ceradon-blue)]/5">
-        <div class="mx-auto max-w-7xl px-4 py-16">
-          <div class="card-glass p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12" data-animate>
-            <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-4 border border-[color:var(--ceradon-blue)]/15 shrink-0">
-              <svg class="h-10 w-10 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" /></svg>
-            </div>
-            <div class="flex-1 space-y-3 text-center md:text-left">
-              <div class="flex items-center gap-3 justify-center md:justify-start">
-                <span class="tag">New</span>
-                <h2 class="text-xl md:text-2xl font-bold text-[color:var(--white)]">AI Agent Integration Services</h2>
-              </div>
-              <p class="text-subtle text-lg">Deploy custom AI agent systems for your business &mdash; from lead follow-up to document processing to 24/7 client communication. Starting at $2,500.</p>
-            </div>
-            <a href="intelligent-systems.html" class="btn btn-primary text-sm shrink-0">Learn More &rarr;</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ SCOUT ============ -->
-      <section class="border-b border-[color:var(--steel-700)] relative overflow-hidden">
-        <!-- Radar sweep background -->
-        <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.07]">
-            <div class="absolute inset-0 rounded-full border border-[color:var(--ceradon-blue)]"></div>
-            <div class="absolute inset-[15%] rounded-full border border-[color:var(--ceradon-blue)]"></div>
-            <div class="absolute inset-[30%] rounded-full border border-[color:var(--ceradon-blue)]"></div>
-            <div class="absolute inset-[45%] rounded-full border border-[color:var(--ceradon-blue)]"></div>
-            <div class="absolute top-0 bottom-0 left-1/2 w-px bg-[color:var(--ceradon-blue)]"></div>
-            <div class="absolute left-0 right-0 top-1/2 h-px bg-[color:var(--ceradon-blue)]"></div>
-            <div class="absolute inset-0 rounded-full overflow-hidden">
-              <div class="absolute inset-0 bg-[conic-gradient(from_0deg,transparent_0deg,rgba(43,120,255,0.3)_30deg,transparent_60deg)] animate-spin" style="animation-duration:4s;"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="relative mx-auto max-w-7xl px-4 py-20 space-y-10">
-          <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <!-- Left: Copy -->
+      <!-- ============ SCOUT (Brief) ============ -->
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
+          <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
             <div class="space-y-6" data-animate>
               <div class="flex items-center gap-3">
                 <span class="tag">Live Product</span>
                 <span class="inline-flex items-center gap-2 text-xs tracking-wider uppercase text-[color:var(--green-400)]">
-                  <span class="w-2 h-2 rounded-full bg-[color:var(--green-400)] pulse-dot"></span>
-                  SaaS &middot; Accepting Customers
+                  <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--green-400)] pulse-dot"></span>
+                  SaaS
                 </span>
               </div>
               <h2 class="section-heading">SCOUT</h2>
-              <p class="text-xl text-[color:var(--white)] font-medium leading-relaxed">
-                AI-powered federal opportunity scanner built for small defense businesses.
+              <p class="text-lg text-white/50 leading-relaxed">
+                AI-powered federal opportunity scanner. SCOUT monitors SAM.gov for contracts that match your capabilities, scores each for relevance, and delivers daily email digests so you never miss a winnable bid.
               </p>
-              <p class="text-subtle text-lg leading-relaxed">
-                Scout continuously monitors SAM.gov for contracts that match your capabilities. Every opportunity is AI-scored for relevance, filtered by set-aside status, and delivered as a daily email digest &mdash; so you never miss a contract you should be bidding on.
-              </p>
-
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                <div class="card-glass p-4 text-center space-y-1">
-                  <p class="text-2xl font-bold text-[color:var(--ceradon-blue)]">AI</p>
-                  <p class="text-xs text-subtle">Relevance Scoring</p>
-                </div>
-                <div class="card-glass p-4 text-center space-y-1">
-                  <p class="text-2xl font-bold text-[color:var(--ceradon-blue)]">SDVOSB</p>
-                  <p class="text-xs text-subtle">Set-Aside Filtering</p>
-                </div>
-                <div class="card-glass p-4 text-center space-y-1">
-                  <p class="text-2xl font-bold text-[color:var(--ceradon-blue)]">Daily</p>
-                  <p class="text-xs text-subtle">Email Digests</p>
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
-                <a href="scout.html" class="btn btn-primary text-sm">Learn More &rarr;</a>
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
+                <a href="scout.html" class="btn btn-primary text-sm">Learn More</a>
                 <a href="https://sentinel-scout.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-sm">Start Scanning &rarr;</a>
               </div>
-              <p class="text-sm text-subtle">Plans from <strong class="text-[color:var(--white)]">$49/mo</strong> to <strong class="text-[color:var(--white)]">$199/mo</strong> &middot; Cancel anytime</p>
+              <p class="text-sm text-white/30">Plans from <strong class="text-white/60">$49/mo</strong> to <strong class="text-white/60">$199/mo</strong></p>
             </div>
-
-            <!-- Right: Feature list -->
-            <div class="space-y-5" data-animate data-delay="200">
-              <div class="card-glass p-6 flex items-start gap-4 group">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 shrink-0 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" /></svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-[color:var(--white)] mb-1">SAM.gov Opportunity Scanning</h3>
-                  <p class="text-sm text-subtle leading-relaxed">Automated daily scans of new solicitations, pre-solicitations, and award notices across all federal agencies.</p>
-                </div>
+            <div class="grid grid-cols-3 gap-px bg-white/[0.06] rounded-xl overflow-hidden" data-animate data-delay="200">
+              <div class="bg-[color:var(--ink)] p-6 text-center space-y-2">
+                <p class="text-xl font-bold text-white">AI</p>
+                <p class="text-xs text-white/30">Relevance Scoring</p>
               </div>
-              <div class="card-glass p-6 flex items-start gap-4 group">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 shrink-0 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 0 0-2.455 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" /></svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-[color:var(--white)] mb-1">AI Capability-Fit Scoring</h3>
-                  <p class="text-sm text-subtle leading-relaxed">Each opportunity is scored against your company profile using AI &mdash; focus on the contracts you can actually win.</p>
-                </div>
+              <div class="bg-[color:var(--ink)] p-6 text-center space-y-2">
+                <p class="text-xl font-bold text-white">SDVOSB</p>
+                <p class="text-xs text-white/30">Set-Aside Filters</p>
               </div>
-              <div class="card-glass p-6 flex items-start gap-4 group">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 shrink-0 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" /></svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-[color:var(--white)] mb-1">SDVOSB / VOSB Set-Aside Filters</h3>
-                  <p class="text-sm text-subtle leading-relaxed">Automatically surface veteran-owned set-asides, 8(a), HUBZone, and other small business opportunities.</p>
-                </div>
-              </div>
-              <div class="card-glass p-6 flex items-start gap-4 group">
-                <div class="rounded-xl bg-[color:var(--ceradon-blue)]/10 p-3 shrink-0 border border-[color:var(--ceradon-blue)]/15 group-hover:border-[color:var(--ceradon-blue)]/30 transition-colors">
-                  <svg class="h-6 w-6 text-[color:var(--ceradon-blue)]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" /></svg>
-                </div>
-                <div>
-                  <h3 class="font-semibold text-[color:var(--white)] mb-1">Daily Email Digests</h3>
-                  <p class="text-sm text-subtle leading-relaxed">Curated opportunity reports delivered to your inbox every morning. No login required to stay informed.</p>
-                </div>
+              <div class="bg-[color:var(--ink)] p-6 text-center space-y-2">
+                <p class="text-xl font-bold text-white">Daily</p>
+                <p class="text-xs text-white/30">Email Digests</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ LABS / OTHER PROJECTS ============ -->
-      <section class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">Ceradon Labs</p>
-            <h2 class="section-heading">Other Projects</h2>
-            <p class="text-subtle text-lg">Complementary tools and experiments from the Ceradon ecosystem.</p>
-          </div>
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
-            <article class="product-card">
-              <img src="./assets/hero-polygen.webp" alt="PolyGen text-to-3D model generator interface" class="w-full h-36 object-cover rounded-xl mb-5 opacity-75" loading="lazy" width="1920" height="1071" />
-              <div class="product-card__header">
-                <h3 class="product-title">PolyGen</h3>
-                <p class="product-tagline">Text-to-3D model generator. Multi-agent AI pipeline.</p>
-              </div>
-              <ul class="product-bullets">
-                <li>Natural language to printable OpenSCAD</li>
-                <li>Gemini + Claude multi-agent pipeline</li>
-                <li>Browser-based WASM validation</li>
-              </ul>
-              <a class="btn btn-secondary mt-5 inline-flex text-xs" href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer">Launch PolyGen</a>
-            </article>
-            <article class="product-card">
-              <img src="./assets/hero-architect.webp" alt="Architect offline planning tools" class="w-full h-36 object-cover rounded-xl mb-5 opacity-75" loading="lazy" width="1920" height="1071" />
-              <div class="product-card__header">
-                <h3 class="product-title">Architect</h3>
-                <p class="product-tagline">Open-source planning for nodes, drones, and RF mesh.</p>
-              </div>
-              <ul class="product-bullets">
-                <li>Models inventory & mission constraints</li>
-                <li>RF mesh layout planning</li>
-                <li>Offline-first, export-ready</li>
-              </ul>
-              <a class="btn btn-secondary mt-5 inline-flex text-xs" href="architect.html">Explore Architect</a>
-            </article>
-            <article class="product-card" id="aegis">
-              <img src="./assets/hero-aegis.webp" alt="AEGIS multi-modal counter-UAS detection system" class="w-full h-36 object-cover rounded-xl mb-5 opacity-75" loading="lazy" width="1920" height="1071" />
-              <div class="product-card__header">
-                <h3 class="product-title">AEGIS</h3>
-                <p class="product-tagline">Multi-modal counter-UAS detection for the tactical edge.</p>
-              </div>
-              <ul class="product-bullets">
-                <li>Acoustic + visual + passive RF sensor fusion</li>
-                <li>Drone detection, classification &amp; alerting from $315/node</li>
-                <li>ATAK/CoT integrated &mdash; works RF-denied</li>
-              </ul>
-              <a class="btn btn-secondary mt-5 inline-flex text-xs" href="aegis.html">Explore AEGIS</a>
-            </article>
+      <!-- ============ AI SERVICES (Brief) ============ -->
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
+          <div class="max-w-3xl space-y-6" data-animate>
+            <span class="tag">Services</span>
+            <h2 class="section-heading">Intelligent Systems</h2>
+            <p class="text-lg text-white/50 leading-relaxed max-w-2xl">
+              Custom AI agent deployment for your business. Multi-agent workflows, deep integrations, industry-specific training. We build and run production AI systems &mdash; not slide decks.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="intelligent-systems.html" class="btn btn-primary text-sm">Learn More</a>
+              <a href="contact.html" class="btn btn-secondary text-sm">Book a Free Assessment</a>
+            </div>
+            <p class="text-sm text-white/30">Starting at <strong class="text-white/60">$2,500</strong></p>
           </div>
         </div>
       </section>
 
       <!-- ============ CONTACT CTA ============ -->
-      <section id="contact">
-        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-start">
+      <section id="contact" class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
+          <div class="grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:items-start">
             <div class="space-y-6" data-animate>
               <span class="tag">Contact</span>
               <h2 class="section-heading">Ready to talk through-wall detection?</h2>
-              <p class="text-subtle text-lg leading-relaxed">Whether you're a program manager, SWAT commander, or SAR coordinator, let's discuss how Vantage fits your mission.</p>
-              <div class="flex flex-col gap-3 text-subtle">
-                <div class="flex items-center gap-3">
-                  <svg class="h-5 w-5 text-[color:var(--ceradon-blue)] shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
-                  </svg>
-                  <div>
-                    <p><a href="mailto:contact@ceradonsystems.com" class="text-[color:var(--ceradon-sky)] hover:text-[color:var(--white)]">contact@ceradonsystems.com</a></p>
-                  </div>
-                </div>
+              <p class="text-white/40 text-lg leading-relaxed">Whether you're a program manager, SWAT commander, or SAR coordinator &mdash; let's discuss how VANTAGE fits your mission.</p>
+              <div class="flex items-center gap-3 text-white/40">
+                <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
+                </svg>
+                <a href="mailto:contact@ceradonsystems.com" class="text-white/60 hover:text-white transition-colors">contact@ceradonsystems.com</a>
               </div>
             </div>
             <div class="card-glass p-8" data-animate data-delay="200">
@@ -574,10 +312,10 @@
                 </div>
                 <div>
                   <label for="message">How can we help? <span class="text-red-400" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
-                  <textarea id="message" name="message" rows="4" placeholder="Tell us about your mission needs, timeline, or questions about Vantage." required aria-required="true"></textarea>
+                  <textarea id="message" name="message" rows="4" placeholder="Tell us about your mission needs, timeline, or questions about VANTAGE." required aria-required="true"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-full text-sm">Send Message</button>
-                <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
+                <p aria-live="polite" class="text-sm text-white/30" data-form-status></p>
               </form>
             </div>
           </div>
@@ -586,27 +324,27 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-[color:var(--steel-700)]">
+    <footer class="border-t border-white/[0.06]">
       <div class="mx-auto max-w-7xl px-4 py-14 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/Emblem.webp" alt="Ceradon Systems" class="h-12 w-12 image-surface" loading="lazy" width="558" height="558" />
+            <img src="./assets/Emblem.webp" alt="Ceradon Systems" class="h-10 w-10 image-surface" loading="lazy" width="558" height="558" />
             <div>
-              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
-              <p class="text-sm text-subtle">Passive through-wall detection. Veteran-founded SDVOSB.</p>
+              <p class="font-semibold text-white text-sm">Ceradon Systems</p>
+              <p class="text-xs text-white/30">Passive through-wall detection. Veteran-founded SDVOSB.</p>
             </div>
           </div>
-          <div class="flex flex-wrap gap-4 items-center text-sm text-subtle">
+          <div class="flex flex-wrap gap-4 items-center text-sm text-white/40">
             <a href="mailto:contact@ceradonsystems.com">contact@ceradonsystems.com</a>
-            <span aria-hidden="true" class="text-[color:var(--steel-600)]">&middot;</span>
+            <span aria-hidden="true" class="text-white/10">&middot;</span>
             <a href="https://www.linkedin.com/company/111601964/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
           </div>
         </div>
         <div class="footer-links" data-footer-links></div>
         <div class="gradient-divider"></div>
-        <div class="space-y-2 text-xs text-subtle">
+        <div class="space-y-1.5 text-xs text-white/25">
           <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
           <p>Socio-economic status: SDVOSB &middot; VOSB &middot; NAICS: 541715, 541330 &middot; PSC: K058, AJ11.</p>
           <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
