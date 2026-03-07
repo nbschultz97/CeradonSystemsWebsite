@@ -127,6 +127,7 @@
       <!-- ============ HERO ============ -->
       <section id="top" class="relative overflow-hidden min-h-[90vh] flex items-center">
         <div class="grid-bg" aria-hidden="true"></div>
+        <img src="./assets/hero-intelligent-systems.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" aria-hidden="true" loading="eager" />
         <div class="relative mx-auto max-w-7xl px-4 py-32 lg:py-40 w-full">
           <div class="max-w-4xl space-y-8" data-animate>
             <div class="flex items-center gap-3">
@@ -293,12 +294,17 @@
       <!-- ============ CONSTRUCTION SPOTLIGHT ============ -->
       <section class="border-t border-white/[0.06]">
         <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-3xl space-y-4" data-animate>
-            <p class="tag">Industry Spotlight</p>
-            <h2 class="section-heading">AI for construction &amp; contractors</h2>
-            <p class="text-white/50 text-lg leading-relaxed">
-              Your PM spends 3 hours a day on email. Estimates go out but nobody follows up. Bid deadlines slip through the cracks. We fix that.
-            </p>
+          <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div class="space-y-6" data-animate>
+              <p class="tag">Construction &amp; Contractors</p>
+              <h2 class="section-heading">Your PM shouldn't spend 3 hours a day on email</h2>
+              <p class="text-white/50 text-lg leading-relaxed">
+                Estimates go out but nobody follows up. Bid deadlines slip through the cracks. RFIs pile up. We fix that &mdash; without changing how you work.
+              </p>
+            </div>
+            <div class="rounded-xl overflow-hidden" data-animate data-delay="200">
+              <img src="./assets/hero-construction.webp" alt="Construction project manager reviewing AI-powered project dashboard" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+            </div>
           </div>
           <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
             <div class="bg-[color:var(--ink)] p-8 space-y-3">
@@ -316,6 +322,114 @@
             <div class="bg-[color:var(--ink)] p-8 space-y-3">
               <h3 class="text-base font-semibold text-white">Daily job rollups</h3>
               <p class="text-sm text-white/40 leading-relaxed">End-of-day status across all active jobs. No chasing PMs. No missed updates. One summary, every morning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HOME SERVICES SPOTLIGHT ============ -->
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
+          <div class="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div class="rounded-xl overflow-hidden order-2 lg:order-1" data-animate>
+              <img src="./assets/hero-homeservices.webp" alt="Home services technician using AI-powered scheduling on smartphone" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+            </div>
+            <div class="space-y-6 order-1 lg:order-2" data-animate data-delay="200">
+              <p class="tag">Home Services &amp; Trades</p>
+              <h2 class="section-heading">Stop losing jobs to slow response times</h2>
+              <p class="text-white/50 text-lg leading-relaxed">
+                HVAC, plumbing, electrical, roofing &mdash; your customers call three companies and hire whoever answers first. AI makes sure that's always you.
+              </p>
+            </div>
+          </div>
+          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Instant lead response</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Every inquiry gets an immediate, intelligent reply. Qualify leads and book appointments while you're on a job.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Smart scheduling</h3>
+              <p class="text-sm text-white/40 leading-relaxed">AI dispatching that routes technicians by location, skill, and availability. No more scheduling Tetris.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Invoice follow-ups</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Automated payment reminders on completed jobs. Polite, persistent, and on schedule without you chasing.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Review automation</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Automatically request Google reviews after completed jobs. More reviews, more visibility, more calls.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ REAL ESTATE SPOTLIGHT ============ -->
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
+          <div class="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div class="space-y-6" data-animate>
+              <p class="tag">Real Estate</p>
+              <h2 class="section-heading">Speed-to-lead wins deals</h2>
+              <p class="text-white/50 text-lg leading-relaxed">
+                The agent who responds first gets the client. AI handles your lead response, follow-up sequences, and transaction coordination so you can focus on closings.
+              </p>
+            </div>
+            <div class="rounded-xl overflow-hidden" data-animate data-delay="200">
+              <img src="./assets/hero-realestate.webp" alt="Real estate professional with AI analytics dashboard" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+            </div>
+          </div>
+          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Lead qualification</h3>
+              <p class="text-sm text-white/40 leading-relaxed">AI screens and qualifies incoming leads instantly. Hot leads get escalated, tire-kickers get nurtured automatically.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Drip sequences</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Personalized follow-up campaigns that keep you top-of-mind without writing a single email.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Transaction tracking</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Every deadline, inspection, and contingency tracked. AI alerts you before anything slips through.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Market intelligence</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Automated comp analysis and market reports. Know the neighborhood before the client asks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ LEGAL SPOTLIGHT ============ -->
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
+          <div class="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
+            <div class="rounded-xl overflow-hidden order-2 lg:order-1" data-animate>
+              <img src="./assets/hero-legal.webp" alt="Attorney reviewing AI-assisted document analysis" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+            </div>
+            <div class="space-y-6 order-1 lg:order-2" data-animate data-delay="200">
+              <p class="tag">Legal</p>
+              <h2 class="section-heading">Bill more hours by doing less admin</h2>
+              <p class="text-white/50 text-lg leading-relaxed">
+                Client intake, deadline tracking, document review &mdash; the non-billable work that eats your day. AI handles the admin so you can practice law.
+              </p>
+            </div>
+          </div>
+          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Client intake</h3>
+              <p class="text-sm text-white/40 leading-relaxed">AI screens inquiries, collects case details, and routes qualified leads to the right attorney automatically.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Deadline tracking</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Statutes of limitations, filing deadlines, court dates &mdash; tracked and alerted automatically. Never miss a deadline.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Document review</h3>
+              <p class="text-sm text-white/40 leading-relaxed">AI-assisted contract review and summarization. Flag key clauses, risks, and inconsistencies in minutes.</p>
+            </div>
+            <div class="bg-[color:var(--ink)] p-8 space-y-3">
+              <h3 class="text-base font-semibold text-white">Time capture</h3>
+              <p class="text-sm text-white/40 leading-relaxed">Automatic billable hour logging from emails, calls, and documents. Stop losing revenue to forgotten entries.</p>
             </div>
           </div>
         </div>
