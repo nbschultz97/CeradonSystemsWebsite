@@ -325,6 +325,35 @@
         </div>
       </section>
 
+      <!-- ============ TAK INTEGRATION ============ -->
+      <section class="py-20 border-t border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 space-y-16">
+          <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
+            <span class="tag">TAK Ecosystem</span>
+            <h2 class="section-heading">Detections on every screen, instantly</h2>
+            <p class="text-subtle text-lg">RAPTOR pushes Cursor on Target (CoT) events directly into the TAK ecosystem. Every threat appears on every operator's ATAK display in real time&mdash;no manual reporting, no radio calls, no delay.</p>
+          </div>
+          <div class="rounded-xl overflow-hidden max-w-4xl mx-auto" data-animate>
+            <img src="./assets/section-raptor-tak.webp" alt="RAPTOR integration with ATAK tablets via mesh network" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3" data-animate-stagger>
+            <div class="card-glass p-6 space-y-4">
+              <h3 class="font-semibold text-[color:var(--white)]">Auto-Populate SA</h3>
+              <p class="text-sm text-subtle leading-relaxed">Detected threats, vehicles, and persons of interest appear as CoT markers on ATAK maps. Classified as hostile, friendly, neutral, or unknown with confidence scores.</p>
+            </div>
+            <div class="card-glass p-6 space-y-4">
+              <h3 class="font-semibold text-[color:var(--white)]">Works Disconnected</h3>
+              <p class="text-sm text-subtle leading-relaxed">RAPTOR pushes CoT over local UDP&mdash;no internet required. Works with any TAK Server on the local mesh, including OpenTAKServer running on a companion device.</p>
+            </div>
+            <div class="card-glass p-6 space-y-4">
+              <h3 class="font-semibold text-[color:var(--white)]">Multi-Node Coverage</h3>
+              <p class="text-sm text-subtle leading-relaxed">Deploy three RAPTOR nodes around a compound. Each pushes detections to TAK independently. Operators see a unified threat picture from all sensors on a single map.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ COMPARISON ============ -->
       <section class="py-20 border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 space-y-12">
@@ -436,9 +465,29 @@
 
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
             <div class="card-glass p-6 space-y-3">
-              <span class="text-xs font-mono text-red-400 uppercase tracking-wider">In Development</span>
+              <span class="text-xs font-mono text-green-400 uppercase tracking-wider">Active Development</span>
               <h3 class="font-semibold text-[color:var(--white)]">ATAK / CoT Integration</h3>
-              <p class="text-sm text-subtle">Push detections as Cursor on Target messages into the TAK ecosystem for full battlefield integration.</p>
+              <p class="text-sm text-subtle">Push detections as Cursor on Target messages into the TAK ecosystem via UDP. Threat detections auto-appear on every ATAK device in the network&mdash;full battlefield integration with zero manual reporting.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <span class="text-xs font-mono text-green-400 uppercase tracking-wider">Active Development</span>
+              <h3 class="font-semibold text-[color:var(--white)]">Multi-Source Video Input</h3>
+              <p class="text-sm text-subtle">RTSP IP cameras, video files, and live webcam feeds. Drag-and-drop video upload from the web UI. Switch sources without restarting. Test and validate with recorded footage.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <span class="text-xs font-mono text-green-400 uppercase tracking-wider">Active Development</span>
+              <h3 class="font-semibold text-[color:var(--white)]">Automated Evidence Recording</h3>
+              <p class="text-sm text-subtle">Auto-record video clips when threats are detected. Timestamped incident recordings stored locally, downloadable from the web UI. Full chain-of-custody for after-action review.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <span class="text-xs font-mono text-green-400 uppercase tracking-wider">Active Development</span>
+              <h3 class="font-semibold text-[color:var(--white)]">TensorRT Optimization</h3>
+              <p class="text-sm text-subtle">Hardware-accelerated inference using NVIDIA TensorRT. 3&ndash;5&times; FPS improvement over PyTorch, enabling 30+ FPS real-time detection with full tracking on the $250 Jetson module.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <span class="text-xs font-mono text-red-400 uppercase tracking-wider">In Development</span>
+              <h3 class="font-semibold text-[color:var(--white)]">Ceradon Sim Integration</h3>
+              <p class="text-sm text-subtle">Virtual testbench with ArduPilot SITL and Gazebo 3D. Test RAPTOR + UGV control in simulated environments before deploying to real hardware. Sim-to-real parameter export.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
               <span class="text-xs font-mono text-red-400 uppercase tracking-wider">In Development</span>
@@ -457,8 +506,13 @@
             </div>
             <div class="card-glass p-6 space-y-3">
               <span class="text-xs font-mono text-yellow-400 uppercase tracking-wider">Planned</span>
-              <h3 class="font-semibold text-[color:var(--white)]">Multi-Vehicle Mesh</h3>
-              <p class="text-sm text-subtle">Coordinate multiple RAPTOR units across a perimeter. Shared detection data, deconfliction, and distributed tracking.</p>
+              <h3 class="font-semibold text-[color:var(--white)]">Multi-Node Mesh</h3>
+              <p class="text-sm text-subtle">Coordinate multiple RAPTOR nodes across a perimeter. Shared detection data, deconfliction, and distributed tracking over BATMAN mesh networking.</p>
+            </div>
+            <div class="card-glass p-6 space-y-3">
+              <span class="text-xs font-mono text-yellow-400 uppercase tracking-wider">Planned</span>
+              <h3 class="font-semibold text-[color:var(--white)]">Multi-Sensor Fusion</h3>
+              <p class="text-sm text-subtle">Combine RAPTOR (visual), Vantage (WiFi CSI through-wall), and RF detection (RTL-SDR) into a single $300 multi-phenomenology sensor node. Nobody else offers this at any price.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
               <span class="text-xs font-mono text-yellow-400 uppercase tracking-wider">Planned</span>
