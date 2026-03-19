@@ -546,70 +546,78 @@
       <!-- ══════════ APPLICATION ══════════ -->
       <section id="apply" class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-start">
-            <div class="space-y-6" data-animate>
-              <span class="spots-indicator">6 spots this quarter</span>
-              <h2 class="section-heading text-3xl">Your Competitors Are Installing AI Systems Right Now.</h2>
-              <p class="text-subtle text-lg leading-relaxed">
-                Every month without systems is a month they compound and you don't. The businesses that install now will be unreachable in 12 months. This page being live means we have availability.
-              </p>
-              <div class="card-glass p-6 space-y-2">
-                <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">How this works:</strong> Submit your application. If you're a fit, we'll schedule a 30-minute discovery call within 24 hours. On that call, we'll map your workflows and show you exactly what your AI department would look like. No obligation.</p>
+          <div class="max-w-3xl space-y-6" data-animate>
+            <span class="spots-indicator">6 spots this quarter</span>
+            <h2 class="section-heading text-3xl">Your Competitors Are Installing AI Systems Right Now.</h2>
+            <p class="text-subtle text-lg leading-relaxed">
+              Every month without systems is a month they compound and you don't. The businesses that install now will be unreachable in 12 months. Book a 30-minute discovery call. We'll map your workflows and show you exactly what your AI department would look like. No obligation.
+            </p>
+            <div class="grid grid-cols-3 gap-4 max-w-md">
+              <div class="card-glass p-5 text-center">
+                <p class="stat-number text-2xl">8</p>
+                <p class="stat-label">Agents</p>
               </div>
-
-              <div class="grid grid-cols-3 gap-4 pt-2">
-                <div class="card-glass p-5 text-center">
-                  <p class="stat-number text-2xl">8</p>
-                  <p class="stat-label">Agents</p>
-                </div>
-                <div class="card-glass p-5 text-center">
-                  <p class="stat-number text-2xl">14</p>
-                  <p class="stat-label">Days</p>
-                </div>
-                <div class="card-glass p-5 text-center">
-                  <p class="stat-number text-2xl">3h</p>
-                  <p class="stat-label">Your time</p>
-                </div>
+              <div class="card-glass p-5 text-center">
+                <p class="stat-number text-2xl">14</p>
+                <p class="stat-label">Days</p>
+              </div>
+              <div class="card-glass p-5 text-center">
+                <p class="stat-number text-2xl">3h</p>
+                <p class="stat-label">Your time</p>
               </div>
             </div>
+          </div>
 
-            <div class="card-glass p-8" data-animate data-delay="200">
-              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-6">Apply for Installation</h3>
-              <form class="space-y-5" action="https://formspree.io/f/xnjbjayd" method="POST" data-contact-form>
-                <input type="hidden" name="_subject" value="AI Department Installation Application" />
-                <div>
-                  <label for="app-name">Your Name <span class="text-red-400" aria-hidden="true">*</span></label>
-                  <input id="app-name" name="name" type="text" placeholder="Full name" required aria-required="true" />
-                </div>
-                <div>
-                  <label for="app-business">Business Name <span class="text-red-400" aria-hidden="true">*</span></label>
-                  <input id="app-business" name="business_name" type="text" placeholder="Your company" required aria-required="true" />
-                </div>
-                <div>
-                  <label for="app-revenue">Annual Revenue <span class="text-red-400" aria-hidden="true">*</span></label>
-                  <select id="app-revenue" name="revenue" required aria-required="true">
-                    <option value="">Select range</option>
-                    <option value="Under $500K">Under $500K</option>
-                    <option value="$500K - $1M">$500K &ndash; $1M</option>
-                    <option value="$1M - $3M">$1M &ndash; $3M</option>
-                    <option value="$3M - $5M">$3M &ndash; $5M</option>
-                    <option value="$5M - $10M">$5M &ndash; $10M</option>
-                    <option value="$10M+">$10M+</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="app-email">Email <span class="text-red-400" aria-hidden="true">*</span></label>
-                  <input id="app-email" name="email" type="email" placeholder="you@company.com" required aria-required="true" />
-                </div>
-                <div>
-                  <label for="app-challenge">Biggest operational challenge right now</label>
-                  <textarea id="app-challenge" name="challenge" rows="3" placeholder="What would you automate first if you could?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary w-full text-sm uppercase tracking-wide">Submit Application</button>
-                <p class="text-xs text-subtle text-center">No commitment. We follow up within 24 hours if you're a fit.</p>
-                <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
-              </form>
-            </div>
+          <!-- Calendly inline embed -->
+          <div class="card-glass overflow-hidden" data-animate data-delay="200" style="min-height:660px;">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/noah-ceradonsystems/30min?hide_gdpr_banner=1&background_color=04070d&text_color=c5cbd6&primary_color=2b78ff" style="min-width:320px;height:660px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          </div>
+
+          <!-- Fallback form for people who prefer not to book directly -->
+          <div class="max-w-lg mx-auto" data-animate data-delay="300">
+            <details class="card-glass p-6 group">
+              <summary class="text-sm font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                Prefer to submit an application instead?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer pt-6">
+                <form class="space-y-5" action="https://formspree.io/f/xnjbjayd" method="POST" data-contact-form>
+                  <input type="hidden" name="_subject" value="AI Department Installation Application" />
+                  <div>
+                    <label for="app-name">Your Name <span class="text-red-400" aria-hidden="true">*</span></label>
+                    <input id="app-name" name="name" type="text" placeholder="Full name" required aria-required="true" />
+                  </div>
+                  <div>
+                    <label for="app-business">Business Name <span class="text-red-400" aria-hidden="true">*</span></label>
+                    <input id="app-business" name="business_name" type="text" placeholder="Your company" required aria-required="true" />
+                  </div>
+                  <div>
+                    <label for="app-revenue">Annual Revenue <span class="text-red-400" aria-hidden="true">*</span></label>
+                    <select id="app-revenue" name="revenue" required aria-required="true">
+                      <option value="">Select range</option>
+                      <option value="Under $500K">Under $500K</option>
+                      <option value="$500K - $1M">$500K &ndash; $1M</option>
+                      <option value="$1M - $3M">$1M &ndash; $3M</option>
+                      <option value="$3M - $5M">$3M &ndash; $5M</option>
+                      <option value="$5M - $10M">$5M &ndash; $10M</option>
+                      <option value="$10M+">$10M+</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="app-email">Email <span class="text-red-400" aria-hidden="true">*</span></label>
+                    <input id="app-email" name="email" type="email" placeholder="you@company.com" required aria-required="true" />
+                  </div>
+                  <div>
+                    <label for="app-challenge">Biggest operational challenge right now</label>
+                    <textarea id="app-challenge" name="challenge" rows="3" placeholder="What would you automate first if you could?"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-full text-sm uppercase tracking-wide">Submit Application</button>
+                  <p class="text-xs text-subtle text-center">No commitment. We follow up within 24 hours if you're a fit.</p>
+                  <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
+                </form>
+              </div>
+            </details>
           </div>
         </div>
       </section>
