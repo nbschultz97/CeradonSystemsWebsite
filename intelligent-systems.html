@@ -16,11 +16,11 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-    <title>Install Your AI Department | Ceradon Intelligent Systems</title>
-    <meta name="description" content="We install a done-for-you AI department that runs your content, sales, and operations. 8 trained agents. 14-day installation. You keep everything we build." />
-    <meta name="keywords" content="AI department, AI agents for business, AI automation, AI integration, replace headcount with AI, AI content engine, AI sales system, business AI deployment" />
+    <title>Intelligent Systems | In-House AI Department Installation | Ceradon Systems</title>
+    <meta name="description" content="We install a done-for-you AI department into your business. 8 trained agents handling content, sales, and operations. 14-day deployment. Built by the team that builds AI for defense." />
+    <meta name="keywords" content="AI department, AI agents for business, AI automation, AI integration services, replace headcount with AI, AI content engine, AI sales system, business AI deployment, defense-grade AI" />
     <meta property="og:title" content="Install Your AI Department | Ceradon Intelligent Systems" />
-    <meta property="og:description" content="8 AI agents. 14-day install. Replace $300K+ in annual salary costs. Application required." />
+    <meta property="og:description" content="8 AI agents. 14-day install. Replace $300K+ in annual salary costs. Built by the team that builds AI for defense." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/intelligent-systems.html" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
@@ -45,213 +45,50 @@
         "name": "Ceradon Systems, LLC",
         "url": "https://ceradonsystems.com"
       },
-      "description": "Done-for-you AI department installation. 8 trained AI agents for content, sales, operations, and reporting. 14-day deployment.",
+      "description": "Done-for-you AI department installation. 8 trained AI agents for content, sales, operations, and reporting. 14-day deployment. Built by the team that builds AI for defense applications.",
       "url": "https://www.ceradonsystems.com/intelligent-systems.html",
       "areaServed": "US"
     }
     </script>
     <style>
-      /* ── Page-specific styles ── */
-
-      /* Animated gradient border on hero cards */
-      .glow-card {
-        position: relative;
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.06);
-        border-radius: 12px;
-        overflow: hidden;
-        transition: border-color 0.3s ease, transform 0.3s ease;
+      /* Minimal page-specific additions — everything else from styles.css */
+      .is-compare-old { border-left: 2px solid var(--red-400); }
+      .is-compare-new { border-left: 2px solid var(--ceradon-blue); }
+      .spots-indicator {
+        display: inline-flex; align-items: center; gap: 8px;
+        padding: 0.4rem 0.85rem; border-radius: 4px;
+        border: 1px solid rgba(250, 204, 21, 0.2);
+        background: rgba(250, 204, 21, 0.05);
+        font-size: 0.75rem; font-weight: 600;
+        letter-spacing: 0.04em; color: var(--yellow-400);
       }
-      .glow-card:hover {
-        border-color: rgba(43, 120, 255, 0.25);
-        transform: translateY(-2px);
+      .spots-indicator::before {
+        content: ''; width: 6px; height: 6px;
+        background: var(--yellow-400); border-radius: 50%;
+        animation: pulse-dot 2s cubic-bezier(0.4,0,0.6,1) infinite;
       }
-      .glow-card::before {
-        content: '';
-        position: absolute;
-        inset: -1px;
-        border-radius: 13px;
-        padding: 1px;
-        background: linear-gradient(135deg, rgba(43,120,255,0.15), transparent 50%, rgba(86,183,255,0.1));
-        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        mask-composite: exclude;
-        -webkit-mask-composite: xor;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.3s ease;
+      .agent-metric {
+        font-size: 0.6875rem; font-weight: 600;
+        letter-spacing: 0.06em; text-transform: uppercase;
+        color: var(--ceradon-blue);
       }
-      .glow-card:hover::before { opacity: 1; }
-
-      /* Animated counter */
-      .counter-value {
-        font-variant-numeric: tabular-nums;
-        font-feature-settings: 'tnum';
-      }
-
-      /* Pulse dot */
-      .pulse-dot {
-        width: 8px; height: 8px;
-        background: #4ade80;
-        border-radius: 50%;
-        animation: pulse-ring 2s ease-out infinite;
-        position: relative;
-      }
-      .pulse-dot::after {
-        content: '';
-        position: absolute;
-        inset: -4px;
-        border-radius: 50%;
-        border: 2px solid rgba(74, 222, 128, 0.4);
-        animation: pulse-ring 2s ease-out infinite;
-      }
-      @keyframes pulse-ring {
-        0% { opacity: 1; transform: scale(1); }
-        100% { opacity: 0; transform: scale(2.5); }
-      }
-
-      /* Comparison columns */
-      .compare-old {
-        background: linear-gradient(135deg, rgba(248,113,113,0.04), rgba(248,113,113,0.01));
-        border: 1px solid rgba(248,113,113,0.1);
-      }
-      .compare-new {
-        background: linear-gradient(135deg, rgba(43,120,255,0.06), rgba(43,120,255,0.02));
-        border: 1px solid rgba(43,120,255,0.15);
-      }
-
-      /* Agent cards grid */
-      .agent-grid {
-        display: grid;
-        gap: 1px;
-        background: rgba(255,255,255,0.06);
-        border-radius: 12px;
-        overflow: hidden;
-      }
-      @media (min-width: 640px) { .agent-grid { grid-template-columns: repeat(2, 1fr); } }
-      @media (min-width: 1024px) { .agent-grid { grid-template-columns: repeat(4, 1fr); } }
-      .agent-card {
-        background: var(--ink);
-        padding: 2rem;
-        position: relative;
-        transition: background 0.3s ease;
-      }
-      .agent-card:hover { background: rgba(255,255,255,0.02); }
-      .agent-icon {
-        width: 40px; height: 40px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        margin-bottom: 1rem;
-        background: rgba(43,120,255,0.1);
-        border: 1px solid rgba(43,120,255,0.15);
-      }
-
-      /* Flywheel */
-      .flywheel-ring {
-        width: 100%;
-        max-width: 500px;
-        aspect-ratio: 1;
-        border-radius: 50%;
-        border: 2px solid rgba(43,120,255,0.15);
-        position: relative;
-        margin: 0 auto;
-      }
-      .flywheel-node {
-        position: absolute;
-        width: max-content;
-        padding: 0.5rem 1rem;
-        background: var(--ink);
-        border: 1px solid rgba(43,120,255,0.2);
-        border-radius: 8px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        color: var(--white);
-        white-space: nowrap;
-        transform: translate(-50%, -50%);
-      }
-      .flywheel-center {
-        position: absolute;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-      .flywheel-arrow {
-        position: absolute;
-        top: 50%; left: 50%;
-        width: 90%;
-        height: 90%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        border: 2px dashed rgba(43,120,255,0.08);
-        animation: spin-slow 30s linear infinite;
-      }
-      @keyframes spin-slow { to { transform: translate(-50%, -50%) rotate(360deg); } }
-
-      /* Fit check cards */
-      .fit-yes { border-left: 3px solid #4ade80; }
-      .fit-no { border-left: 3px solid rgba(248,113,113,0.5); }
-
-      /* Dashboard mockup */
-      .dash-mockup {
-        background: linear-gradient(135deg, #080c16, #0d1424);
-        border: 1px solid rgba(255,255,255,0.06);
-        border-radius: 12px;
-        overflow: hidden;
-      }
-      .dash-topbar {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px 16px;
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-      }
-      .dash-dot { width: 8px; height: 8px; border-radius: 50%; }
-      .dash-bar {
-        height: 6px;
-        border-radius: 3px;
-        background: rgba(43,120,255,0.3);
-        animation: bar-grow 2s ease-out forwards;
-      }
-      @keyframes bar-grow {
-        from { width: 0; }
-        to { width: var(--bar-width, 70%); }
-      }
-      .dash-metric {
-        padding: 12px 16px;
-        border-bottom: 1px solid rgba(255,255,255,0.04);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      /* Spots counter */
-      .spots-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 6px 14px;
-        border-radius: 99px;
-        background: rgba(250,204,21,0.08);
-        border: 1px solid rgba(250,204,21,0.2);
-        color: #facc15;
-        font-size: 0.8rem;
-        font-weight: 600;
-      }
-
-      /* Scroll-triggered counter animation */
-      .count-up { opacity: 0; transform: translateY(10px); transition: all 0.6s var(--ease-out-expo); }
-      .count-up.is-visible { opacity: 1; transform: translateY(0); }
+      /* Network graph SVG */
+      .network-graph { max-width: 100%; height: auto; }
+      .network-graph .node-ring { fill: none; stroke: var(--ceradon-blue); stroke-width: 1.5; opacity: 0.2; }
+      .network-graph .node-fill { fill: var(--ceradon-blue); opacity: 0.15; }
+      .network-graph .node-dot { fill: var(--ceradon-blue); }
+      .network-graph .edge { stroke: rgba(43,120,255,0.08); stroke-width: 1; }
+      .network-graph .edge-active { stroke: rgba(43,120,255,0.2); stroke-width: 1.5; stroke-dasharray: 6 4; animation: dash-flow 12s linear infinite; }
+      .network-graph text { fill: var(--white); font-size: 11px; font-weight: 600; font-family: inherit; }
+      .network-graph .text-sub { fill: rgba(197,203,214,0.5); font-size: 9px; font-weight: 500; }
+      @keyframes dash-flow { to { stroke-dashoffset: -120; } }
     </style>
   </head>
   <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:p-4 focus:bg-[color:var(--ceradon-blue)] focus:text-white focus:rounded-lg">
-      Skip to main content
-    </a>
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
 
     <!-- HEADER -->
-    <header class="backdrop-blur bg-[color:var(--ink)]/80 sticky top-0 z-50 border-b border-white/[0.06]" style="backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%);">
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]">
       <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-2">
           <span class="hidden md:inline-flex logo-plate logo-plate--nav">
@@ -260,19 +97,22 @@
           <span class="md:hidden inline-flex logo-plate logo-plate--nav">
             <img class="logo-glow" src="./assets/Emblem.webp" alt="Ceradon Systems" width="558" height="558" />
           </span>
+          <span class="hidden lg:flex flex-col leading-tight">
+            <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
+          </span>
         </a>
-        <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+        <nav class="hidden md:flex gap-6" aria-label="Main navigation">
           <div class="relative group">
             <button class="navlink">Products</button>
             <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
-              <div class="bg-[#080c16] border border-white/[0.06] rounded-lg py-2 min-w-[220px] shadow-2xl">
-                <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">VANTAGE <span class="text-xs text-white/30">Through-Wall</span></a>
-                <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">RAPTOR <span class="text-xs text-white/30">Edge AI Vision</span></a>
-                <a href="scout.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">SCOUT</a>
-                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">Architect</a>
-                <a href="aegis.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">AEGIS <span class="text-xs text-white/30">Counter-UAS</span></a>
-                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">PolyGen</a>
-                <a href="fedresume.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">FedResume</a>
+              <div class="bg-[#0a0f1a] border border-[#1e293b] rounded-lg py-2 min-w-[220px] shadow-xl">
+                <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">VANTAGE <span class="text-xs text-[color:var(--ceradon-blue)]">Through-Wall</span></a>
+                <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">RAPTOR <span class="text-xs text-[color:var(--ceradon-blue)]">Edge AI Vision</span></a>
+                <a href="scout.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">SCOUT</a>
+                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">Architect</a>
+                <a href="aegis.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">AEGIS <span class="text-xs text-[color:var(--ceradon-blue)]">Counter-UAS</span></a>
+                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">PolyGen</a>
+                <a href="fedresume.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">FedResume</a>
               </div>
             </div>
           </div>
@@ -288,602 +128,487 @@
 
     <main id="main-content">
 
-      <!-- ═══════════════ HERO ═══════════════ -->
-      <section id="top" class="relative overflow-hidden min-h-[90vh] flex items-center">
-        <div class="grid-bg" aria-hidden="true"></div>
-        <!-- Animated gradient orb -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full opacity-[0.07] pointer-events-none" style="background: radial-gradient(circle, rgba(43,120,255,0.4) 0%, transparent 70%); filter: blur(80px);" aria-hidden="true"></div>
-
-        <div class="relative mx-auto max-w-7xl px-4 py-28 lg:py-40 w-full">
-          <div class="max-w-4xl space-y-8" data-animate>
-            <div class="flex items-center gap-3 flex-wrap">
-              <span class="spots-badge">
-                <span style="width:6px;height:6px;background:#facc15;border-radius:50%;"></span>
-                6 spots left this quarter
-              </span>
-            </div>
-
-            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-[color:var(--white)]" data-animate data-delay="100">
-              Stop hiring.<br/>
-              <span class="text-white/30">Install an AI department.</span>
-            </h1>
-
-            <p class="max-w-2xl text-lg lg:text-xl leading-relaxed text-white/50" data-animate data-delay="200">
-              We install 8 trained AI agents into your business in 14 days. Content, sales, operations, reporting &mdash; running 24/7. You keep everything we build. It never quits, never calls in sick, and compounds every month.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-3 pt-2" data-animate data-delay="300">
-              <a href="#apply" class="btn btn-primary text-sm">Apply for Installation &rarr;</a>
-              <a href="#system" class="btn btn-secondary text-sm">See the System</a>
-            </div>
-          </div>
-
-          <!-- Hero stats strip -->
-          <div class="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] rounded-xl overflow-hidden" data-animate data-delay="400">
-            <div class="bg-[color:var(--ink)] p-6 lg:p-8">
-              <p class="text-2xl lg:text-3xl font-bold text-white counter-value" data-count="67">0</p>
-              <p class="text-xs text-white/30 mt-1">Pieces of content / week</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-6 lg:p-8">
-              <p class="text-2xl lg:text-3xl font-bold text-white">14 <span class="text-base font-normal text-white/30">days</span></p>
-              <p class="text-xs text-white/30 mt-1">Full installation</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-6 lg:p-8">
-              <p class="text-2xl lg:text-3xl font-bold text-white">8</p>
-              <p class="text-xs text-white/30 mt-1">Trained AI agents</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-6 lg:p-8">
-              <p class="text-2xl lg:text-3xl font-bold text-white">24/7</p>
-              <p class="text-xs text-white/30 mt-1">Always running</p>
-            </div>
-          </div>
+      <!-- ══════════ HERO ══════════ -->
+      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
+        <div class="absolute inset-0 pointer-events-none">
+          <img src="./assets/hero-intelligent-systems.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" loading="eager" width="1920" height="1071" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/50 via-[#04070d]/30 to-[#04070d]"></div>
         </div>
-      </section>
-
-      <!-- ═══════════════ THE SHIFT ═══════════════ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-3xl space-y-6" data-animate>
-            <p class="tag">The Shift</p>
-            <h2 class="section-heading">More headcount isn't the answer.<br/><span class="text-white/30">Better infrastructure is.</span></h2>
-            <p class="text-white/50 text-lg leading-relaxed">
-              The businesses scaling fastest right now aren't adding to payroll. They're installing AI systems that do the work of 3&ndash;5 hires, run around the clock, and compound over time.
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6" data-animate data-delay="200">
-            <!-- Old Way -->
-            <div class="compare-old rounded-xl p-8 space-y-5">
-              <div class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-red-400/60" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
-                <h3 class="text-lg font-semibold text-white">The Old Way</h3>
+        <div class="relative mx-auto max-w-7xl px-4 py-16">
+          <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:items-center">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3 flex-wrap">
+                <span class="spots-indicator">6 spots this quarter</span>
+                <span class="badge">14-Day Installation</span>
               </div>
-              <ul class="space-y-3 text-sm text-white/40">
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/50 mt-0.5">&#x2717;</span>
-                  <span>Marketing director &mdash; <strong class="text-white/60">$150&ndash;250K/yr</strong> and still can't keep up with content</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/50 mt-0.5">&#x2717;</span>
-                  <span>Agencies charging <strong class="text-white/60">$10&ndash;20K/mo</strong> with recycled strategies</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/50 mt-0.5">&#x2717;</span>
-                  <span>Bloated teams eating margins &mdash; payroll is your biggest line item</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/50 mt-0.5">&#x2717;</span>
-                  <span>3&ndash;6 month ramp time per new hire, then they leave</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/50 mt-0.5">&#x2717;</span>
-                  <span>Manual reporting across disconnected tools &mdash; nobody has the real picture</span>
-                </li>
+              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Stop hiring.<br/>Install an AI department.</h1>
+              <p class="text-lg text-subtle">We install <strong class="text-[color:var(--white)]">8 trained AI agents</strong> into your business in 14 days. Content, sales, operations, reporting &mdash; running 24/7. You keep everything we build. Built by the same team that builds AI for defense applications.</p>
+              <p class="text-lg text-subtle">Does the work of <strong class="text-[color:var(--white)]">3&ndash;5 hires</strong> at a fraction of the cost. Never quits, never calls in sick, and compounds every month.</p>
+              <div class="flex flex-wrap gap-3">
+                <span class="badge">Content Engine</span>
+                <span class="badge">Sales Manager</span>
+                <span class="badge">Lead Qualifier</span>
+                <span class="badge">Operations</span>
+                <span class="badge">24/7 Uptime</span>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="#apply" class="btn btn-primary text-sm uppercase tracking-wide">Apply for Installation</a>
+                <a href="#system" class="btn btn-secondary text-sm uppercase tracking-wide">See the System</a>
+              </div>
+            </div>
+            <div class="card-glass p-8 space-y-5">
+              <h2 class="text-xl font-semibold text-[color:var(--white)]">What you get</h2>
+              <ul class="space-y-3 text-sm text-subtle">
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">8 AI agents</strong> trained on your voice, workflows, and tools</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">60+ content pieces/week</strong> across every platform, in your voice</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Automated sales pipeline:</strong> lead scoring, follow-up, booking</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Real-time command dashboard</strong> &mdash; every metric, one screen</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Full ownership:</strong> you keep everything, no lock-in</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Defense-grade engineering:</strong> not templates, not chatbots</li>
               </ul>
-            </div>
-            <!-- New Way -->
-            <div class="compare-new rounded-xl p-8 space-y-5">
-              <div class="flex items-center gap-3">
-                <div class="pulse-dot"></div>
-                <h3 class="text-lg font-semibold text-white">In-House AI Department</h3>
-              </div>
-              <ul class="space-y-3 text-sm text-white/40">
-                <li class="flex items-start gap-3">
-                  <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
-                  <span>AI content engine &mdash; <strong class="text-white/80">60+ pieces/week</strong> in your voice, every platform</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
-                  <span>AI sales system &mdash; lead scoring, follow-up, booking while you sleep</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
-                  <span>AI agents handling ops, reporting, and coordination <strong class="text-white/80">24/7</strong></span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
-                  <span>Real-time dashboard &mdash; every metric, one screen, zero manual assembly</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
-                  <span>Does the work of 3&ndash;5 hires. <strong class="text-white/80">Installed in 14 days.</strong> Compounds every month.</span>
-                </li>
-              </ul>
+              <a href="#apply" class="btn btn-primary text-sm uppercase tracking-wide w-full text-center">Apply Now</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ═══════════════ THE SYSTEM ═══════════════ -->
-      <section id="system" class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-3xl space-y-4" data-animate>
-            <p class="tag">The System</p>
-            <h2 class="section-heading">Eight trained agents. One 14-day installation.<br/><span class="text-white/30">You keep everything we build.</span></h2>
+      <!-- ══════════ STATS ══════════ -->
+      <section class="mx-auto max-w-7xl px-4 py-16">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6" data-animate-stagger>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">67+</p>
+            <p class="stat-label">Content pieces / week</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">14</p>
+            <p class="stat-label">Day installation</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">8</p>
+            <p class="stat-label">Trained AI agents</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">24/7</p>
+            <p class="stat-label">Always running</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ THE SHIFT: COMPARISON TABLE ══════════ -->
+      <section class="mx-auto max-w-7xl px-4 py-20 space-y-12">
+        <div class="space-y-6" data-animate>
+          <h2 class="section-heading text-3xl">The Cost of Doing Things the Old Way</h2>
+          <p class="text-subtle max-w-3xl">More headcount isn't the answer. Better infrastructure is. The businesses scaling fastest right now aren't adding to payroll &mdash; they're installing AI systems that do the work of 3&ndash;5 hires and compound over time.</p>
+        </div>
+
+        <div class="overflow-x-auto" data-animate data-delay="200">
+          <table class="table-dark text-sm">
+            <thead>
+              <tr>
+                <th scope="col">Function</th>
+                <th scope="col">Traditional Hire</th>
+                <th scope="col">Annual Cost</th>
+                <th scope="col">AI Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Content &amp; Marketing</th>
+                <td>Marketing director + agency retainer</td>
+                <td>$150K &ndash; $250K/yr</td>
+                <td class="text-green-400">Content Engine agent &mdash; 60+ pieces/week in your voice</td>
+              </tr>
+              <tr>
+                <th scope="row">Sales Management</th>
+                <td>Sales manager + CRM admin</td>
+                <td>$80K &ndash; $120K/yr</td>
+                <td class="text-green-400">Sales Manager agent &mdash; pipeline, scoring, follow-up</td>
+              </tr>
+              <tr>
+                <th scope="row">Lead Response</th>
+                <td>SDR or inside sales rep</td>
+                <td>$60K &ndash; $80K/yr</td>
+                <td class="text-green-400">Lead Qualifier agent &mdash; instant scoring and routing</td>
+              </tr>
+              <tr>
+                <th scope="row">Follow-up Sequences</th>
+                <td>Marketing automation admin</td>
+                <td>$50K &ndash; $70K/yr + software</td>
+                <td class="text-green-400">Follow-Up Engine &mdash; 97% follow-up rate</td>
+              </tr>
+              <tr>
+                <th scope="row">Operations &amp; Coordination</th>
+                <td>2&ndash;3 coordinators</td>
+                <td>$100K &ndash; $225K/yr</td>
+                <td class="text-green-400">Operations + Delivery agents &mdash; 24/7</td>
+              </tr>
+              <tr>
+                <th scope="row">Reporting &amp; Analytics</th>
+                <td>Data analyst + BI tools</td>
+                <td>$70K &ndash; $100K/yr</td>
+                <td class="text-green-400">Company Hub &mdash; real-time, zero manual assembly</td>
+              </tr>
+              <tr class="bg-[color:var(--ceradon-blue)]/5 border-l-2 border-[color:var(--ceradon-blue)]">
+                <th scope="row" class="text-[color:var(--ceradon-blue)] font-bold">Total</th>
+                <td class="text-[color:var(--white)]">6&ndash;10 employees</td>
+                <td class="text-red-400 font-bold">$510K &ndash; $845K/yr</td>
+                <td class="text-[color:var(--ceradon-blue)] font-bold">8 AI agents. Installed in 14 days.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════ THE SYSTEM: AGENT NETWORK ══════════ -->
+      <section id="system" class="border-t border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-20 space-y-16">
+          <div class="space-y-6" data-animate>
+            <h2 class="section-heading text-3xl">Eight Agents. One Connected System.</h2>
+            <p class="text-subtle max-w-3xl">Each agent is purpose-built, voice-trained, and connected to your tools. Together they form a flywheel: content creates leads, leads become sales, sales become deliveries, deliveries become case studies, case studies become content. Each cycle strengthens the next.</p>
           </div>
 
-          <!-- Agent Grid -->
-          <div class="agent-grid" data-animate-stagger>
-            <!-- 1: Content Engine -->
-            <div class="agent-card">
-              <div class="agent-icon">📝</div>
-              <h3 class="text-base font-semibold text-white mb-2">Content Engine</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Record 30 minutes. Get 60&ndash;70 pieces per week across every platform &mdash; in your voice. Posts, reels, threads, emails. All on-brand. All scheduled.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">Replaces $150&ndash;250K/yr marketing director</p>
+          <!-- Agent Network SVG -->
+          <div class="flex justify-center" data-animate data-delay="200">
+            <svg class="network-graph" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI agent network diagram showing 8 connected agents">
+              <!-- Edges (connections) -->
+              <line class="edge-active" x1="360" y1="60" x2="560" y2="100"/>
+              <line class="edge-active" x1="560" y1="100" x2="620" y2="220"/>
+              <line class="edge-active" x1="620" y1="220" x2="540" y2="330"/>
+              <line class="edge-active" x1="540" y1="330" x2="360" y2="360"/>
+              <line class="edge-active" x1="360" y1="360" x2="180" y2="330"/>
+              <line class="edge-active" x1="180" y1="330" x2="100" y2="220"/>
+              <line class="edge-active" x1="100" y1="220" x2="160" y2="100"/>
+              <line class="edge-active" x1="160" y1="100" x2="360" y2="60"/>
+              <!-- Cross connections -->
+              <line class="edge" x1="360" y1="60" x2="360" y2="360"/>
+              <line class="edge" x1="160" y1="100" x2="620" y2="220"/>
+              <line class="edge" x1="560" y1="100" x2="100" y2="220"/>
+              <line class="edge" x1="180" y1="330" x2="560" y2="100"/>
+              <line class="edge" x1="540" y1="330" x2="160" y2="100"/>
+
+              <!-- Center hub -->
+              <circle cx="360" cy="200" r="44" class="node-fill"/>
+              <circle cx="360" cy="200" r="44" class="node-ring" stroke-width="2"/>
+              <text x="360" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="var(--white)">YOUR</text>
+              <text x="360" y="212" text-anchor="middle" class="text-sub" font-size="10">BUSINESS</text>
+
+              <!-- Node 1: Content Engine (top center) -->
+              <circle cx="360" cy="60" r="22" class="node-fill"/>
+              <circle cx="360" cy="60" r="22" class="node-ring"/>
+              <circle cx="360" cy="60" r="4" class="node-dot"/>
+              <text x="360" y="30" text-anchor="middle">Content Engine</text>
+
+              <!-- Node 2: Sales Manager (top right) -->
+              <circle cx="560" cy="100" r="22" class="node-fill"/>
+              <circle cx="560" cy="100" r="22" class="node-ring"/>
+              <circle cx="560" cy="100" r="4" class="node-dot"/>
+              <text x="600" y="80" text-anchor="start">Sales Manager</text>
+
+              <!-- Node 3: Lead Qualifier (right) -->
+              <circle cx="620" cy="220" r="22" class="node-fill"/>
+              <circle cx="620" cy="220" r="22" class="node-ring"/>
+              <circle cx="620" cy="220" r="4" class="node-dot"/>
+              <text x="660" y="216" text-anchor="start">Lead Qualifier</text>
+
+              <!-- Node 4: Follow-Up (bottom right) -->
+              <circle cx="540" cy="330" r="22" class="node-fill"/>
+              <circle cx="540" cy="330" r="22" class="node-ring"/>
+              <circle cx="540" cy="330" r="4" class="node-dot"/>
+              <text x="575" y="355" text-anchor="start">Follow-Up</text>
+
+              <!-- Node 5: Delivery (bottom center) -->
+              <circle cx="360" cy="360" r="22" class="node-fill"/>
+              <circle cx="360" cy="360" r="22" class="node-ring"/>
+              <circle cx="360" cy="360" r="4" class="node-dot"/>
+              <text x="360" y="395" text-anchor="middle">Delivery</text>
+
+              <!-- Node 6: Operations (bottom left) -->
+              <circle cx="180" cy="330" r="22" class="node-fill"/>
+              <circle cx="180" cy="330" r="22" class="node-ring"/>
+              <circle cx="180" cy="330" r="4" class="node-dot"/>
+              <text x="145" y="355" text-anchor="end">Operations</text>
+
+              <!-- Node 7: Company Hub (left) -->
+              <circle cx="100" cy="220" r="22" class="node-fill"/>
+              <circle cx="100" cy="220" r="22" class="node-ring"/>
+              <circle cx="100" cy="220" r="4" class="node-dot"/>
+              <text x="60" y="216" text-anchor="end">Company Hub</text>
+
+              <!-- Node 8: QA (top left) -->
+              <circle cx="160" cy="100" r="22" class="node-fill"/>
+              <circle cx="160" cy="100" r="22" class="node-ring"/>
+              <circle cx="160" cy="100" r="4" class="node-dot"/>
+              <text x="120" y="80" text-anchor="end">Quality Assurance</text>
+            </svg>
+          </div>
+
+          <!-- Agent detail cards -->
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Content Engine</h3>
+              <p class="text-sm text-subtle">Record 30 minutes. Get 60&ndash;70 pieces per week across every platform &mdash; in your voice. Posts, reels, threads, emails. All on-brand. All scheduled.</p>
+              <p class="agent-metric">Replaces $150&ndash;250K/yr marketing director</p>
             </div>
-            <!-- 2: Sales Manager -->
-            <div class="agent-card">
-              <div class="agent-icon">📊</div>
-              <h3 class="text-base font-semibold text-white mb-2">Sales Manager</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Lead scoring, pipeline tracking, call analysis, rep management. AI flags underperformers before you notice. Every KPI on one screen.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">Replaces $10&ndash;20K/mo agency retainer</p>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Sales Manager</h3>
+              <p class="text-sm text-subtle">Lead scoring, pipeline tracking, call analysis, rep performance. AI flags underperformers before you notice. Every KPI on one screen.</p>
+              <p class="agent-metric">Replaces $10&ndash;20K/mo agency retainer</p>
             </div>
-            <!-- 3: Lead Qualifier -->
-            <div class="agent-card">
-              <div class="agent-icon">🎯</div>
-              <h3 class="text-base font-semibold text-white mb-2">Lead Qualifier</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Every inbound lead scored, qualified, and routed instantly. Hot leads get escalated. Everyone else gets nurtured automatically.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">Replaces $60&ndash;80K/yr SDR</p>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Lead Qualifier</h3>
+              <p class="text-sm text-subtle">Every inbound lead scored, qualified, and routed instantly. Hot leads get escalated. Everyone else gets nurtured automatically.</p>
+              <p class="agent-metric">Replaces $60&ndash;80K/yr SDR</p>
             </div>
-            <!-- 4: Follow-Up Engine -->
-            <div class="agent-card">
-              <div class="agent-icon">🔄</div>
-              <h3 class="text-base font-semibold text-white mb-2">Follow-Up Engine</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Personalized sequences that keep deals alive. Email, SMS, LinkedIn. Timed perfectly. Nobody falls through the cracks again.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">97% follow-up rate vs 20% industry avg</p>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Follow-Up Engine</h3>
+              <p class="text-sm text-subtle">Personalized sequences across email, SMS, and LinkedIn. Timed perfectly. Nobody falls through the cracks again.</p>
+              <p class="agent-metric">97% follow-up rate vs 20% industry average</p>
             </div>
-            <!-- 5: Operations Agent -->
-            <div class="agent-card">
-              <div class="agent-icon">⚙️</div>
-              <h3 class="text-base font-semibold text-white mb-2">Operations Agent</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Project coordination, meeting notes, task management, deadline tracking. The back-office employee that never sleeps and never forgets.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">Replaces 2&ndash;3 coordinators ($50&ndash;75K ea)</p>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Operations</h3>
+              <p class="text-sm text-subtle">Project coordination, meeting notes, task management, deadline tracking. The back-office employee that never sleeps and never forgets.</p>
+              <p class="agent-metric">Replaces 2&ndash;3 coordinators ($50&ndash;75K each)</p>
             </div>
-            <!-- 6: Delivery Agent -->
-            <div class="agent-card">
-              <div class="agent-icon">📦</div>
-              <h3 class="text-base font-semibold text-white mb-2">Delivery Agent</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Client onboarding, status updates, milestone tracking. Your clients get white-glove service without you doing the work.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">40% faster client delivery</p>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Delivery</h3>
+              <p class="text-sm text-subtle">Client onboarding, status updates, milestone tracking. Your clients get white-glove service without you doing the manual work.</p>
+              <p class="agent-metric">40% faster client delivery</p>
             </div>
-            <!-- 7: Company Hub -->
-            <div class="agent-card">
-              <div class="agent-icon">🖥️</div>
-              <h3 class="text-base font-semibold text-white mb-2">Company Hub</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Revenue, pipeline, content, clients &mdash; one screen, real-time. AI flags problems before they become fires. You see everything.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">Replaces $70&ndash;100K/yr data analyst</p>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Company Hub</h3>
+              <p class="text-sm text-subtle">Revenue, pipeline, content, clients &mdash; one screen, real-time. AI flags problems before they become fires. You see everything.</p>
+              <p class="agent-metric">Replaces $70&ndash;100K/yr data analyst</p>
             </div>
-            <!-- 8: QA Agent -->
-            <div class="agent-card">
-              <div class="agent-icon">🛡️</div>
-              <h3 class="text-base font-semibold text-white mb-2">Quality Assurance</h3>
-              <p class="text-sm text-white/40 leading-relaxed mb-3">Every piece of content, every email, every response &mdash; checked for brand voice, accuracy, and compliance before it goes out.</p>
-              <p class="text-xs text-[color:var(--ceradon-blue)]">92% on-brand consistency</p>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Quality Assurance</h3>
+              <p class="text-sm text-subtle">Every piece of content, every email, every client-facing response &mdash; checked for voice, accuracy, and compliance before it goes out.</p>
+              <p class="agent-metric">92% on-brand consistency</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ═══════════════ LIVE DASHBOARD MOCKUP ═══════════════ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-            <div class="space-y-6" data-animate>
-              <p class="tag">Real-Time Visibility</p>
-              <h2 class="section-heading">Your entire business.<br/>One screen.</h2>
-              <p class="text-white/50 text-lg leading-relaxed">
-                No more logging into 6 different tools. No more chasing people for updates. Every metric that matters, updated in real-time, with AI that flags problems before they become fires.
-              </p>
-              <div class="space-y-3 text-sm text-white/40">
-                <div class="flex items-center gap-3">
-                  <div class="pulse-dot" style="width:6px;height:6px;"></div>
-                  <span><strong class="text-white/70">5 agents</strong> running right now</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <span class="text-[color:var(--ceradon-blue)]">&#x2713;</span>
-                  <span>43 tasks completed today</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <span class="text-[color:var(--ceradon-blue)]">&#x2713;</span>
-                  <span>99.8% uptime</span>
-                </div>
-              </div>
-            </div>
-            <!-- Dashboard mockup -->
-            <div class="dash-mockup" data-animate data-delay="200">
-              <div class="dash-topbar">
-                <div class="dash-dot" style="background:#f87171;"></div>
-                <div class="dash-dot" style="background:#facc15;"></div>
-                <div class="dash-dot" style="background:#4ade80;"></div>
-                <span class="text-xs text-white/20 ml-2">Ceradon Command &mdash; Live</span>
-                <div class="ml-auto flex items-center gap-2">
-                  <div class="pulse-dot" style="width:5px;height:5px;"></div>
-                  <span class="text-[10px] text-green-400/60">Connected</span>
-                </div>
-              </div>
-              <div class="p-4 space-y-3">
-                <div class="dash-metric">
-                  <div>
-                    <p class="text-xs text-white/30">Monthly Revenue</p>
-                    <p class="text-lg font-bold text-white">$347,200</p>
-                  </div>
-                  <span class="text-xs text-green-400">+12.4%</span>
-                </div>
-                <div class="dash-metric">
-                  <div>
-                    <p class="text-xs text-white/30">Pipeline Value</p>
-                    <p class="text-lg font-bold text-white">$1.2M</p>
-                  </div>
-                  <span class="text-xs text-green-400">+8.1%</span>
-                </div>
-                <div class="p-4 space-y-2">
-                  <p class="text-xs text-white/30 mb-3">Content Performance</p>
-                  <div class="space-y-2">
-                    <div class="flex items-center gap-3">
-                      <span class="text-xs text-white/40 w-16">LinkedIn</span>
-                      <div class="flex-1 h-2 bg-white/[0.04] rounded-full overflow-hidden">
-                        <div class="dash-bar rounded-full" style="--bar-width:85%;background:rgba(43,120,255,0.5);"></div>
-                      </div>
-                      <span class="text-xs text-white/30">34K</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <span class="text-xs text-white/40 w-16">Instagram</span>
-                      <div class="flex-1 h-2 bg-white/[0.04] rounded-full overflow-hidden">
-                        <div class="dash-bar rounded-full" style="--bar-width:72%;background:rgba(86,183,255,0.5);animation-delay:0.3s;"></div>
-                      </div>
-                      <span class="text-xs text-white/30">28K</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <span class="text-xs text-white/40 w-16">Email</span>
-                      <div class="flex-1 h-2 bg-white/[0.04] rounded-full overflow-hidden">
-                        <div class="dash-bar rounded-full" style="--bar-width:61%;background:rgba(34,211,238,0.5);animation-delay:0.6s;"></div>
-                      </div>
-                      <span class="text-xs text-white/30">12K</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                      <span class="text-xs text-white/40 w-16">Twitter/X</span>
-                      <div class="flex-1 h-2 bg-white/[0.04] rounded-full overflow-hidden">
-                        <div class="dash-bar rounded-full" style="--bar-width:48%;background:rgba(128,136,154,0.5);animation-delay:0.9s;"></div>
-                      </div>
-                      <span class="text-xs text-white/30">9K</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="dash-metric" style="border:none;">
-                  <div>
-                    <p class="text-xs text-white/30">Active Agents</p>
-                    <div class="flex gap-2 mt-1">
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-[color:var(--ceradon-blue)]/10 text-[color:var(--ceradon-blue)] border border-[color:var(--ceradon-blue)]/20">Sales</span>
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-[color:var(--ceradon-blue)]/10 text-[color:var(--ceradon-blue)] border border-[color:var(--ceradon-blue)]/20">Content</span>
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-[color:var(--ceradon-blue)]/10 text-[color:var(--ceradon-blue)] border border-[color:var(--ceradon-blue)]/20">Ops</span>
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-green-400/10 text-green-400 border border-green-400/20">Delivery</span>
-                      <span class="text-[10px] px-2 py-0.5 rounded bg-green-400/10 text-green-400 border border-green-400/20">QA</span>
-                    </div>
-                  </div>
-                  <span class="text-xs text-green-400">All Online</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════ FLYWHEEL ═══════════════ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
-            <!-- Flywheel visual -->
-            <div class="relative" data-animate>
-              <div class="flywheel-ring">
-                <div class="flywheel-arrow"></div>
-                <div class="flywheel-node" style="top:3%;left:50%;">📝 Content Published</div>
-                <div class="flywheel-node" style="top:25%;left:95%;">🎯 Leads Generated</div>
-                <div class="flywheel-node" style="top:65%;left:95%;">💰 Sales Closed</div>
-                <div class="flywheel-node" style="top:90%;left:50%;">📦 Delivery Complete</div>
-                <div class="flywheel-node" style="top:65%;left:5%;">⭐ Case Study Created</div>
-                <div class="flywheel-node" style="top:25%;left:5%;">🔄 Feeds Back Into Content</div>
-                <div class="flywheel-center">
-                  <p class="text-3xl font-bold text-white">∞</p>
-                  <p class="text-xs text-white/30 mt-1">Compounds<br/>every cycle</p>
-                </div>
-              </div>
-            </div>
-            <!-- Flywheel copy -->
-            <div class="space-y-6" data-animate data-delay="200">
-              <p class="tag">Flywheel Architecture</p>
-              <h2 class="section-heading">The system that<br/>feeds itself.</h2>
-              <p class="text-white/50 text-lg leading-relaxed">
-                Content creates leads. Leads become sales. Sales become deliveries. Deliveries become case studies. Case studies become content. Each cycle strengthens the next. The longer it runs, the harder it is to compete with.
-              </p>
-              <p class="text-white/60 font-semibold">
-                This is the entire machine, connected. And it's yours.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-2xl space-y-4" data-animate>
-            <p class="tag">Process</p>
-            <h2 class="section-heading">From application to running AI department in 14 days</h2>
-          </div>
-          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden md:grid-cols-4" data-animate-stagger>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <span class="text-xs font-semibold text-[color:var(--ceradon-blue)] tracking-wider">DAY 0</span>
-              <h3 class="font-semibold text-white">Discovery Call</h3>
-              <p class="text-sm text-white/40 leading-relaxed">30-minute call. We learn your business, map your workflows, and determine if we're a fit. Most applicants aren't &mdash; that's intentional.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <span class="text-xs font-semibold text-[color:var(--ceradon-blue)] tracking-wider">DAYS 1&ndash;3</span>
-              <h3 class="font-semibold text-white">Architecture</h3>
-              <p class="text-sm text-white/40 leading-relaxed">We design the AI department around your specific workflows. What agents run, how data flows, where automation triggers, what dashboards track.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <span class="text-xs font-semibold text-[color:var(--ceradon-blue)] tracking-wider">DAYS 4&ndash;12</span>
-              <h3 class="font-semibold text-white">Installation</h3>
-              <p class="text-sm text-white/40 leading-relaxed">We build, train, connect, and test every agent. Voice-trained on your content. Connected to your tools. Your team's involvement: ~3 hours total.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <span class="text-xs font-semibold text-[color:var(--ceradon-blue)] tracking-wider">DAY 14+</span>
-              <h3 class="font-semibold text-white">Live &amp; Optimizing</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Your AI department goes live. We monitor, optimize, and add new capabilities. Most clients stay on retainer because the system keeps getting better.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════ WHAT MAKES US DIFFERENT ═══════════════ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-3xl space-y-4" data-animate>
-            <p class="tag">Why Ceradon</p>
-            <h2 class="section-heading">We build AI for defense contractors.<br/><span class="text-white/30">Your business gets the same rigor.</span></h2>
-          </div>
-          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Defense-Grade Engineering</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Same team that builds AI systems for national security. We don't do templates. We don't do generic. Everything is purpose-built.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">You Own Everything</h3>
-              <p class="text-sm text-white/40 leading-relaxed">The agents, the workflows, the dashboards, the data. All inside your business. Walk away anytime and everything still runs.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Not a Tool &mdash; Infrastructure</h3>
-              <p class="text-sm text-white/40 leading-relaxed">ChatGPT is a hammer. We build the house. Architecture first, then tools, then connections, then optimization. Connected systems, not point solutions.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">14-Day Installation</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Not 14 weeks. Not 14 months. We move fast because we've built the playbook. Your team spends ~3 hours total. We handle everything else.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Trained on Your Voice</h3>
-              <p class="text-sm text-white/40 leading-relaxed">We don't generate generic AI slop. The system trains on your calls, your posts, your way of explaining things. Clients can't tell what's AI and what isn't.</p>
-            </div>
-            <div class="bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Compounds Monthly</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Every month the system learns more, performs better, handles more. Your competitors don't have this. In 12 months, they won't be able to catch up.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════ FIT CHECK ═══════════════ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-3xl space-y-4" data-animate>
-            <p class="tag">Fit Check</p>
-            <h2 class="section-heading">This is not for everyone.<br/><span class="text-white/30">That's the point.</span></h2>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6" data-animate data-delay="200">
-            <!-- For You -->
-            <div class="rounded-xl bg-white/[0.02] p-8 space-y-4 fit-yes">
-              <h3 class="text-lg font-semibold text-white">This is for you if&hellip;</h3>
-              <ul class="space-y-3 text-sm text-white/40">
-                <li class="flex items-start gap-3">
-                  <span class="text-green-400 mt-0.5">&#x2713;</span>
-                  <span>You're doing <strong class="text-white/70">$1M&ndash;$10M/yr</strong> and margins are shrinking as you scale</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-green-400 mt-0.5">&#x2713;</span>
-                  <span>Payroll is your biggest expense and it keeps growing</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-green-400 mt-0.5">&#x2713;</span>
-                  <span>You've tried agencies and internal hires &mdash; neither solved it</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-green-400 mt-0.5">&#x2713;</span>
-                  <span>Your competitors are starting to use AI and you're falling behind</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-green-400 mt-0.5">&#x2713;</span>
-                  <span>You want to scale revenue without scaling headcount</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-green-400 mt-0.5">&#x2713;</span>
-                  <span>You're ready to invest in infrastructure that replaces six figures in annual costs</span>
-                </li>
-              </ul>
-            </div>
-            <!-- Not For You -->
-            <div class="rounded-xl bg-white/[0.02] p-8 space-y-4 fit-no">
-              <h3 class="text-lg font-semibold text-white">This is not for you if&hellip;</h3>
-              <ul class="space-y-3 text-sm text-white/40">
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/60 mt-0.5">&#x2717;</span>
-                  <span>You're pre-revenue or haven't found product-market fit</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/60 mt-0.5">&#x2717;</span>
-                  <span>You're looking to learn AI yourself &mdash; we install it, we don't teach it</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/60 mt-0.5">&#x2717;</span>
-                  <span>You're not ready to invest in replacing six figures in salary costs</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/60 mt-0.5">&#x2717;</span>
-                  <span>Your business model depends on you being the bottleneck</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/60 mt-0.5">&#x2717;</span>
-                  <span>You think AI is a fad and aren't ready to build operations on it</span>
-                </li>
-                <li class="flex items-start gap-3">
-                  <span class="text-red-400/60 mt-0.5">&#x2717;</span>
-                  <span>You want the cheapest option &mdash; we're not that</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ═══════════════ FAQ ═══════════════ -->
-      <section class="border-t border-white/[0.06]">
+      <!-- ══════════ INSTALLATION TIMELINE ══════════ -->
+      <section class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
-          <div class="space-y-4 max-w-2xl" data-animate>
-            <p class="tag">FAQ</p>
-            <h2 class="section-heading">You've got questions.<br/><span class="text-white/30">We've got answers.</span></h2>
+          <div class="space-y-6" data-animate>
+            <h2 class="section-heading text-3xl">From Application to Running AI Department</h2>
+            <p class="text-subtle max-w-3xl">14 days. Your team invests roughly 3 hours total. We handle the other 97%.</p>
           </div>
-          <div class="max-w-3xl space-y-4" data-animate-stagger>
-            <details class="card-glass group">
-              <summary class="p-6 cursor-pointer flex items-center justify-between font-semibold text-white hover:text-white/60 transition-colors">
-                "Won't the content sound like AI wrote it?"
-                <svg class="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+
+          <div class="timeline max-w-3xl" data-animate data-delay="200">
+            <div class="timeline-item">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Day 0</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Discovery Call</h3>
+              <p class="text-sm text-subtle">30-minute call. We learn your business, map your workflows, and determine if we're a fit. Most applicants aren't &mdash; that's intentional.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Days 1&ndash;3</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Architecture</h3>
+              <p class="text-sm text-subtle">We design the AI department around your workflows. What agents run, how data flows, where automation triggers, what dashboards track. Custom architecture, not templates.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Days 4&ndash;12</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Installation</h3>
+              <p class="text-sm text-subtle">We build, train, connect, and test every agent. Voice-trained on your content. Connected to your existing tools. Your team records one 30-minute content session and answers questions about the business.</p>
+            </div>
+            <div class="timeline-item" style="padding-bottom:0;">
+              <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Day 14+</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Live &amp; Compounding</h3>
+              <p class="text-sm text-subtle">Your AI department goes live. We monitor, optimize, and add new capabilities. The system gets smarter every month. Most clients stay on retainer because it keeps improving.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ WHY CERADON ══════════ -->
+      <section class="border-t border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
+          <div class="space-y-6" data-animate>
+            <h2 class="section-heading text-3xl">We Build AI for Defense Contractors.<br/><span class="text-subtle">Your Business Gets the Same Rigor.</span></h2>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Defense-Grade Engineering</h3>
+              <p class="text-sm text-subtle">Same team that builds AI systems for national security applications. We don't do templates. We don't do generic. Everything is purpose-built for your operation.</p>
+            </div>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">You Own Everything</h3>
+              <p class="text-sm text-subtle">The agents, the workflows, the dashboards, the data. It all lives inside your business. Walk away anytime and everything still runs. No lock-in.</p>
+            </div>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Not a Tool &mdash; Infrastructure</h3>
+              <p class="text-sm text-subtle">ChatGPT is a hammer. We build the house. Architecture first, then tools, then connections, then optimization. Connected systems that compound.</p>
+            </div>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Trained on Your Voice</h3>
+              <p class="text-sm text-subtle">We don't generate generic AI content. The system trains on your calls, posts, and way of explaining things. Clients can't tell what's AI-assisted and what isn't.</p>
+            </div>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">3 Hours of Your Time</h3>
+              <p class="text-sm text-subtle">Total involvement during a 14-day install. One content recording session and answering questions. We handle everything else. The busier you are, the more you need this.</p>
+            </div>
+            <div class="card-glass p-7 space-y-3">
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Compounds Monthly</h3>
+              <p class="text-sm text-subtle">Every month the system learns more, performs better, handles more. In 12 months, your competitors won't be able to catch up. The gap only widens.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ FIT CHECK ══════════ -->
+      <section class="border-t border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
+          <div class="space-y-6" data-animate>
+            <h2 class="section-heading text-3xl">This Is Not for Everyone. That's the Point.</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6" data-animate data-delay="200">
+            <div class="card-glass p-8 space-y-4 is-compare-new">
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">This is for you if&hellip;</h3>
+              <ul class="space-y-3 text-sm text-subtle">
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You're doing <strong class="text-[color:var(--white)]">$1M&ndash;$10M/yr</strong> and margins are shrinking as you scale</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> Payroll is your biggest expense and it keeps growing every quarter</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You've tried agencies ($10&ndash;20K/mo) and internal hires &mdash; neither solved it</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> Your competitors are starting to use AI and you can feel the gap opening</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You want to scale revenue without scaling headcount</li>
+                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You're ready to invest in infrastructure that replaces six figures in annual costs</li>
+              </ul>
+            </div>
+            <div class="card-glass p-8 space-y-4 is-compare-old">
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">This is not for you if&hellip;</h3>
+              <ul class="space-y-3 text-sm text-subtle">
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You're pre-revenue or haven't found product-market fit yet</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You're looking to learn AI yourself &mdash; we install it, we don't teach it</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You're not ready to invest in replacing six figures in salary costs</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Your business model depends on you being the bottleneck</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You think AI is a fad and aren't ready to build operations around it</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You want the cheapest option available &mdash; we are not that</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ FAQ ══════════ -->
+      <section class="border-t border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
+          <div class="space-y-6" data-animate>
+            <h2 class="section-heading text-3xl">Frequently Asked Questions</h2>
+          </div>
+          <div class="space-y-4 max-w-3xl" data-animate-stagger>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                Won't the content sound like AI wrote it?
+                <span class="faq-icon">+</span>
               </summary>
-              <div class="px-6 pb-6 text-sm text-white/40 leading-relaxed">
-                No. During installation, we train the system on your voice, your frameworks, your stories. We pull from your calls, your posts, your way of explaining things. The output sounds like you on your best day. Clients regularly can't tell what was AI-assisted and what wasn't.
-              </div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">No. During installation, we train the system on your voice, your frameworks, your stories. We pull from your calls, your posts, your way of explaining things. The output sounds like you on your best day. Clients regularly can't tell what was AI-assisted and what wasn't.</p></div>
             </details>
-            <details class="card-glass group">
-              <summary class="p-6 cursor-pointer flex items-center justify-between font-semibold text-white hover:text-white/60 transition-colors">
-                "Will this replace my team?"
-                <svg class="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                Will this replace my team?
+                <span class="faq-icon">+</span>
               </summary>
-              <div class="px-6 pb-6 text-sm text-white/40 leading-relaxed">
-                Your team doesn't go away. They get superpowers. A 3-person marketing team doing 10 pieces a week can do 60+ with the right AI infrastructure underneath them. We don't replace your people. We multiply their output so you can stop hiring and start scaling what you already have.
-              </div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">Your team doesn't go away. They get superpowers. A 3-person marketing team doing 10 pieces a week can do 60+ with the right AI infrastructure underneath them. We don't replace your people. We multiply their output so you can stop hiring and start scaling what you already have.</p></div>
             </details>
-            <details class="card-glass group">
-              <summary class="p-6 cursor-pointer flex items-center justify-between font-semibold text-white hover:text-white/60 transition-colors">
-                "What if I want to stop? Am I locked in?"
-                <svg class="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                What if I want to stop? Am I locked in?
+                <span class="faq-icon">+</span>
               </summary>
-              <div class="px-6 pb-6 text-sm text-white/40 leading-relaxed">
-                You own everything. The systems, the agents, the workflows, the dashboards. It all lives inside your business. Most clients stay on a retainer because we keep optimizing and adding new capabilities. But you're never locked in. Walk away and everything still runs.
-              </div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">You own everything. The systems, the agents, the workflows, the dashboards. It all lives inside your business. Most clients stay on retainer because we keep optimizing. But you're never locked in. Walk away and everything still runs.</p></div>
             </details>
-            <details class="card-glass group">
-              <summary class="p-6 cursor-pointer flex items-center justify-between font-semibold text-white hover:text-white/60 transition-colors">
-                "How is this different from ChatGPT / Microsoft Copilot?"
-                <svg class="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                How is this different from ChatGPT or Copilot?
+                <span class="faq-icon">+</span>
               </summary>
-              <div class="px-6 pb-6 text-sm text-white/40 leading-relaxed">
-                ChatGPT is a tool. We install infrastructure. That's like buying a hammer and saying you tried building a house. We design the architecture first: what agents run, how data flows, where automation triggers, what dashboards track. Every tool connects, every workflow compounds, and it's all customized to your business.
-              </div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">ChatGPT is a tool. We install infrastructure. That's like buying a hammer and saying you tried building a house. We design the architecture first: what agents run, how data flows, where automation triggers, what dashboards track. Every tool connects, every workflow compounds, and it's all customized to your business.</p></div>
             </details>
-            <details class="card-glass group">
-              <summary class="p-6 cursor-pointer flex items-center justify-between font-semibold text-white hover:text-white/60 transition-colors">
-                "How much time does my team need to invest?"
-                <svg class="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                How much time does my team need to invest?
+                <span class="faq-icon">+</span>
               </summary>
-              <div class="px-6 pb-6 text-sm text-white/40 leading-relaxed">
-                About 3 hours per week during the install. We handle 90% of the build. Your team's main job is recording a 30-minute content session each week and answering questions about your business. After the install, they save 15+ hours every week. The busier you are, the more you need this.
-              </div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">About 3 hours per week during the install. We handle 90% of the build. Your team's main job is recording a 30-minute content session each week and answering questions about the business. After the install, they save 15+ hours every week.</p></div>
             </details>
-            <details class="card-glass group">
-              <summary class="p-6 cursor-pointer flex items-center justify-between font-semibold text-white hover:text-white/60 transition-colors">
-                "What industries does this work for?"
-                <svg class="h-5 w-5 shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+            <details class="card-glass p-6 group">
+              <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
+                What industries does this work for?
+                <span class="faq-icon">+</span>
               </summary>
-              <div class="px-6 pb-6 text-sm text-white/40 leading-relaxed">
-                We've built systems for agencies, consultants, SaaS, e-commerce, professional services, construction, and trades businesses. The system adapts because we build it around your specific workflows, not a template. That said, we screen every applicant. If we don't think we can deliver results, we'll tell you on the call. We only take on businesses we know we can win for.
-              </div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">We've built systems for agencies, consultants, SaaS, e-commerce, professional services, construction, and trades businesses. The system adapts because we build around your specific workflows, not a template. We screen every applicant. If we don't think we can deliver results, we'll tell you on the call.</p></div>
             </details>
           </div>
         </div>
       </section>
 
-      <!-- ═══════════════ APPLICATION CTA ═══════════════ -->
-      <section id="apply" class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="max-w-3xl mx-auto text-center space-y-8" data-animate>
-            <span class="spots-badge">
-              <span style="width:6px;height:6px;background:#facc15;border-radius:50%;"></span>
-              6 spots left this quarter
-            </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight text-[color:var(--white)]">
-              Your competitors are installing<br/>AI systems right now.
-            </h2>
-            <p class="text-white/50 text-lg leading-relaxed max-w-2xl mx-auto">
-              Every month without systems is a month they compound and you don't. The businesses that install now will be unreachable in 12 months. This page being live means we have availability. It won't always be here.
-            </p>
-
-            <!-- Calendly embed placeholder + direct form -->
-            <div class="max-w-lg mx-auto">
-              <div class="card-glass p-8 text-left" data-animate data-delay="200">
-                <h3 class="text-lg font-semibold text-white mb-6">Apply for Installation</h3>
-                <form class="space-y-5" action="https://formspree.io/f/xnjbjayd" method="POST" data-contact-form>
-                  <input type="hidden" name="_subject" value="AI Department Installation Application" />
-                  <div>
-                    <label for="app-name" class="text-sm text-white/40">Your Name <span class="text-red-400">*</span></label>
-                    <input id="app-name" name="name" type="text" placeholder="Full name" required aria-required="true" class="w-full mt-1 rounded-lg border border-white/[0.12] bg-white/[0.03] px-4 py-3 text-sm text-[color:var(--silver)] focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/10" />
-                  </div>
-                  <div>
-                    <label for="app-business" class="text-sm text-white/40">Business Name <span class="text-red-400">*</span></label>
-                    <input id="app-business" name="business_name" type="text" placeholder="Your company" required aria-required="true" class="w-full mt-1 rounded-lg border border-white/[0.12] bg-white/[0.03] px-4 py-3 text-sm text-[color:var(--silver)] focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/10" />
-                  </div>
-                  <div>
-                    <label for="app-revenue" class="text-sm text-white/40">Annual Revenue Range <span class="text-red-400">*</span></label>
-                    <select id="app-revenue" name="revenue" required aria-required="true" class="w-full mt-1 rounded-lg border border-white/[0.12] bg-white/[0.03] px-4 py-3 text-sm text-[color:var(--silver)] focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/10">
-                      <option value="">Select range</option>
-                      <option value="Under $500K">Under $500K</option>
-                      <option value="$500K - $1M">$500K &ndash; $1M</option>
-                      <option value="$1M - $3M">$1M &ndash; $3M</option>
-                      <option value="$3M - $5M">$3M &ndash; $5M</option>
-                      <option value="$5M - $10M">$5M &ndash; $10M</option>
-                      <option value="$10M+">$10M+</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label for="app-email" class="text-sm text-white/40">Email <span class="text-red-400">*</span></label>
-                    <input id="app-email" name="email" type="email" placeholder="you@company.com" required aria-required="true" class="w-full mt-1 rounded-lg border border-white/[0.12] bg-white/[0.03] px-4 py-3 text-sm text-[color:var(--silver)] focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/10" />
-                  </div>
-                  <div>
-                    <label for="app-challenge" class="text-sm text-white/40">Biggest operational challenge right now</label>
-                    <textarea id="app-challenge" name="challenge" rows="3" placeholder="What would you automate first if you could?" class="w-full mt-1 rounded-lg border border-white/[0.12] bg-white/[0.03] px-4 py-3 text-sm text-[color:var(--silver)] focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/10"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary w-full text-sm">Submit Application &rarr;</button>
-                  <p class="text-xs text-white/25 text-center">No commitment. We'll follow up within 24 hours if you're a fit.</p>
-                  <p aria-live="polite" class="text-sm text-white/40" data-form-status></p>
-                </form>
+      <!-- ══════════ APPLICATION ══════════ -->
+      <section id="apply" class="border-t border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
+          <div class="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-start">
+            <div class="space-y-6" data-animate>
+              <span class="spots-indicator">6 spots this quarter</span>
+              <h2 class="section-heading text-3xl">Your Competitors Are Installing AI Systems Right Now.</h2>
+              <p class="text-subtle text-lg leading-relaxed">
+                Every month without systems is a month they compound and you don't. The businesses that install now will be unreachable in 12 months. This page being live means we have availability.
+              </p>
+              <div class="card-glass p-6 space-y-2">
+                <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">How this works:</strong> Submit your application. If you're a fit, we'll schedule a 30-minute discovery call within 24 hours. On that call, we'll map your workflows and show you exactly what your AI department would look like. No obligation.</p>
               </div>
+
+              <div class="grid grid-cols-3 gap-4 pt-2">
+                <div class="card-glass p-5 text-center">
+                  <p class="stat-number text-2xl">8</p>
+                  <p class="stat-label">Agents</p>
+                </div>
+                <div class="card-glass p-5 text-center">
+                  <p class="stat-number text-2xl">14</p>
+                  <p class="stat-label">Days</p>
+                </div>
+                <div class="card-glass p-5 text-center">
+                  <p class="stat-number text-2xl">3h</p>
+                  <p class="stat-label">Your time</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-glass p-8" data-animate data-delay="200">
+              <h3 class="text-xl font-semibold text-[color:var(--white)] mb-6">Apply for Installation</h3>
+              <form class="space-y-5" action="https://formspree.io/f/xnjbjayd" method="POST" data-contact-form>
+                <input type="hidden" name="_subject" value="AI Department Installation Application" />
+                <div>
+                  <label for="app-name">Your Name <span class="text-red-400" aria-hidden="true">*</span></label>
+                  <input id="app-name" name="name" type="text" placeholder="Full name" required aria-required="true" />
+                </div>
+                <div>
+                  <label for="app-business">Business Name <span class="text-red-400" aria-hidden="true">*</span></label>
+                  <input id="app-business" name="business_name" type="text" placeholder="Your company" required aria-required="true" />
+                </div>
+                <div>
+                  <label for="app-revenue">Annual Revenue <span class="text-red-400" aria-hidden="true">*</span></label>
+                  <select id="app-revenue" name="revenue" required aria-required="true">
+                    <option value="">Select range</option>
+                    <option value="Under $500K">Under $500K</option>
+                    <option value="$500K - $1M">$500K &ndash; $1M</option>
+                    <option value="$1M - $3M">$1M &ndash; $3M</option>
+                    <option value="$3M - $5M">$3M &ndash; $5M</option>
+                    <option value="$5M - $10M">$5M &ndash; $10M</option>
+                    <option value="$10M+">$10M+</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="app-email">Email <span class="text-red-400" aria-hidden="true">*</span></label>
+                  <input id="app-email" name="email" type="email" placeholder="you@company.com" required aria-required="true" />
+                </div>
+                <div>
+                  <label for="app-challenge">Biggest operational challenge right now</label>
+                  <textarea id="app-challenge" name="challenge" rows="3" placeholder="What would you automate first if you could?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-full text-sm uppercase tracking-wide">Submit Application</button>
+                <p class="text-xs text-subtle text-center">No commitment. We follow up within 24 hours if you're a fit.</p>
+                <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
+              </form>
             </div>
           </div>
         </div>
@@ -891,62 +616,32 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="border-t border-white/[0.06]">
-      <div class="mx-auto max-w-7xl px-4 py-14 space-y-10">
+    <footer class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/80]">
+      <div class="mx-auto max-w-7xl px-4 py-12 space-y-10">
         <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div class="flex items-center gap-4">
-            <img src="./assets/Emblem.webp" alt="Ceradon Systems" class="h-10 w-10 image-surface" loading="lazy" width="558" height="558" />
+            <img src="./assets/Emblem.webp" alt="Ceradon Systems" class="h-12 w-12 image-surface" loading="lazy" width="558" height="558" />
             <div>
-              <p class="font-semibold text-white text-sm">Ceradon Systems</p>
-              <p class="text-xs text-white/30">Defense-grade AI infrastructure. Veteran-founded SDVOSB.</p>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Defense-grade AI infrastructure. Veteran-founded SDVOSB.</p>
             </div>
           </div>
-          <div class="flex flex-wrap gap-4 items-center text-sm text-white/40">
-            <a href="mailto:contact@ceradonsystems.com">contact@ceradonsystems.com</a>
-            <span aria-hidden="true" class="text-white/10">&middot;</span>
-            <a href="https://www.linkedin.com/company/111601964/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <div class="flex gap-4 items-center text-sm text-subtle">
+            <a href="mailto:contact@ceradonsystems.com" class="hover:text-[color:var(--white)]">contact@ceradonsystems.com</a>
+            <a href="https://www.linkedin.com/company/111601964/" target="_blank" rel="noopener noreferrer" class="hover:text-[color:var(--white)]" aria-label="LinkedIn">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
           </div>
         </div>
         <div class="footer-links" data-footer-links></div>
         <div class="gradient-divider"></div>
-        <div class="space-y-1.5 text-xs text-white/25">
-          <p>&copy; <span data-year></span> Ceradon Systems, LLC. All rights reserved.</p>
+        <div class="space-y-2 text-xs text-subtle">
+          <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
+          <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
+          <p>&copy; <span data-year></span> Ceradon Systems. All rights reserved.</p>
         </div>
       </div>
     </footer>
-
-    <!-- Counter animation script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const counters = document.querySelectorAll('[data-count]');
-        if (!counters.length) return;
-
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            const el = entry.target;
-            const target = parseInt(el.dataset.count, 10);
-            const duration = 1500;
-            const start = performance.now();
-
-            function tick(now) {
-              const elapsed = now - start;
-              const progress = Math.min(elapsed / duration, 1);
-              const eased = 1 - Math.pow(1 - progress, 3);
-              el.textContent = Math.round(eased * target);
-              if (progress < 1) requestAnimationFrame(tick);
-              else el.textContent = target + '+';
-            }
-            requestAnimationFrame(tick);
-            observer.unobserve(el);
-          });
-        }, { threshold: 0.5 });
-
-        counters.forEach(c => observer.observe(c));
-      });
-    </script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>
