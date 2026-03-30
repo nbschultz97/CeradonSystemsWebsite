@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DDV7FSG1G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1DDV7FSG1G');
+    </script>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#04070d">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <title>We Gave Our AI Agent Persistent Memory Using SQLite. No Vector Database Required. | Ceradon Systems</title>
+    <meta name="description" content="After months of running autonomous AI agents, we built a dead-simple persistent memory system using SQLite and full-text search. Here's why we skipped vector databases and what actually works in production." />
+    <meta property="og:title" content="We Gave Our AI Agent Persistent Memory Using SQLite. No Vector Database Required." />
+    <meta property="og:description" content="Most AI memory solutions are overengineered. Here's what actually works after months of running autonomous agents in production." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.ceradonsystems.com/blog/2026-03-30-persistent-ai-agent-memory-without-vector-databases.html" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://www.ceradonsystems.com/blog/2026-03-30-persistent-ai-agent-memory-without-vector-databases.html" />
+    <link rel="icon" type="image/png" href="../assets/Emblem.webp" />
+    <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "We Gave Our AI Agent Persistent Memory Using SQLite. No Vector Database Required.",
+      "datePublished": "2026-03-30",
+      "dateModified": "2026-03-30",
+      "author": { "@type": "Organization", "name": "Ceradon Systems" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ceradon Systems",
+        "logo": { "@type": "ImageObject", "url": "https://www.ceradonsystems.com/assets/Emblem.webp" }
+      },
+      "description": "After months of running autonomous AI agents, we built a dead-simple persistent memory system using SQLite and full-text search. No vector database, no embeddings API, no external dependencies.",
+      "mainEntityOfPage": "https://www.ceradonsystems.com/blog/2026-03-30-persistent-ai-agent-memory-without-vector-databases.html"
+    }
+    </script>
+  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <!-- HEADER -->
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]" style="backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%);">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="hidden md:inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow h-8" src="../assets/Horizontal_Logo.webp" alt="Ceradon Systems" width="1536" height="1024" />
+          </span>
+          <span class="md:hidden inline-flex logo-plate logo-plate--nav">
+            <img class="logo-glow" src="../assets/Emblem.webp" alt="Ceradon Systems" width="558" height="558" />
+          </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+          <a href="../index.html" class="navlink">Home</a>
+          <a href="../vantage.html" class="navlink">Vantage</a>
+          <a href="../architect.html" class="navlink">COTS Architect</a>
+          <a href="../scout.html" class="navlink">Ceradon Scout</a>
+          <a href="../ai-services.html" class="navlink">AI Services</a>
+          <a href="../polygen.html" class="navlink">PolyGen AI</a>
+          <a href="../technology.html" class="navlink">R&amp;D</a>
+          <a href="../company.html" class="navlink">Company</a>
+          <a href="/blog/" class="navlink" aria-current="page">Insights</a>
+          <a href="../contact.html" class="btn btn-primary">Contact</a>
+        </nav>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>&#9776;</button>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-3xl px-4 py-16 space-y-10">
+      <article class="space-y-8">
+        <header class="space-y-4">
+          <a href="/blog/" class="text-sm text-[color:var(--ceradon-sky)] hover:text-[color:var(--white)] transition-colors">&larr; Back to Insights</a>
+          <p class="tag">Engineering</p>
+          <h1 class="text-4xl md:text-5xl font-black leading-tight">We Gave Our AI Agent Persistent Memory Using SQLite. No Vector Database Required.</h1>
+          <p class="text-subtle">March 30, 2026 &middot; Ceradon Systems</p>
+        </header>
+
+        <div class="prose prose-invert max-w-none space-y-6 text-[color:var(--silver)] leading-relaxed">
+
+          <p class="text-lg">We run autonomous AI agents 24/7 for internal operations&mdash;business development, code review, email triage, competitive intelligence. After months of iteration, the single biggest reliability improvement wasn&rsquo;t a better model or a fancier framework. It was giving the agent <strong>persistent memory that actually works</strong>. Here&rsquo;s how we built it and why we deliberately ignored the conventional wisdom.</p>
+
+          <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">The Problem: Every Session Starts from Zero</h2>
+          <p>Large language models have no persistent state. Every time your agent starts a new session, it wakes up with amnesia. It doesn&rsquo;t remember that the client prefers email over phone. It doesn&rsquo;t know that the last three attempts to authenticate with a particular API failed because of a token format issue. It doesn&rsquo;t recall that you already tried approach A and it didn&rsquo;t work.</p>
+          <p>The standard solutions are context windows (expensive, limited) and RAG pipelines with vector databases (complex, brittle). We tried both. Context stuffing burns tokens fast when your agent runs dozens of sessions per day. Vector databases introduced a dependency chain&mdash;embedding APIs, similarity thresholds, chunk sizing&mdash;that created more problems than it solved.</p>
+          <p>We needed something that a CLI-driven agent could call in one line, that didn&rsquo;t require an API key or external service, and that would survive reboots, crashes, and deployment changes. The answer was embarrassingly simple.</p>
+
+          <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">The Architecture: SQLite + FTS5</h2>
+          <p>The entire memory system is a single SQLite database with an <a href="https://www.sqlite.org/fts5.html" class="text-[color:var(--ceradon-sky)] hover:underline">FTS5 full-text search</a> index. That&rsquo;s it. No vector embeddings. No cosine similarity. No external services.</p>
+
+          <p>The schema stores five things per memory:</p>
+          <ul class="space-y-2 ml-4">
+            <li><strong class="text-[color:var(--white)]">Content</strong>&mdash;the actual text to remember</li>
+            <li><strong class="text-[color:var(--white)]">Category</strong>&mdash;a fixed taxonomy (project, business, infrastructure, personal, etc.)</li>
+            <li><strong class="text-[color:var(--white)]">Tags</strong>&mdash;freeform comma-separated labels for cross-cutting concerns</li>
+            <li><strong class="text-[color:var(--white)]">Source</strong>&mdash;where the memory came from (which agent, which session)</li>
+            <li><strong class="text-[color:var(--white)]">Upsert key</strong>&mdash;a unique identifier for facts that change over time</li>
+          </ul>
+
+          <p>The upsert key is the most important design decision. When you store a fact like &ldquo;current project status: Phase 2&rdquo; with the key <code>vantage.status</code>, any future store with the same key <em>replaces</em> the old value instead of creating a duplicate. This means the database stays clean without manual maintenance. Facts evolve; they don&rsquo;t accumulate.</p>
+
+          <p>The CLI interface is deliberately minimal:</p>
+          <pre class="bg-[color:var(--steel-900)] rounded-lg p-4 text-sm overflow-x-auto"><code># Store a memory
+python memory.py store "Client prefers email over phone" -c business -t "client,prefs" -k "client.contact_pref"
+
+# Search memories
+python memory.py search "client preferences" -c business -l 5
+
+# Check database health
+python memory.py stats</code></pre>
+
+          <p>An agent doesn&rsquo;t need an SDK, a library import, or an API call. It runs a shell command and gets results. This matters more than it sounds&mdash;every dependency you add to an agent&rsquo;s tool chain is a dependency that can break at 2 AM when no one is watching.</p>
+
+          <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">Why FTS5 Over Vector Search</h2>
+          <p>The AI community has largely converged on vector embeddings as the &ldquo;right&rdquo; way to do memory retrieval. Embed the query, embed the stored memories, find the nearest neighbors by cosine similarity. It&rsquo;s elegant in theory. In practice, for agent memory specifically, it has problems:</p>
+
+          <ul class="space-y-3 ml-4">
+            <li><strong class="text-[color:var(--white)]">Embedding API dependency.</strong> If your embedding service is down, your agent has no memory. We run agents overnight and on weekends. External API outages at 3 AM are not theoretical.</li>
+            <li><strong class="text-[color:var(--white)]">Semantic drift.</strong> Vector similarity retrieves things that are &ldquo;about&rdquo; the same topic, but agent memory often needs exact recall. &ldquo;What was the API key format issue?&rdquo; is better served by keyword search than by semantic proximity.</li>
+            <li><strong class="text-[color:var(--white)]">Cost at scale.</strong> When your agent stores 50&ndash;100 memories per day and searches before every major action, embedding costs add up. FTS5 is free, forever.</li>
+            <li><strong class="text-[color:var(--white)]">Debuggability.</strong> You can open a SQLite database and read it. You can grep it. You can write SQL against it. Try debugging why a vector search returned an irrelevant result when all you have is a 1536-dimensional float array.</li>
+          </ul>
+
+          <p>FTS5 handles the 90% case&mdash;finding memories that contain the words you&rsquo;re looking for, with ranking by relevance. For the remaining 10% where semantic search would genuinely help, the category and tag system narrows the search space enough that exact-match retrieval works fine.</p>
+
+          <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">The Workflow That Makes It Work</h2>
+          <p>The database is necessary but not sufficient. What makes the system reliable is the <em>discipline</em> built into the agent&rsquo;s operating instructions:</p>
+
+          <ul class="space-y-3 ml-4">
+            <li><strong class="text-[color:var(--white)]">Search before storing.</strong> Every time the agent is about to store a memory, it first searches for duplicates. This prevents the database from filling with redundant entries.</li>
+            <li><strong class="text-[color:var(--white)]">Store actively, not passively.</strong> The agent doesn&rsquo;t wait to be told to remember something. When it learns a new fact, encounters an error, or discovers a workaround, it stores it immediately. &ldquo;Mental notes&rdquo; don&rsquo;t survive session restarts. SQLite does.</li>
+            <li><strong class="text-[color:var(--white)]">Search before answering.</strong> Before responding to questions about past events, the agent queries the database. This is the behavioral rule that provides the most value&mdash;it turns a stateless LLM into something that genuinely remembers.</li>
+            <li><strong class="text-[color:var(--white)]">Nightly consolidation.</strong> During active sessions, agents write quick notes to daily markdown files (fast, low-friction). A nightly cron job reads these files, extracts important facts, and stores them as structured memories in SQLite. This two-tier approach gives agents speed during the day and durability overnight.</li>
+            <li><strong class="text-[color:var(--white)]">Upsert for evolving facts.</strong> Project statuses, GPA, deployment dates, contact preferences&mdash;these change. Using upsert keys means the agent always retrieves the <em>current</em> value, not a stale one buried under newer entries.</li>
+          </ul>
+
+          <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">What We Learned After 3 Months</h2>
+          <p>The system has been running in production since January 2026, supporting 20+ autonomous agents across business development, software engineering, email management, and competitive intelligence. Some observations:</p>
+
+          <p><strong class="text-[color:var(--white)]">Categories matter more than tags.</strong> We started with a freeform tagging system. It became inconsistent within a week. Switching to a fixed category taxonomy (8 categories: military, project, business, infrastructure, coursework, legal, personal, financial) with freeform tags as a secondary index solved the consistency problem. Agents are surprisingly good at choosing from a fixed list. They&rsquo;re terrible at inventing consistent taxonomies on their own.</p>
+
+          <p><strong class="text-[color:var(--white)]">The upsert key is the killer feature.</strong> Without it, the database would be 10x its current size and full of contradictory information. With it, every fact has a canonical location. When the agent searches for &ldquo;current project status,&rdquo; it gets one answer, not twelve historical snapshots.</p>
+
+          <p><strong class="text-[color:var(--white)]">500 memories is the sweet spot.</strong> Our database has a few hundred structured memories, not thousands. Quality and recency matter more than volume. The nightly consolidation cron is as much about pruning as it is about persisting.</p>
+
+          <p><strong class="text-[color:var(--white)]">Behavioral rules do more than clever retrieval.</strong> The biggest improvements came from adding two lines to the agent&rsquo;s system prompt: &ldquo;Search memory before answering questions about past events&rdquo; and &ldquo;Store important facts immediately, don&rsquo;t make mental notes.&rdquo; No architectural change had as much impact as these two behavioral instructions.</p>
+
+          <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">When This Approach Falls Short</h2>
+          <p>To be clear about the limitations: this system works well for <strong>structured factual recall</strong>&mdash;what happened, what was decided, what failed, what someone prefers. It does not work as well for:</p>
+          <ul class="space-y-2 ml-4">
+            <li>Semantic retrieval across large document corpuses (use a proper RAG pipeline for that)</li>
+            <li>Conversation history replay (we store summaries, not transcripts)</li>
+            <li>Multi-agent shared state with consistency guarantees (SQLite handles concurrent reads fine, but concurrent writes from multiple agents need WAL mode and careful design)</li>
+          </ul>
+          <p>For our use case&mdash;a primary agent with multiple specialized sub-agents, all running on the same machine&mdash;SQLite with FTS5 handles everything we need. If we were running distributed agents across multiple servers, we&rsquo;d need something more. We&rsquo;re not, so we don&rsquo;t.</p>
+
+          <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">The Point</h2>
+          <p>The AI agent ecosystem is drowning in complexity. Every week brings a new memory framework, a new vector database, a new retrieval strategy. Most of them solve problems you don&rsquo;t have yet while introducing problems you didn&rsquo;t have before.</p>
+          <p>If you&rsquo;re building agents that need to remember things across sessions, start with the simplest thing that could work: a SQLite database, full-text search, a CLI your agent can call, and a set of behavioral rules that tell the agent when to store and when to search.</p>
+          <p>You can always add vector search later if you need it. In three months of production use, we haven&rsquo;t.</p>
+
+          <div class="card-glass p-6 mt-8 space-y-3">
+            <h3 class="text-lg font-semibold text-[color:var(--white)]">Building with autonomous agents?</h3>
+            <p class="text-sm text-subtle">We deploy AI systems for defense and commercial operations. If you&rsquo;re working on agent architecture, autonomous workflows, or edge-deployed AI, we&rsquo;d like to hear about it.</p>
+            <a href="../contact.html" class="btn btn-primary text-sm inline-flex">Get in Touch</a>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-[color:var(--steel-700)]">
+      <div class="mx-auto max-w-7xl px-4 py-14 space-y-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="../assets/Emblem.webp" alt="Ceradon Systems" class="h-12 w-12 image-surface" loading="lazy" width="558" height="558" />
+            <div>
+              <p class="font-semibold text-[color:var(--white)]">Ceradon Systems</p>
+              <p class="text-sm text-subtle">Passive through-wall detection. Veteran-founded SDVOSB.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4 items-center text-sm text-subtle">
+            <a href="mailto:contact@ceradonsystems.com">contact@ceradonsystems.com</a>
+          </div>
+        </div>
+        <div class="gradient-divider"></div>
+        <div class="space-y-2 text-xs text-subtle">
+          <p>&copy; <span data-year></span> Ceradon Systems. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
