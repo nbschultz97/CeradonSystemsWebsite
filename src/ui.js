@@ -12,8 +12,7 @@ const BREAKPOINTS = {
 };
 
 const TIMEOUTS = {
-  RESIZE_DEBOUNCE: 250,
-  FORM_RESET: 3000
+  RESIZE_DEBOUNCE: 250
 };
 
 const NAV_ITEMS = [
@@ -343,10 +342,12 @@ async function handleContactSubmit(event) {
   const action = form.getAttribute('action');
   if (action && action.includes('formspree.io')) {
     // Use Formspree via fetch
-    const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.classList.add('opacity-60', 'cursor-not-allowed');
+    submitBtn.classList.add('is-loading');
+    if (status) {
+      status.textContent = '';
+      status.className = 'text-sm mt-3 text-white/40';
+    }
 
     try {
       const formData = new FormData(form);
@@ -372,11 +373,8 @@ async function handleContactSubmit(event) {
       }
     }
 
-    setTimeout(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
-      submitBtn.classList.remove('opacity-60', 'cursor-not-allowed');
-    }, TIMEOUTS.FORM_RESET);
+    submitBtn.disabled = false;
+    submitBtn.classList.remove('is-loading');
     return;
   }
 

@@ -1,6 +1,8 @@
 import './input.css';
 import './scroll-animations.js';
 import { initUI, refreshActiveStates } from './ui.js';
+import { initWiFiVisualization } from './wifi-visualization.js';
+import { initStatCounters, initSpotlight, initFlowConnector } from './interactions.js';
 
 function ready(fn) {
   if (document.readyState === 'loading') {
@@ -12,6 +14,10 @@ function ready(fn) {
 
 ready(() => {
   initUI();
+  initWiFiVisualization();
+  initStatCounters();
+  initSpotlight();
+  initFlowConnector();
 });
 
 if (import.meta.hot) {
@@ -19,4 +25,3 @@ if (import.meta.hot) {
     refreshActiveStates();
   });
 }
-

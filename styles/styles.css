@@ -996,3 +996,78 @@ a[target="_blank"]:not(.btn):not([aria-label]):not(.product-card)::after {
   width: clamp(280px, 35vw, 520px);
   height: auto;
 }
+
+/* --- HERO WIFI CANVAS VISUALIZATION --- */
+.wifi-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 767px) {
+  .wifi-canvas { display: none; }
+}
+
+/* --- SPOTLIGHT EFFECT (cursor-follow glow on cards) --- */
+[data-spotlight] {
+  position: relative;
+  isolation: isolate;
+}
+
+[data-spotlight]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    320px circle at var(--spot-x, -200%) var(--spot-y, -200%),
+    rgba(43, 120, 255, 0.12),
+    rgba(43, 120, 255, 0.05) 30%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+[data-spotlight].spotlight-active:hover::before {
+  opacity: 1;
+}
+
+[data-spotlight] > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-spotlight]::before { display: none; }
+}
+
+/* --- FLOW CONNECTOR (animated line through process steps) --- */
+.flow-connector {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  pointer-events: none;
+  overflow: visible;
+  transform: translateY(-50%);
+}
+
+.flow-connector path {
+  fill: none;
+  stroke: url(#flow-gradient);
+  stroke-width: 1.5;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+@media (max-width: 1023px) {
+  .flow-connector { display: none; }
+}

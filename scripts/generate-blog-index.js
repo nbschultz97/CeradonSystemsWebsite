@@ -57,9 +57,10 @@ const listHtml = posts.map(post => {
 // Read current index and replace blog-list content
 let index = readFileSync(indexPath, 'utf-8');
 
+// Replacer function form avoids $-backreference interpretation of dollar
+// sequences inside post descriptions (e.g. "$100M").
 const listRegex = /(<div class="blog-list" id="blog-posts">)\s*[\s\S]*?(\s*<\/div>)/;
-const replacement = `$1\n${listHtml}\n          $2`;
-index = index.replace(listRegex, replacement);
+index = index.replace(listRegex, (_match, open, close) => `${open}\n${listHtml}\n          ${close}`);
 
 writeFileSync(indexPath, index, 'utf-8');
 console.log(`Blog index updated with ${posts.length} posts:`);
