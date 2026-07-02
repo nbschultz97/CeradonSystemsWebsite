@@ -184,6 +184,12 @@ a:hover .logo-glow {
   color: var(--white);
 }
 
+/* Keyboard/click-opened dropdown (JS toggles .is-open; hover handled by
+   Tailwind group-hover classes in markup) */
+header nav .group.is-open > div.hidden {
+  display: block;
+}
+
 /* --- MOBILE MENU --- */
 .mobile-menu-overlay {
   position: fixed;

@@ -17,31 +17,36 @@ const TIMEOUTS = {
 };
 
 const NAV_ITEMS = [
-  { label: 'VANTAGE', href: 'vantage.html', group: 'Products' },
-  { label: 'RAPTOR', href: 'raptor.html', group: 'Products' },
-  { label: 'Ceradon Scout', href: 'scout.html', group: 'Products' },
-  { label: 'Architect', href: 'architect.html', group: 'Products' },
-  { label: 'PolyGen', href: 'polygen.html', group: 'Products' },
-  { label: 'Intelligent Systems', href: 'intelligent-systems.html', group: 'Services' },
-  { label: 'Technology', href: 'technology.html' },
-  { label: 'Company', href: 'company.html' },
+  { label: 'VANTAGE', href: '/vantage.html', group: 'Products' },
+  { label: 'RAPTOR', href: '/raptor.html', group: 'Products' },
+  { label: 'SCOUT', href: '/scout.html', group: 'Products' },
+  { label: 'Architect', href: '/architect.html', group: 'Products' },
+  { label: 'AEGIS', href: '/aegis.html', group: 'Products' },
+  { label: 'PolyGen', href: '/polygen.html', group: 'Products' },
+  { label: 'FedResume', href: '/fedresume.html', group: 'Products' },
+  { label: 'Intelligent Systems', href: '/intelligent-systems.html', group: 'Services' },
+  { label: 'Technology', href: '/technology.html' },
+  { label: 'Company', href: '/company.html' },
   { label: 'Insights', href: '/blog/' },
-  { label: 'Contact', href: 'contact.html', isCTA: true }
+  { label: 'Contact', href: '/contact.html', isCTA: true }
 ];
 
 const FOOTER_LINKS = [
-  { label: 'VANTAGE', href: 'vantage.html' },
-  { label: 'RAPTOR', href: 'raptor.html' },
-  { label: 'Ceradon Scout', href: 'scout.html' },
-  { label: 'Architect', href: 'architect.html' },
-  { label: 'PolyGen', href: 'polygen.html' },
-  { label: 'Intelligent Systems', href: 'intelligent-systems.html' },
-  { label: 'Technology', href: 'technology.html' },
-  { label: 'Company', href: 'company.html' },
+  { label: 'VANTAGE', href: '/vantage.html' },
+  { label: 'RAPTOR', href: '/raptor.html' },
+  { label: 'SCOUT', href: '/scout.html' },
+  { label: 'Architect', href: '/architect.html' },
+  { label: 'AEGIS', href: '/aegis.html' },
+  { label: 'PolyGen', href: '/polygen.html' },
+  { label: 'FedResume', href: '/fedresume.html' },
+  { label: 'Intelligent Systems', href: '/intelligent-systems.html' },
+  { label: 'Technology', href: '/technology.html' },
+  { label: 'Company', href: '/company.html' },
   { label: 'Insights', href: '/blog/' },
-  { label: 'Contact', href: 'contact.html' },
-  { label: 'Privacy', href: 'privacy.html' },
-  { label: 'Disclaimer', href: 'disclaimer.html' }
+  { label: 'Careers', href: '/careers.html' },
+  { label: 'Contact', href: '/contact.html' },
+  { label: 'Privacy', href: '/privacy.html' },
+  { label: 'Disclaimer', href: '/disclaimer.html' }
 ];
 
 const focusableSelector = [
@@ -305,6 +310,42 @@ function initMobileMenu(header) {
   });
 }
 
+function initDesktopDropdowns(header) {
+  header.querySelectorAll('nav .group > button').forEach((button) => {
+    const wrapper = button.parentElement;
+    const menu = button.nextElementSibling;
+    if (!menu) return;
+
+    button.setAttribute('aria-haspopup', 'true');
+    button.setAttribute('aria-expanded', 'false');
+
+    const setOpen = (open) => {
+      wrapper.classList.toggle('is-open', open);
+      button.setAttribute('aria-expanded', String(open));
+    };
+
+    button.addEventListener('click', () => {
+      setOpen(!wrapper.classList.contains('is-open'));
+    });
+
+    wrapper.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && wrapper.classList.contains('is-open')) {
+        event.stopPropagation();
+        setOpen(false);
+        button.focus();
+      }
+    });
+
+    wrapper.addEventListener('focusout', (event) => {
+      if (!wrapper.contains(event.relatedTarget)) setOpen(false);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!wrapper.contains(event.target)) setOpen(false);
+    });
+  });
+}
+
 function updateFooterYear() {
   const year = new Date().getFullYear();
   document.querySelectorAll('[data-year]').forEach((node) => {
@@ -426,6 +467,7 @@ export function initUI() {
   const header = document.querySelector('header');
   if (header) {
     initMobileMenu(header);
+    initDesktopDropdowns(header);
   }
   populateFooterLinks();
   updateFooterYear();

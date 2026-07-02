@@ -15,27 +15,22 @@ try {
     });
 } catch { /* no blog posts yet */ }
 
+// Collect every top-level page dynamically so new pages can never be
+// silently dropped from the build (aegis/fedresume were missing before).
+const pageEntries = {};
+readdirSync(rootDir)
+  .filter((f) => f.endsWith('.html'))
+  .forEach((f) => {
+    pageEntries[f.replace(/\.html$/, '')] = resolve(rootDir, f);
+  });
+
 export default defineConfig({
   root: rootDir,
   assetsInclude: ['**/*.PNG', '**/*.jpg'],
   build: {
     rollupOptions: {
       input: {
-        main: resolve(rootDir, 'index.html'),
-        vantage: resolve(rootDir, 'vantage.html'),
-        polygen: resolve(rootDir, 'polygen.html'),
-        architect: resolve(rootDir, 'architect.html'),
-        technology: resolve(rootDir, 'technology.html'),
-        company: resolve(rootDir, 'company.html'),
-        ip: resolve(rootDir, 'ip.html'),
-        careers: resolve(rootDir, 'careers.html'),
-        contact: resolve(rootDir, 'contact.html'),
-        privacy: resolve(rootDir, 'privacy.html'),
-        disclaimer: resolve(rootDir, 'disclaimer.html'),
-        raptor: resolve(rootDir, 'raptor.html'),
-        scout: resolve(rootDir, 'scout.html'),
-        intelligentSystems: resolve(rootDir, 'intelligent-systems.html'),
-        notFound: resolve(rootDir, '404.html'),
+        ...pageEntries,
         blog: resolve(rootDir, 'blog/index.html'),
         ...blogEntries
       }
