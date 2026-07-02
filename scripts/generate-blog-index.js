@@ -58,8 +58,9 @@ const listHtml = posts.map(post => {
 let index = readFileSync(indexPath, 'utf-8');
 
 const listRegex = /(<div class="blog-list" id="blog-posts">)\s*[\s\S]*?(\s*<\/div>)/;
-const replacement = `$1\n${listHtml}\n          $2`;
-index = index.replace(listRegex, replacement);
+// Use a replacer function so `$` in post titles (e.g. "$14.6B") is not
+// treated as a capture-group reference and injected as broken HTML.
+index = index.replace(listRegex, (_, open, close) => `${open}\n${listHtml}\n          ${close}`);
 
 writeFileSync(indexPath, index, 'utf-8');
 console.log(`Blog index updated with ${posts.length} posts:`);

@@ -37,9 +37,11 @@ src/main.js        Initializes shared UI (nav states, mobile menu, contact form)
 src/ui.js          Navigation logic, focus trapping, footer hydration
 styles/styles.css  CSS variables, component overrides, focus styles
 *.html             Individual marketing pages with shared header/footer
-robots.txt         Basic crawler directives
-sitemap.xml        Search indexing map
-vite.config.js     Vite multi-page configuration
+blog/              Insights posts; index regenerated at build
+public/robots.txt  Basic crawler directives (copied verbatim into dist/)
+public/sitemap.xml Search indexing map (regenerated at build — do not hand-edit)
+scripts/           Build-time generators for the blog index and sitemap
+vite.config.js     Vite multi-page configuration (pages auto-discovered)
 ```
 
 ## Accessibility & Performance
