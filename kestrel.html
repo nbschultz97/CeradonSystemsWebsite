@@ -26,6 +26,46 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.ceradonsystems.com/kestrel.html" />    <link rel="icon" type="image/webp" href="./assets/Emblem.webp" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <style>
+      /* KESTREL hero — the trainer's FPV feed as the page thesis */
+      .kestrel-hero { position: relative; }
+      .kestrel-feed { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
+      .kestrel-grid {
+        position: absolute; inset: 0; opacity: .5;
+        background-image:
+          linear-gradient(to right, rgba(120,170,235,.14) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(120,170,235,.14) 1px, transparent 1px);
+        background-size: 84px 84px;
+        -webkit-mask-image: radial-gradient(ellipse at 60% 45%, #000 55%, transparent 92%);
+        mask-image: radial-gradient(ellipse at 60% 45%, #000 55%, transparent 92%);
+      }
+      .kestrel-bracket { position: absolute; width: 26px; height: 26px; border: 2px solid rgba(120,170,235,.55); }
+      .kestrel-bracket--tl { top: 22px; left: 22px; border-right: 0; border-bottom: 0; }
+      .kestrel-bracket--tr { top: 22px; right: 22px; border-left: 0; border-bottom: 0; }
+      .kestrel-bracket--bl { bottom: 22px; left: 22px; border-right: 0; border-top: 0; }
+      .kestrel-bracket--br { bottom: 22px; right: 22px; border-left: 0; border-top: 0; }
+      .kestrel-reticle {
+        position: absolute; top: 45%; left: 60%; width: 40px; height: 40px;
+        transform: translate(-50%,-50%);
+        background:
+          linear-gradient(rgba(120,170,235,.6),rgba(120,170,235,.6)) center/2px 40px no-repeat,
+          linear-gradient(rgba(120,170,235,.6),rgba(120,170,235,.6)) center/40px 2px no-repeat;
+        opacity: .7;
+      }
+      .kestrel-readout {
+        position: absolute; bottom: 26px; font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
+        font-size: 12px; letter-spacing: .12em; color: rgba(150,195,240,.82);
+        text-shadow: 0 1px 3px rgba(0,0,0,.9);
+      }
+      .kestrel-readout--l { left: 60px; }
+      .kestrel-readout--r { right: 60px; }
+      .kestrel-hero > .relative { position: relative; z-index: 2; }
+      @media (max-width: 640px) { .kestrel-readout, .kestrel-reticle { display: none; } }
+      @media (prefers-reduced-motion: no-preference) {
+        .kestrel-bracket { animation: kestrel-lock 4s ease-in-out infinite; }
+      }
+      @keyframes kestrel-lock { 0%,100% { opacity: .55; } 50% { opacity: .9; } }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -86,8 +126,21 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content">
-      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
-        <img src="./assets/hero-kestrel.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40 pointer-events-none" aria-hidden="true" loading="eager" />
+      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)] kestrel-hero">
+        <img src="./assets/hero-kestrel.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-55 pointer-events-none" aria-hidden="true" loading="eager" />
+        <!-- KESTREL signature: the hero reads as the trainer's own FPV feed —
+             an MGRS-style grid, corner reticle brackets, and a live coordinate
+             readout over photoreal terrain. -->
+        <div class="kestrel-feed" aria-hidden="true">
+          <div class="kestrel-grid"></div>
+          <span class="kestrel-bracket kestrel-bracket--tl"></span>
+          <span class="kestrel-bracket kestrel-bracket--tr"></span>
+          <span class="kestrel-bracket kestrel-bracket--bl"></span>
+          <span class="kestrel-bracket kestrel-bracket--br"></span>
+          <span class="kestrel-reticle"></span>
+          <span class="kestrel-readout kestrel-readout--l">MGRS 11S MT 8341 9720</span>
+          <span class="kestrel-readout kestrel-readout--r">ALT 74m &middot; ARMED</span>
+        </div>
         <div class="relative mx-auto max-w-7xl px-4 py-16">
           <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
             <div class="space-y-6">
