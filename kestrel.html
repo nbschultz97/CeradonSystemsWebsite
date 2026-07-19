@@ -12,69 +12,29 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KESTREL | Ceradon Systems</title>
-    <meta name="description" content="KESTREL is an sUAS flight trainer: fly any coordinate on Earth in photoreal terrain, on physics derived from the real part specs of your build." />
+    <title>KESTREL Mission Rehearsal | Ceradon Systems</title>
+    <meta name="description" content="KESTREL helps public-safety, SAR, inspection, and training teams rehearse structured sUAS missions with aircraft-specific configuration and repeatable session scoring." />
     <meta property="og:title" content="KESTREL | Ceradon Systems" />
-    <meta property="og:description" content="Fly any coordinate on Earth. Train on physics from real part specs. Realistic failure — battery, RF link, and crash damage." />
+    <meta property="og:description" content="Configure the aircraft, load the operating area, rehearse the objective chain, and review a scored session record." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/kestrel.html" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/hero-kestrel.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="KESTREL | Ceradon Systems" />
-    <meta name="twitter:description" content="sUAS flight trainer — fly any coordinate on Earth on physics from real part specs." />
+    <meta name="twitter:description" content="Aircraft-configured sUAS mission rehearsal for public-safety, SAR, inspection, and training teams." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/hero-kestrel.webp" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.ceradonsystems.com/kestrel.html" />    <link rel="icon" type="image/webp" href="./assets/Emblem.webp" />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <style>
-      /* KESTREL hero — the trainer's FPV feed as the page thesis */
-      .kestrel-hero { position: relative; }
-      .kestrel-feed { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 1; }
-      .kestrel-grid {
-        position: absolute; inset: 0; opacity: .5;
-        background-image:
-          linear-gradient(to right, rgba(120,170,235,.14) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(120,170,235,.14) 1px, transparent 1px);
-        background-size: 84px 84px;
-        -webkit-mask-image: radial-gradient(ellipse at 60% 45%, #000 55%, transparent 92%);
-        mask-image: radial-gradient(ellipse at 60% 45%, #000 55%, transparent 92%);
-      }
-      .kestrel-bracket { position: absolute; width: 26px; height: 26px; border: 2px solid rgba(120,170,235,.55); }
-      .kestrel-bracket--tl { top: 22px; left: 22px; border-right: 0; border-bottom: 0; }
-      .kestrel-bracket--tr { top: 22px; right: 22px; border-left: 0; border-bottom: 0; }
-      .kestrel-bracket--bl { bottom: 22px; left: 22px; border-right: 0; border-top: 0; }
-      .kestrel-bracket--br { bottom: 22px; right: 22px; border-left: 0; border-top: 0; }
-      .kestrel-reticle {
-        position: absolute; top: 45%; left: 60%; width: 40px; height: 40px;
-        transform: translate(-50%,-50%);
-        background:
-          linear-gradient(rgba(120,170,235,.6),rgba(120,170,235,.6)) center/2px 40px no-repeat,
-          linear-gradient(rgba(120,170,235,.6),rgba(120,170,235,.6)) center/40px 2px no-repeat;
-        opacity: .7;
-      }
-      .kestrel-readout {
-        position: absolute; bottom: 26px; font-family: ui-monospace, "Cascadia Code", Menlo, Consolas, monospace;
-        font-size: 12px; letter-spacing: .12em; color: rgba(150,195,240,.82);
-        text-shadow: 0 1px 3px rgba(0,0,0,.9);
-      }
-      .kestrel-readout--l { left: 60px; }
-      .kestrel-readout--r { right: 60px; }
-      .kestrel-hero > .relative { position: relative; z-index: 2; }
-      @media (max-width: 640px) { .kestrel-readout, .kestrel-reticle { display: none; } }
-      @media (prefers-reduced-motion: no-preference) {
-        .kestrel-bracket { animation: kestrel-lock 4s ease-in-out infinite; }
-      }
-      @keyframes kestrel-lock { 0%,100% { opacity: .55; } 50% { opacity: .9; } }
-    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
       "name": "KESTREL",
-      "applicationCategory": "GameApplication",
+      "applicationCategory": "SimulationApplication",
       "operatingSystem": "Windows",
       "url": "https://www.ceradonsystems.com/kestrel.html",
-      "description": "sUAS flight trainer with photoreal real-world terrain at any coordinate and physics derived from real component specifications.",
+      "description": "Windows-based sUAS mission-rehearsal simulator with aircraft-specific configuration, location-based scenarios, structured objectives, and local session records.",
       "publisher": {
         "@type": "Organization",
         "name": "Ceradon Systems, LLC",
@@ -128,38 +88,26 @@
     <main id="main-content">
       <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)] kestrel-hero">
         <img src="./assets/hero-kestrel.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-55 pointer-events-none" aria-hidden="true" loading="eager" />
-        <!-- KESTREL signature: the hero reads as the trainer's own FPV feed —
-             an MGRS-style grid, corner reticle brackets, and a live coordinate
-             readout over photoreal terrain. -->
-        <div class="kestrel-feed" aria-hidden="true">
-          <div class="kestrel-grid"></div>
-          <span class="kestrel-bracket kestrel-bracket--tl"></span>
-          <span class="kestrel-bracket kestrel-bracket--tr"></span>
-          <span class="kestrel-bracket kestrel-bracket--bl"></span>
-          <span class="kestrel-bracket kestrel-bracket--br"></span>
-          <span class="kestrel-reticle"></span>
-          <span class="kestrel-readout kestrel-readout--l">MGRS 11S MT 8341 9720</span>
-          <span class="kestrel-readout kestrel-readout--r">ALT 74m &middot; ARMED</span>
-        </div>
         <div class="relative mx-auto max-w-7xl px-4 py-16">
           <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
             <div class="space-y-6">
               <img src="./assets/kestrel-logo.png" alt="KESTREL" class="h-24 md:h-32 mb-2" loading="eager" />
-              <h1 class="text-4xl font-bold text-[color:var(--white)]">Fly any coordinate on Earth. Train on real physics.</h1>
-              <p class="text-lg text-subtle">KESTREL is an sUAS flight trainer. Type a location and fly it in photoreal terrain — on flight physics derived from the real component specifications of your build, not a game approximation.</p>
-              <p class="text-subtle">It runs the real Betaflight control law, so your rates and tune fly the way they do on your own aircraft — with a firmware-style OSD and honest failure: the battery dies, the link drops, and a crash damages the aircraft. Self-contained Windows build, no engine install, no cloud.</p>
-              <p class="text-subtle">Location &rarr; Build &rarr; Fly &rarr; Mission &rarr; Training Record.</p>
+              <p class="tag">Early Design-Partner Program</p>
+              <h1 class="text-4xl font-bold text-[color:var(--white)]">Rehearse the mission before the aircraft leaves the case.</h1>
+              <p class="text-lg text-subtle">KESTREL is a Windows-based sUAS mission-rehearsal simulator for public-safety, search-and-rescue, inspection, and training teams. Configure the aircraft you fly, load an operating area, and practice a structured run with repeatable objectives and scoring.</p>
+              <p class="text-subtle">Practice navigation gates, position holds, reconnaissance or inspection dwells, and precision landing using an RC transmitter. Aircraft behavior is derived from component specifications, while core mission data and session records remain local.</p>
+              <p class="text-subtle">Configure &rarr; Rehearse &rarr; Compare &rarr; Improve.</p>
               <div class="flex flex-wrap gap-3">
-                <span class="badge">Any coordinate on Earth</span>
-                <span class="badge">Physics from real specs</span>
-                <span class="badge">Realistic failure</span>
+                <span class="badge">Location-based rehearsal</span>
+                <span class="badge">Aircraft-specific configuration</span>
+                <span class="badge">Repeatable mission scoring</span>
               </div>
             </div>
             <div class="card-glass p-8 space-y-4">
-              <p class="text-sm text-subtle">Built for teams who train unmanned operators and need a trainer that flies the kit they actually have, over the terrain they actually operate in.</p>
+              <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">Bring one aircraft, one location, and one training problem.</strong> Design partners receive guided onboarding, early-build access, and direct input into scenario development.</p>
               <div class="flex flex-wrap gap-3">
-                <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
-                <a href="architect.html" class="btn btn-secondary text-sm uppercase tracking-wide">Pairs with COTS Architect</a>
+                <a href="contact.html?product=kestrel" class="btn btn-primary text-sm uppercase tracking-wide">Apply for a Pilot</a>
+                <a href="#workflow" class="btn btn-secondary text-sm uppercase tracking-wide">See the Workflow</a>
               </div>
             </div>
           </div>
@@ -168,60 +116,59 @@
 
       <section class="mx-auto max-w-7xl px-4 py-16 space-y-10">
         <div class="space-y-3">
-          <p class="tag">What makes it real</p>
-          <h2 class="section-heading text-3xl">A trainer, not a tech demo</h2>
-          <p class="text-subtle max-w-3xl">Every system is grounded in something real — the terrain, the parts, the failure modes. That is the difference between a flight game and a trainer a unit can rely on.</p>
+          <p class="tag">Mission workflow</p>
+          <h2 class="section-heading text-3xl">From mission plan to repeatable rehearsal.</h2>
+          <p class="text-subtle max-w-3xl">KESTREL connects an operating area, an aircraft configuration, an objective chain, and a session result in one practice loop. Design partners help us measure and improve that loop against the missions their teams actually perform.</p>
         </div>
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <article class="product-card">
             <div class="product-card__header">
-              <h3 class="product-title">Fly Anywhere</h3>
-              <p class="product-tagline">Type a latitude and longitude and load that exact place.</p>
+              <h3 class="product-title">Choose the Operating Area</h3>
+              <p class="product-tagline">Enter coordinates and create a location-based scenario.</p>
             </div>
             <ul class="product-bullets">
-              <li>Photoreal 3D terrain streamed at real coordinates.</li>
-              <li>The world self-calibrates so you launch on the real ground.</li>
+              <li>Streamed 3D terrain where service coverage and connectivity allow.</li>
+              <li>A generated training environment provides a fallback when streamed terrain is unavailable.</li>
             </ul>
           </article>
           <article class="product-card">
             <div class="product-card__header">
-              <h3 class="product-title">Physics From Real Specs</h3>
-              <p class="product-tagline">Mass, motors, prop, and battery come from the actual build.</p>
+              <h3 class="product-title">Configure the Aircraft</h3>
+              <p class="product-tagline">Mass, motor, propeller, battery, and radio parameters come from the selected build.</p>
             </div>
             <ul class="product-bullets">
-              <li>Thrust-to-weight and control feel track the real hardware.</li>
-              <li>Motors are held to their spec-sheet rated point, not fantasy.</li>
+              <li>Component specifications inform thrust, energy, and control behavior.</li>
+              <li>Saved configurations keep comparison runs consistent.</li>
             </ul>
           </article>
           <article class="product-card">
             <div class="product-card__header">
-              <h3 class="product-title">Honest Failure</h3>
-              <p class="product-tagline">The consequences a real pilot manages.</p>
+              <h3 class="product-title">Practice Contingencies</h3>
+              <p class="product-tagline">Introduce conditions an operator may need to recognize and manage.</p>
             </div>
             <ul class="product-bullets">
-              <li>Battery drains, sags, and browns out — the aircraft falls.</li>
-              <li>Fly the link past terrain and it degrades, then fails safe.</li>
-              <li>A crash damages the camera and motors, like it would in the field.</li>
+              <li>Model battery use, link degradation, and damage conditions during a run.</li>
+              <li>Use scenario effects as training cues, not as airworthiness or certification evidence.</li>
             </ul>
           </article>
           <article class="product-card">
             <div class="product-card__header">
-              <h3 class="product-title">Faithful Controls &amp; OSD</h3>
-              <p class="product-tagline">The real flight-controller law.</p>
+              <h3 class="product-title">RC Transmitter &amp; Flight View</h3>
+              <p class="product-tagline">A familiar control loop for repeatable practice.</p>
             </div>
             <ul class="product-bullets">
-              <li>Runs the Betaflight rate and control law — your rates and tune fly the same.</li>
-              <li>A firmware-style on-screen display, on your own radio.</li>
+              <li>Map a compatible RC transmitter over USB and save the control profile.</li>
+              <li>Configure rates and use a flight-controller-style on-screen display.</li>
             </ul>
           </article>
           <article class="product-card">
             <div class="product-card__header">
-              <h3 class="product-title">Fly Your Build</h3>
-              <p class="product-tagline">Import the loadout you planned in COTS Architect.</p>
+              <h3 class="product-title">COTS Architect Handoff</h3>
+              <p class="product-tagline">Carry the selected configuration and mission into rehearsal.</p>
             </div>
             <ul class="product-bullets">
-              <li>Real motor, prop, battery, and radio specifications carry over.</li>
-              <li>Fly the kit that is actually on the unit's shelf.</li>
+              <li>Selected motor, propeller, battery, and radio identifiers stay attached to the handoff.</li>
+              <li>Keep the rehearsal configuration traceable to the source inventory.</li>
             </ul>
           </article>
           <article class="product-card">
@@ -230,49 +177,50 @@
               <p class="product-tagline">Objectives, scoring, and a completion record.</p>
             </div>
             <ul class="product-bullets">
-              <li>Structured tasks with pass, timing, and scoring.</li>
-              <li>A saved record for each run — evidence of training completed.</li>
+              <li>Practice gates, holds, inspection dwells, return, and landing objectives.</li>
+              <li>A local session summary captures outcomes, elapsed time, and score for review.</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+      <section id="workflow" class="scroll-mt-24 border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
         <div class="mx-auto max-w-7xl px-4 py-16 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
             <img src="./assets/kestrel-flight.webp" alt="First-person view of a small unmanned aircraft over photoreal real-world terrain in KESTREL" class="w-full h-full object-cover" loading="lazy" />
           </figure>
           <div class="space-y-4">
-            <p class="tag">One ecosystem, one build file</p>
-            <h2 class="section-heading text-3xl">Plan it in Architect. Fly it in KESTREL.</h2>
-            <p class="text-subtle">A build assembled from a unit's real inventory in COTS Architect exports as a single loadout file. KESTREL flies that exact build on its real specifications — same motors, prop, battery, and radios.</p>
-            <p class="text-subtle">Missions and their scoring records move as plain files, entirely offline. Nothing leaves the operator's computer.</p>
+            <p class="tag">COTS Architect handoff</p>
+            <h2 class="section-heading text-3xl">Plan what you have. Rehearse what you will fly.</h2>
+            <p class="text-subtle">Assemble a configuration from your organization's inventory in COTS Architect, define the operating area and objective chain, then export a versioned handoff package to KESTREL.</p>
+            <p class="text-subtle">The handoff keeps the aircraft configuration, mission metadata, operating area, and objectives together. Core file exchange and session records stay local; streamed terrain requires connectivity when that source is selected.</p>
+            <a href="architect.html" class="inline-flex text-sm text-[color:var(--ceradon-blue)] hover:text-[color:var(--white)]">Explore COTS Architect &rarr;</a>
           </div>
         </div>
       </section>
 
       <section class="mx-auto max-w-7xl px-4 py-16 space-y-8">
         <div class="space-y-3">
-          <p class="tag">Deployment</p>
-          <h2 class="section-heading text-3xl">A self-contained Windows trainer</h2>
-          <p class="text-subtle max-w-3xl">No engine install to run, no account, no dependency on a live service for flight. The training loop runs on the operator's own laptop.</p>
+          <p class="tag">How it runs</p>
+          <h2 class="section-heading text-3xl">A local Windows rehearsal loop.</h2>
+          <p class="text-subtle max-w-3xl">The core simulator, mission execution, and session record run on a supported Windows PC. Streamed terrain may require an active connection and is subject to provider coverage.</p>
         </div>
         <div class="grid gap-6 md:grid-cols-2">
           <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">Your radio, your build</h3>
-            <p class="text-subtle text-sm">Fly on a standard RC transmitter in USB mode, with the build imported from COTS Architect. A guided setup maps the sticks and an arm switch.</p>
+            <h3 class="font-semibold text-[color:var(--white)]">RC transmitter input</h3>
+            <p class="text-subtle text-sm">Use a compatible RC transmitter in USB mode. Map the sticks and arm control, then save the profile for repeatable sessions.</p>
           </div>
           <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">Photoreal terrain, on demand</h3>
-            <p class="text-subtle text-sm">Real-world terrain streams at any coordinate. An offline block-terrain fallback keeps the trainer usable without a network.</p>
+            <h3 class="font-semibold text-[color:var(--white)]">Location options</h3>
+            <p class="text-subtle text-sm">Use streamed 3D terrain where coverage permits, or run the mission loop in a generated training environment.</p>
           </div>
           <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">Grounded, not gamified</h3>
-            <p class="text-subtle text-sm">Battery, link, and damage behave like the real thing, so habits built in the trainer transfer to the field instead of teaching the wrong reflexes.</p>
+            <h3 class="font-semibold text-[color:var(--white)]">Structured objectives</h3>
+            <p class="text-subtle text-sm">Build a measurable sequence from gates, position holds, inspection dwells, return, landing, and disarm conditions.</p>
           </div>
           <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">Records that travel</h3>
-            <p class="text-subtle text-sm">Each mission writes a completion record — objectives met, time, and score — as a plain file a unit can keep and review.</p>
+            <h3 class="font-semibold text-[color:var(--white)]">Reviewable results</h3>
+            <p class="text-subtle text-sm">Each completed run produces a local session summary with objective outcomes, elapsed time, and score for comparison.</p>
           </div>
         </div>
       </section>
@@ -282,10 +230,10 @@
         <div class="absolute inset-0 bg-gradient-to-r from-[#04070d] via-[#04070d]/90 to-[#04070d]/25"></div>
         <div class="relative mx-auto max-w-7xl w-full px-4 py-20">
           <div class="max-w-2xl space-y-5">
-            <p class="tag">Train on the kit you have, over the ground you operate.</p>
-            <h2 class="section-heading text-4xl">See KESTREL fly your build.</h2>
-            <p class="text-subtle text-lg">Request a walkthrough and we will fly a build over a coordinate you choose.</p>
-            <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
+            <p class="tag">Design-partner pilots</p>
+            <h2 class="section-heading text-4xl">Bring one mission we can prove together.</h2>
+            <p class="text-subtle text-lg">Tell us what aircraft your team flies, the mission you want to rehearse, and one evaluation location. We will scope a controlled pilot with clear success criteria.</p>
+            <a href="contact.html?product=kestrel" class="btn btn-primary text-sm uppercase tracking-wide">Discuss a KESTREL Pilot</a>
           </div>
         </div>
       </section>

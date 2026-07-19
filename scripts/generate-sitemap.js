@@ -24,6 +24,7 @@ const PRIORITIES = {
   'fedresume.html': { priority: '0.8', changefreq: 'monthly' },
   'intelligent-systems.html': { priority: '0.8', changefreq: 'monthly' },
   'architect.html': { priority: '0.7', changefreq: 'monthly' },
+  'kestrel.html': { priority: '0.8', changefreq: 'monthly' },
   'polygen.html': { priority: '0.7', changefreq: 'monthly' },
   'technology.html': { priority: '0.7', changefreq: 'monthly' },
   'company.html': { priority: '0.6', changefreq: 'monthly' },

@@ -21,6 +21,7 @@ const NAV_ITEMS = [
   { label: 'RAPTOR', href: '/raptor.html', group: 'Products' },
   { label: 'SCOUT', href: '/scout.html', group: 'Products' },
   { label: 'Architect', href: '/architect.html', group: 'Products' },
+  { label: 'KESTREL', href: '/kestrel.html', group: 'Products' },
   { label: 'AEGIS', href: '/aegis.html', group: 'Products' },
   { label: 'PolyGen', href: '/polygen.html', group: 'Products' },
   { label: 'FedResume', href: '/fedresume.html', group: 'Products' },
@@ -36,6 +37,7 @@ const FOOTER_LINKS = [
   { label: 'RAPTOR', href: '/raptor.html' },
   { label: 'SCOUT', href: '/scout.html' },
   { label: 'Architect', href: '/architect.html' },
+  { label: 'KESTREL', href: '/kestrel.html' },
   { label: 'AEGIS', href: '/aegis.html' },
   { label: 'PolyGen', href: '/polygen.html' },
   { label: 'FedResume', href: '/fedresume.html' },
@@ -445,8 +447,9 @@ async function handleContactSubmit(event) {
     .filter(Boolean)
     .join('\n');
 
+  const subject = form.querySelector('[name="_subject"]')?.value.trim() || 'Ceradon Inquiry';
   const mailto = new URL('mailto:contact@ceradonsystems.com');
-  mailto.searchParams.set('subject', 'Ceradon Inquiry');
+  mailto.searchParams.set('subject', subject);
   mailto.searchParams.set('body', composed);
   window.location.href = mailto.toString();
 
@@ -460,6 +463,31 @@ async function handleContactSubmit(event) {
 function initContactForm() {
   const form = document.querySelector('[data-contact-form]');
   if (!form) return;
+
+  const requestedProduct = new URLSearchParams(window.location.search)
+    .get('product')
+    ?.trim()
+    .toLowerCase();
+
+  if (requestedProduct === 'kestrel') {
+    const subject = form.querySelector('[name="_subject"]');
+    const product = form.querySelector('[name="product"]');
+    const message = form.querySelector('[name="message"]');
+    const kestrelPrompt = 'Tell us what aircraft your team flies, the type of mission you want to rehearse, and one location you would use for an evaluation.';
+
+    if (subject) {
+      subject.value = 'KESTREL Design-Partner Inquiry';
+      subject.defaultValue = 'KESTREL Design-Partner Inquiry';
+    }
+    if (product) {
+      product.value = 'KESTREL';
+      product.defaultValue = 'KESTREL';
+    }
+    if (message) {
+      message.placeholder = kestrelPrompt;
+    }
+  }
+
   form.addEventListener('submit', handleContactSubmit);
 }
 
