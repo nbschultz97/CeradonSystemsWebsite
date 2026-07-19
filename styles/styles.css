@@ -1258,3 +1258,127 @@ section.border-t::before { content:''; position:absolute; left:50%; top:-1px; wi
 @media (prefers-reduced-motion: reduce) {
   .visual-story__frame, .visual-story__media img { transform: none !important; transition: none !important; }
 }
+
+/* ============================================================
+   DESIGN PASS — rhythm, precision, registration
+   ------------------------------------------------------------
+   The site was competent but loose: 250-320px of dead air between
+   sections (py-40 + py-28 stacked), numbers set in proportional
+   figures, and no visual thread tying pages together.
+
+   Direction: this company builds instruments — things that measure
+   and register the physical world (RF sensing, floorplans, coordinate
+   overlays). So the visual language borrows from instrumentation:
+   registration ticks, tabular figures, hairline rules. Not decoration;
+   it is what the products actually do.
+   ============================================================ */
+
+/* --- 1. VERTICAL RHYTHM ------------------------------------
+   Tighten the scale so sections read as related, not marooned.
+   Applied at the utility level so every page benefits at once. */
+.py-40 { padding-top: 6rem;   padding-bottom: 6rem; }
+.py-32 { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+.py-28 { padding-top: 5rem;   padding-bottom: 5rem; }
+.py-24 { padding-top: 4.5rem; padding-bottom: 4.5rem; }
+.py-20 { padding-top: 4rem;   padding-bottom: 4rem; }
+@media (min-width: 768px) {
+  .py-40 { padding-top: 8rem;   padding-bottom: 8rem; }
+  .py-32 { padding-top: 7rem;   padding-bottom: 7rem; }
+  .py-28 { padding-top: 6rem;   padding-bottom: 6rem; }
+  .py-24 { padding-top: 5.5rem; padding-bottom: 5.5rem; }
+  .py-20 { padding-top: 5rem;   padding-bottom: 5rem; }
+}
+
+/* --- 2. PRECISION FIGURES ----------------------------------
+   Specs, stats and identifiers are measurements. Tabular lining
+   figures make columns align and read as instrument output. */
+.stat-number,
+.agent-metric,
+.badge,
+[class*="tracking-[0.2em]"],
+[class*="tracking-[0.3em]"] {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+.stat-number {
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+.stat-label {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: var(--ceradon-slate);
+  letter-spacing: 0.01em;
+}
+
+/* --- 3. REGISTRATION RULE ----------------------------------
+   The signature. A section divider drawn as an instrument scale:
+   a hairline with measured ticks, brightening at the origin mark.
+   Used once per major boundary, never decoratively. */
+.reg-rule {
+  position: relative;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent, var(--steel-600) 12%, var(--steel-600) 88%, transparent);
+}
+.reg-rule::before {
+  content: "";
+  position: absolute;
+  inset: -3px 12% auto 12%;
+  height: 7px;
+  background-image: repeating-linear-gradient(90deg,
+    var(--steel-600) 0 1px, transparent 1px 48px);
+  opacity: 0.55;
+}
+.reg-rule::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  top: -4px;
+  width: 1px;
+  height: 9px;
+  background: var(--ceradon-blue);
+  box-shadow: 0 0 8px rgba(43, 120, 255, 0.6);
+}
+
+/* --- 4. READABILITY ----------------------------------------
+   Body copy sat at --silver on near-black; comfortable for headings,
+   thin for sustained reading. Lift long-form paragraphs only. */
+main p { color: #d3d9e4; }
+main p.text-sm, main li { color: var(--silver); }
+.text-subtle { color: var(--ceradon-slate); }
+
+/* --- 5. CARD SURFACES --------------------------------------
+   card-glass had almost no edge, so grouped content floated.
+   Give it a defined boundary and a light source. */
+.card-glass {
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.035), rgba(255,255,255,0.012));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color 0.3s var(--ease-out-expo),
+              transform 0.3s var(--ease-out-expo);
+}
+.card-glass:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-glass, .card-glass:hover { transition: none; transform: none; }
+}
+
+/* --- 6. HERO HEIGHT ----------------------------------------
+   .hero-immersive reserved min-h-[92vh] and centred its content, so on
+   any normal window the lower half was empty by construction -- that was
+   the "dead space", not the section padding. Reserve less, and bias the
+   content upward so the fold sits under the copy instead of under nothing. */
+.hero-immersive {
+  min-height: 78vh !important;
+}
+@media (min-width: 768px) {
+  .hero-immersive { min-height: 82vh !important; }
+}
+.hero-immersive > .relative,
+.hero-immersive > div:not([class*="absolute"]) {
+  padding-block: clamp(3rem, 7vh, 6rem);
+}
