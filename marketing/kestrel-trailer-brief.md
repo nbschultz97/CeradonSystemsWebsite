@@ -4,7 +4,7 @@
 
 Create a 55-second product trailer that proves one workflow:
 
-> Import the equipment a team owns into COTS Architect, configure an aircraft, create a mission, send it to KESTREL, rehearse the objective chain with an RC transmitter, and review the result.
+> Import the equipment a team owns into COTS ARCHITECT, configure an aircraft, create a mission, send it to KESTREL, rehearse the objective chain with an RC transmitter, and review the result.
 
 Position KESTREL as an early design-partner mission-rehearsal product for public safety, search and rescue, infrastructure inspection, and professional training teams. It is not a generic FPV game.
 
@@ -29,7 +29,7 @@ Keep the aircraft name, mission name, location, and objective chain consistent i
 | Time | Picture | On-screen copy |
 | --- | --- | --- |
 | 0-4s | Clean FPV approach toward the mission ingress gate. | **TRAIN THE MISSION BEFORE IT MATTERS** |
-| 4-9s | Import a clean fictional XLSX inventory into COTS Architect. Reveal motors, propellers, batteries, frames, radios, and payloads. | **START WITH WHAT YOU OWN** |
+| 4-9s | Import a clean fictional XLSX inventory into COTS ARCHITECT. Reveal motors, propellers, batteries, frames, radios, and payloads. | **START WITH WHAT YOU OWN** |
 | 9-15s | Assemble **Response Quad 7** in Platform Designer. | **BUILD FROM COMPONENT SPECS** |
 | 15-20s | Plan **Post-Storm Asset Survey** and show the objective chain. | **PLAN FOR THE OPERATING AREA** |
 | 20-24s | Click **Send to KESTREL** and hold on the confirmation. | **ONE HANDOFF** |
@@ -53,7 +53,7 @@ Source: C:\Users\noah\Videos\Kestral Demo Video.mp4
 - Strongest visual candidates are in the airfield run around 1:20, the park/city runs around 2:00-2:40, and the later downtown runs around 4:00-4:50
 - The upper-left developer/status overlay is visible during gameplay
 - Some early loading and flight segments show unstable terrain, extreme attitude, or obstructed camera views
-- The recording does not show the Architect inventory import, mission construction, Send to KESTREL action, objective completion sequence, or a clearly readable saved session record
+- The recording does not show the ARCHITECT inventory import, mission construction, Send to KESTREL action, objective completion sequence, or a clearly readable saved session record
 
 Use this file for an internal teaser or selected flight inserts. For the public launch trailer, recapture the chosen flights with all debug/status text disabled. Do not crop away required terrain attribution.
 

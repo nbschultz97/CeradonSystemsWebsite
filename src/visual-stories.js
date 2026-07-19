@@ -42,10 +42,10 @@ const VISUAL_STORIES = {
   '/architect.html': {
     eyebrow: 'System planning',
     title: 'Make component decisions visible',
-    copy: 'Architect connects mission needs, compatible COTS hardware, and build-ready system structure.',
+    copy: 'ARCHITECT connects mission needs, compatible COTS hardware, and build-ready system structure.',
     items: [
       ['./assets/hero-architect.webp', 'COTS unmanned system architecture workspace', 'Mission architecture'],
-      ['./assets/cots-architect-logo.png', 'COTS Architect planning toolkit identity', 'Planning toolkit'],
+      ['./assets/cots-architect-logo.png', 'COTS ARCHITECT planning toolkit identity', 'Planning toolkit'],
       ['./assets/section-tech-edge.webp', 'Rugged edge-compute hardware for autonomous systems', 'Edge hardware']
     ]
   },
