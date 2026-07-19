@@ -16,18 +16,18 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-    <title>Ceradon Systems | Through-Wall Detection | Passive WiFi Sensing Technology</title>
-    <meta name="description" content="Ceradon Systems builds Vantage, a passive WiFi CSI through-wall detection system. Zero emissions, 10x cheaper than radar. Veteran-founded SDVOSB defense contractor in Utah." />
-    <meta name="keywords" content="through wall detection, passive wall sensing, WiFi sensing technology, SDVOSB defense contractor Utah, Lumineye alternative, through wall radar alternative, WiFi CSI sensing" />
-    <meta property="og:title" content="Ceradon Systems | Passive Through-Wall Detection Technology" />
-    <meta property="og:description" content="Vantage detects humans through walls using passive WiFi. No emissions, no detection, 10x cheaper than radar. Veteran-founded SDVOSB." />
+    <title>Ceradon Systems | Defense Sensing, Mapping &amp; Mission Systems | Veteran-Owned SDVOSB</title>
+    <meta name="description" content="Ceradon Systems builds sensing, mapping, and mission-rehearsal systems for defense and public-safety teams: VANTAGE passive through-wall detection, RAPTOR edge AI vision, LANTERN drone-video floorplans, KESTREL mission rehearsal, COTS ARCHITECT, and POLYGEN. Veteran-owned SDVOSB, CAGE 179U9." />
+    <meta name="keywords" content="through wall detection, passive wall sensing, WiFi sensing technology, SDVOSB defense contractor Utah, edge AI detection, drone video floorplan ATAK, sUAS mission rehearsal, Lumineye alternative, WiFi CSI sensing" />
+    <meta property="og:title" content="Ceradon Systems | Defense Sensing, Mapping &amp; Mission Systems" />
+    <meta property="og:description" content="Veteran-owned SDVOSB building passive through-wall detection, edge AI vision, drone-video floorplans, and sUAS mission rehearsal on commodity hardware." />
     <meta property="og:type" content="website" />
     <meta name="robots" content="index, follow" />
     <meta property="og:url" content="https://www.ceradonsystems.com/" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Ceradon Systems | Passive Through-Wall Detection" />
-    <meta name="twitter:description" content="Vantage detects humans through walls using passive WiFi. No emissions, no detection, 10x cheaper than radar." />
+    <meta name="twitter:title" content="Ceradon Systems | Defense Sensing, Mapping &amp; Mission Systems" />
+    <meta name="twitter:description" content="Veteran-owned SDVOSB building passive through-wall detection, edge AI vision, drone-video floorplans, and sUAS mission rehearsal on commodity hardware." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
     <link rel="canonical" href="https://www.ceradonsystems.com/" />
     <link rel="icon" type="image/webp" href="./assets/Emblem.webp" />
@@ -35,6 +35,25 @@
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
     <link rel="preload" href="./assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <style>
+      /* Homepage survey-plate animation (scoped, namespaced: no collision with styles.css) */
+      .plate-arc { animation: plate-drift 26s linear infinite; }
+      @keyframes plate-drift { to { stroke-dashoffset: -160; } }
+      .plate-ping {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: plate-ping 2.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+      }
+      @keyframes plate-ping {
+        0%   { transform: scale(0.35); opacity: 0.9; }
+        70%  { opacity: 0.15; }
+        100% { transform: scale(2.8); opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .plate-arc, .plate-ping { animation: none; }
+        .plate-ping { opacity: 0.3; }
+      }
+    </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -78,10 +97,10 @@
               <div class="bg-[#080c16] border border-white/[0.06] rounded-lg py-2 min-w-[220px] shadow-2xl">
                 <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">VANTAGE <span class="text-xs text-white/30">Through-Wall</span></a>
                 <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">RAPTOR <span class="text-xs text-white/30">Edge AI Vision</span></a>
-                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">ARCHITECT</a>
-                <a href="lantern.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">LANTERN <span class="text-xs text-[color:var(--ceradon-blue)]">Video to floorplan</span></a>
+                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">ARCHITECT <span class="text-xs text-white/30">UxS Planning</span></a>
+                <a href="lantern.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">LANTERN <span class="text-xs text-[color:var(--ceradon-blue)]">Video to floorplan</span></a>
                 <a href="kestrel.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">KESTREL <span class="text-xs text-white/30">Mission Rehearsal</span></a>
-                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">POLYGEN</a>
+                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]">POLYGEN <span class="text-xs text-white/30">Text to 3D</span></a>
               </div>
             </div>
           </div>
@@ -97,132 +116,278 @@
 
     <main id="main-content">
 
-      <!-- ============ HERO ============ -->
-      <section id="top" class="hero-immersive relative overflow-hidden min-h-[92vh] flex items-center" data-immersive-hero>
+      <!-- ============ HERO — company thesis + survey plate ============ -->
+      <section id="top" class="hero-immersive relative overflow-hidden flex items-center" data-immersive-hero>
         <div class="grid-bg" aria-hidden="true"></div>
-        <img src="./assets/hero-index.webp" alt="" class="hero-immersive__image absolute inset-0 w-full h-full object-cover pointer-events-none" aria-hidden="true" loading="eager" />
-        <div class="hero-immersive__wash" aria-hidden="true"></div>
         <div class="hero-immersive__scan" aria-hidden="true"></div>
-        <div class="relative mx-auto max-w-7xl px-4 py-32 lg:py-40 w-full">
-          <div class="max-w-4xl space-y-8" data-animate>
-            <div class="flex items-center gap-3">
-              <span class="tag">Veteran-Founded SDVOSB</span>
-              <span class="tag">Passive WiFi Sensing</span>
+        <div class="relative z-[2] mx-auto max-w-7xl px-4 w-full">
+          <div class="grid gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,500px)] lg:items-center">
+
+            <div class="space-y-8" data-animate>
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="tag">Veteran-Owned SDVOSB</span>
+                <span class="tag">CAGE 179U9</span>
+              </div>
+
+              <h1 class="font-bold leading-[1.08] tracking-tight" style="font-size:clamp(2.4rem,4.1vw,3.9rem);max-width:none" data-animate data-delay="100">
+                Sense. Map. Rehearse.<br/>
+                <span class="text-white/40">Six systems, one team.</span>
+              </h1>
+
+              <p class="max-w-xl text-lg leading-relaxed text-white/50" data-animate data-delay="200">
+                Ceradon Systems builds sensing, mapping, and mission-rehearsal tools for defense and public-safety teams &mdash; passive through-wall detection, edge AI vision, drone-video floorplans, and UxS build planning &mdash; engineered on commodity hardware at a fraction of incumbent cost.
+              </p>
+
+              <div class="flex flex-col sm:flex-row gap-3 pt-2" data-animate data-delay="300">
+                <a href="#portfolio" class="btn btn-primary text-sm">Explore the Portfolio <span aria-hidden="true">&darr;</span></a>
+                <a href="contact.html" class="btn btn-secondary text-sm">Talk to Ceradon</a>
+              </div>
+
+              <div class="hero-proof" data-animate data-delay="400" aria-label="Company characteristics">
+                <span><i aria-hidden="true"></i> Passive &amp; edge-first</span>
+                <span>ATAK / CoT output</span>
+                <span>COTS hardware</span>
+              </div>
             </div>
 
-            <h1 class="font-bold leading-[1.05] tracking-tight" data-animate data-delay="100">
-              See through walls.<br/>
-              <span class="text-white/40">Stay invisible.</span>
-            </h1>
+            <!-- Survey plate: plan-view floorplan with a passive RF field registered onto it.
+                 This is the artifact the products actually produce (LANTERN floorplans,
+                 VANTAGE detections), drawn as an instrument plate. Decorative to AT. -->
+            <figure class="hidden md:block select-none" aria-hidden="true" data-animate data-delay="200"
+                    style="transform: translate3d(calc(var(--pointer-x, 0) * 7px), calc(var(--pointer-y, 0) * 5px), 0); transition: transform .25s linear;">
+              <svg viewBox="0 0 560 600" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <clipPath id="plate-clip"><rect x="14" y="14" width="532" height="532" /></clipPath>
+                  <pattern id="plate-grat" width="76" height="76" patternUnits="userSpaceOnUse">
+                    <path d="M38 32 V44 M32 38 H44" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+                  </pattern>
+                  <pattern id="plate-ticks" width="26.6" height="7" patternUnits="userSpaceOnUse">
+                    <rect width="1" height="7" fill="rgba(255,255,255,0.22)" />
+                  </pattern>
+                </defs>
 
-            <p class="max-w-2xl text-lg lg:text-xl leading-relaxed text-white/50" data-animate data-delay="200">
-              <strong class="text-white/90">VANTAGE</strong> detects human presence through solid walls using passive WiFi Channel State Information. Zero RF emissions. Zero chance of detection. A fraction of the cost of active radar.
-            </p>
+                <!-- plate field -->
+                <rect x="14" y="14" width="532" height="532" fill="rgba(255,255,255,0.012)" stroke="rgba(255,255,255,0.10)" />
+                <rect x="14" y="14" width="532" height="532" fill="url(#plate-grat)" />
 
-            <div class="flex flex-col sm:flex-row gap-3 pt-2" data-animate data-delay="300">
-              <a href="vantage.html" class="btn btn-primary text-sm">Explore VANTAGE <span aria-hidden="true">&rarr;</span></a>
-              <a href="contact.html" class="btn btn-secondary text-sm">Request a Demo</a>
-            </div>
-            <div class="hero-proof" data-animate data-delay="400" aria-label="System characteristics">
-              <span><i aria-hidden="true"></i> Passive sensing</span>
-              <span>Edge inference</span>
-              <span>ATAK ready</span>
-            </div>
+                <!-- corner registration marks -->
+                <g stroke="#2b78ff" stroke-width="1.5" opacity="0.9">
+                  <path d="M14 34 V14 H34" />
+                  <path d="M526 14 H546 V34" />
+                  <path d="M546 526 V546 H526" />
+                  <path d="M34 546 H14 V526" />
+                </g>
+
+                <!-- passive RF field: range rings from the listening node, clipped to plate -->
+                <g clip-path="url(#plate-clip)">
+                  <g class="plate-arc" stroke="#56b7ff" stroke-width="1" stroke-dasharray="3 7">
+                    <circle cx="96" cy="300" r="70"  opacity="0.50" />
+                    <circle cx="96" cy="300" r="130" opacity="0.40" />
+                    <circle cx="96" cy="300" r="190" opacity="0.31" />
+                    <circle cx="96" cy="300" r="250" opacity="0.23" />
+                    <circle cx="96" cy="300" r="310" opacity="0.16" />
+                    <circle cx="96" cy="300" r="370" opacity="0.10" />
+                  </g>
+                </g>
+
+                <!-- structure: surveyed floorplan, plan view -->
+                <path d="M180 120 H470 V470 H250 V330 H180 Z" fill="rgba(244,246,251,0.02)" />
+                <!-- outer walls with a door gap on the west wall -->
+                <g stroke="rgba(244,246,251,0.32)" stroke-width="2">
+                  <path d="M180 120 H470 V470 H250 V330 H180 V268" />
+                  <path d="M180 240 V120" />
+                </g>
+                <!-- interior partitions with door gaps -->
+                <g stroke="rgba(244,246,251,0.20)" stroke-width="1.25">
+                  <path d="M330 120 V200 M330 226 V300" />
+                  <path d="M250 300 H380 M406 300 H470" />
+                </g>
+
+                <!-- listening node (outside the structure) -->
+                <rect x="90" y="294" width="12" height="12" stroke="#56b7ff" stroke-width="1" />
+                <circle cx="96" cy="300" r="2" fill="#56b7ff" />
+                <text x="40" y="336" fill="rgba(197,203,214,0.55)" font-size="9" letter-spacing="1.5" font-weight="500">NODE 01 &#183; PASSIVE RX</text>
+
+                <!-- detection inside the north-east room -->
+                <g>
+                  <line x1="386" y1="210" x2="414" y2="210" stroke="#22d3ee" stroke-width="1" opacity="0.75" />
+                  <line x1="400" y1="196" x2="400" y2="224" stroke="#22d3ee" stroke-width="1" opacity="0.75" />
+                  <circle class="plate-ping" cx="400" cy="210" r="11" stroke="#22d3ee" stroke-width="1" />
+                  <circle cx="400" cy="210" r="3.5" fill="#22d3ee" />
+                </g>
+                <path d="M406 204 L446 168 H518" stroke="rgba(34,211,238,0.35)" stroke-width="1" />
+                <text x="446" y="158" fill="rgba(244,246,251,0.72)" font-size="9" letter-spacing="1.5" font-weight="600">PRESENCE 01</text>
+                <text x="446" y="146" fill="rgba(197,203,214,0.45)" font-size="8" letter-spacing="1.2">CONF 94.8%</text>
+
+                <!-- plate annotations -->
+                <text x="26" y="42" fill="rgba(197,203,214,0.50)" font-size="9" letter-spacing="1.5" font-weight="500">PLAN VIEW &#183; GRID 10 M</text>
+                <text x="534" y="530" text-anchor="end" fill="rgba(197,203,214,0.40)" font-size="9" letter-spacing="1.5" font-weight="500">VANTAGE &#183; CSI FIELD</text>
+
+                <!-- measured tick scale along the plate base -->
+                <rect x="14" y="539" width="532" height="7" fill="url(#plate-ticks)" opacity="0.7" />
+                <rect x="14" y="536" width="1.5" height="10" fill="#2b78ff" />
+              </svg>
+              <figcaption class="mt-5 space-y-3">
+                <div class="reg-rule"></div>
+                <div class="flex justify-between text-[10px] uppercase tracking-[0.2em] text-white/30">
+                  <span>Fig. 01 &mdash; structure survey &middot; plan view</span>
+                  <span>Output: ATAK / CoT</span>
+                </div>
+              </figcaption>
+            </figure>
+
           </div>
-          <div class="signal-scene" aria-hidden="true" data-signal-scene>
-            <div class="signal-scene__floor"></div>
-            <div class="signal-scene__wall signal-scene__wall--rear"></div>
-            <div class="signal-scene__wall signal-scene__wall--front"></div>
-            <div class="signal-scene__beam"></div>
-            <div class="signal-scene__core">
-              <span class="signal-scene__ring signal-scene__ring--1"></span>
-              <span class="signal-scene__ring signal-scene__ring--2"></span>
-              <span class="signal-scene__ring signal-scene__ring--3"></span>
-              <span class="signal-scene__target"></span>
+        </div>
+      </section>
+
+      <!-- ============ REGISTRATION STRIP — who this company is, as readouts ============ -->
+      <section class="border-t border-white/[0.06]" aria-label="Company registration and identity">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] rounded-xl overflow-hidden" data-animate-stagger>
+            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">06</p>
+              <p class="stat-label">Product lines &mdash; sensing, vision, mapping, planning, rehearsal, generation.</p>
             </div>
-            <span class="signal-scene__node signal-scene__node--1"></span>
-            <span class="signal-scene__node signal-scene__node--2"></span>
-            <span class="signal-scene__node signal-scene__node--3"></span>
-            <div class="signal-scene__readout">
-              <span>VANTAGE // LIVE</span>
-              <strong>Presence detected</strong>
-              <small>Confidence 94.8%</small>
+            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">SDVOSB</p>
+              <p class="stat-label">Service-disabled veteran-owned small business. Veteran-founded, Utah-based.</p>
+            </div>
+            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">179U9</p>
+              <p class="stat-label">CAGE code &middot; UEI UZA9PFJ9RDL6 &middot; active in SAM.gov through Dec 5, 2026.</p>
+            </div>
+            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">COTS</p>
+              <p class="stat-label">Commodity hardware, edge inference &mdash; systems teams can afford to field.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ KEY ADVANTAGES ============ -->
+      <!-- ============ PORTFOLIO — the six systems ============ -->
+      <section id="portfolio" class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-12">
+          <div class="reg-rule" aria-hidden="true"></div>
+          <div class="flex flex-wrap items-end justify-between gap-6 pt-2" data-animate>
+            <div class="max-w-2xl space-y-4">
+              <p class="tag">Portfolio</p>
+              <h2 class="section-heading">Six systems, one discipline:<br class="hidden lg:block"/> make the unseen usable.</h2>
+            </div>
+            <p class="max-w-sm text-sm text-white/40 leading-relaxed">
+              Every Ceradon system does one of four jobs &mdash; sense, map, build, or rehearse &mdash; and delivers its output at the edge, in formats operators already use.
+            </p>
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
+
+            <a href="vantage.html" class="product-card group block">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Sense &middot; Passive RF</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-white/25">TRL 4</span>
+              </div>
+              <div class="product-card__header">
+                <h3 class="product-title">VANTAGE</h3>
+                <p class="product-tagline">Detects human presence through walls from ambient WiFi. Zero RF emissions &mdash; nothing to detect, jam, or trace.</p>
+              </div>
+              <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore VANTAGE &rarr;</span>
+            </a>
+
+            <a href="raptor.html" class="product-card group block">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Sense &middot; Edge AI Vision</span>
+              </div>
+              <div class="product-card__header">
+                <h3 class="product-title">RAPTOR</h3>
+                <p class="product-tagline">Real-time detection and classification for drones, UGVs, and fixed sites. Field-retrainable on low-cost edge compute, no cloud required.</p>
+              </div>
+              <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore RAPTOR &rarr;</span>
+            </a>
+
+            <a href="lantern.html" class="product-card group block">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Map &middot; Video to Floorplan</span>
+              </div>
+              <div class="product-card__header">
+                <h3 class="product-title">LANTERN</h3>
+                <p class="product-tagline">Turns drone or walkthrough video into a georeferenced interior floorplan on ATAK. No survey, about two minutes on a laptop.</p>
+              </div>
+              <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore LANTERN &rarr;</span>
+            </a>
+
+            <a href="architect.html" class="product-card group block">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Build &middot; UxS Planning</span>
+              </div>
+              <div class="product-card__header">
+                <h3 class="product-title">COTS ARCHITECT</h3>
+                <p class="product-tagline">Turns quantity-first lab inventory into validated UxS builds, RF evidence, and concise technical handoff packages.</p>
+              </div>
+              <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore ARCHITECT &rarr;</span>
+            </a>
+
+            <a href="kestrel.html" class="product-card group block">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Rehearse &middot; sUAS Missions</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-white/25">Design Partners</span>
+              </div>
+              <div class="product-card__header">
+                <h3 class="product-title">KESTREL</h3>
+                <p class="product-tagline">Rehearse structured sUAS missions over the real operating area, with aircraft-specific configuration and repeatable session scoring.</p>
+              </div>
+              <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore KESTREL &rarr;</span>
+            </a>
+
+            <a href="polygen.html" class="product-card group block">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Build &middot; Text to 3D</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-white/25">Live</span>
+              </div>
+              <div class="product-card__header">
+                <h3 class="product-title">POLYGEN</h3>
+                <p class="product-tagline">Describe a part, get a printable 3D model. Free to try in the browser.</p>
+              </div>
+              <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore POLYGEN &rarr;</span>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FLAGSHIP — VANTAGE ============ -->
       <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] rounded-xl overflow-hidden" data-animate>
-            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
-              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">ZERO</p>
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-14">
+          <div class="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:items-center" data-animate>
+            <div class="max-w-2xl space-y-4">
+              <p class="tag">Flagship &mdash; VANTAGE</p>
+              <h2 class="section-heading">See through walls. Stay invisible.</h2>
+              <p class="text-white/40 text-lg leading-relaxed">
+                VANTAGE reads the distortions human bodies leave in ambient WiFi &mdash; Channel State Information &mdash; to detect presence through solid walls without transmitting a thing.
+              </p>
+            </div>
+            <div class="rounded-xl overflow-hidden">
+              <img src="./assets/section-vantage-preview.webp" alt="Building exterior with passive WiFi signal visualization" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] rounded-xl overflow-hidden" data-animate-stagger>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="text-3xl font-bold text-white tracking-tight">ZERO</p>
               <p class="text-sm text-white/40 leading-relaxed">RF emissions. Invisible to electronic warfare systems and RF detection.</p>
             </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
-              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">10&times;</p>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="text-3xl font-bold text-white tracking-tight">10&times;</p>
               <p class="text-sm text-white/40 leading-relaxed">Cost reduction vs active radar. COTS hardware at a fraction of $60K&ndash;$85K systems.</p>
             </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
-              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">TRL 4</p>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="text-3xl font-bold text-white tracking-tight">TRL 4</p>
               <p class="text-sm text-white/40 leading-relaxed">Lab validated. Active development toward operational deployment.</p>
             </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 lg:p-10 space-y-3">
-              <p class="text-3xl lg:text-4xl font-bold text-white tracking-tight">ATAK</p>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="text-3xl font-bold text-white tracking-tight">ATAK</p>
               <p class="text-sm text-white/40 leading-relaxed">Networked mesh nodes feed CoT data for distributed situational awareness.</p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- ============ APPLICATIONS ============ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-2xl space-y-4" data-animate>
-            <p class="tag">Applications</p>
-            <h2 class="section-heading">Built for operators who need to know<br class="hidden lg:block"/> what's on the other side</h2>
-          </div>
-          <div class="rounded-xl overflow-hidden max-w-4xl mx-auto" data-animate>
-            <img src="./assets/section-vantage-preview.webp" alt="Building exterior with passive WiFi signal visualization" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
-          </div>
-          <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
-            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Military Breach & Clearing</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Know room occupancy before entry. Passive sensing means zero signature in contested EW environments.</p>
-            </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Law Enforcement / SWAT</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Barricaded suspect standoffs, hostage rescue, warrant service. Know how many people are inside before making entry.</p>
-            </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Search & Rescue</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Detect trapped survivors through rubble and collapsed structures. WiFi penetrates where cameras and thermal can't.</p>
-            </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Building & Facility Security</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Continuous occupancy monitoring for critical infrastructure, embassies, and secure facilities.</p>
-            </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">Infrastructure Protection</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Perimeter security for power stations, data centers, and government buildings. Detect unauthorized presence passively.</p>
-            </div>
-            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
-              <h3 class="text-base font-semibold text-white">SIGINT / Intelligence</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Dual-use: WiFi CSI reveals both human presence and network topology without active probing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ HOW IT WORKS ============ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-16">
-          <div class="max-w-2xl space-y-4" data-animate>
-            <p class="tag">VANTAGE Platform</p>
-            <h2 class="section-heading">How passive WiFi through-wall detection works</h2>
-            <p class="text-white/40 text-lg">VANTAGE exploits WiFi Channel State Information &mdash; the subtle signal distortions caused by human bodies in a WiFi field.</p>
-          </div>
           <div class="grid gap-px bg-white/[0.06] rounded-xl overflow-hidden sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
             <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
               <span class="text-xs font-semibold text-white/20 tracking-wider">01</span>
@@ -245,13 +410,51 @@
               <p class="text-sm text-white/40 leading-relaxed">Outputs presence alerts via JSON, CLI, or ATAK CoT feed in real time.</p>
             </div>
           </div>
-          <div data-animate>
-            <a href="vantage.html" class="btn btn-secondary text-sm">Full VANTAGE Details &rarr;</a>
+
+          <div class="flex flex-col lg:flex-row lg:items-center gap-6 lg:justify-between" data-animate>
+            <div class="space-y-3">
+              <p class="text-[10px] uppercase tracking-[0.2em] text-white/30">Mission sets</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">Breach &amp; clearing</span>
+                <span class="badge">LE / SWAT</span>
+                <span class="badge">Search &amp; rescue</span>
+                <span class="badge">Facility security</span>
+                <span class="badge">Infrastructure protection</span>
+                <span class="badge">SIGINT</span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a href="vantage.html" class="btn btn-primary text-sm">Full VANTAGE Details &rarr;</a>
+              <a href="contact.html" class="btn btn-secondary text-sm">Request a Demo</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ============ KESTREL (Design Partner) ============ -->
+      <!-- ============ LANTERN ============ -->
+      <section class="border-t border-white/[0.06]">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
+          <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
+            <div class="rounded-xl overflow-hidden order-2 lg:order-1" data-animate>
+              <img src="./assets/lantern-atak.webp" alt="Interior floorplan generated by LANTERN overlaid on a map in ATAK" class="w-full h-auto image-surface" loading="lazy" />
+            </div>
+            <div class="space-y-6 order-1 lg:order-2" data-animate data-delay="200">
+              <span class="tag">LANTERN &mdash; Video to Floorplan</span>
+              <h2 class="section-heading">One drone goes in. Everybody gets the floorplan.</h2>
+              <p class="text-lg text-white/50 leading-relaxed">
+                LANTERN turns drone or walkthrough video into a georeferenced interior floorplan for ATAK &mdash; no survey, no ground truth, about two minutes on a laptop. The assault force, the QRF, and the TOC all see the same interior before anyone else goes through the door.
+              </p>
+              <p class="text-sm text-white/30">Video in &middot; Floorplan out &middot; ATAK overlay</p>
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
+                <a href="lantern.html" class="btn btn-primary text-sm">Explore LANTERN</a>
+                <a href="contact.html?product=lantern" class="btn btn-secondary text-sm">Request a Walkthrough &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ KESTREL ============ -->
       <section class="border-t border-white/[0.06]">
         <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
           <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
@@ -280,88 +483,38 @@
         </div>
       </section>
 
-      <!-- ============ SCOUT (Brief) ============ -->
+      <!-- ============ ALSO FROM CERADON — self-serve tools & services ============ -->
       <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
-            <div class="space-y-6" data-animate>
-              <div class="flex items-center gap-3">
-                <span class="tag">Live Product</span>
-                <span class="inline-flex items-center gap-2 text-xs tracking-wider uppercase text-[color:var(--green-400)]">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--green-400)] pulse-dot"></span>
-                  SaaS
-                </span>
-              </div>
-              <h2 class="section-heading">SCOUT</h2>
-              <p class="text-lg text-white/50 leading-relaxed">
-                AI-powered federal opportunity scanner. SCOUT monitors SAM.gov for contracts that match your capabilities, scores each for relevance, and delivers daily email digests so you never miss a winnable bid.
-              </p>
-              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
-                <a href="https://sentinel-scout.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-sm">Start Scanning &rarr;</a>
-              </div>
-              <p class="text-sm text-white/30">Plans from <strong class="text-white/60">$49/mo</strong> to <strong class="text-white/60">$199/mo</strong></p>
-            </div>
-            <div class="rounded-xl overflow-hidden" data-animate data-delay="200">
-              <img src="./assets/section-scout-preview.webp" alt="AI-powered contract opportunity dashboard" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
-            </div>
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 space-y-8">
+          <div class="max-w-2xl space-y-3" data-animate>
+            <p class="tag">Also from Ceradon</p>
+            <h2 class="text-2xl font-semibold text-white tracking-tight">Self-serve tools and applied AI, live today</h2>
           </div>
-        </div>
-      </section>
-
-      <!-- ============ FEDRESUME (Brief) ============ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
-            <div class="rounded-xl overflow-hidden order-2 lg:order-1" data-animate>
-              <img src="./assets/section-fedresume-preview.webp" alt="Federal resume conversion process" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
-            </div>
-            <div class="space-y-6 order-1 lg:order-2" data-animate data-delay="200">
-              <div class="flex items-center gap-3">
-                <span class="tag">Live Product</span>
-                <span class="inline-flex items-center gap-2 text-xs tracking-wider uppercase text-[color:var(--green-400)]">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[color:var(--green-400)] pulse-dot"></span>
-                  AI Tool
-                </span>
+          <div class="grid gap-4 md:grid-cols-3" data-animate-stagger>
+            <a href="intelligent-systems.html" class="product-card group block">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Services</span>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-white/25">From $2,500</span>
               </div>
-              <h2 class="section-heading">FedResume</h2>
-              <p class="text-lg text-white/50 leading-relaxed">
-                AI-powered federal resume converter. Paste your civilian resume and a USAJobs listing &mdash; get a properly formatted federal resume with KSAs, specialized experience, and GS-level language in under 2 minutes.
-              </p>
-              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 pt-2">
-                <a href="https://fedresume.vercel.app/convert" target="_blank" rel="noopener noreferrer" class="btn btn-secondary text-sm">Convert Now &rarr;</a>
+              <div class="product-card__header">
+                <h3 class="product-title">Intelligent Systems</h3>
+                <p class="product-tagline">Custom AI agent deployment for your business &mdash; multi-agent workflows, deep integrations, run in production.</p>
               </div>
-              <p class="text-sm text-white/30">One-time <strong class="text-white/60">$9.99</strong></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ AI SERVICES (Brief) ============ -->
-      <section class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="max-w-3xl space-y-6" data-animate>
-            <span class="tag">Services</span>
-            <h2 class="section-heading">Intelligent Systems</h2>
-            <p class="text-lg text-white/50 leading-relaxed max-w-2xl">
-              Custom AI agent deployment for your business. Multi-agent workflows, deep integrations, industry-specific training. We build and run production AI systems &mdash; not slide decks.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-3 pt-2">
-              <a href="intelligent-systems.html" class="btn btn-primary text-sm">Learn More</a>
-              <a href="contact.html" class="btn btn-secondary text-sm">Book a Free Assessment</a>
-            </div>
-            <p class="text-sm text-white/30">Starting at <strong class="text-white/60">$2,500</strong></p>
+              <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore Services &rarr;</span>
+            </a>
           </div>
         </div>
       </section>
 
       <!-- ============ CONTACT CTA ============ -->
       <section id="contact" class="border-t border-white/[0.06]">
-        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28">
-          <div class="grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:items-start">
+        <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-12">
+          <div class="reg-rule" aria-hidden="true"></div>
+          <div class="grid gap-16 lg:grid-cols-[1.1fr_1fr] lg:items-start pt-2">
             <div class="space-y-6" data-animate>
               <span class="tag">Contact</span>
-              <h2 class="section-heading">Ready to talk through-wall detection?</h2>
-              <p class="text-white/40 text-lg leading-relaxed">Whether you're a program manager, SWAT commander, or SAR coordinator &mdash; let's discuss how VANTAGE fits your mission.</p>
+              <h2 class="section-heading">Tell us the mission. We'll tell you which system fits.</h2>
+              <p class="text-white/40 text-lg leading-relaxed">Program managers, unit innovation cells, prime integrators, public-safety teams &mdash; whether it's through-wall sensing, interior mapping, or mission rehearsal, start the conversation here.</p>
               <div class="flex items-center gap-3 text-white/40">
                 <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25H4.5a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v1.072a2.25 2.25 0 0 1-1.08 1.923l-6.772 4.064a2.25 2.25 0 0 1-2.296 0L3.33 9.745a2.25 2.25 0 0 1-1.08-1.923V6.75" />
@@ -388,7 +541,7 @@
                 </div>
                 <div>
                   <label for="message">How can we help? <span class="text-red-400" aria-hidden="true">*</span><span class="sr-only">(required)</span></label>
-                  <textarea id="message" name="message" rows="4" placeholder="Tell us about your mission needs, timeline, or questions about VANTAGE." required aria-required="true"></textarea>
+                  <textarea id="message" name="message" rows="4" placeholder="Tell us about your mission needs, timeline, or which system you want to discuss." required aria-required="true"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-full text-sm">Send Message</button>
                 <p aria-live="polite" class="text-sm text-white/30" data-form-status></p>
@@ -407,7 +560,7 @@
             <img src="./assets/Emblem.webp" alt="Ceradon Systems" class="h-10 w-10 image-surface" loading="lazy" width="558" height="558" />
             <div>
               <p class="font-semibold text-white text-sm">Ceradon Systems</p>
-              <p class="text-xs text-white/30">Passive through-wall detection. Veteran-founded SDVOSB.</p>
+              <p class="text-xs text-white/30">Sensing, mapping, and mission systems. Veteran-founded SDVOSB.</p>
             </div>
           </div>
           <div class="flex flex-wrap gap-4 items-center text-sm text-white/40">

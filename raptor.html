@@ -87,14 +87,14 @@
     <main id="main-content">
 
       <!-- ============ HERO ============ -->
-      <section class="relative overflow-hidden min-h-[75vh] flex items-center">
+      <section class="relative overflow-hidden min-h-[70vh] flex items-center border-b border-[color:var(--steel-700)]">
         <img src="./assets/hero-raptor.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none" aria-hidden="true" loading="eager" />
         <div class="absolute inset-0 pointer-events-none">
           <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/30 via-[#0a1628]/80 to-[#04070d]"></div>
         </div>
         <div class="grid-bg" aria-hidden="true"></div>
 
-        <div class="relative mx-auto max-w-7xl px-4 py-24 lg:py-32 w-full">
+        <div class="relative mx-auto max-w-7xl px-4 py-24 lg:py-28 w-full">
           <div class="max-w-3xl space-y-8">
             <div class="inline-flex items-center gap-3 rounded-full border border-[color:var(--steel-500)] bg-[color:var(--steel-900)/80] px-5 py-2.5 text-xs tracking-[0.2em] uppercase" style="backdrop-filter: blur(8px);" data-animate>
               <span class="w-2 h-2 rounded-full bg-red-500 pulse-dot"></span>
@@ -116,14 +116,57 @@
 
             <div class="flex flex-col sm:flex-row gap-4" data-animate data-delay="300">
               <a href="contact.html" class="btn btn-primary text-sm">Request a Demo</a>
-              <a href="technology.html" class="btn btn-secondary text-sm">Technical Details</a>
+              <a href="#status" class="btn btn-secondary text-sm">Where it is today</a>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ============ STATS ============ -->
+      <section class="mx-auto max-w-7xl px-4 py-14" aria-label="Key figures">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6" data-animate-stagger>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">$250</p>
+            <p class="stat-label">Compute module &mdash; NVIDIA Jetson Orin Nano</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">30+ FPS</p>
+            <p class="stat-label">Detection with TensorRT; 15+ FPS with full tracking</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">&lt; 30 ms</p>
+            <p class="stat-label">Inference latency &mdash; low enough for terminal guidance</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">60 g</p>
+            <p class="stat-label">Module weight &mdash; fits 5&Prime; FPV frames</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTRAST ============ -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <h2 class="section-heading text-3xl">The feed should be watched by software, not by a tired operator</h2>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="card-glass p-7">
+              <p class="text-xs uppercase tracking-[0.2em] text-subtle">Today</p>
+              <p class="mt-3">An operator stares at a video feed for hours so nothing is missed. A jammed link means a blind aircraft. And when a new threat shows up in theater, teaching the system to recognize it means a vendor contract and a wait measured in months.</p>
+            </div>
+            <div class="card-glass p-7">
+              <p class="text-xs uppercase tracking-[0.2em] text-red-400">With RAPTOR</p>
+              <p class="mt-3">The model watches the feed and alerts on detections. Visual target lock rides through RF jamming and signal loss. And when the AI gets something wrong, the operator corrects it on the spot and retrains on-device&mdash;the system knows the new threat by the next mission.</p>
+            </div>
+          </div>
+          <figure class="mt-8 rounded-xl overflow-hidden max-w-4xl mx-auto" data-animate>
+            <img src="./assets/section-raptor-ui.webp" alt="RAPTOR web interface showing live detections and classification controls" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+            <figcaption class="mt-3 text-sm text-subtle text-center">The RAPTOR web UI &mdash; live detections, classification controls, and one-click retraining from any device on the network.</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <!-- ============ WHAT MAKES IT DIFFERENT ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
+      <section class="py-20">
         <div class="mx-auto max-w-7xl px-4 space-y-16">
           <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
             <span class="tag">Why RAPTOR</span>
@@ -202,8 +245,8 @@
       </section>
 
       <!-- ============ PLATFORMS ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 space-y-16">
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
           <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
             <span class="tag">Platforms</span>
             <h2 class="section-heading">One system. Every platform.</h2>
@@ -216,7 +259,8 @@
           <div class="grid gap-6 md:grid-cols-2" data-animate-stagger>
             <!-- UGV -->
             <div class="card-glass p-8 space-y-4">
-              <h3 class="text-xl font-bold text-[color:var(--white)]">&#x1F6E1;&#xFE0F; Unmanned Ground Vehicles</h3>
+              <p class="text-xs uppercase tracking-[0.2em] text-red-400">Ground</p>
+              <h3 class="text-xl font-bold text-[color:var(--white)]">Unmanned Ground Vehicles</h3>
               <p class="text-subtle leading-relaxed">Autonomous threat detection and target following for ground robots. MAVLink integration steers toward designated targets. RC override at any time.</p>
               <ul class="space-y-2 text-sm text-subtle">
                 <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">&#x2713;</span> Auto-steer toward designated targets</li>
@@ -227,7 +271,8 @@
 
             <!-- FPV -->
             <div class="card-glass p-8 space-y-4">
-              <h3 class="text-xl font-bold text-[color:var(--white)]">&#x1F3AE; FPV Drones</h3>
+              <p class="text-xs uppercase tracking-[0.2em] text-red-400">Air &middot; Rotary</p>
+              <h3 class="text-xl font-bold text-[color:var(--white)]">FPV Drones</h3>
               <p class="text-subtle leading-relaxed">AI-powered terminal guidance for first-person-view platforms. Lock a target, and RAPTOR maintains tracking through jamming and signal loss&mdash;the capability Ukraine proved in combat.</p>
               <ul class="space-y-2 text-sm text-subtle">
                 <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">&#x2713;</span> Visual target lock survives RF jamming</li>
@@ -238,7 +283,8 @@
 
             <!-- Fixed Wing -->
             <div class="card-glass p-8 space-y-4">
-              <h3 class="text-xl font-bold text-[color:var(--white)]">&#x2708;&#xFE0F; Fixed-Wing UAVs</h3>
+              <p class="text-xs uppercase tracking-[0.2em] text-red-400">Air &middot; Fixed-wing</p>
+              <h3 class="text-xl font-bold text-[color:var(--white)]">Fixed-Wing UAVs</h3>
               <p class="text-subtle leading-relaxed">Persistent ISR with automatic detection alerts. RAPTOR watches the feed so the operator doesn't have to stare at a screen for hours. Aerial-perspective models trained on VisDrone and DOTA datasets.</p>
               <ul class="space-y-2 text-sm text-subtle">
                 <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">&#x2713;</span> Auto-alert on detection events</li>
@@ -249,7 +295,8 @@
 
             <!-- Fixed Installation -->
             <div class="card-glass p-8 space-y-4">
-              <h3 class="text-xl font-bold text-[color:var(--white)]">&#x1F3D7;&#xFE0F; Fixed Installations</h3>
+              <p class="text-xs uppercase tracking-[0.2em] text-red-400">Fixed site</p>
+              <h3 class="text-xl font-bold text-[color:var(--white)]">Fixed Installations</h3>
               <p class="text-subtle leading-relaxed">Perimeter security, checkpoint overwatch, and FOB protection. Multi-camera coverage on a single Jetson. 24/7 operation with thermal/IR for night.</p>
               <ul class="space-y-2 text-sm text-subtle">
                 <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">&#x2713;</span> Multi-camera array management</li>
@@ -262,11 +309,12 @@
       </section>
 
       <!-- ============ CAPABILITIES ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
+      <section class="py-20">
         <div class="mx-auto max-w-7xl px-4 space-y-16">
           <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
             <span class="tag">Capabilities</span>
-            <h2 class="section-heading">What RAPTOR does</h2>
+            <h2 class="section-heading">One loop: detect, classify, act, retrain</h2>
+            <p class="text-subtle text-lg">Every stage feeds the next. What the operator corrects today is what the model knows tomorrow.</p>
           </div>
           <div class="rounded-xl overflow-hidden max-w-4xl mx-auto" data-animate>
             <img src="./assets/section-raptor-detection.webp" alt="AI detection and tracking with bounding boxes on thermal imagery" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
@@ -275,49 +323,49 @@
           <div class="grid gap-8 lg:grid-cols-2">
             <!-- Core Detection -->
             <div class="space-y-6" data-animate>
-              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3">Detection &amp; Tracking</h3>
+              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3"><span class="text-red-400">1 &middot;</span> Detection &amp; Tracking</h3>
               <ul class="space-y-3 text-subtle">
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">01</span> Real-time YOLOv8 inference with TensorRT acceleration</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">02</span> BoT-SORT multi-object tracking with persistent IDs (300-frame memory)</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">03</span> Dual-model detection: primary + COCO classes simultaneously</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">04</span> Auto-detect armed persons via weapon-person proximity</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">05</span> Adjustable confidence threshold (live slider)</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Real-time YOLOv8 inference with TensorRT acceleration</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> BoT-SORT multi-object tracking with persistent IDs (300-frame memory)</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Dual-model detection: primary + COCO classes simultaneously</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Auto-detect armed persons via weapon-person proximity</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Adjustable confidence threshold (live slider)</li>
               </ul>
             </div>
 
             <!-- Classification -->
             <div class="space-y-6" data-animate data-delay="100">
-              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3">Classification &amp; Labeling</h3>
+              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3"><span class="text-red-400">2 &middot;</span> Classification &amp; Labeling</h3>
               <ul class="space-y-3 text-subtle">
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">01</span> Tag detections: THREAT / FRIENDLY / NEUTRAL / UNKNOWN</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">02</span> Correct misclassifications in real-time from the UI</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">03</span> Labels persist across restarts</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">04</span> Identity reassignment when track IDs change</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">05</span> Audio alerts on new threat detection</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Tag detections: THREAT / FRIENDLY / NEUTRAL / UNKNOWN</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Correct misclassifications in real-time from the UI</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Labels persist across restarts</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Identity reassignment when track IDs change</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Audio alerts on new threat detection</li>
               </ul>
             </div>
 
             <!-- Targeting -->
             <div class="space-y-6" data-animate data-delay="200">
-              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3">Targeting &amp; Engagement</h3>
+              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3"><span class="text-red-400">3 &middot;</span> Targeting &amp; Engagement</h3>
               <ul class="space-y-3 text-subtle">
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">01</span> Crosshair overlay on designated targets</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">02</span> Multi-target priority queue with auto-designation</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">03</span> Autonomous target following (UGV steering)</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">04</span> E-STOP: spacebar or button, instant disengage</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">05</span> RC override always available&mdash;operator stays in control</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Crosshair overlay on designated targets</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Multi-target priority queue with auto-designation</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Autonomous target following (UGV steering)</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> E-STOP: spacebar or button, instant disengage</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> RC override always available&mdash;operator stays in control</li>
               </ul>
             </div>
 
             <!-- Training -->
             <div class="space-y-6" data-animate data-delay="300">
-              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3">Field Retraining</h3>
+              <h3 class="text-lg font-bold text-[color:var(--white)] border-b border-[color:var(--steel-700)] pb-3"><span class="text-red-400">4 &middot;</span> Field Retraining</h3>
               <ul class="space-y-3 text-subtle">
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">01</span> Auto-save labeled data on every correction</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">02</span> One-click retrain from the web UI</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">03</span> Custom class list grows as operators add corrections</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">04</span> Import external datasets (VisDrone, DOTA, xView)</li>
-                <li class="flex items-start gap-3"><span class="text-red-400 font-bold">05</span> Batch annotation review and quality control</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Auto-save labeled data on every correction</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> One-click retrain from the web UI</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Custom class list grows as operators add corrections</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Import external datasets (VisDrone, DOTA, xView)</li>
+                <li class="flex items-start gap-3"><span class="text-red-400">&#x2713;</span> Batch annotation review and quality control</li>
               </ul>
             </div>
           </div>
@@ -325,12 +373,12 @@
       </section>
 
       <!-- ============ TAK INTEGRATION ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 space-y-16">
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
           <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
-            <span class="tag">TAK Ecosystem</span>
-            <h2 class="section-heading">Detections on every screen, instantly</h2>
-            <p class="text-subtle text-lg">RAPTOR pushes Cursor on Target (CoT) events directly into the TAK ecosystem. Every threat appears on every operator's ATAK display in real time&mdash;no manual reporting, no radio calls, no delay.</p>
+            <span class="tag">TAK Ecosystem &middot; In active development</span>
+            <h2 class="section-heading">Detections on every screen</h2>
+            <p class="text-subtle text-lg">RAPTOR is being built to push Cursor on Target (CoT) events directly into the TAK ecosystem, so every threat appears on every operator's ATAK display in real time&mdash;no manual reporting, no radio calls, no delay.</p>
           </div>
           <div class="rounded-xl overflow-hidden max-w-4xl mx-auto" data-animate>
             <img src="./assets/section-raptor-tak.webp" alt="RAPTOR integration with ATAK tablets via mesh network" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
@@ -354,7 +402,7 @@
       </section>
 
       <!-- ============ COMPARISON ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
+      <section class="py-20">
         <div class="mx-auto max-w-7xl px-4 space-y-12">
           <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
             <span class="tag">Competitive Landscape</span>
@@ -415,8 +463,8 @@
       </section>
 
       <!-- ============ SPECS ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 space-y-12">
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-12">
           <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
             <span class="tag">Specifications</span>
             <h2 class="section-heading">Technical details</h2>
@@ -454,12 +502,13 @@
         </div>
       </section>
 
-      <!-- ============ ROADMAP ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
+      <!-- ============ STATUS / ROADMAP ============ -->
+      <section id="status" class="py-20">
         <div class="mx-auto max-w-7xl px-4 space-y-12">
           <div class="text-center max-w-2xl mx-auto space-y-4" data-animate>
             <span class="tag">Roadmap</span>
-            <h2 class="section-heading">What's coming</h2>
+            <h2 class="section-heading">Where RAPTOR is today</h2>
+            <p class="text-subtle text-lg">The capabilities above run in the current build. The items below do not&mdash;we would rather list them as roadmap than imply them as product. Status labels are exact.</p>
           </div>
 
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
@@ -523,7 +572,8 @@
       </section>
 
       <!-- ============ CTA ============ -->
-      <section class="py-20 border-t border-[color:var(--steel-700)]">
+      <div class="reg-rule"></div>
+      <section class="py-20">
         <div class="mx-auto max-w-3xl px-4 text-center space-y-8" data-animate>
           <h2 class="section-heading">Ready to deploy intelligent vision?</h2>
           <p class="text-subtle text-lg leading-relaxed">Whether you're integrating AI onto a UGV, adding autonomy to FPV platforms, or building a perimeter security system&mdash;RAPTOR gives you field-retrainable AI at a price point that makes sense.</p>
@@ -531,6 +581,7 @@
             <a href="contact.html" class="btn btn-primary text-sm">Request a Demo</a>
             <a href="mailto:contact@ceradonsystems.com" class="btn btn-secondary text-sm">contact@ceradonsystems.com</a>
           </div>
+          <p class="text-xs uppercase tracking-[0.2em] text-subtle">SDVOSB &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</p>
         </div>
       </section>
     </main>

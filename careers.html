@@ -68,55 +68,93 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content">
-      <section class="relative overflow-hidden">
-        <img src="./assets/hero-careers.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-12 pointer-events-none" aria-hidden="true" loading="eager" />
-        <div class="relative mx-auto max-w-7xl px-4 py-16 space-y-8">
-        <div class="space-y-4">
-          <span class="tag">Join Ceradon</span>
-          <h1 class="text-4xl font-bold text-[color:var(--white)]">Build the future of passive pose intelligence</h1>
-          <p class="text-lg text-subtle max-w-3xl">We are assembling a mission-driven team to finish the Vantage MVP: real-time through-wall skeletal pose detection using Wi-Fi CSI. If you thrive on hard problems, low-power compute, and security-first design, we should talk.</p>
+      <!-- HERO — image confined here so content below stays legible -->
+      <section class="relative overflow-hidden border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+        <img src="./assets/hero-careers.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none" aria-hidden="true" loading="eager" />
+        <div class="relative mx-auto max-w-7xl px-4 py-16 lg:py-20">
+          <div class="max-w-3xl space-y-6">
+            <span class="tag">Careers</span>
+            <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Hard problems, small team, real users.</h1>
+            <p class="text-lg text-subtle">We are assembling a mission-driven team to finish the Vantage MVP: real-time through-wall skeletal pose detection using Wi-Fi CSI. The work is low-power compute, security-first design, and shipping to people who depend on it. If that sounds like your kind of problem, we should talk.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#open-roles" class="btn btn-primary text-sm uppercase tracking-wide">See open roles</a>
+              <a href="mailto:careers@ceradonsystems.com?subject=Ceradon%20Careers" class="btn btn-secondary text-sm uppercase tracking-wide">Email your CV</a>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="card-glass p-8 space-y-6">
-          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Why Ceradon</h2>
-          <ul class="grid gap-4 md:grid-cols-2 text-sm text-subtle">
-            <li class="shadow-border rounded-xl p-4">Offline-first architecture, no cloud lock-in.</li>
-            <li class="shadow-border rounded-xl p-4">Direct operator feedback loops to guide pose overlays.</li>
-            <li class="shadow-border rounded-xl p-4">Small, senior team with autonomy and rapid iteration.</li>
-            <li class="shadow-border rounded-xl p-4">Equity participation, mission bonus, and flexible deployment schedules.</li>
+      <section class="relative">
+        <div class="relative mx-auto max-w-7xl px-4 py-16 space-y-14">
+
+        <!-- HOW WE WORK — conditions of the job, stated plainly -->
+        <div class="space-y-6">
+          <h2 class="section-heading text-3xl">How we work</h2>
+          <ul class="border-t border-[color:var(--steel-700)]">
+            <li class="grid gap-1 md:grid-cols-[14rem_1fr] md:gap-6 py-5 px-2 border-b border-[color:var(--steel-700)]">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">Architecture</span>
+              <span class="text-sm text-subtle">Offline-first, no cloud lock-in. Systems have to keep working when connectivity does not.</span>
+            </li>
+            <li class="grid gap-1 md:grid-cols-[14rem_1fr] md:gap-6 py-5 px-2 border-b border-[color:var(--steel-700)]">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">Feedback</span>
+              <span class="text-sm text-subtle">Direct operator feedback loops guide what gets built. The distance between you and the end user is one conversation.</span>
+            </li>
+            <li class="grid gap-1 md:grid-cols-[14rem_1fr] md:gap-6 py-5 px-2 border-b border-[color:var(--steel-700)]">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">Team</span>
+              <span class="text-sm text-subtle">Small and senior, with autonomy and rapid iteration. You own outcomes, not tickets.</span>
+            </li>
+            <li class="grid gap-1 md:grid-cols-[14rem_1fr] md:gap-6 py-5 px-2 border-b border-[color:var(--steel-700)]">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">Terms</span>
+              <span class="text-sm text-subtle">Equity participation, mission bonus, and flexible deployment schedules.</span>
+            </li>
           </ul>
         </div>
 
-        <div class="space-y-4">
-          <h2 class="section-heading text-3xl">Open Roles</h2>
+        <!-- OPEN ROLES -->
+        <div id="open-roles" class="space-y-6">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <h2 class="section-heading text-3xl">Open roles</h2>
+            <p class="text-sm text-subtle">Apply by email &mdash; a short note and something you have built beats a formal cover letter.</p>
+          </div>
           <div class="grid gap-6 md:grid-cols-2">
-            <article class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Contract ML / RF Scientist</h3>
+            <article class="card-glass p-8 flex flex-col gap-4">
+              <div class="space-y-2">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-subtle">Contract &middot; ML / RF</p>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Contract ML / RF Scientist</h3>
+              </div>
               <p class="text-sm text-subtle">Own the CSI-to-pose inference pipeline. Optimize denoising, skeletal estimation, and model compression for edge devices.</p>
-              <ul class="text-sm text-subtle space-y-2">
-                <li>&bull; Experience with Wi-Fi CSI datasets (Intel 5300, AX210, ESP32).</li>
-                <li>&bull; Familiar with WiPose, PassiveWiFiPose, or similar models.</li>
-                <li>&bull; Comfortable with PyTorch, quantization, and deployment on Pi/Jetson.</li>
+              <ul class="text-sm text-subtle space-y-2 border-t border-[color:var(--border)] pt-4">
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Experience with Wi-Fi CSI datasets (Intel 5300, AX210, ESP32).</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Familiar with WiPose, PassiveWiFiPose, or similar models.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Comfortable with PyTorch, quantization, and deployment on Pi/Jetson.</li>
               </ul>
+              <a href="mailto:careers@ceradonsystems.com?subject=Contract%20ML%20%2F%20RF%20Scientist" class="btn btn-secondary text-sm uppercase tracking-wide self-start mt-auto">Apply by email</a>
             </article>
-            <article class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Embedded Software Engineer</h3>
+            <article class="card-glass p-8 flex flex-col gap-4">
+              <div class="space-y-2">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-subtle">Engineering &middot; Embedded</p>
+                <h3 class="text-xl font-semibold text-[color:var(--white)]">Embedded Software Engineer</h3>
+              </div>
               <p class="text-sm text-subtle">Build CLI tooling, structured logging, and OTA packages that keep Vantage nodes resilient in the field.</p>
-              <ul class="text-sm text-subtle space-y-2">
-                <li>&bull; C/C++ and Python on Linux edge devices.</li>
-                <li>&bull; Networking, secure boot, and schema validation.</li>
-                <li>&bull; UI hooks for future pose visualization overlays.</li>
+              <ul class="text-sm text-subtle space-y-2 border-t border-[color:var(--border)] pt-4">
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> C/C++ and Python on Linux edge devices.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Networking, secure boot, and schema validation.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> UI hooks for future pose visualization overlays.</li>
               </ul>
+              <a href="mailto:careers@ceradonsystems.com?subject=Embedded%20Software%20Engineer" class="btn btn-secondary text-sm uppercase tracking-wide self-start mt-auto">Apply by email</a>
             </article>
           </div>
         </div>
 
-        <div class="card-glass p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <div>
+        <div class="reg-rule" aria-hidden="true"></div>
+
+        <!-- GENERAL INTEREST -->
+        <div class="card-glass p-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div class="space-y-1">
             <h2 class="text-2xl font-semibold text-[color:var(--white)]">No perfect fit yet?</h2>
             <p class="text-sm text-subtle">We recruit specialists who understand contested environments. Send us a signal and we&rsquo;ll open a secure thread.</p>
           </div>
-          <a href="mailto:careers@ceradonsystems.com?subject=Ceradon%20Careers" class="btn btn-primary text-sm uppercase tracking-wide">Email your CV</a>
+          <a href="mailto:careers@ceradonsystems.com?subject=Ceradon%20Careers" class="btn btn-primary text-sm uppercase tracking-wide shrink-0">Email your CV</a>
         </div>
       </div>
       </section>

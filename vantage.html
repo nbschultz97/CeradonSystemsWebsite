@@ -63,7 +63,7 @@
           "name": "Does it integrate with ATAK?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Vantage is designed for ATAK integration using Cursor-on-Target (CoT) messaging, allowing presence data to appear as real-time overlays on tactical maps in ATAK/WinTAK."
+            "text": "ATAK integration is on the development roadmap. Vantage is designed to deliver Cursor-on-Target (CoT) feeds, allowing presence data to appear as real-time overlays on tactical maps in ATAK/WinTAK."
           }
         },
         {
@@ -121,7 +121,7 @@
             <button class="navlink">Products</button>
             <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
               <div class="bg-[#0a0f1a] border border-[#1e293b] rounded-lg py-2 min-w-[220px] shadow-xl">
-                <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">VANTAGE</a>
+                <a href="vantage.html" class="block px-4 py-2 text-sm text-white hover:bg-[#1e293b]" aria-current="page">VANTAGE</a>
                 <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">RAPTOR</a>
                 <a href="architect.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">ARCHITECT</a>
                 <a href="lantern.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">LANTERN <span class="text-xs text-[color:var(--ceradon-blue)]">Video to floorplan</span></a>
@@ -141,124 +141,146 @@
     </header>
     <main id="main-content">
       <!-- HERO -->
-      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
-        <div class="absolute inset-0 pointer-events-none">
-          <img src="./assets/hero-vantage.webp" alt="Vantage passive through-wall detection system concept" class="absolute inset-0 w-full h-full object-cover opacity-15" aria-hidden="true" width="1920" height="1071" />
-          <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/50 via-[#04070d]/30 to-[#04070d]"></div>
+      <section class="relative overflow-hidden border-b border-[color:var(--steel-700)]">
+        <img src="./assets/hero-vantage.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none" aria-hidden="true" width="1920" height="1071" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/50 via-[#04070d]/30 to-[#04070d] pointer-events-none"></div>
+        <div class="relative mx-auto max-w-7xl px-4 py-24">
+          <p class="text-xs uppercase tracking-[0.3em] text-[color:var(--ceradon-blue)] mb-4">Vantage &middot; Passive RF Sensing</p>
+          <img src="./assets/vantage-logo.png" alt="Vantage" class="h-20 md:h-24 mb-6" loading="eager" />
+          <h1 class="text-4xl md:text-6xl font-bold text-[color:var(--white)] max-w-4xl leading-tight">See through the wall.<br />Emit nothing.</h1>
+          <p class="mt-6 max-w-2xl text-lg">Active through-wall radar announces itself &mdash; its pulses are exactly what electronic warfare receivers are built to find. Vantage never transmits. It reads the ambient WiFi already filling the structure and detects human presence and movement through the wall, in real time, on edge hardware.</p>
+          <p class="mt-4 max-w-2xl text-lg text-[color:var(--white)]">At <strong>$5,000&ndash;$10,000</strong> per unit, Vantage delivers covert through-wall awareness at a fraction of the cost of systems like <strong>Camero Xaver ($60K&ndash;$85K)</strong>.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="badge">Zero emissions</span>
+            <span class="badge">Undetectable</span>
+            <span class="badge">Unjammable</span>
+            <span class="badge">Edge compute &mdash; no cloud</span>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="contact.html" class="btn btn-primary">Request a demonstration</a>
+            <a href="#how" class="btn">How passive sensing works</a>
+            <a href="#pricing" class="btn">Compare cost</a>
+          </div>
         </div>
-        <div class="relative mx-auto max-w-7xl px-4 py-16">
-          <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:items-center">
-            <div class="space-y-6">
-              <img src="./assets/vantage-logo.png" alt="Vantage" class="h-24 md:h-32 mb-2" loading="eager" />
-              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">See through walls.<br/>Without anyone knowing you're there.</h1>
-              <p class="text-lg text-subtle"><strong class="text-[color:var(--white)]">Active radar broadcasts your position to the enemy.</strong> Vantage doesn't. Using passive WiFi sensing, Vantage detects human presence through walls without emitting a single signal. Zero emissions. Zero detection risk. Zero compromise.</p>
-              <p class="text-lg text-subtle">At <strong class="text-[color:var(--white)]">$5,000&ndash;$10,000</strong> per unit, Vantage delivers covert through-wall awareness at a fraction of the cost of systems like <strong class="text-[color:var(--white)]">Camero Xaver ($60K&ndash;$85K)</strong>, on rugged edge hardware your team already knows how to operate.</p>
-              <div class="flex flex-wrap gap-3">
-                <span class="badge">Zero Emissions</span>
-                <span class="badge">Undetectable</span>
-                <span class="badge">Unjammable</span>
-                <span class="badge">ATAK-Ready</span>
-                <span class="badge">Edge Compute</span>
-              </div>
-              <div class="flex flex-wrap gap-3">
-                <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
-                <a href="#pricing" class="btn btn-secondary text-sm uppercase tracking-wide">Compare Pricing</a>
-              </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="mx-auto max-w-7xl px-4 py-14" aria-label="Key figures">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6" data-animate-stagger>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">0</p>
+            <p class="stat-label">RF emissions &mdash; receive only, nothing to detect or jam</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">&lt; 25 W</p>
+            <p class="stat-label">Draw in continuous sensing on edge hardware</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">2.4 GHz</p>
+            <p class="stat-label">Default band, chosen for wall penetration</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">TRL 4</p>
+            <p class="stat-label">Lab-validated &mdash; field validation in progress</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTRAST -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <h2 class="section-heading text-3xl">The problem with active radar is that it is active</h2>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="card-glass p-7">
+              <p class="text-xs uppercase tracking-[0.2em] text-subtle">Active radar today</p>
+              <p class="mt-3">Xaver- and Lumineye-class systems transmit RF pulses to see through the wall. In a contested EW environment that emission is a beacon: using the sensor can reveal the team that carries it. The hardware runs from roughly $5,000 handhelds to $85,000 systems.</p>
             </div>
-            <div class="card-glass p-8 space-y-5">
-              <h2 class="text-xl font-semibold text-[color:var(--white)]">Built for the mission</h2>
-              <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Completely passive:</strong> listens only, never transmits</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Real-time detection:</strong> presence and movement through walls</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">AI-powered classification:</strong> advanced ML separates signal from noise</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Runs on edge hardware:</strong> no cloud, no external dependencies</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Structured output:</strong> JSON feeds ready for ATAK and C2 integration</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Veteran-built:</strong> designed by defense professionals with SOF experience</li>
-              </ul>
-              <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide w-full text-center">Request a Demo</a>
+            <div class="card-glass p-7">
+              <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--ceradon-blue)]">With Vantage</p>
+              <p class="mt-3">Vantage transmits nothing. It listens to WiFi signals that already fill the environment, so its RF signature matches the local noise floor. There is no emission to detect and nothing to jam &mdash; and a unit costs $5,000&ndash;$10,000.</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- HOW IT WORKS -->
+      <section id="how" class="mx-auto max-w-7xl px-4 py-16">
+        <h2 class="section-heading text-3xl">The building is already illuminated. Vantage just listens.</h2>
+        <p class="mt-4 max-w-3xl">WiFi access points flood most structures with RF around the clock. Vantage turns that ambient field into a sensor without adding a single transmission of its own.</p>
+        <img src="./assets/section-vantage-preview.webp" alt="Vantage passive through-wall sensing system preview" class="mt-8 w-full rounded-lg border border-[color:var(--steel-700)]" loading="lazy" />
+        <div class="mt-10 grid md:grid-cols-3 gap-6" data-animate-stagger>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Illuminate</h3>
+            <p class="mt-2 text-sm">Existing WiFi signals pass through walls and reflect off everything inside the structure &mdash; including human bodies. The illumination is already there; nobody had to place it.</p>
+          </div>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Listen</h3>
+            <p class="mt-2 text-sm">Vantage captures the Channel State Information of those signals. When someone moves, breathes, or changes position, the channel changes measurably. Vantage receives only &mdash; it never transmits.</p>
+          </div>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Classify</h3>
+            <p class="mt-2 text-sm">An on-device ML pipeline separates human presence and movement from environmental noise and emits structured JSON for downstream systems. No cloud, fully air-gappable.</p>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-subtle max-w-3xl">In environments without WiFi infrastructure, a covert transmitter node can be deployed to create the sensing environment.</p>
+      </section>
+
       <!-- USE CASES -->
-      <section class="mx-auto max-w-7xl px-4 py-20 space-y-16">
-        <div class="space-y-6" data-animate>
-          <h2 class="section-heading text-3xl">Mission Applications</h2>
-          <p class="text-subtle max-w-3xl">Vantage gives your team covert situational awareness in scenarios where active radar would compromise the operation.</p>
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Tactical Breach</h3>
-              <p class="text-sm text-subtle">Know who's inside before the door opens. Passive detection means the target never knows they're being observed.</p>
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <h2 class="section-heading text-3xl">Mission applications</h2>
+          <p class="mt-4 max-w-3xl">Covert situational awareness for the scenarios where an active emission would compromise the operation.</p>
+          <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="card-glass p-7">
+              <h3 class="text-[color:var(--white)] font-semibold">Tactical breach</h3>
+              <p class="mt-2 text-sm">Know who is inside before the door opens. Passive detection means the target never knows they are being observed.</p>
             </div>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Perimeter Security</h3>
-              <p class="text-sm text-subtle">Persistent, covert monitoring of structures and compounds without exposing sensor positions.</p>
+            <div class="card-glass p-7">
+              <h3 class="text-[color:var(--white)] font-semibold">Perimeter security</h3>
+              <p class="mt-2 text-sm">Persistent, covert monitoring of structures and compounds without exposing sensor positions.</p>
             </div>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Hostage Rescue</h3>
-              <p class="text-sm text-subtle">Locate and track occupants through walls in real time, without tipping off hostage takers.</p>
+            <div class="card-glass p-7">
+              <h3 class="text-[color:var(--white)] font-semibold">Hostage rescue</h3>
+              <p class="mt-2 text-sm">Locate and track occupants through walls in real time, without tipping off hostage takers.</p>
             </div>
-            <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Force Protection</h3>
-              <p class="text-sm text-subtle">Early warning of human activity near forward operating bases, checkpoints, and sensitive facilities.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- CAPABILITIES -->
-        <div class="space-y-6" data-animate>
-          <h2 class="section-heading text-3xl">Capabilities</h2>
-          <p class="text-subtle max-w-3xl">What Vantage delivers today and where we're headed next.</p>
-          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
-            <div class="card-glass p-7 space-y-3">
-              <div class="flex items-center gap-2">
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Presence Detection</h3>
-                <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
-              </div>
-              <p class="text-sm text-subtle">Real-time human presence detection through standard building materials. Works through drywall, wood, concrete block, and brick at room-scale distances.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="flex items-center gap-2">
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Movement Classification</h3>
-                <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
-              </div>
-              <p class="text-sm text-subtle">AI-powered classification distinguishes movement patterns from environmental noise. Structured output for downstream integration.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="flex items-center gap-2">
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Edge Processing</h3>
-                <span class="inline-flex items-center rounded-full bg-green-500/10 border border-green-500/30 px-2 py-0.5 text-[10px] font-medium text-green-400 uppercase tracking-wider">Live</span>
-              </div>
-              <p class="text-sm text-subtle">All processing runs locally on compact edge hardware. No cloud dependency, no data exfiltration risk, fully air-gappable.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="flex items-center gap-2">
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Pose Classification</h3>
-                <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
-              </div>
-              <p class="text-sm text-subtle">Standing, crouched, and prone classification to help operators assess threat posture before entry.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="flex items-center gap-2">
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">Zone Localization</h3>
-                <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
-              </div>
-              <p class="text-sm text-subtle">Multi-node sensor mesh to locate subjects within sectors of a room. Spatial resolution for tactical planning.</p>
-            </div>
-            <div class="card-glass p-7 space-y-3">
-              <div class="flex items-center gap-2">
-                <h3 class="text-xl font-semibold text-[color:var(--white)]">ATAK Integration</h3>
-                <span class="inline-flex items-center rounded-full bg-yellow-500/10 border border-yellow-500/30 px-2 py-0.5 text-[10px] font-medium text-yellow-400 uppercase tracking-wider">Roadmap</span>
-              </div>
-              <p class="text-sm text-subtle">Cursor-on-Target (CoT) feeds for real-time presence overlays on ATAK/WinTAK tactical maps.</p>
+            <div class="card-glass p-7">
+              <h3 class="text-[color:var(--white)] font-semibold">Force protection</h3>
+              <p class="mt-2 text-sm">Early warning of human activity near forward operating bases, checkpoints, and sensitive facilities.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- PRICING COMPARISON -->
-        <div class="space-y-6" id="pricing">
-          <h2 class="section-heading text-3xl">Cost Comparison: Through-Wall Detection Systems</h2>
+      <!-- STATUS -->
+      <section class="mx-auto max-w-7xl px-4 py-16">
+        <h2 class="section-heading text-3xl">Where Vantage is today</h2>
+        <p class="mt-4 max-w-3xl">Vantage is at TRL 4: the technology is validated in the laboratory, and field validation is in progress. We would rather state its limits than have an operator discover them.</p>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Working now</h3>
+            <ul class="mt-3 space-y-2 text-sm list-disc list-inside">
+              <li>Presence detection through drywall, wood, concrete block, and brick at room-scale distances (3&ndash;8 m)</li>
+              <li>Movement classification that separates human activity from environmental noise</li>
+              <li>Full pipeline on compact edge hardware &mdash; under 25 W, no cloud, air-gappable</li>
+              <li>Structured JSON output for downstream integration</li>
+            </ul>
+          </div>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Not yet</h3>
+            <ul class="mt-3 space-y-2 text-sm list-disc list-inside">
+              <li>Pose classification (standing, crouched, prone) is on the roadmap</li>
+              <li>Zone localization from a multi-node mesh is on the roadmap</li>
+              <li>ATAK Cursor-on-Target feeds are on the roadmap</li>
+              <li>Performance degrades through metal-lined walls, wire mesh, and heavily reinforced concrete</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING COMPARISON -->
+      <section id="pricing" class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <h2 class="section-heading text-3xl">Cost comparison: through-wall detection systems</h2>
           <p class="text-subtle max-w-3xl">Active radar through-wall systems are expensive and emit detectable RF energy. Vantage takes a fundamentally different approach.</p>
           <div class="overflow-x-auto">
             <table class="table-dark text-sm">
@@ -301,29 +323,31 @@
             <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">Looking for a Lumineye alternative?</strong> If you're evaluating through-wall detection options, Vantage offers a fundamentally different approach: passive sensing with zero emissions at comparable or lower cost, with the added benefit of being completely covert.</p>
           </div>
         </div>
+      </section>
 
-        <!-- FORM FACTORS -->
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Form Factors</h2>
-          <div class="grid gap-6 lg:grid-cols-3">
-            <div class="card-glass p-7 space-y-4">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Tripod Node</h3>
-              <p class="text-sm text-subtle">Deployable mast with directional antennas for site security and long-duration coverage.</p>
-            </div>
-            <div class="card-glass p-7 space-y-4">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Handheld Kit</h3>
-              <p class="text-sm text-subtle">Portable controller with quick-look presence alerts for breach teams.</p>
-            </div>
-            <div class="card-glass p-7 space-y-4">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Remote Payload</h3>
-              <p class="text-sm text-subtle">Modular payload integrates with tactical robots and drones for covert overwatch.</p>
-            </div>
+      <!-- FORM FACTORS -->
+      <section class="mx-auto max-w-7xl px-4 py-16">
+        <h2 class="section-heading text-3xl">Form factors</h2>
+        <div class="mt-8 grid gap-6 lg:grid-cols-3" data-animate-stagger>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Tripod node</h3>
+            <p class="mt-2 text-sm">Deployable mast with directional antennas for site security and long-duration coverage.</p>
+          </div>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Handheld kit</h3>
+            <p class="mt-2 text-sm">Portable controller with quick-look presence alerts for breach teams.</p>
+          </div>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Remote payload</h3>
+            <p class="mt-2 text-sm">Modular payload integrates with tactical robots and drones for covert overwatch.</p>
           </div>
         </div>
+      </section>
 
-        <!-- TECHNICAL SPECS -->
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Technical Specifications</h2>
+      <!-- TECHNICAL SPECS -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <h2 class="section-heading text-3xl">Technical specifications</h2>
           <div class="overflow-x-auto">
             <table class="table-dark text-sm">
               <thead>
@@ -361,28 +385,36 @@
             </table>
           </div>
         </div>
+      </section>
 
-        <!-- CREDIBILITY -->
-        <div class="space-y-6">
-          <div class="grid gap-6 md:grid-cols-3">
-            <div class="card-glass p-7 space-y-3 text-center">
-              <p class="text-2xl font-bold text-[color:var(--white)]">SDVOSB</p>
-              <p class="text-sm text-subtle">Service-Disabled Veteran-Owned Small Business</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 text-center">
-              <p class="text-2xl font-bold text-[color:var(--white)]">SOF Experience</p>
-              <p class="text-sm text-subtle">Developed by defense professionals who've operated in the environments this technology serves</p>
-            </div>
-            <div class="card-glass p-7 space-y-3 text-center">
-              <p class="text-2xl font-bold text-[color:var(--white)]">Patent Pending</p>
-              <p class="text-sm text-subtle">Novel approach to passive through-wall sensing protected by pending intellectual property</p>
-            </div>
-          </div>
+      <!-- SENSOR COMPARISON -->
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+        <h2 class="section-heading text-3xl">Sensor comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="table-dark text-sm">
+            <thead>
+              <tr>
+                <th scope="col">Attribute</th>
+                <th scope="col">Cameras</th>
+                <th scope="col">Radar</th>
+                <th scope="col">Vantage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Line of Sight</th><td>Requires clear LoS.</td><td>Limited through-wall performance.</td><td>Sees through walls using ambient Wi-Fi.</td></tr>
+              <tr><th scope="row">Emissions</th><td>Visible-light signature.</td><td>Active RF emissions.</td><td>Zero-emission passive capture.</td></tr>
+              <tr><th scope="row">Detectability</th><td>Easily spotted or blinded.</td><td>Detectable with RF sweeps.</td><td>Covert; matches local Wi-Fi noise floor.</td></tr>
+              <tr><th scope="row">SWaP-C</th><td>Varies; often high power draw.</td><td>Bulky arrays and high power use.</td><td>Runs on Pi/Jetson-class compute under 25 W.</td></tr>
+              <tr><th scope="row">Cost</th><td>High for rugged PTZ systems.</td><td>High procurement and sustainment.</td><td>COTS radios with software-defined capability.</td></tr>
+            </tbody>
+          </table>
         </div>
+      </section>
 
-        <!-- FAQ -->
-        <div class="space-y-6" id="faq">
-          <h2 class="section-heading text-3xl">Frequently Asked Questions</h2>
+      <!-- FAQ -->
+      <section id="faq" class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <h2 class="section-heading text-3xl">Frequently asked questions</h2>
           <div class="space-y-4 max-w-3xl" data-animate-stagger>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
@@ -422,41 +454,37 @@
               <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed">Vantage works best with ambient WiFi signals from existing access points, which are present in most urban and suburban environments. In areas without WiFi infrastructure, a covert transmitter node can be deployed to create the sensing environment.</p></div></details>
           </div>
         </div>
+      </section>
 
-        <!-- SENSOR COMPARISON -->
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Sensor Comparison</h2>
-          <div class="overflow-x-auto">
-            <table class="table-dark text-sm">
-              <thead>
-                <tr>
-                  <th scope="col">Attribute</th>
-                  <th scope="col">Cameras</th>
-                  <th scope="col">Radar</th>
-                  <th scope="col">Vantage</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr><th scope="row">Line of Sight</th><td>Requires clear LoS.</td><td>Limited through-wall performance.</td><td>Sees through walls using ambient Wi-Fi.</td></tr>
-                <tr><th scope="row">Emissions</th><td>Visible-light signature.</td><td>Active RF emissions.</td><td>Zero-emission passive capture.</td></tr>
-                <tr><th scope="row">Detectability</th><td>Easily spotted or blinded.</td><td>Detectable with RF sweeps.</td><td>Covert; matches local Wi-Fi noise floor.</td></tr>
-                <tr><th scope="row">SWaP-C</th><td>Varies; often high power draw.</td><td>Bulky arrays and high power use.</td><td>Runs on Pi/Jetson-class compute under 25 W.</td></tr>
-                <tr><th scope="row">Cost</th><td>High for rugged PTZ systems.</td><td>High procurement and sustainment.</td><td>COTS radios with software-defined capability.</td></tr>
-              </tbody>
-            </table>
+      <!-- CREDIBILITY -->
+      <section class="mx-auto max-w-7xl px-4 py-16">
+        <div class="grid gap-6 md:grid-cols-3" data-animate-stagger>
+          <div class="card-glass p-7 space-y-3 text-center">
+            <p class="text-2xl font-bold text-[color:var(--white)]">SDVOSB</p>
+            <p class="text-sm text-subtle">Service-Disabled Veteran-Owned Small Business</p>
+          </div>
+          <div class="card-glass p-7 space-y-3 text-center">
+            <p class="text-2xl font-bold text-[color:var(--white)]">SOF Experience</p>
+            <p class="text-sm text-subtle">Developed by defense professionals who've operated in the environments this technology serves</p>
+          </div>
+          <div class="card-glass p-7 space-y-3 text-center">
+            <p class="text-2xl font-bold text-[color:var(--white)]">Patent Pending</p>
+            <p class="text-sm text-subtle">Novel approach to passive through-wall sensing protected by pending intellectual property</p>
           </div>
         </div>
+      </section>
 
-        <!-- CTA -->
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between card-glass p-6">
-          <div>
-            <h3 class="text-2xl font-semibold text-[color:var(--white)]">Ready to see through walls, without being seen?</h3>
-            <p class="text-sm text-subtle">Schedule a controlled demonstration or request our capability briefing packet.</p>
+      <!-- CTA -->
+      <div class="reg-rule"></div>
+      <section>
+        <div class="mx-auto max-w-7xl px-4 py-20 text-center">
+          <h2 class="section-heading text-4xl">Ready to see through walls, without being seen?</h2>
+          <p class="mt-4 max-w-2xl mx-auto">Schedule a controlled demonstration or request the capability briefing packet. Bring a wall; we will show you what is behind it.</p>
+          <div class="mt-8 flex flex-wrap gap-3 justify-center">
+            <a href="contact.html" class="btn btn-primary">Request a demonstration</a>
+            <a href="technology.html" class="btn">Learn the technology</a>
           </div>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Request a Demo</a>
-            <a href="technology.html" class="btn btn-secondary text-sm uppercase tracking-wide">Learn the Technology</a>
-          </div>
+          <p class="mt-6 text-xs uppercase tracking-[0.2em] text-subtle">SDVOSB &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</p>
         </div>
       </section>
     </main>

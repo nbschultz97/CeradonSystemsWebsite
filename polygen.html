@@ -60,7 +60,6 @@
             <img class="logo-glow" src="./assets/Emblem.webp" alt="Ceradon Systems" width="558" height="558" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
-            
             <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
@@ -74,7 +73,7 @@
                 <a href="architect.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">ARCHITECT</a>
                 <a href="lantern.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">LANTERN <span class="text-xs text-[color:var(--ceradon-blue)]">Video to floorplan</span></a>
                 <a href="kestrel.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">KESTREL <span class="text-xs text-[color:var(--ceradon-blue)]">Trainer</span></a>
-                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">POLYGEN</a>
+                <a href="polygen.html" class="block px-4 py-2 text-sm text-white hover:bg-[#1e293b]" aria-current="page">POLYGEN</a>
               </div>
             </div>
           </div>
@@ -88,6 +87,7 @@
       </div>
     </header>
     <main id="main-content">
+      <!-- HERO -->
       <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
         <div class="absolute inset-0 pointer-events-none">
           <svg class="absolute -bottom-20 -left-28 hidden lg:block h-[26rem] w-[26rem] opacity-40" viewBox="0 0 480 480" aria-hidden="true" focusable="false">
@@ -107,60 +107,85 @@
         <div class="relative mx-auto max-w-7xl px-4 py-16">
           <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:items-center">
             <div class="space-y-6">
-              <img src="./assets/polygen-logo.png" alt="POLYGEN" class="h-24 md:h-32 mb-2" loading="eager" />
-              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Text-to-3D. Describe it, print it.</h1>
-              <p class="text-lg text-subtle">POLYGEN transforms natural language descriptions into printable OpenSCAD code using a multi-agent AI pipeline. Powered by Google Gemini for planning and Anthropic Claude for code generation, with browser-based WASM validation.</p>
+              <p class="text-xs uppercase tracking-[0.3em] text-[color:var(--ceradon-blue)]">Polygen &middot; Text to 3D</p>
+              <img src="./assets/polygen-logo.png" alt="POLYGEN" class="h-20 md:h-28 mb-2" loading="eager" />
+              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Describe the part.<br />Print the part.</h1>
+              <p class="text-lg text-subtle">POLYGEN turns a plain-English description into parametric OpenSCAD code &mdash; planned by Google Gemini, written by Anthropic Claude, and compiled right in your browser. If the code doesn't build, the loop fixes it and tries again.</p>
               <div class="flex flex-wrap gap-3">
                 <span class="badge">Multi-agent pipeline</span>
                 <span class="badge">OpenSCAD output</span>
-                <span class="badge">Browser validation</span>
+                <span class="badge">Validates in your browser</span>
+                <span class="badge">Free to try</span>
+              </div>
+              <div class="flex flex-wrap gap-3">
+                <a href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-sm uppercase tracking-wide">Launch POLYGEN</a>
+                <a href="#pipeline" class="btn text-sm uppercase tracking-wide">See the pipeline</a>
               </div>
             </div>
-            <div class="card-glass p-6 space-y-4">
-              <img src="./assets/polygen-hero.webp" alt="AI-generated 3D model visualization" class="w-full rounded-lg image-surface" loading="lazy" width="1024" height="361" />
-              <p class="text-subtle">Describe what you want to create in plain English. POLYGEN handles the geometry, code, and validation.</p>
-              <a href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-sm uppercase tracking-wide">Launch POLYGEN</a>
+            <div class="card-glass p-6 font-mono text-sm" aria-label="Example POLYGEN generation">
+              <p class="text-xs uppercase tracking-[0.2em] text-subtle">polygen &middot; generation</p>
+              <p class="mt-4 text-[color:var(--white)]"><span class="text-[color:var(--ceradon-blue)]">&gt;</span> a hook that clips over a 19 mm shelf edge</p>
+              <p class="mt-3 text-xs text-subtle">planner &rarr; geometry tree &middot; coder &rarr; openscad &middot; validator &rarr; wasm</p>
+              <pre class="mt-3 overflow-x-auto text-xs leading-relaxed text-subtle rounded-lg border border-[color:var(--steel-700)] bg-[color:var(--ink)] p-4"><code>module shelf_hook() {
+  difference() {
+    cube([24, 34, 8]);
+    translate([2.5, 8, -0.01])
+      cube([19, 34, 8.02]);
+  }
+}
+shelf_hook();</code></pre>
+              <p class="mt-3 text-xs text-green-400">&#10003; compiled &middot; manifold &middot; STL ready</p>
+              <p class="mt-4 text-sm text-subtle font-sans">No CAD experience required. Describe it, preview it in 3D, download the STL.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="mx-auto max-w-7xl px-4 py-16 space-y-12">
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Core Features</h2>
-          <p class="text-subtle max-w-3xl">From natural language to printable models, POLYGEN handles the entire pipeline with AI-powered planning, code generation, and validation.</p>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Natural Language Input</h3>
-              <p class="text-sm text-subtle">Describe what you want to create in plain English. No CAD experience required.</p>
+      <!-- STATS -->
+      <section class="mx-auto max-w-7xl px-4 py-14" aria-label="Key figures">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6" data-animate-stagger>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">$0</p>
+            <p class="stat-label">To start &mdash; five generations a month, free</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">3</p>
+            <p class="stat-label">Validation attempts per model, with escalating guidance</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">9</p>
+            <p class="stat-label">Quick-start templates for common objects</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">12</p>
+            <p class="stat-label">Documented OpenSCAD pitfalls the coder avoids</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTRAST -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <h2 class="section-heading text-3xl">The part is simple. CAD is not.</h2>
+          <div class="mt-8 grid md:grid-cols-2 gap-6">
+            <div class="card-glass p-7">
+              <p class="text-xs uppercase tracking-[0.2em] text-subtle">Today</p>
+              <p class="mt-3">A one-off bracket means hours in a CAD package you open twice a year: sketches, constraints, extrudes, export settings. The bottleneck was never the printer &mdash; it is the software in front of it.</p>
             </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Image-to-3D</h3>
-              <p class="text-sm text-subtle">Upload a photo and recreate it as a printable parametric model.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">OpenSCAD Output</h3>
-              <p class="text-sm text-subtle">Generates clean, parametric OpenSCAD code ready for 3D printing.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">In-App 3D Preview</h3>
-              <p class="text-sm text-subtle">View your model in the browser with Three.js before downloading.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">STL Export</h3>
-              <p class="text-sm text-subtle">Download STL files directly from the preview for immediate printing.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Design Templates</h3>
-              <p class="text-sm text-subtle">9 quick-start templates for common objects to accelerate your workflow.</p>
+            <div class="card-glass p-7">
+              <p class="text-xs uppercase tracking-[0.2em] text-[color:var(--ceradon-blue)]">With POLYGEN</p>
+              <p class="mt-3">Type what you want. POLYGEN plans the geometry, writes clean parametric OpenSCAD, verifies that it compiles and is manifold, and hands you the STL. Because the output is code, every dimension stays editable.</p>
             </div>
           </div>
         </div>
+      </section>
 
+      <!-- PIPELINE -->
+      <section id="pipeline" class="mx-auto max-w-7xl px-4 py-16">
         <div class="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div class="space-y-6">
-            <h2 class="section-heading text-3xl">Multi-Agent Pipeline</h2>
-            <p class="text-subtle">POLYGEN uses a sophisticated multi-agent architecture where specialized AI models handle different stages of the generation process.</p>
+            <h2 class="section-heading text-3xl">Multi-agent pipeline</h2>
+            <p class="text-subtle">POLYGEN uses a multi-agent architecture where specialized AI models handle different stages of the generation process.</p>
             <ul class="space-y-3 text-sm text-subtle">
               <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Planner Agent (Gemini)</strong> generates a Geometric Structure Tree (GST) from your description.</li>
               <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Coder Agent (Claude)</strong> converts the GST into pure OpenSCAD code.</li>
@@ -169,11 +194,11 @@
             </ul>
           </div>
           <div class="card-glass p-6 space-y-4">
-            <h3 class="text-lg font-semibold text-[color:var(--white)]">Pipeline Flow</h3>
+            <h3 class="text-lg font-semibold text-[color:var(--white)]">Pipeline flow</h3>
             <div class="space-y-3 text-sm">
               <div class="flex items-center gap-3">
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--ceradon-blue)] flex items-center justify-center text-white font-semibold">1</span>
-                <span class="text-subtle">User Prompt</span>
+                <span class="text-subtle">User prompt</span>
               </div>
               <div class="flex items-center gap-3">
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--steel-700)] flex items-center justify-center text-white font-semibold">2</span>
@@ -185,46 +210,87 @@
               </div>
               <div class="flex items-center gap-3">
                 <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--steel-700)] flex items-center justify-center text-white font-semibold">4</span>
-                <span class="text-subtle">Validator (WASM) &rarr; 3D Model</span>
+                <span class="text-subtle">Validator (WASM) &rarr; 3D model</span>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Reliable Code Generation</h2>
+      <!-- RELIABILITY -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <h2 class="section-heading text-3xl">Reliable code generation</h2>
           <p class="text-subtle max-w-3xl">Built-in validation and error handling ensure your models are printable and geometrically sound.</p>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Closed-Loop Validation</h3>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Closed-loop validation</h3>
               <p class="text-sm text-subtle">3-attempt retry system with escalating guidance ensures successful generation.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Error Categorization</h3>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Error categorization</h3>
               <p class="text-sm text-subtle">Parses errors into 7 categories with suggested fixes for quick resolution.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Pitfall Database</h3>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Pitfall database</h3>
               <p class="text-sm text-subtle">12 common OpenSCAD mistakes documented with bad/good examples.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Auto-Preprocessing</h3>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Auto-preprocessing</h3>
               <p class="text-sm text-subtle">Automatically injects epsilon and $fn parameters if missing.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Manifold Checking</h3>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Manifold checking</h3>
               <p class="text-sm text-subtle">Detects open edges and non-manifold geometry before export.</p>
             </div>
             <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Teaching Mode</h3>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Teaching mode</h3>
               <p class="text-sm text-subtle">Educational comments explain OpenSCAD concepts in generated code.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Pricing Plans</h2>
-          <div class="grid gap-6 md:grid-cols-3">
+      <!-- FEATURES -->
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-8">
+        <h2 class="section-heading text-3xl">Everything between the prompt and the printer</h2>
+        <figure class="rounded-xl overflow-hidden max-w-4xl" data-animate>
+          <img src="./assets/polygen-hero.webp" alt="AI-generated 3D model visualization in the POLYGEN interface" class="w-full rounded-lg image-surface" loading="lazy" width="1024" height="361" />
+          <figcaption class="mt-3 text-sm text-subtle">Preview every model in the browser with Three.js before you download it.</figcaption>
+        </figure>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Natural language input</h3>
+            <p class="text-sm text-subtle">Describe what you want to create in plain English. No CAD experience required.</p>
+          </div>
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Image-to-3D</h3>
+            <p class="text-sm text-subtle">Upload a photo and recreate it as a printable parametric model.</p>
+          </div>
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">OpenSCAD output</h3>
+            <p class="text-sm text-subtle">Generates clean, parametric OpenSCAD code ready for 3D printing.</p>
+          </div>
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">In-app 3D preview</h3>
+            <p class="text-sm text-subtle">View your model in the browser with Three.js before downloading.</p>
+          </div>
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">STL export</h3>
+            <p class="text-sm text-subtle">Download STL files directly from the preview for immediate printing.</p>
+          </div>
+          <div class="card-glass p-6 space-y-3">
+            <h3 class="text-xl font-semibold text-[color:var(--white)]">Design templates</h3>
+            <p class="text-sm text-subtle">9 quick-start templates for common objects to accelerate your workflow.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <h2 class="section-heading text-3xl">Pricing</h2>
+          <div class="grid gap-6 md:grid-cols-3" data-animate-stagger>
             <div class="card-glass p-6 space-y-4">
               <div class="space-y-2">
                 <h3 class="text-xl font-semibold text-[color:var(--white)]">Free</h3>
@@ -269,9 +335,35 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Tech Stack</h2>
+      <!-- HONEST SCOPE -->
+      <section class="mx-auto max-w-7xl px-4 py-16">
+        <h2 class="section-heading text-3xl">What POLYGEN is &mdash; and is not</h2>
+        <div class="mt-8 grid md:grid-cols-2 gap-6">
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Built for functional parts</h3>
+            <ul class="mt-3 space-y-2 text-sm list-disc list-inside">
+              <li>Parametric geometry through OpenSCAD &mdash; brackets, mounts, hooks, enclosures, fixtures</li>
+              <li>Every model is editable code, not a frozen mesh: change one number, regenerate the part</li>
+              <li>Validation runs entirely in your browser via WASM &mdash; no server round-trip</li>
+            </ul>
+          </div>
+          <div class="card-glass p-7">
+            <h3 class="text-[color:var(--white)] font-semibold">Know before you subscribe</h3>
+            <ul class="mt-3 space-y-2 text-sm list-disc list-inside">
+              <li>Generation can fail &mdash; the validator catches it and the loop retries up to three times with escalating guidance</li>
+              <li>OpenSCAD's primitive-based geometry favors functional shapes over organic sculpts</li>
+              <li>The free tier is 5 generations a month &mdash; enough to judge the output on your own parts before paying</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
+          <h2 class="section-heading text-3xl">Tech stack</h2>
           <div class="overflow-x-auto">
             <table class="table-dark text-sm">
               <thead>
@@ -309,15 +401,15 @@
             </table>
           </div>
         </div>
+      </section>
 
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between card-glass p-6">
-          <div>
-            <h3 class="text-2xl font-semibold text-[color:var(--white)]">Ready to turn ideas into printable models?</h3>
-            <p class="text-sm text-subtle">Start generating 3D models from text descriptions today.</p>
-          </div>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary text-sm uppercase tracking-wide">Launch POLYGEN</a>
-          </div>
+      <!-- CTA -->
+      <div class="reg-rule"></div>
+      <section>
+        <div class="mx-auto max-w-7xl px-4 py-20 text-center">
+          <h2 class="section-heading text-4xl">Your printer is waiting on a sentence.</h2>
+          <p class="mt-4 max-w-2xl mx-auto">Start free with five generations a month. Describe a part, watch it compile, and print it.</p>
+          <a href="https://polygen.ceradonsystems.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-8 inline-flex text-sm uppercase tracking-wide">Launch POLYGEN</a>
         </div>
       </section>
     </main>
@@ -342,7 +434,6 @@
         </div>
         <div class="footer-links" data-footer-links></div>
         <div class="space-y-2 text-xs text-subtle">
-          <p>ARCHITECT is maintained as an open-source project by Ceradon Systems.</p>
           <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
           <p>Socio-economic status: SDVOSB &middot; VOSB.</p>
           <p>NAICS: 541715, 541330 &middot; PSC: K058, AJ11.</p>

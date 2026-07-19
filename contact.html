@@ -70,23 +70,38 @@
     <main id="main-content">
       <section class="relative overflow-hidden">
         <img src="./assets/bg-contact.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none" aria-hidden="true" loading="eager" />
-        <div class="relative mx-auto max-w-7xl px-4 py-16 space-y-10">
-        <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div class="card-glass p-8 space-y-6">
-            <div class="flex items-center gap-4">
-              <img src="./assets/Emblem.webp" alt="Ceradon Systems" class="h-16 w-16 image-surface" loading="lazy" width="558" height="558" />
-              <div>
-                <h1 class="text-3xl font-bold text-[color:var(--white)]">Contact Ceradon Systems</h1>
-                <p class="text-sm text-subtle">Offline-first RF sensing and planning support.</p>
-              </div>
-            </div>
-            <p class="text-subtle">Send us your collaboration requests, demo questions, or open-source contribution ideas. We operate on offline-friendly channels.</p>
-            <div class="space-y-2 text-sm text-subtle">
-              <p><strong class="text-[color:var(--white)]">Email:</strong> <a href="mailto:contact@ceradonsystems.com" class="text-[color:var(--ceradon-blue)]">contact@ceradonsystems.com</a></p>
-              <p><strong class="text-[color:var(--white)]">Signal:</strong> Available on request.</p>
+        <div class="relative mx-auto max-w-7xl px-4 py-16 space-y-12">
+
+        <!-- HERO — one clear action -->
+        <div class="max-w-3xl space-y-6">
+          <span class="tag">Contact</span>
+          <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Reach the team directly.</h1>
+          <p class="text-lg text-subtle">One inbox, no routing trees. Send collaboration requests, demo questions, procurement inquiries, or open-source contribution ideas. Replies come by email; Signal is available on request for sensitive coordination.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="mailto:contact@ceradonsystems.com" class="btn btn-primary text-sm uppercase tracking-wide">Email contact@ceradonsystems.com</a>
+            <a href="#contact-form" class="btn btn-secondary text-sm uppercase tracking-wide">Use the form</a>
+          </div>
+        </div>
+
+        <div class="reg-rule" aria-hidden="true"></div>
+
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div class="space-y-6">
+            <h2 class="section-heading text-2xl">What to include</h2>
+            <p class="text-sm text-subtle">A few lines are enough. The more of the following you can share, the faster the first reply is useful:</p>
+            <ul class="space-y-3 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> The mission or capability need you are working against.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Your timeline and any decision dates.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Platforms, environments, or quantities involved.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Contracting context, if relevant &mdash; set-aside, sole-source, or an existing vehicle.</li>
+            </ul>
+            <div class="card-glass p-6 space-y-3">
+              <h3 class="text-base font-semibold text-[color:var(--white)]">Operations</h3>
+              <p class="text-sm text-subtle">Utah-based, remote-first, and appointment-only for on-site visits. Use email to coordinate collaboration or demo requests.</p>
             </div>
           </div>
-          <form class="card-glass p-8 space-y-4" action="https://formspree.io/f/xnjbjayd" method="POST" data-contact-form aria-label="Contact form">
+          <form id="contact-form" class="card-glass p-8 space-y-4" action="https://formspree.io/f/xnjbjayd" method="POST" data-contact-form aria-label="Contact form">
+            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Send a message</h2>
             <input type="hidden" name="_subject" value="Ceradon Website Contact" />
             <input type="hidden" name="product" value="" />
             <div>
@@ -112,19 +127,35 @@
           </form>
         </div>
 
-        <div class="card-glass p-8 space-y-4">
-          <h2 class="text-2xl font-semibold text-[color:var(--white)]">How to Procure</h2>
-          <p class="text-subtle">Ceradon Systems is a verified Veteran-Owned Small Business eligible for sole-source and set-aside contract awards.</p>
-          <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">CAGE:</strong> 179U9 &middot; <strong class="text-[color:var(--white)]">UEI:</strong> UZA9PFJ9RDL6 &middot; <strong class="text-[color:var(--white)]">NAICS:</strong> 541715, 541330</p>
-          <p class="text-sm text-subtle">SAM.gov registered through December 2026.</p>
-          <p class="text-sm text-subtle">For procurement inquiries, contact us directly or reach out through your contracting office.</p>
-        </div>
-
-        <div class="grid gap-6 lg:grid-cols-[1fr_1fr]">
-          <div class="card-glass p-6 space-y-3">
-            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Operations</h2>
-            <p class="text-sm text-subtle">Utah-based, remote-first, and appointment-only for on-site visits.</p>
-            <p class="text-sm text-subtle">Use email to coordinate collaboration or demo requests.</p>
+        <!-- PROCUREMENT — registry plate for contracting officers -->
+        <div class="card-glass overflow-hidden grid lg:grid-cols-[1fr_1fr]">
+          <div class="p-8 space-y-4 border-b lg:border-b-0 lg:border-r border-[color:var(--steel-700)]">
+            <h2 class="text-2xl font-semibold text-[color:var(--white)]">How to procure</h2>
+            <p class="text-subtle text-sm">Ceradon Systems is a verified Service-Disabled Veteran-Owned Small Business eligible for sole-source and set-aside contract awards. For procurement inquiries, contact us directly or reach out through your contracting office.</p>
+          </div>
+          <div>
+            <div class="flex items-center justify-between px-8 py-4 border-b border-[color:var(--border)]">
+              <span class="text-[10px] uppercase tracking-[0.3em] text-subtle">Entity Record</span>
+              <span class="h-1.5 w-1.5 rounded-full bg-[color:var(--ceradon-blue)] shadow-[0_0_8px_rgba(43,120,255,0.7)]" aria-hidden="true"></span>
+            </div>
+            <dl class="text-sm">
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-8 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">CAGE</dt>
+                <dd class="text-[color:var(--white)] tracking-[0.06em]">179U9</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-8 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">UEI</dt>
+                <dd class="text-[color:var(--white)] tracking-[0.06em]">UZA9PFJ9RDL6</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-8 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">NAICS</dt>
+                <dd class="text-[color:var(--white)]">541715 &middot; 541330</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-8 py-3">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">SAM.gov</dt>
+                <dd class="text-[color:var(--white)]">Registered through December 2026</dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>

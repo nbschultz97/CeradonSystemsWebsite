@@ -68,96 +68,165 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content">
+      <!-- HERO — mission statement + entity record plate -->
       <section class="relative border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60] overflow-hidden">
         <img src="./assets/hero-company.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none" aria-hidden="true" loading="eager" />
-        <div class="relative mx-auto max-w-7xl px-4 py-16 space-y-6">
-          <span class="tag">Our Mission</span>
-          <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Deliver decisive, low-signature sensing to teams operating at the edge.</h1>
-          <p class="text-lg text-subtle max-w-3xl">Ceradon Systems, LLC is a Utah-based engineering firm focused on Vantage, a passive Wi-Fi CSI sensing platform, and Aegis, a readiness assurance system for unmanned assets. ARCHITECT is maintained as an open-source project by Ceradon Systems, built to plan COTS unmanned systems with offline-first workflows.</p>
-          <div class="card-glass p-6 space-y-2 max-w-3xl">
-            <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">Federal registration:</strong> Active federal contractor in SAM.gov through Dec 5, 2026.</p>
-            <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">CAGE:</strong> 179U9 &middot; <strong class="text-[color:var(--white)]">UEI:</strong> UZA9PFJ9RDL6.</p>
-            <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">Socio-economic status:</strong> SDVOSB &middot; VOSB.</p>
-            <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">NAICS:</strong> 541715, 541330 &middot; <strong class="text-[color:var(--white)]">PSC:</strong> K058, AJ11.</p>
+        <div class="relative mx-auto max-w-7xl px-4 py-16 lg:py-20 grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div class="space-y-6">
+            <span class="tag">Veteran-Founded &middot; SDVOSB</span>
+            <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)] max-w-[20ch]">Deliver decisive, low-signature sensing to teams operating at the edge.</h1>
+            <p class="text-lg text-subtle max-w-2xl">Ceradon Systems, LLC is a Utah-based engineering firm with roots in defense and special operations. We build passive RF sensing, autonomous detection, unmanned-systems planning, mission rehearsal, and mapping tools for operators, first responders, and security teams working in contested environments.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide">Start a conversation</a>
+              <a href="technology.html" class="btn btn-secondary text-sm uppercase tracking-wide">Technology</a>
+            </div>
+          </div>
+          <aside class="card-glass overflow-hidden" aria-label="Federal registration record">
+            <div class="flex items-center justify-between px-6 py-4 border-b border-[color:var(--steel-700)]">
+              <span class="text-[10px] uppercase tracking-[0.3em] text-subtle">Entity Record</span>
+              <span class="h-1.5 w-1.5 rounded-full bg-[color:var(--ceradon-blue)] shadow-[0_0_8px_rgba(43,120,255,0.7)]" aria-hidden="true"></span>
+            </div>
+            <dl class="text-sm">
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-6 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">Entity</dt>
+                <dd class="text-[color:var(--white)]">Ceradon Systems, LLC &middot; Utah</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-6 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">CAGE</dt>
+                <dd class="text-[color:var(--white)] tracking-[0.06em]">179U9</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-6 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">UEI</dt>
+                <dd class="text-[color:var(--white)] tracking-[0.06em]">UZA9PFJ9RDL6</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-6 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">Status</dt>
+                <dd class="text-[color:var(--white)]">SDVOSB &middot; VOSB</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-6 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">SAM.gov</dt>
+                <dd class="text-[color:var(--white)]">Active through Dec 5, 2026</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-6 py-3 border-b border-[color:var(--border)]">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">NAICS</dt>
+                <dd class="text-[color:var(--white)]">541715 &middot; 541330</dd>
+              </div>
+              <div class="grid grid-cols-[6.5rem_1fr] gap-4 px-6 py-3">
+                <dt class="text-[10px] uppercase tracking-[0.2em] text-subtle self-center">PSC</dt>
+                <dd class="text-[color:var(--white)]">K058 &middot; AJ11</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CAPABILITY INDEX — products as line items, not marketing cards -->
+      <section class="mx-auto max-w-7xl px-4 py-16 space-y-8" aria-labelledby="capability-index">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div class="space-y-3">
+            <span class="tag">Capability Index</span>
+            <h2 id="capability-index" class="section-heading text-3xl">What we build</h2>
+          </div>
+          <p class="text-sm text-subtle max-w-md">Seven product lines across sensing, autonomy, planning, rehearsal, and mapping. Each line links to full specifications.</p>
+        </div>
+        <ul class="border-t border-[color:var(--steel-700)]">
+          <li class="border-b border-[color:var(--steel-700)]">
+            <a href="vantage.html" class="group grid gap-1 md:grid-cols-[12rem_9rem_1fr_auto] md:items-baseline md:gap-6 px-2 py-5 hover:bg-[rgba(255,255,255,0.025)] transition-colors">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">Passive RF Sensing</span>
+              <span class="text-lg font-semibold text-[color:var(--white)]">VANTAGE</span>
+              <span class="text-sm text-subtle">Passive Wi-Fi CSI sensing for zero-emission through-wall human detection and pose estimation.</span>
+              <svg class="hidden md:block h-4 w-4 self-center text-[color:var(--ceradon-blue)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+            </a>
+          </li>
+          <li class="border-b border-[color:var(--steel-700)]">
+            <a href="raptor.html" class="group grid gap-1 md:grid-cols-[12rem_9rem_1fr_auto] md:items-baseline md:gap-6 px-2 py-5 hover:bg-[rgba(255,255,255,0.025)] transition-colors">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">Autonomous Detection</span>
+              <span class="text-lg font-semibold text-[color:var(--white)]">RAPTOR</span>
+              <span class="text-sm text-subtle">Real-time AI detection, classification, and targeting for UGVs, FPV drones, fixed-wing UAVs, and fixed installations. Field-retrainable, no cloud required.</span>
+              <svg class="hidden md:block h-4 w-4 self-center text-[color:var(--ceradon-blue)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+            </a>
+          </li>
+          
+          <li class="border-b border-[color:var(--steel-700)]">
+            <a href="architect.html" class="group grid gap-1 md:grid-cols-[12rem_9rem_1fr_auto] md:items-baseline md:gap-6 px-2 py-5 hover:bg-[rgba(255,255,255,0.025)] transition-colors">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">UxS Build Planning</span>
+              <span class="text-lg font-semibold text-[color:var(--white)]">ARCHITECT</span>
+              <span class="text-sm text-subtle">Offline-first, open-source planning for COTS unmanned systems, nodes, drones, and RF mesh layouts.</span>
+              <svg class="hidden md:block h-4 w-4 self-center text-[color:var(--ceradon-blue)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+            </a>
+          </li>
+          <li class="border-b border-[color:var(--steel-700)]">
+            <a href="kestrel.html" class="group grid gap-1 md:grid-cols-[12rem_9rem_1fr_auto] md:items-baseline md:gap-6 px-2 py-5 hover:bg-[rgba(255,255,255,0.025)] transition-colors">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">Mission Rehearsal</span>
+              <span class="text-lg font-semibold text-[color:var(--white)]">KESTREL</span>
+              <span class="text-sm text-subtle">Structured sUAS mission rehearsal with aircraft-specific configuration and repeatable session scoring.</span>
+              <svg class="hidden md:block h-4 w-4 self-center text-[color:var(--ceradon-blue)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+            </a>
+          </li>
+          <li class="border-b border-[color:var(--steel-700)]">
+            <a href="lantern.html" class="group grid gap-1 md:grid-cols-[12rem_9rem_1fr_auto] md:items-baseline md:gap-6 px-2 py-5 hover:bg-[rgba(255,255,255,0.025)] transition-colors">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">Interior Mapping</span>
+              <span class="text-lg font-semibold text-[color:var(--white)]">LANTERN</span>
+              <span class="text-sm text-subtle">Drone or walkthrough video to georeferenced interior floorplans for ATAK. No survey, no ground truth.</span>
+              <svg class="hidden md:block h-4 w-4 self-center text-[color:var(--ceradon-blue)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+            </a>
+          </li>
+          <li class="border-b border-[color:var(--steel-700)]">
+            <a href="polygen.html" class="group grid gap-1 md:grid-cols-[12rem_9rem_1fr_auto] md:items-baseline md:gap-6 px-2 py-5 hover:bg-[rgba(255,255,255,0.025)] transition-colors">
+              <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">3D Generation</span>
+              <span class="text-lg font-semibold text-[color:var(--white)]">POLYGEN</span>
+              <span class="text-sm text-subtle">Text-to-3D model generation through a multi-agent AI pipeline for rapid prototyping.</span>
+              <svg class="hidden md:block h-4 w-4 self-center text-[color:var(--ceradon-blue)] opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" /></svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <div class="mx-auto max-w-7xl px-4"><div class="reg-rule" aria-hidden="true"></div></div>
+
+      <!-- WHO WE ARE + VALUES -->
+      <section class="mx-auto max-w-7xl px-4 py-16 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start" aria-labelledby="who-we-are">
+        <div class="space-y-6">
+          <h2 id="who-we-are" class="section-heading text-3xl">Who we are</h2>
+          <p class="text-subtle text-lg">Ceradon Systems is veteran-founded with roots in defense and special operations. We build tools for the people who actually use them: operators, first responders, and security teams who need reliable technology in contested environments.</p>
+          <img src="./assets/lab-soldering.jpg" alt="Hands-on hardware assembly and soldering at Ceradon Systems" class="rounded-xl w-full h-64 object-cover" width="600" height="320" loading="lazy" />
+        </div>
+        <div class="grid gap-px bg-[color:var(--steel-700)] border border-[color:var(--steel-700)] rounded-xl overflow-hidden sm:grid-cols-2">
+          <div class="bg-[color:var(--ink)] p-6 space-y-2">
+            <h3 class="text-base font-semibold text-[color:var(--white)]">Mission first</h3>
+            <p class="text-sm text-subtle">Every feature must strengthen detection accuracy or the intel picture supporting it.</p>
+          </div>
+          <div class="bg-[color:var(--ink)] p-6 space-y-2">
+            <h3 class="text-base font-semibold text-[color:var(--white)]">Edge hardened</h3>
+            <p class="text-sm text-subtle">Offline-first, self-healing pipelines that run on low-power hardware and survive austere deployments.</p>
+          </div>
+          <div class="bg-[color:var(--ink)] p-6 space-y-2">
+            <h3 class="text-base font-semibold text-[color:var(--white)]">Security aware</h3>
+            <p class="text-sm text-subtle">Secure boot, signed releases, and audit trails preserve trust across distributed teams.</p>
+          </div>
+          <div class="bg-[color:var(--ink)] p-6 space-y-2">
+            <h3 class="text-base font-semibold text-[color:var(--white)]">Operator empathy</h3>
+            <p class="text-sm text-subtle">Human-centered UX for operators under stress. Fast, unambiguous insights without clutter.</p>
           </div>
         </div>
       </section>
 
-      <section class="mx-auto max-w-7xl px-4 py-16 space-y-12">
-        <div class="space-y-4">
-          <h2 class="section-heading text-3xl">Who We Are</h2>
-          <p class="text-subtle text-lg">Ceradon Systems is veteran-founded with roots in defense and special operations. We build tools for the people who actually use them: operators, first responders, and security teams who need reliable technology in contested environments.</p>
-        </div>
-
-        <div class="space-y-6">
-          <img src="./assets/lab-soldering.jpg" alt="Hands-on hardware assembly and soldering at Ceradon Systems" class="rounded-xl w-full max-w-2xl mx-auto h-80 object-cover" width="600" height="320" loading="lazy" />
-        </div>
-
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Values</h2>
-          <div class="grid gap-6 md:grid-cols-2">
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Mission First</h3>
-              <p class="text-sm text-subtle">Every feature must strengthen pose detection accuracy or the intel picture supporting it.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Edge Hardened</h3>
-              <p class="text-sm text-subtle">Offline-first, self-healing pipelines that run on low-power hardware and survive austere deployments.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Security Aware</h3>
-              <p class="text-sm text-subtle">Secure boot, signed releases, and audit trails preserve trust across distributed teams.</p>
-            </div>
-            <div class="card-glass p-6 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Operator Empathy</h3>
-              <p class="text-sm text-subtle">Human-centered UX for operators under stress. Fast, unambiguous insights without clutter.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="space-y-6">
-          <h2 class="section-heading text-3xl">Products</h2>
-          <div class="grid gap-6 md:grid-cols-3">
-            <article class="card-glass p-6 space-y-3">
-              <p class="text-xs uppercase tracking-[0.2em] text-subtle">Sensing</p>
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Vantage</h3>
-              <p class="text-sm text-subtle">Passive Wi-Fi CSI sensing for zero-emission through-wall human detection and pose estimation.</p>
-              <a href="vantage.html" class="inline-flex items-center gap-2 text-sm text-[color:var(--ceradon-blue)]">Learn more
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </a>
-            </article>
-            <article class="card-glass p-6 space-y-3">
-              <p class="text-xs uppercase tracking-[0.2em] text-subtle">3D Generation</p>
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">POLYGEN</h3>
-              <p class="text-sm text-subtle">Text-to-3D model generator powered by multi-agent AI pipeline for rapid prototyping.</p>
-              <a href="polygen.html" class="inline-flex items-center gap-2 text-sm text-[color:var(--ceradon-blue)]">Learn more
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </a>
-            </article>
-            <article class="card-glass p-6 space-y-3">
-              <p class="text-xs uppercase tracking-[0.2em] text-subtle">Planning</p>
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">ARCHITECT</h3>
-              <p class="text-sm text-subtle">Offline-first planning tools for COTS nodes, drones, and RF mesh layouts.</p>
-              <a href="architect.html" class="inline-flex items-center gap-2 text-sm text-[color:var(--ceradon-blue)]">Learn more
-                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-6-6 6 6-6 6" />
-                </svg>
-              </a>
-            </article>
-          </div>
-        </div>
+      <!-- SECURITY & ETHICS + CONTRACTING -->
+      <section class="mx-auto max-w-7xl px-4 pb-16 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]" aria-label="Security, ethics, and contracting">
         <div class="card-glass p-8 space-y-4">
-          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Security &amp; Ethics</h2>
-          <p class="text-subtle">Vantage never records video or audio. All processing stays local, logs are redacted for PII, and exports are encrypted. Passive sensing respects privacy while giving teams the intelligence needed to reduce collateral risk.</p>
+          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Security &amp; ethics</h2>
+          <p class="text-subtle">Vantage, our passive RF platform, never records video or audio. Processing stays local, logs are redacted for PII, and exports are encrypted. Passive sensing respects privacy while giving teams the intelligence needed to reduce collateral risk.</p>
           <ul class="space-y-3 text-sm text-subtle">
             <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Signed firmware, secure boot, and tamper logging for field hardware.</li>
             <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Role-based access for dashboards and CLI tooling.</li>
             <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Export-control-aware configurations for compliant sharing.</li>
           </ul>
+        </div>
+        <div class="card-glass p-8 flex flex-col gap-4">
+          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Doing business with Ceradon</h2>
+          <p class="text-sm text-subtle">As a verified Service-Disabled Veteran-Owned Small Business, Ceradon Systems is eligible for sole-source and set-aside contract awards. SAM.gov registration is active; CAGE and UEI are listed above and in the footer of every page.</p>
+          <p class="text-sm text-subtle">For procurement inquiries, contact us directly or reach out through your contracting office.</p>
+          <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide self-start mt-auto">Contact us</a>
         </div>
       </section>
     </main>
