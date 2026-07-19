@@ -16,17 +16,17 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
-    <title>Intelligent Systems | In-House AI Department Installation | Ceradon Systems</title>
-    <meta name="description" content="We install a done-for-you AI department into your business. 8 trained agents handling content, sales, and operations. 14-day deployment. Built by the team that builds AI for defense." />
-    <meta name="keywords" content="AI department, AI agents for business, AI automation, AI integration services, replace headcount with AI, AI content engine, AI sales system, business AI deployment, defense-grade AI" />
-    <meta property="og:title" content="Install Your AI Department | Ceradon Intelligent Systems" />
-    <meta property="og:description" content="8 AI agents. 14-day install. Replace $300K+ in annual salary costs. Built by the team that builds AI for defense." />
+    <title>Intelligent Systems | AI Agent Systems for Business | Ceradon Systems</title>
+    <meta name="description" content="Ceradon's commercial practice: we design and install a connected system of AI agents — content, sales, operations, reporting — inside your business, wired into the tools you already use. You own everything we build." />
+    <meta name="keywords" content="AI agents for business, AI automation, AI integration services, AI department, business AI deployment, AI infrastructure consulting" />
+    <meta property="og:title" content="Intelligent Systems | Ceradon Systems" />
+    <meta property="og:description" content="A connected system of AI agents, engineered and installed into your business. You own everything we build. No lock-in." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/intelligent-systems.html" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Install Your AI Department | Ceradon Intelligent Systems" />
-    <meta name="twitter:description" content="8 AI agents. 14-day install. Replace $300K+ in annual salary costs." />
+    <meta name="twitter:title" content="Intelligent Systems | Ceradon Systems" />
+    <meta name="twitter:description" content="A connected system of AI agents, engineered and installed into your business. You own everything we build." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.ceradonsystems.com/intelligent-systems.html" />
@@ -45,32 +45,37 @@
         "name": "Ceradon Systems, LLC",
         "url": "https://ceradonsystems.com"
       },
-      "description": "Done-for-you AI department installation. 8 trained AI agents for content, sales, operations, and reporting. 14-day deployment. Built by the team that builds AI for defense applications.",
+      "description": "Design and installation of connected AI agent systems for business — content, sales, operations, and reporting — built by the team behind Ceradon's defense AI products. Clients own everything that is built.",
       "url": "https://www.ceradonsystems.com/intelligent-systems.html",
       "areaServed": "US"
     }
     </script>
     <style>
-      /* Minimal page-specific additions — everything else from styles.css */
+      /* Page-scoped register: the commercial practice shares the family
+         palette but speaks in its own display voice. */
+      main .section-heading,
+      main h1, main h2, main h3 {
+        font-family: "General Sans", Inter, system-ui, sans-serif;
+      }
       .is-compare-old { border-left: 2px solid var(--red-400); }
       .is-compare-new { border-left: 2px solid var(--ceradon-blue); }
-      .spots-indicator {
-        display: inline-flex; align-items: center; gap: 8px;
-        padding: 0.4rem 0.85rem; border-radius: 4px;
-        border: 1px solid rgba(250, 204, 21, 0.2);
-        background: rgba(250, 204, 21, 0.05);
-        font-size: 0.75rem; font-weight: 600;
-        letter-spacing: 0.04em; color: var(--yellow-400);
-      }
-      .spots-indicator::before {
-        content: ''; width: 6px; height: 6px;
-        background: var(--yellow-400); border-radius: 50%;
-        animation: pulse-dot 2s cubic-bezier(0.4,0,0.6,1) infinite;
-      }
       .agent-metric {
         font-size: 0.6875rem; font-weight: 600;
         letter-spacing: 0.06em; text-transform: uppercase;
+        color: var(--ceradon-slate);
+      }
+      .no-promise-item {
+        display: flex; gap: 0.85rem;
+        padding: 1.15rem 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.9375rem;
+      }
+      .no-promise-item:last-child { border-bottom: none; }
+      .no-promise-item::before {
+        content: "\2014"; /* em dash: the mark of a struck claim */
         color: var(--ceradon-blue);
+        font-weight: 600;
+        flex: none;
       }
       /* Network graph SVG */
       .network-graph { max-width: 100%; height: auto; }
@@ -82,6 +87,9 @@
       .network-graph text { fill: var(--white); font-size: 11px; font-weight: 600; font-family: inherit; }
       .network-graph .text-sub { fill: rgba(197,203,214,0.5); font-size: 9px; font-weight: 500; }
       @keyframes dash-flow { to { stroke-dashoffset: -120; } }
+      @media (prefers-reduced-motion: reduce) {
+        .network-graph .edge-active { animation: none; stroke-dasharray: none; }
+      }
     </style>
   </head>
   <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
@@ -119,7 +127,7 @@
           <a href="technology.html" class="navlink">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
-          <a href="#apply" class="btn btn-primary">Apply Now</a>
+          <a href="#apply" class="btn btn-primary">Book a Call</a>
         </nav>
         <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>&#9776;</button>
       </div>
@@ -137,67 +145,67 @@
           <div class="grid gap-12 lg:grid-cols-[3fr_2fr] lg:items-center">
             <div class="space-y-6">
               <div class="flex items-center gap-3 flex-wrap">
-                <span class="spots-indicator">6 spots this quarter</span>
-                <span class="badge">14-Day Installation</span>
+                <span class="tag">Commercial practice</span>
+                <span class="badge">Built by a defense AI team</span>
               </div>
-              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">Stop hiring.<br/>Install an AI department.</h1>
-              <p class="text-lg text-subtle">We install <strong class="text-[color:var(--white)]">8 trained AI agents</strong> into your business in 14 days. Content, sales, operations, reporting &mdash; running 24/7. You keep everything we build. Built by the same team that builds AI for defense applications.</p>
-              <p class="text-lg text-subtle">Does the work of <strong class="text-[color:var(--white)]">3&ndash;5 hires</strong> at a fraction of the cost. Never quits, never calls in sick, and compounds every month.</p>
+              <h1 class="text-4xl sm:text-5xl font-bold text-[color:var(--white)]">An AI department, installed &mdash; not subscribed to.</h1>
+              <p class="text-lg text-subtle">Ceradon builds edge-AI systems for defense. Intelligent Systems is our commercial practice: the same engineers design and install a <strong class="text-[color:var(--white)]">connected system of AI agents</strong> inside your business &mdash; content, sales, operations, reporting &mdash; wired into the tools you already use.</p>
+              <p class="text-lg text-subtle">You own everything we build. No per-seat licence, no lock-in, no dependency on us to keep it running.</p>
               <div class="flex flex-wrap gap-3">
-                <span class="badge">Content Engine</span>
-                <span class="badge">Sales Manager</span>
-                <span class="badge">Lead Qualifier</span>
+                <span class="badge">Content</span>
+                <span class="badge">Sales pipeline</span>
                 <span class="badge">Operations</span>
-                <span class="badge">24/7 Uptime</span>
+                <span class="badge">Reporting</span>
               </div>
               <div class="flex flex-wrap gap-3">
-                <a href="#apply" class="btn btn-primary text-sm uppercase tracking-wide">Apply for Installation</a>
-                <a href="#system" class="btn btn-secondary text-sm uppercase tracking-wide">See the System</a>
+                <a href="#apply" class="btn btn-primary text-sm uppercase tracking-wide">Book a discovery call</a>
+                <a href="#system" class="btn btn-secondary text-sm uppercase tracking-wide">See how it&rsquo;s built</a>
               </div>
             </div>
             <div class="card-glass p-8 space-y-5">
-              <h2 class="text-xl font-semibold text-[color:var(--white)]">What you get</h2>
+              <h2 class="text-xl font-semibold text-[color:var(--white)]">The terms, up front</h2>
               <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">8 AI agents</strong> trained on your voice, workflows, and tools</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">60+ content pieces/week</strong> across every platform, in your voice</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Automated sales pipeline:</strong> lead scoring, follow-up, booking</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Real-time command dashboard</strong> &mdash; every metric, one screen</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Full ownership:</strong> you keep everything, no lock-in</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> <strong class="text-[color:var(--white)]">Defense-grade engineering:</strong> not templates, not chatbots</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong class="text-[color:var(--white)]">Eight agent roles</strong> covering content, sales, operations, delivery, and reporting</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong class="text-[color:var(--white)]">Custom architecture</strong> designed around your workflows, not a template</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong class="text-[color:var(--white)]">Trained on your material</strong> &mdash; your calls, posts, and way of explaining things</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong class="text-[color:var(--white)]">Installed in about 14 days</strong>, with a few hours of your team&rsquo;s time</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong class="text-[color:var(--white)]">Full ownership</strong> &mdash; agents, workflows, dashboards, and data stay yours</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong class="text-[color:var(--white)]">Ongoing optimization optional</strong>, never required</li>
               </ul>
-              <a href="#apply" class="btn btn-primary text-sm uppercase tracking-wide w-full text-center">Apply Now</a>
+              <a href="#apply" class="btn btn-primary text-sm uppercase tracking-wide w-full text-center">Book a Call</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ══════════ STATS ══════════ -->
+      <!-- ══════════ OFFER TERMS ══════════ -->
       <section class="mx-auto max-w-7xl px-4 py-16">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-6" data-animate-stagger>
           <div class="card-glass p-7 text-center">
-            <p class="stat-number">67+</p>
-            <p class="stat-label">Content pieces / week</p>
-          </div>
-          <div class="card-glass p-7 text-center">
-            <p class="stat-number">14</p>
-            <p class="stat-label">Day installation</p>
-          </div>
-          <div class="card-glass p-7 text-center">
             <p class="stat-number">8</p>
-            <p class="stat-label">Trained AI agents</p>
+            <p class="stat-label">Agent roles in a full install</p>
           </div>
           <div class="card-glass p-7 text-center">
-            <p class="stat-number">24/7</p>
-            <p class="stat-label">Always running</p>
+            <p class="stat-number">~14</p>
+            <p class="stat-label">Days, discovery to live</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">100%</p>
+            <p class="stat-label">Owned by you at handover</p>
+          </div>
+          <div class="card-glass p-7 text-center">
+            <p class="stat-number">0</p>
+            <p class="stat-label">Long-term contracts required</p>
           </div>
         </div>
+        <p class="mt-4 text-xs text-subtle text-center">These are the terms of the engagement &mdash; not performance claims. Results depend on your offer, your funnel, and your follow-through.</p>
       </section>
 
-      <!-- ══════════ THE SHIFT: COMPARISON TABLE ══════════ -->
+      <!-- ══════════ THE STAFFING MATH ══════════ -->
       <section class="mx-auto max-w-7xl px-4 py-20 space-y-12">
         <div class="space-y-6" data-animate>
-          <h2 class="section-heading text-3xl">The Cost of Doing Things the Old Way</h2>
-          <p class="text-subtle max-w-3xl">More headcount isn't the answer. Better infrastructure is. The businesses scaling fastest right now aren't adding to payroll &mdash; they're installing AI systems that do the work of 3&ndash;5 hires and compound over time.</p>
+          <h2 class="section-heading text-3xl">The staffing math</h2>
+          <p class="text-subtle max-w-3xl">These functions are usually solved with headcount. The table shows what staffing them typically costs on the open market, and what an installed agent system covers instead. One is a recurring salary line; the other is infrastructure you build once and own.</p>
         </div>
 
         <div class="overflow-x-auto" data-animate data-delay="200">
@@ -205,9 +213,9 @@
             <thead>
               <tr>
                 <th scope="col">Function</th>
-                <th scope="col">Traditional Hire</th>
-                <th scope="col">Annual Cost</th>
-                <th scope="col">AI Department</th>
+                <th scope="col">Typically staffed by</th>
+                <th scope="col">Typical market cost</th>
+                <th scope="col">Agent system coverage</th>
               </tr>
             </thead>
             <tbody>
@@ -215,60 +223,61 @@
                 <th scope="row">Content &amp; Marketing</th>
                 <td>Marketing director + agency retainer</td>
                 <td>$150K &ndash; $250K/yr</td>
-                <td class="text-green-400">Content Engine agent &mdash; 60+ pieces/week in your voice</td>
+                <td>Content Engine &mdash; drafting, repurposing, scheduling in your voice</td>
               </tr>
               <tr>
                 <th scope="row">Sales Management</th>
                 <td>Sales manager + CRM admin</td>
                 <td>$80K &ndash; $120K/yr</td>
-                <td class="text-green-400">Sales Manager agent &mdash; pipeline, scoring, follow-up</td>
+                <td>Sales Manager &mdash; pipeline tracking, scoring, call analysis</td>
               </tr>
               <tr>
                 <th scope="row">Lead Response</th>
                 <td>SDR or inside sales rep</td>
                 <td>$60K &ndash; $80K/yr</td>
-                <td class="text-green-400">Lead Qualifier agent &mdash; instant scoring and routing</td>
+                <td>Lead Qualifier &mdash; scoring, routing, escalation</td>
               </tr>
               <tr>
                 <th scope="row">Follow-up Sequences</th>
                 <td>Marketing automation admin</td>
                 <td>$50K &ndash; $70K/yr + software</td>
-                <td class="text-green-400">Follow-Up Engine &mdash; 97% follow-up rate</td>
+                <td>Follow-Up Engine &mdash; sequenced outreach across channels</td>
               </tr>
               <tr>
                 <th scope="row">Operations &amp; Coordination</th>
                 <td>2&ndash;3 coordinators</td>
                 <td>$100K &ndash; $225K/yr</td>
-                <td class="text-green-400">Operations + Delivery agents &mdash; 24/7</td>
+                <td>Operations + Delivery agents &mdash; coordination, tracking, onboarding</td>
               </tr>
               <tr>
                 <th scope="row">Reporting &amp; Analytics</th>
                 <td>Data analyst + BI tools</td>
                 <td>$70K &ndash; $100K/yr</td>
-                <td class="text-green-400">Company Hub &mdash; real-time, zero manual assembly</td>
+                <td>Company Hub &mdash; live dashboard, no manual assembly</td>
               </tr>
               <tr class="bg-[color:var(--ceradon-blue)]/5 border-l-2 border-[color:var(--ceradon-blue)]">
                 <th scope="row" class="text-[color:var(--ceradon-blue)] font-bold">Total</th>
-                <td class="text-[color:var(--white)]">6&ndash;10 employees</td>
-                <td class="text-red-400 font-bold">$510K &ndash; $845K/yr</td>
-                <td class="text-[color:var(--ceradon-blue)] font-bold">8 AI agents. Installed in 14 days.</td>
+                <td class="text-[color:var(--white)]">6&ndash;10 salaries</td>
+                <td class="text-[color:var(--white)] font-bold">$510K &ndash; $845K/yr</td>
+                <td class="text-[color:var(--ceradon-blue)] font-bold">One installed system, owned outright</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="text-xs text-subtle max-w-3xl">Salary figures are typical U.S. market ranges for these roles, cited for comparison. They are benchmarks, not client results &mdash; an agent system covers the repeatable work of these functions; it does not make judgment calls for you.</p>
       </section>
 
       <!-- ══════════ THE SYSTEM: AGENT NETWORK ══════════ -->
       <section id="system" class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-16">
           <div class="space-y-6" data-animate>
-            <h2 class="section-heading text-3xl">Eight Agents. One Connected System.</h2>
-            <p class="text-subtle max-w-3xl">Each agent is purpose-built, voice-trained, and connected to your tools. Together they form a flywheel: content creates leads, leads become sales, sales become deliveries, deliveries become case studies, case studies become content. Each cycle strengthens the next.</p>
+            <h2 class="section-heading text-3xl">Eight agents. One connected system.</h2>
+            <p class="text-subtle max-w-3xl">Each agent is purpose-built and connected to your tools. Together they form a loop: content creates leads, leads become sales, sales become deliveries, deliveries become material for more content. The point is not any single agent &mdash; it is that they share context instead of living in eight separate tabs.</p>
           </div>
 
           <!-- Agent Network SVG -->
           <div class="flex justify-center" data-animate data-delay="200">
-            <svg class="network-graph" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI agent network diagram showing 8 connected agents">
+            <svg class="network-graph" viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI agent network diagram showing 8 connected agents around a central business hub">
               <!-- Edges (connections) -->
               <line class="edge-active" x1="360" y1="60" x2="560" y2="100"/>
               <line class="edge-active" x1="560" y1="100" x2="620" y2="220"/>
@@ -345,43 +354,43 @@
           <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Content Engine</h3>
-              <p class="text-sm text-subtle">Record 30 minutes. Get 60&ndash;70 pieces per week across every platform &mdash; in your voice. Posts, reels, threads, emails. All on-brand. All scheduled.</p>
-              <p class="agent-metric">Replaces $150&ndash;250K/yr marketing director</p>
+              <p class="text-sm text-subtle">Turns raw material &mdash; recorded calls, notes, briefs &mdash; into drafted posts, emails, and articles in your voice, queued for your review before anything publishes.</p>
+              <p class="agent-metric">Scope: drafting &middot; repurposing &middot; scheduling</p>
             </div>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Sales Manager</h3>
-              <p class="text-sm text-subtle">Lead scoring, pipeline tracking, call analysis, rep performance. AI flags underperformers before you notice. Every KPI on one screen.</p>
-              <p class="agent-metric">Replaces $10&ndash;20K/mo agency retainer</p>
+              <p class="text-sm text-subtle">Tracks the pipeline, scores opportunities, and summarizes call activity so the state of every deal is visible on one screen instead of living in someone&rsquo;s head.</p>
+              <p class="agent-metric">Scope: pipeline &middot; scoring &middot; call analysis</p>
             </div>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Lead Qualifier</h3>
-              <p class="text-sm text-subtle">Every inbound lead scored, qualified, and routed instantly. Hot leads get escalated. Everyone else gets nurtured automatically.</p>
-              <p class="agent-metric">Replaces $60&ndash;80K/yr SDR</p>
+              <p class="text-sm text-subtle">Scores and routes every inbound lead against criteria you set. Strong fits get escalated to a human; the rest enter an automated nurture track.</p>
+              <p class="agent-metric">Scope: scoring &middot; routing &middot; escalation</p>
             </div>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Follow-Up Engine</h3>
-              <p class="text-sm text-subtle">Personalized sequences across email, SMS, and LinkedIn. Timed perfectly. Nobody falls through the cracks again.</p>
-              <p class="agent-metric">97% follow-up rate vs 20% industry average</p>
+              <p class="text-sm text-subtle">Runs personalized sequences across email, SMS, and LinkedIn on the cadence you define, so no lead goes quiet because a human forgot.</p>
+              <p class="agent-metric">Scope: sequences &middot; multi-channel &middot; cadence</p>
             </div>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Operations</h3>
-              <p class="text-sm text-subtle">Project coordination, meeting notes, task management, deadline tracking. The back-office employee that never sleeps and never forgets.</p>
-              <p class="agent-metric">Replaces 2&ndash;3 coordinators ($50&ndash;75K each)</p>
+              <p class="text-sm text-subtle">Project coordination, meeting notes, task management, and deadline tracking &mdash; the administrative layer handled continuously in the background.</p>
+              <p class="agent-metric">Scope: coordination &middot; notes &middot; deadlines</p>
             </div>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Delivery</h3>
-              <p class="text-sm text-subtle">Client onboarding, status updates, milestone tracking. Your clients get white-glove service without you doing the manual work.</p>
-              <p class="agent-metric">40% faster client delivery</p>
+              <p class="text-sm text-subtle">Client onboarding, status updates, and milestone tracking, so your clients hear from you at every stage without you writing every message.</p>
+              <p class="agent-metric">Scope: onboarding &middot; updates &middot; milestones</p>
             </div>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Company Hub</h3>
-              <p class="text-sm text-subtle">Revenue, pipeline, content, clients &mdash; one screen, real-time. AI flags problems before they become fires. You see everything.</p>
-              <p class="agent-metric">Replaces $70&ndash;100K/yr data analyst</p>
+              <p class="text-sm text-subtle">Revenue, pipeline, content, and delivery status on one live dashboard, with flags raised when a number moves in a direction it shouldn&rsquo;t.</p>
+              <p class="agent-metric">Scope: dashboard &middot; alerts &middot; reporting</p>
             </div>
             <div class="card-glass p-7 space-y-3">
               <h3 class="text-xl font-semibold text-[color:var(--white)]">Quality Assurance</h3>
-              <p class="text-sm text-subtle">Every piece of content, every email, every client-facing response &mdash; checked for voice, accuracy, and compliance before it goes out.</p>
-              <p class="agent-metric">92% on-brand consistency</p>
+              <p class="text-sm text-subtle">Checks every piece of client-facing output for voice, accuracy, and compliance before it goes anywhere. Nothing ships on autopilot.</p>
+              <p class="agent-metric">Scope: voice &middot; accuracy &middot; compliance</p>
             </div>
           </div>
         </div>
@@ -391,30 +400,30 @@
       <section class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
           <div class="space-y-6" data-animate>
-            <h2 class="section-heading text-3xl">From Application to Running AI Department</h2>
-            <p class="text-subtle max-w-3xl">14 days. Your team invests roughly 3 hours total. We handle the other 97%.</p>
+            <h2 class="section-heading text-3xl">From first call to running system</h2>
+            <p class="text-subtle max-w-3xl">About 14 days, with a few hours of your team&rsquo;s time. We handle the rest.</p>
           </div>
 
           <div class="timeline max-w-3xl" data-animate data-delay="200">
             <div class="timeline-item">
               <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Day 0</p>
-              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Discovery Call</h3>
-              <p class="text-sm text-subtle">30-minute call. We learn your business, map your workflows, and determine if we're a fit. Most applicants aren't &mdash; that's intentional.</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Discovery call</h3>
+              <p class="text-sm text-subtle">30 minutes. We learn your business, map your workflows, and decide together whether the math works. If it doesn&rsquo;t, we say so on the call.</p>
             </div>
             <div class="timeline-item">
               <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Days 1&ndash;3</p>
               <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Architecture</h3>
-              <p class="text-sm text-subtle">We design the AI department around your workflows. What agents run, how data flows, where automation triggers, what dashboards track. Custom architecture, not templates.</p>
+              <p class="text-sm text-subtle">We design the system around your workflows: which agents run, how data flows, where automation triggers, what the dashboard tracks. Custom architecture, not a template.</p>
             </div>
             <div class="timeline-item">
               <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Days 4&ndash;12</p>
-              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Installation</h3>
-              <p class="text-sm text-subtle">We build, train, connect, and test every agent. Voice-trained on your content. Connected to your existing tools. Your team records one 30-minute content session and answers questions about the business.</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Build, train, test</h3>
+              <p class="text-sm text-subtle">We build and connect every agent, train the content side on your recorded material, and test against your real workflows. Your part: one recorded session and answering questions about the business.</p>
             </div>
             <div class="timeline-item" style="padding-bottom:0;">
               <p class="text-[10px] font-semibold uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] mb-1">Day 14+</p>
-              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Live &amp; Compounding</h3>
-              <p class="text-sm text-subtle">Your AI department goes live. We monitor, optimize, and add new capabilities. The system gets smarter every month. Most clients stay on retainer because it keeps improving.</p>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-1">Live &amp; handed over</h3>
+              <p class="text-sm text-subtle">The system goes live and you get the documentation and access to run it. Ongoing monitoring and optimization are available as a retainer &mdash; useful, never required.</p>
             </div>
           </div>
         </div>
@@ -424,32 +433,49 @@
       <section class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
           <div class="space-y-6" data-animate>
-            <h2 class="section-heading text-3xl">We Build AI for Defense Contractors.<br/><span class="text-subtle">Your Business Gets the Same Rigor.</span></h2>
+            <h2 class="section-heading text-3xl">The defense work is the standard.<br/><span class="text-subtle">Your system is held to it.</span></h2>
+            <p class="text-subtle max-w-3xl">Ceradon&rsquo;s main business is building AI and sensing systems for defense applications, where "it usually works" is not an acceptable answer. Intelligent Systems is the same team applying the same engineering discipline to business operations.</p>
           </div>
           <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
             <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Defense-Grade Engineering</h3>
-              <p class="text-sm text-subtle">Same team that builds AI systems for national security applications. We don't do templates. We don't do generic. Everything is purpose-built for your operation.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Engineered, not assembled</h3>
+              <p class="text-sm text-subtle">Architecture first, then tools, then connections. We design the system before we build it &mdash; no bolted-together template stacks.</p>
             </div>
             <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">You Own Everything</h3>
-              <p class="text-sm text-subtle">The agents, the workflows, the dashboards, the data. It all lives inside your business. Walk away anytime and everything still runs. No lock-in.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">You own everything</h3>
+              <p class="text-sm text-subtle">The agents, the workflows, the dashboards, the data. It all lives inside your accounts and your business. Walk away anytime and it keeps running.</p>
             </div>
             <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Not a Tool &mdash; Infrastructure</h3>
-              <p class="text-sm text-subtle">ChatGPT is a hammer. We build the house. Architecture first, then tools, then connections, then optimization. Connected systems that compound.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Infrastructure, not a tool</h3>
+              <p class="text-sm text-subtle">ChatGPT is a hammer. This is the house: connected agents that share context, so work done in one place compounds everywhere else.</p>
             </div>
             <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Trained on Your Voice</h3>
-              <p class="text-sm text-subtle">We don't generate generic AI content. The system trains on your calls, posts, and way of explaining things. Clients can't tell what's AI-assisted and what isn't.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Trained on your voice</h3>
+              <p class="text-sm text-subtle">The content side trains on your calls, posts, and way of explaining things &mdash; and you review the output. The goal is drafts you would sign, not generic AI copy.</p>
             </div>
             <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">3 Hours of Your Time</h3>
-              <p class="text-sm text-subtle">Total involvement during a 14-day install. One content recording session and answering questions. We handle everything else. The busier you are, the more you need this.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">A small footprint on your time</h3>
+              <p class="text-sm text-subtle">A few hours across the whole install: one recorded session on your voice and offer, plus answering questions. The busier you are, the more that matters.</p>
             </div>
             <div class="card-glass p-7 space-y-3">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Compounds Monthly</h3>
-              <p class="text-sm text-subtle">Every month the system learns more, performs better, handles more. In 12 months, your competitors won't be able to catch up. The gap only widens.</p>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Built to be inspected</h3>
+              <p class="text-sm text-subtle">Every workflow is documented at handover. You can see what each agent does, why it did it, and change it without calling us.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════ WHAT WE WON'T PROMISE ══════════ -->
+      <section class="border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-20">
+          <div class="max-w-3xl">
+            <h2 class="section-heading text-3xl" data-animate>What we won&rsquo;t promise</h2>
+            <p class="mt-4 text-subtle" data-animate data-delay="100">Most AI-agency pages are a wall of invented percentages. Our defense work is measured against ground truth, and we hold our marketing to the same rule: if we haven&rsquo;t measured it, we don&rsquo;t publish it.</p>
+            <div class="mt-8" data-animate data-delay="200">
+              <div class="no-promise-item">No revenue multiples or ROI percentages. Your results depend on your offer, your funnel, and your follow-through &mdash; not on a number we made up.</div>
+              <div class="no-promise-item">No testimonials on this page. When we publish results, they will be named, dated, and verifiable.</div>
+              <div class="no-promise-item">No claim that AI output is indistinguishable from your own. The honest version is drafts in your voice, a QA gate, and your review before anything ships.</div>
+              <div class="no-promise-item">No selling you agents where a spreadsheet would do. If your problem has a $50/month answer, we will point you to it on the call.</div>
             </div>
           </div>
         </div>
@@ -459,30 +485,29 @@
       <section class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
           <div class="space-y-6" data-animate>
-            <h2 class="section-heading text-3xl">This Is Not for Everyone. That's the Point.</h2>
+            <h2 class="section-heading text-3xl">Who this is for</h2>
+            <p class="text-subtle max-w-3xl">We take on a small number of installs at a time, and a bad fit wastes your money and our build hours. The honest screen:</p>
           </div>
 
           <div class="grid md:grid-cols-2 gap-6" data-animate data-delay="200">
             <div class="card-glass p-8 space-y-4 is-compare-new">
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">This is for you if&hellip;</h3>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">A likely fit&hellip;</h3>
               <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You're doing <strong class="text-[color:var(--white)]">$1M&ndash;$10M/yr</strong> and margins are shrinking as you scale</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> Payroll is your biggest expense and it keeps growing every quarter</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You've tried agencies ($10&ndash;20K/mo) and internal hires &mdash; neither solved it</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> Your competitors are starting to use AI and you can feel the gap opening</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You want to scale revenue without scaling headcount</li>
-                <li class="flex gap-2"><span class="text-green-400">&#10003;</span> You're ready to invest in infrastructure that replaces six figures in annual costs</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Roughly <strong class="text-[color:var(--white)]">$1M&ndash;$10M/yr</strong> in revenue, with margins tightening as you scale</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Payroll is your biggest expense and the next hire is the default answer to every bottleneck</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> You have tried agencies or internal hires for this and neither stuck</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> Your operation runs on repeatable workflows an agent can actually be wired into</li>
+                <li class="flex gap-2"><span class="text-[color:var(--ceradon-blue)]">&#10003;</span> You want to scale output without scaling headcount</li>
               </ul>
             </div>
             <div class="card-glass p-8 space-y-4 is-compare-old">
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">This is not for you if&hellip;</h3>
+              <h3 class="text-lg font-semibold text-[color:var(--white)]">Probably not&hellip;</h3>
               <ul class="space-y-3 text-sm text-subtle">
-                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You're pre-revenue or haven't found product-market fit yet</li>
-                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You're looking to learn AI yourself &mdash; we install it, we don't teach it</li>
-                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You're not ready to invest in replacing six figures in salary costs</li>
-                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Your business model depends on you being the bottleneck</li>
-                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You think AI is a fad and aren't ready to build operations around it</li>
-                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> You want the cheapest option available &mdash; we are not that</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Pre-revenue, or still searching for product-market fit</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Looking to learn AI yourself &mdash; we install systems, we don&rsquo;t run courses</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Expecting the system to run with zero human review &mdash; ours ships with a QA gate on purpose</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Your business model depends on you personally being in every decision</li>
+                <li class="flex gap-2"><span class="text-red-400">&#10007;</span> Shopping for the cheapest option &mdash; engineered systems are not that</li>
               </ul>
             </div>
           </div>
@@ -493,7 +518,7 @@
       <section class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
           <div class="space-y-6" data-animate>
-            <h2 class="section-heading text-3xl">Frequently Asked Questions</h2>
+            <h2 class="section-heading text-3xl">Frequently asked questions</h2>
           </div>
           <div class="space-y-4 max-w-3xl" data-animate-stagger>
             <details class="card-glass p-6 group">
@@ -501,42 +526,42 @@
                 Won't the content sound like AI wrote it?
                 <span class="faq-icon">+</span>
               </summary>
-              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">No. During installation, we train the system on your voice, your frameworks, your stories. We pull from your calls, your posts, your way of explaining things. The output sounds like you on your best day. Clients regularly can't tell what was AI-assisted and what wasn't.</p></div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">The system trains on your material &mdash; your calls, your posts, your way of explaining things &mdash; and produces drafts in that voice. A QA agent checks every piece, and you review before anything publishes. The goal is content you would put your name on, not content that slips past detection.</p></div>
             </details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 Will this replace my team?
                 <span class="faq-icon">+</span>
               </summary>
-              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">Your team doesn't go away. They get superpowers. A 3-person marketing team doing 10 pieces a week can do 60+ with the right AI infrastructure underneath them. We don't replace your people. We multiply their output so you can stop hiring and start scaling what you already have.</p></div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">It is built to replace the hires you have not made yet, not the people you have. The repeatable work &mdash; drafting, routing, follow-up, status tracking &mdash; moves to the system; your team keeps the judgment calls and gets the hours back.</p></div>
             </details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 What if I want to stop? Am I locked in?
                 <span class="faq-icon">+</span>
               </summary>
-              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">You own everything. The systems, the agents, the workflows, the dashboards. It all lives inside your business. Most clients stay on retainer because we keep optimizing. But you're never locked in. Walk away and everything still runs.</p></div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">No. You own the agents, the workflows, the dashboards, and the data &mdash; it all lives inside your accounts, and you get the documentation at handover. An optimization retainer is available if you want us to keep improving it, but the system does not depend on us to keep running.</p></div>
             </details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 How is this different from ChatGPT or Copilot?
                 <span class="faq-icon">+</span>
               </summary>
-              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">ChatGPT is a tool. We install infrastructure. That's like buying a hammer and saying you tried building a house. We design the architecture first: what agents run, how data flows, where automation triggers, what dashboards track. Every tool connects, every workflow compounds, and it's all customized to your business.</p></div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">Those are tools; this is infrastructure. We design the architecture first &mdash; which agents run, how data flows between them, where automation triggers, what the dashboard tracks &mdash; then wire it into the tools you already use. The difference shows up in the connections, not in any single agent.</p></div>
             </details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 How much time does my team need to invest?
                 <span class="faq-icon">+</span>
               </summary>
-              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">About 3 hours per week during the install. We handle 90% of the build. Your team's main job is recording a 30-minute content session each week and answering questions about the business. After the install, they save 15+ hours every week.</p></div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">A few hours across the install: one recorded session covering your voice and your offer, plus answering questions as we map workflows. We deliberately keep your side small &mdash; the build is our job.</p></div>
             </details>
             <details class="card-glass p-6 group">
               <summary class="text-lg font-semibold text-[color:var(--white)] cursor-pointer list-none flex items-center justify-between">
                 What industries does this work for?
                 <span class="faq-icon">+</span>
               </summary>
-              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">We've built systems for agencies, consultants, SaaS, e-commerce, professional services, construction, and trades businesses. The system adapts because we build around your specific workflows, not a template. We screen every applicant. If we don't think we can deliver results, we'll tell you on the call.</p></div>
+              <div class="faq-answer"><p class="text-sm text-subtle leading-relaxed pt-4">The architecture is workflow-driven, not industry-templated, so the real question is whether your operation runs on repeatable processes &mdash; content, lead handling, client delivery, reporting. If it does, it is a candidate. We screen every applicant, and if we do not believe we can deliver, we will tell you on the call.</p></div>
             </details>
           </div>
         </div>
@@ -546,23 +571,22 @@
       <section id="apply" class="border-t border-[color:var(--steel-700)]">
         <div class="mx-auto max-w-7xl px-4 py-20 space-y-12">
           <div class="max-w-3xl space-y-6" data-animate>
-            <span class="spots-indicator">6 spots this quarter</span>
-            <h2 class="section-heading text-3xl">Your Competitors Are Installing AI Systems Right Now.</h2>
+            <h2 class="section-heading text-3xl">See what your system would look like</h2>
             <p class="text-subtle text-lg leading-relaxed">
-              Every month without systems is a month they compound and you don't. The businesses that install now will be unreachable in 12 months. Book a 30-minute discovery call. We'll map your workflows and show you exactly what your AI department would look like. No obligation.
+              A 30-minute discovery call. We map your workflows, sketch the architecture your business would get, and give you an honest read on whether it is worth building. No obligation either way.
             </p>
             <div class="grid grid-cols-3 gap-4 max-w-md">
               <div class="card-glass p-5 text-center">
-                <p class="stat-number text-2xl">8</p>
-                <p class="stat-label">Agents</p>
+                <p class="stat-number text-2xl">30</p>
+                <p class="stat-label">Minute call</p>
               </div>
               <div class="card-glass p-5 text-center">
-                <p class="stat-number text-2xl">14</p>
-                <p class="stat-label">Days</p>
+                <p class="stat-number text-2xl">~14</p>
+                <p class="stat-label">Day install</p>
               </div>
               <div class="card-glass p-5 text-center">
-                <p class="stat-number text-2xl">3h</p>
-                <p class="stat-label">Your time</p>
+                <p class="stat-number text-2xl">100%</p>
+                <p class="stat-label">Yours to keep</p>
               </div>
             </div>
           </div>
@@ -582,7 +606,7 @@
               </summary>
               <div class="faq-answer pt-6">
                 <form class="space-y-5" action="https://formspree.io/f/xnjbjayd" method="POST" data-contact-form>
-                  <input type="hidden" name="_subject" value="AI Department Installation Application" />
+                  <input type="hidden" name="_subject" value="Intelligent Systems Discovery Application" />
                   <div>
                     <label for="app-name">Your Name <span class="text-red-400" aria-hidden="true">*</span></label>
                     <input id="app-name" name="name" type="text" placeholder="Full name" required aria-required="true" />
@@ -612,7 +636,7 @@
                     <textarea id="app-challenge" name="challenge" rows="3" placeholder="What would you automate first if you could?"></textarea>
                   </div>
                   <button type="submit" class="btn btn-primary w-full text-sm uppercase tracking-wide">Submit Application</button>
-                  <p class="text-xs text-subtle text-center">No commitment. We follow up within 24 hours if you're a fit.</p>
+                  <p class="text-xs text-subtle text-center">No commitment. We follow up within one business day.</p>
                   <p aria-live="polite" class="text-sm text-subtle" data-form-status></p>
                 </form>
               </div>

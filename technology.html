@@ -12,21 +12,79 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>R&amp;D | Ceradon Systems</title>
-    <meta name="description" content="Ceradon Systems R&amp;D roadmap — collaborative autonomy, passive detection expansion, research partnerships, and future capability areas." />
-    <meta property="og:title" content="R&amp;D | Ceradon Systems" />
-    <meta property="og:description" content="Ceradon Systems R&amp;D roadmap — collaborative autonomy, passive detection expansion, research partnerships, and future capability areas." />
+    <title>Technology | Ceradon Systems</title>
+    <meta name="description" content="Ceradon Systems' engineering approach — edge-first processing, commodity hardware, passive sensing, operator-in-the-loop — and the research now in progress, from edge retraining to collaborative autonomy." />
+    <meta property="og:title" content="Technology | Ceradon Systems" />
+    <meta property="og:description" content="One engineering thesis, checked against shipped products: intelligence in software, processing at the edge, hardware the operator already carries." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/technology.html" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/Emblem.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="R&amp;D | Ceradon Systems" />
-    <meta name="twitter:description" content="Ceradon Systems R&amp;D roadmap — collaborative autonomy, passive detection expansion, research partnerships, and future capability areas." />
+    <meta name="twitter:title" content="Technology | Ceradon Systems" />
+    <meta name="twitter:description" content="One engineering thesis, checked against shipped products: intelligence in software, processing at the edge, hardware the operator already carries." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/Emblem.webp" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.ceradonsystems.com/technology.html" />
     <link rel="icon" type="image/webp" href="./assets/Emblem.webp" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <style>
+      /* Page-scoped: the tenet ledger. Each engineering rule is laid out
+         like a row in a verification matrix — claim on the left, the
+         fielded evidence on the right. */
+      .tenet-list { border-top: 1px solid var(--border); }
+      .tenet-row {
+        display: grid;
+        gap: 1.25rem;
+        padding: 2.25rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      @media (min-width: 768px) {
+        .tenet-row { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 3rem; }
+      }
+      .tenet-evidence {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+      }
+      @media (min-width: 768px) {
+        .tenet-evidence { border-left: 1px solid var(--border); padding-left: 2rem; }
+      }
+      .tenet-evidence-label {
+        font-size: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--ceradon-slate);
+      }
+      .tenet-evidence a.badge { text-decoration: none; }
+      .tenet-evidence a.badge:hover,
+      .tenet-evidence a.badge:focus-visible { color: var(--white); }
+      .maturity {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .maturity::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--ceradon-slate);
+      }
+      .maturity--active::before { background: var(--ceradon-blue); box-shadow: 0 0 6px rgba(43, 120, 255, 0.6); }
+      .snapshot-list { display: grid; gap: 0; border-top: 1px solid var(--border); }
+      .snapshot-list > div {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.875rem;
+      }
+      .snapshot-list dt { color: var(--ceradon-slate); }
+      .snapshot-list dd { color: var(--white); text-align: right; font-variant-numeric: tabular-nums lining-nums; }
+    </style>
   </head>
   <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
     <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
@@ -40,7 +98,7 @@
             <img class="logo-glow" src="./assets/Emblem.webp" alt="Ceradon Systems" width="558" height="558" />
           </span>
           <span class="hidden lg:flex flex-col leading-tight">
-            
+
             <span class="text-[10px] uppercase tracking-[0.2em] text-subtle">CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</span>
           </span>
         </a>
@@ -59,7 +117,7 @@
             </div>
           </div>
           <a href="intelligent-systems.html" class="navlink">Intelligent Systems</a>
-          <a href="technology.html" class="navlink">Technology</a>
+          <a href="technology.html" class="navlink" aria-current="page">Technology</a>
           <a href="company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink">Insights</a>
           <a href="contact.html" class="btn btn-primary">Contact</a>
@@ -69,95 +127,196 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content">
-      <section class="mx-auto max-w-7xl px-4 py-16 space-y-12">
-        <div class="space-y-12">
-          <div class="space-y-4">
-            <span class="tag">Research &amp; Development</span>
-          <h1 class="text-4xl font-bold text-[color:var(--white)]">Where We&rsquo;re Going Next</h1>
-          <p class="text-subtle text-lg max-w-3xl">Our product pages show what Ceradon delivers today. This page shows where we&rsquo;re investing &mdash; the research threads, capability expansions, and partnerships shaping our next generation of tools.</p>
-        </div>
 
-        <div class="space-y-6 relative">
-          <h2 class="section-heading text-3xl">Roadmap</h2>
-          <div class="relative pl-6 timeline">
-            <div class="timeline-item">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Collaborative Autonomy</h3>
-              <p class="text-sm text-subtle">Software-defined orchestration for decentralized drone behaviors and wolfpack-style missions.</p>
+      <!-- HERO: the thesis -->
+      <section class="relative overflow-hidden border-b border-[color:var(--steel-700)]">
+        <img src="./assets/hero-technology.webp" alt="" aria-hidden="true" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+        <div class="absolute inset-0 bg-gradient-to-b from-[#04070d]/40 via-[#04070d]/60 to-[#04070d]" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-7xl px-4 py-24">
+          <p class="text-xs uppercase tracking-[0.3em] text-[color:var(--ceradon-blue)] mb-4">Technology &middot; Engineering approach</p>
+          <h1 class="text-4xl md:text-6xl font-bold text-[color:var(--white)] max-w-4xl leading-tight">The intelligence is software. The hardware is whatever you already carry.</h1>
+          <p class="mt-6 max-w-2xl text-lg">Every Ceradon product applies the same thesis: put the capability in software, run it at the edge, and make it work on commodity hardware the operator already owns. No proprietary payloads, no cloud dependency, no procurement cycle standing between a unit and a capability.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <span class="badge">Edge-processed &mdash; no cloud</span>
+            <span class="badge">Commodity hardware</span>
+            <span class="badge">Operator-in-the-loop</span>
+            <span class="badge">SDVOSB</span>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#rules" class="btn btn-primary">See the design rules</a>
+            <a href="#research" class="btn">Active research</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN RULES: verification-matrix ledger -->
+      <section id="rules" class="mx-auto max-w-7xl px-4 py-16">
+        <h2 class="section-heading text-3xl">Four design rules, checked against shipped products</h2>
+        <p class="mt-4 max-w-3xl">An approach page is easy to write and hard to prove. So each rule below is cross-referenced to the fielded product that demonstrates it &mdash; the same way a requirement traces to a verification event. If a rule has no evidence, it does not appear here.</p>
+
+        <div class="tenet-list mt-10">
+          <div class="tenet-row">
+            <div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Process at the edge, not in the cloud</h3>
+              <p class="mt-2 text-sm">Data is computed where it is collected &mdash; a laptop on the tactical network, embedded compute on the platform. Nothing depends on connectivity, nothing transits infrastructure the operator does not control, and nothing is exposed to exfiltration in the first place.</p>
             </div>
-            <div class="timeline-item">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Localized Production Logic</h3>
-              <p class="text-sm text-subtle">Orchestration for field-based assembly, repair, and sustainment of robotic assets.</p>
+            <div class="tenet-evidence">
+              <span class="tenet-evidence-label">Demonstrated in</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="lantern.html" class="badge">LANTERN &mdash; floorplans on one laptop</a>
+                <a href="raptor.html" class="badge">RAPTOR &mdash; vision on embedded compute</a>
+              </div>
             </div>
-            <div class="timeline-item">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Passive Detection Expansion</h3>
-              <p class="text-sm text-subtle">Wi-Fi CSI anomaly detection for zero-emission awareness of Group 1&ndash;3 threats.</p>
+          </div>
+
+          <div class="tenet-row">
+            <div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Commodity hardware, software intelligence</h3>
+              <p class="mt-2 text-sm">The capability lives in the software, so the hardware can be cheap, replaceable, and already in inventory. A sensor that is a payload must be bought, integrated, powered, and carried. A sensor that is software ships as an update.</p>
             </div>
-            <div class="timeline-item">
-              <h3 class="text-xl font-semibold text-[color:var(--white)]">Operator-Directed Edge Retraining</h3>
-              <p class="text-sm text-subtle">On-device model adaptation in minutes &mdash; no reach-back to CONUS, no contractor, no weeks-long retraining pipeline.</p>
+            <div class="tenet-evidence">
+              <span class="tenet-evidence-label">Demonstrated in</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="lantern.html" class="badge">LANTERN &mdash; existing FPV video, no LiDAR</a>
+                <a href="vantage.html" class="badge">VANTAGE &mdash; commodity RF hardware</a>
+                <a href="architect.html" class="badge">ARCHITECT &mdash; COTS-first UxS planning</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tenet-row">
+            <div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Sense passively where physics allows</h3>
+              <p class="mt-2 text-sm">Emitting reveals position. Where the physics supports it, our sensing reads signals already present in the environment rather than transmitting new ones &mdash; awareness without adding to the unit&rsquo;s signature.</p>
+            </div>
+            <div class="tenet-evidence">
+              <span class="tenet-evidence-label">Demonstrated in</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="vantage.html" class="badge">VANTAGE &mdash; passive RF sensing</a>
+                <a href="raptor.html" class="badge">RAPTOR &mdash; passive EO detection</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="tenet-row">
+            <div>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Operator-in-the-loop, not operator-replaced</h3>
+              <p class="mt-2 text-sm">Autonomy handles volume; the human holds judgment. Our systems surface, rank, and recommend &mdash; and a person validates before anything consequential happens. That is a safety mechanism, and it is also how systems earn trust in the field.</p>
+            </div>
+            <div class="tenet-evidence">
+              <span class="tenet-evidence-label">Demonstrated in</span>
+              <div class="flex flex-wrap gap-2">
+                <a href="architect.html" class="badge">ARCHITECT &mdash; decision support, not decisions</a>
+                <a href="kestrel.html" class="badge">KESTREL &mdash; training the human half</a>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Edge AI Retraining -->
-        <div class="rounded-xl overflow-hidden max-w-3xl mx-auto my-8">
-          <img src="./assets/section-tech-edge.webp" alt="Edge AI compute hardware for tactical deployment" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
-        </div>
-        <div class="card-glass p-8 space-y-6">
-          <div class="space-y-2">
-            <span class="tag">Emerging Capability</span>
-            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Edge AI Retraining &mdash; Closing the Last Mile</h2>
-          </div>
-          <p class="text-subtle max-w-3xl">Every defense AI program hits the same wall: models trained in controlled environments degrade in the field. Different terrain, lighting, concealment methods, and threat profiles mean laboratory accuracy rarely survives first contact with reality.</p>
-          <p class="text-subtle max-w-3xl">The current DoD solution &mdash; ship data back to CONUS, retrain in a SCIF, push updates weeks later &mdash; doesn&rsquo;t work for small teams operating in denied or disconnected environments. We&rsquo;re building systems that retrain on-device, in minutes, directed by the operator who knows the environment best.</p>
-
-          <div class="grid gap-6 md:grid-cols-2 mt-4">
-            <div class="space-y-3">
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">Why This Matters</h3>
-              <ul class="space-y-2 text-sm text-subtle">
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> SOF teams need systems that adapt to the environment they&rsquo;re in <em>right now</em> &mdash; no reach-back to data centers.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Border and perimeter security faces constantly changing threat profiles that demand rapid model updates.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Partner forces can train on <em>their</em> environment with <em>their</em> data &mdash; no classified training sets required. A significant FMS enabler.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Persistent surveillance at FOBs and COPs where the threat signature changes weekly.</li>
-              </ul>
+      <!-- ACTIVE RESEARCH -->
+      <section id="research" class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <h2 class="section-heading text-3xl">Where the research is going</h2>
+          <p class="mt-4 max-w-3xl">The product pages show what ships today. These are the threads we are investing in next, labelled by maturity &mdash; because an evaluator deserves to know the difference between a prototype and an idea.</p>
+          <div class="mt-8 grid gap-6 md:grid-cols-2">
+            <div class="card-glass p-7 space-y-3">
+              <span class="tag maturity maturity--active">Active development</span>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Operator-directed edge retraining</h3>
+              <p class="text-sm text-subtle">On-device model adaptation in minutes, directed by the operator who knows the environment &mdash; no reach-back to CONUS, no contractor, no weeks-long retraining pipeline. Detailed below.</p>
             </div>
-            <div class="space-y-3">
-              <h3 class="text-lg font-semibold text-[color:var(--white)]">Our Approach</h3>
-              <ul class="space-y-2 text-sm text-subtle">
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Operator-in-the-loop:</strong> Human oversight is the safety mechanism &mdash; operators validate retraining results before deployment.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Incremental learning:</strong> Adapt models with small, field-collected datasets without catastrophic forgetting of base capabilities.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Edge-native compute:</strong> Full retraining pipeline runs on embedded hardware &mdash; no cloud dependency, no exfiltration risk.</li>
-                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Closed-loop integration:</strong> Retrained models feed directly into autonomous response and C2 systems.</li>
-              </ul>
+            <div class="card-glass p-7 space-y-3">
+              <span class="tag maturity maturity--active">Active development</span>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Passive detection expansion</h3>
+              <p class="text-sm text-subtle">Extending Wi-Fi CSI anomaly detection toward zero-emission awareness of Group 1&ndash;3 threats, building on the passive RF work fielded in VANTAGE.</p>
+            </div>
+            <div class="card-glass p-7 space-y-3">
+              <span class="tag maturity">Applied research</span>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Collaborative autonomy</h3>
+              <p class="text-sm text-subtle">Software-defined orchestration for decentralized drone behaviors and wolfpack-style missions &mdash; coordination logic that survives losing any single node.</p>
+            </div>
+            <div class="card-glass p-7 space-y-3">
+              <span class="tag maturity">Exploratory</span>
+              <h3 class="text-xl font-semibold text-[color:var(--white)]">Localized production logic</h3>
+              <p class="text-sm text-subtle">Orchestration for field-based assembly, repair, and sustainment of robotic assets &mdash; treating the supply chain as something a small team can carry with it.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="grid gap-6 lg:grid-cols-2">
-          <div class="card-glass p-8 space-y-4">
-            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Research Partnerships</h2>
-            <p class="text-subtle">We collaborate with academic labs and government research programs to advance passive RF sensing, autonomous systems integration, and field-deployable manufacturing.</p>
-            <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> SBIR/STTR-eligible across multiple DoD topics.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Open to joint research with universities and FFRDCs.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Active engagement with SOF innovation channels.</li>
+      <!-- DEEP DIVE: EDGE RETRAINING -->
+      <section class="mx-auto max-w-7xl px-4 py-16">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <span class="tag">Deep dive &middot; Active development</span>
+            <h2 class="section-heading text-3xl mt-3">Edge retraining: closing the last mile</h2>
+            <p class="mt-4">Every defense AI program hits the same wall: models trained in controlled environments degrade in the field. Different terrain, lighting, concealment methods, and threat profiles mean laboratory accuracy rarely survives first contact with reality.</p>
+            <p class="mt-4">The prevailing answer &mdash; ship data back to CONUS, retrain in a SCIF, push updates weeks later &mdash; does not work for small teams in denied or disconnected environments. We are building the alternative: retraining on-device, in minutes, directed by the operator who knows the environment best.</p>
+          </div>
+          <div class="rounded-xl overflow-hidden">
+            <img src="./assets/section-tech-edge.webp" alt="Edge AI compute hardware for tactical deployment" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2">
+          <div class="card-glass p-7 space-y-3">
+            <h3 class="text-lg font-semibold text-[color:var(--white)]">Why it matters</h3>
+            <ul class="space-y-2 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> SOF teams need systems that adapt to the environment they are in <em>right now</em> &mdash; no reach-back to data centers.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Border and perimeter security faces threat profiles that change faster than any centralized retraining cycle.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Partner forces can train on <em>their</em> environment with <em>their</em> data &mdash; no classified training sets required. A significant FMS enabler.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Persistent surveillance at FOBs and COPs where the threat signature changes weekly.</li>
             </ul>
           </div>
-          <div class="card-glass p-8 space-y-4">
-            <h2 class="text-2xl font-semibold text-[color:var(--white)]">Future Capability Areas</h2>
-            <p class="text-subtle">Beyond our current product lines, we&rsquo;re exploring capabilities at the intersection of passive sensing and autonomous logistics.</p>
-            <ul class="space-y-3 text-sm text-subtle">
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Multi-sensor fusion with CSI + acoustic + inertial data.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Edge-native ML for disconnected, contested environments.</li>
-              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Supply chain awareness tooling for expeditionary logistics.</li>
+          <div class="card-glass p-7 space-y-3">
+            <h3 class="text-lg font-semibold text-[color:var(--white)]">How we are building it</h3>
+            <ul class="space-y-2 text-sm text-subtle">
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Operator-in-the-loop:</strong> human oversight is the safety mechanism &mdash; operators validate retraining results before deployment.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Incremental learning:</strong> adapt models with small, field-collected datasets without catastrophic forgetting of base capabilities.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Edge-native compute:</strong> the full retraining pipeline runs on embedded hardware &mdash; no cloud dependency, no exfiltration risk.</li>
+              <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> <strong>Closed-loop integration:</strong> retrained models feed directly into autonomous response and C2 systems.</li>
             </ul>
           </div>
         </div>
+      </section>
 
-        <div class="card-glass p-8 space-y-4 text-center">
-          <h2 class="text-2xl font-semibold text-[color:var(--white)]">Interested in Collaborating?</h2>
-          <p class="text-subtle max-w-2xl mx-auto">Whether you&rsquo;re a research lab, a defense prime, or a program office exploring new sensing modalities &mdash; we&rsquo;d like to hear from you.</p>
-          <a href="contact.html" class="btn btn-primary text-sm uppercase tracking-wide inline-block">Get in Touch</a>
+      <!-- WORKING WITH CERADON -->
+      <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <div class="grid gap-10 lg:grid-cols-2">
+            <div class="space-y-4">
+              <h2 class="section-heading text-3xl">Research partnerships</h2>
+              <p>We collaborate with academic labs and government research programs to advance passive RF sensing, autonomous systems integration, and field-deployable manufacturing.</p>
+              <ul class="space-y-3 text-sm text-subtle">
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> SBIR/STTR-eligible across multiple DoD topics.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Open to joint research with universities and FFRDCs.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Active engagement with SOF innovation channels.</li>
+              </ul>
+            </div>
+            <div class="card-glass p-8">
+              <h2 class="text-xl font-semibold text-[color:var(--white)]">Contracting snapshot</h2>
+              <p class="mt-2 text-sm text-subtle">The identifiers a program office needs, in one place.</p>
+              <dl class="snapshot-list mt-5">
+                <div><dt>CAGE</dt><dd>179U9</dd></div>
+                <div><dt>UEI</dt><dd>UZA9PFJ9RDL6</dd></div>
+                <div><dt>Socio-economic status</dt><dd>SDVOSB &middot; VOSB</dd></div>
+                <div><dt>NAICS</dt><dd>541715 &middot; 541330</dd></div>
+                <div><dt>PSC</dt><dd>K058 &middot; AJ11</dd></div>
+                <div><dt>SAM.gov</dt><dd>Active through Dec 5, 2026</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="reg-rule"></div>
+      <section>
+        <div class="mx-auto max-w-7xl px-4 py-20 text-center">
+          <h2 class="section-heading text-4xl">Evaluating a sensing or autonomy problem?</h2>
+          <p class="mt-4 max-w-2xl mx-auto">Whether you are a research lab, a defense prime, or a program office exploring new modalities &mdash; bring the problem and we will tell you plainly whether our approach fits it.</p>
+          <a href="contact.html" class="btn btn-primary mt-8 inline-flex">Contact Ceradon Systems</a>
+          <p class="mt-6 text-xs uppercase tracking-[0.2em] text-subtle">SDVOSB &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6</p>
         </div>
       </section>
     </main>
