@@ -33,7 +33,12 @@ const PRIORITIES = {
   'disclaimer.html': { priority: '0.2', changefreq: 'yearly' }
 };
 
-const EXCLUDED = new Set(['404.html']);
+// Retired products. The pages still build so existing inbound links do not
+// break, but they are unlinked in the nav/footer and must not be submitted to
+// search engines as current offerings.
+const RETIRED = ['scout.html', 'aegis.html', 'fedresume.html'];
+
+const EXCLUDED = new Set(['404.html', ...RETIRED]);
 
 function gitLastMod(relPath) {
   try {

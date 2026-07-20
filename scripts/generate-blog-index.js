@@ -57,10 +57,13 @@ const listHtml = posts.map(post => {
 // Read current index and replace blog-list content
 let index = readFileSync(indexPath, 'utf-8');
 
-const listRegex = /(<div class="blog-list" id="blog-posts">)\s*[\s\S]*?(\s*<\/div>)/;
+// The closing tag is matched WITHOUT its leading whitespace. Capturing `\s*`
+// there and then re-adding indentation in the replacement grew the file by one
+// blank line on every single build.
+const listRegex = /(<div class="blog-list" id="blog-posts">)[\s\S]*?<\/div>/;
 // Use a replacer function so `$` in post titles (e.g. "$14.6B") is not
 // treated as a capture-group reference and injected as broken HTML.
-index = index.replace(listRegex, (_, open, close) => `${open}\n${listHtml}\n          ${close}`);
+index = index.replace(listRegex, (_, open) => `${open}\n${listHtml}\n          </div>`);
 
 writeFileSync(indexPath, index, 'utf-8');
 console.log(`Blog index updated with ${posts.length} posts:`);

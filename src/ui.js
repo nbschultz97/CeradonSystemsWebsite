@@ -16,15 +16,16 @@ const TIMEOUTS = {
   FORM_RESET: 3000
 };
 
+// The six shipping systems, in the order the homepage introduces them.
+// SCOUT, AEGIS and FedResume are retired: their pages still exist but must
+// not be linked or advertised anywhere.
 const NAV_ITEMS = [
   { label: 'VANTAGE', href: '/vantage.html', group: 'Products' },
   { label: 'RAPTOR', href: '/raptor.html', group: 'Products' },
-  { label: 'SCOUT', href: '/scout.html', group: 'Products' },
   { label: 'ARCHITECT', href: '/architect.html', group: 'Products' },
+  { label: 'LANTERN', href: '/lantern.html', group: 'Products' },
   { label: 'KESTREL', href: '/kestrel.html', group: 'Products' },
-  { label: 'AEGIS', href: '/aegis.html', group: 'Products' },
   { label: 'POLYGEN', href: '/polygen.html', group: 'Products' },
-  { label: 'FedResume', href: '/fedresume.html', group: 'Products' },
   { label: 'Intelligent Systems', href: '/intelligent-systems.html', group: 'Services' },
   { label: 'Technology', href: '/technology.html' },
   { label: 'Company', href: '/company.html' },
@@ -35,12 +36,10 @@ const NAV_ITEMS = [
 const FOOTER_LINKS = [
   { label: 'VANTAGE', href: '/vantage.html' },
   { label: 'RAPTOR', href: '/raptor.html' },
-  { label: 'SCOUT', href: '/scout.html' },
   { label: 'ARCHITECT', href: '/architect.html' },
+  { label: 'LANTERN', href: '/lantern.html' },
   { label: 'KESTREL', href: '/kestrel.html' },
-  { label: 'AEGIS', href: '/aegis.html' },
   { label: 'POLYGEN', href: '/polygen.html' },
-  { label: 'FedResume', href: '/fedresume.html' },
   { label: 'Intelligent Systems', href: '/intelligent-systems.html' },
   { label: 'Technology', href: '/technology.html' },
   { label: 'Company', href: '/company.html' },

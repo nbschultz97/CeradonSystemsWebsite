@@ -38,26 +38,8 @@ const VISUAL_STORIES = {
       ['./assets/section-raptor-tak.webp', 'RAPTOR detections integrated into TAK', 'TAK integration']
     ]
   },
-  '/aegis.html': {
-    eyebrow: 'Sensor fusion',
-    title: 'Three sensing modes. One operational picture.',
-    copy: 'AEGIS combines complementary views so teams can detect, classify, and respond with confidence.',
-    items: [
-      ['./assets/section-aegis-sensors.webp', 'AEGIS fused counter-UAS sensor array', 'Sensor layer'],
-      ['./assets/section-aegis-detection.webp', 'AEGIS drone detection and tracking visualization', 'Detection layer'],
-      ['./assets/hero-aegis.webp', 'Counter-UAS system operating in the field', 'Mission layer']
-    ]
-  },
-  '/scout.html': {
-    eyebrow: 'Workflow',
-    title: 'From opportunity noise to a focused pursuit list',
-    copy: 'SCOUT turns a sprawling federal marketplace into a daily, prioritized operating picture.',
-    items: [
-      ['./assets/hero-scout.webp', 'SCOUT federal opportunity intelligence dashboard', 'Opportunity feed'],
-      ['./assets/section-scout-workflow.webp', 'SCOUT contract discovery and scoring workflow', 'Automated workflow'],
-      ['./assets/section-scout-preview.webp', 'Ranked federal contract opportunities in SCOUT', 'Priority view']
-    ]
-  },
+  // SCOUT and AEGIS entries removed with those products; their pages are
+  // retired and unlinked, so they no longer earn a visual story.
   '/architect.html': {
     eyebrow: 'System planning',
     title: 'Make component decisions visible',
