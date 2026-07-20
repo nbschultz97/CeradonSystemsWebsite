@@ -1,3 +1,22 @@
+// Vite only rewrites asset paths it can see statically. The story map below is
+// plain data, so `./assets/foo.webp` used to survive the build untouched and
+// 404 against dist/, where every file carries a content hash. Globbing the
+// directory gives the bundler something to analyse and yields basename -> URL.
+const ASSET_URLS = Object.fromEntries(
+  Object.entries(
+    import.meta.glob('../assets/*.{webp,png,jpg,jpeg}', {
+      eager: true, query: '?url', import: 'default'
+    })
+  ).map(([path, url]) => [path.replace(/^.*\//, ''), url])
+);
+
+function assetUrl(ref) {
+  const name = ref.replace(/^.*\//, '');
+  const url = ASSET_URLS[name];
+  if (!url) console.warn(`[visual-stories] missing asset: ${ref}`);
+  return url;
+}
+
 const VISUAL_STORIES = {
   '/vantage.html': {
     eyebrow: 'Mission visualization',
@@ -88,15 +107,21 @@ function buildVisualStory(config) {
         <p>${config.copy}</p>
       </div>
       <div class="visual-story__grid" data-animate-stagger>
-        ${config.items.map(([src, alt, label], index) => `
+        ${config.items.map(([src, alt, label], index) => {
+          const url = assetUrl(src);
+          // Drop the frame entirely rather than render a broken image whose
+          // alt text reads as body copy on the page.
+          if (!url) return '';
+          return `
           <figure class="visual-story__frame visual-story__frame--${index + 1}" data-visual-tilt>
             <div class="visual-story__media">
-              <img src="${src}" alt="${alt}" loading="lazy" decoding="async" />
+              <img src="${url}" alt="${alt}" loading="lazy" decoding="async" />
               <span class="visual-story__index">0${index + 1}</span>
             </div>
             <figcaption>${label}</figcaption>
           </figure>
-        `).join('')}
+        `;
+        }).join('')}
       </div>
     </div>
   `;
@@ -107,6 +132,8 @@ function initVisualStories() {
   const config = VISUAL_STORIES[normalisePath(window.location.pathname)];
   const footer = document.querySelector('footer');
   if (!config || !footer || document.querySelector('.visual-story')) return;
+  // An intro heading with no images under it is worse than no section.
+  if (!config.items.some(([src]) => assetUrl(src))) return;
   footer.before(buildVisualStory(config));
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
