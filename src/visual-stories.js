@@ -23,9 +23,19 @@ const VISUAL_STORIES = {
     title: 'Passive awareness, from signal to decision',
     copy: 'A clearer look at the environments, sensing model, and operator context behind VANTAGE.',
     items: [
-      ['./assets/hero-vantage.webp', 'VANTAGE passive WiFi sensing in a built environment', 'Built environment'],
-      ['./assets/section-vantage-preview.webp', 'Passive WiFi signal visualization across a structure', 'Signal picture'],
-      ['./assets/hero-index.webp', 'Operator-focused through-wall awareness visualization', 'Operator context']
+      ['./assets/hero-vantage.webp', 'Sensor package staged against an exterior wall', 'Built environment'],
+      ['./assets/section-vantage-preview.webp', 'Wall-mounted sensor unit inside a bare structure', 'Emplacement'],
+      ['./assets/section-vantage-operator.webp', 'Operator reading returns on a rugged laptop in the field', 'Operator context']
+    ]
+  },
+  '/lantern.html': {
+    eyebrow: 'From flight to floorplan',
+    title: 'The building, on the map, before the next element moves',
+    copy: 'Ordinary video in, a georeferenced interior layout out -- carried on the device the team is already holding.',
+    items: [
+      ['./assets/lantern-pipeline.webp', 'Lantern pipeline from captured video through to placed overlay', 'Pipeline'],
+      ['./assets/lantern-floorplan.webp', 'Interior floorplan reconstructed from video alone', 'Reconstruction'],
+      ['./assets/section-lantern-operator.webp', 'Operator reviewing a floorplan on a handheld before entry', 'In the hand']
     ]
   },
   '/raptor.html': {
