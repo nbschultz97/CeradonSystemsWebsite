@@ -18,7 +18,7 @@
     <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()" />
     <title>Ceradon Systems | Defense Sensing, Mapping &amp; Mission Systems | Veteran-Owned SDVOSB</title>
     <meta name="description" content="Ceradon Systems builds sensing, mapping, and mission-rehearsal systems for defense and public-safety teams: VANTAGE passive through-wall detection, RAPTOR edge AI vision, LANTERN drone-video floorplans, KESTREL mission rehearsal, COTS ARCHITECT, and POLYGEN. Veteran-owned SDVOSB, CAGE 179U9." />
-    <meta name="keywords" content="through wall detection, passive wall sensing, WiFi sensing technology, SDVOSB defense contractor Utah, edge AI detection, drone video floorplan ATAK, sUAS mission rehearsal, Lumineye alternative, WiFi CSI sensing" />
+    <meta name="keywords" content="through wall detection, passive wall sensing, passive RF sensing, SDVOSB defense contractor Utah, edge AI detection, drone video floorplan ATAK, sUAS mission rehearsal" />
     <meta property="og:title" content="Ceradon Systems | Defense Sensing, Mapping &amp; Mission Systems" />
     <meta property="og:description" content="Veteran-owned SDVOSB building passive through-wall detection, edge AI vision, drone-video floorplans, and sUAS mission rehearsal on commodity hardware." />
     <meta property="og:type" content="website" />
@@ -221,7 +221,7 @@
 
                 <!-- plate annotations -->
                 <text x="26" y="42" fill="rgba(197,203,214,0.50)" font-size="9" letter-spacing="1.5" font-weight="500">PLAN VIEW &#183; GRID 10 M</text>
-                <text x="534" y="530" text-anchor="end" fill="rgba(197,203,214,0.40)" font-size="9" letter-spacing="1.5" font-weight="500">VANTAGE &#183; CSI FIELD</text>
+                <text x="534" y="530" text-anchor="end" fill="rgba(197,203,214,0.40)" font-size="9" letter-spacing="1.5" font-weight="500">VANTAGE &#183; PASSIVE RF FIELD</text>
 
                 <!-- measured tick scale along the plate base -->
                 <rect x="14" y="539" width="532" height="7" fill="url(#plate-ticks)" opacity="0.7" />
@@ -281,18 +281,24 @@
           <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
 
             <a href="vantage.html" class="product-card group block">
+              <div class="product-card__media">
+                <img src="./assets/hero-vantage.webp" alt="VANTAGE sensor node in a ruggedized case deployed on gravel" loading="lazy" width="1600" height="900" />
+              </div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Sense &middot; Passive RF</span>
                 <span class="text-[10px] uppercase tracking-[0.2em] text-white/25">TRL 4</span>
               </div>
               <div class="product-card__header">
                 <h3 class="product-title">VANTAGE</h3>
-                <p class="product-tagline">Detects human presence through walls from ambient WiFi. Zero RF emissions &mdash; nothing to detect, jam, or trace.</p>
+                <p class="product-tagline">Detects human presence through walls from ambient RF. Zero emissions &mdash; nothing to detect, jam, or trace.</p>
               </div>
               <span class="text-xs text-white/40 group-hover:text-white/80 transition-colors">Explore VANTAGE &rarr;</span>
             </a>
 
             <a href="raptor.html" class="product-card group block">
+              <div class="product-card__media">
+                <img src="./assets/section-raptor-ugv.webp" alt="Unmanned ground vehicle carrying RAPTOR edge AI vision in desert terrain" loading="lazy" width="1600" height="900" />
+              </div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Sense &middot; Edge AI Vision</span>
               </div>
@@ -304,6 +310,9 @@
             </a>
 
             <a href="lantern.html" class="product-card group block">
+              <div class="product-card__media">
+                <img src="./assets/lantern-atak.webp" alt="LANTERN floorplan georeferenced over satellite imagery in ATAK" loading="lazy" width="1600" height="900" />
+              </div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Map &middot; Video to Floorplan</span>
               </div>
@@ -315,6 +324,9 @@
             </a>
 
             <a href="architect.html" class="product-card group block">
+              <div class="product-card__media">
+                <img src="./assets/cots-architect-workflow.webp" alt="UxS components laid out for build planning — frames, flight controllers, radios" loading="lazy" width="1600" height="900" />
+              </div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Build &middot; UxS Planning</span>
               </div>
@@ -326,6 +338,9 @@
             </a>
 
             <a href="kestrel.html" class="product-card group block">
+              <div class="product-card__media">
+                <img src="./assets/kestrel-osd-day.webp" alt="KESTREL in-flight OSD view over a photoreal city environment" loading="lazy" width="1600" height="900" />
+              </div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Rehearse &middot; sUAS Missions</span>
                 <span class="text-[10px] uppercase tracking-[0.2em] text-white/25">Design Partners</span>
@@ -338,6 +353,9 @@
             </a>
 
             <a href="polygen.html" class="product-card group block">
+              <div class="product-card__media">
+                <img src="./assets/polygen-workspace.jpg" alt="POLYGEN workspace — plain-English prompt, validated 3D model, and OpenSCAD output" loading="lazy" width="1600" height="854" />
+              </div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">Build &middot; Text to 3D</span>
                 <span class="text-[10px] uppercase tracking-[0.2em] text-white/25">Live</span>
@@ -353,6 +371,23 @@
         </div>
       </section>
 
+      <!-- ============ FIELD BAND — full-bleed photography, credibility ============ -->
+      <section class="field-band border-t border-white/[0.06]" aria-label="Field-informed engineering">
+        <img class="field-band__img" src="./assets/ceradon-field-systems-v2.webp" alt="" aria-hidden="true" loading="lazy" width="1600" height="900" />
+        <div class="field-band__content mx-auto max-w-7xl px-4 py-28 lg:py-40">
+          <div class="max-w-xl space-y-5" data-animate>
+            <p class="tag">Why Ceradon</p>
+            <h2 class="section-heading">Built by people who have carried the kit.</h2>
+            <p class="text-white/70 text-lg leading-relaxed">
+              Veteran-founded and field-informed. Every system ships on commodity hardware, runs at the edge without a cloud connection, and speaks the formats operators already use &mdash; because the team has stood where the end user stands.
+            </p>
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a href="company.html" class="btn btn-secondary text-sm">About the company</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ FLAGSHIP — VANTAGE ============ -->
       <section class="border-t border-white/[0.06]">
         <div class="mx-auto max-w-7xl px-4 py-20 lg:py-28 space-y-14">
@@ -361,7 +396,7 @@
               <p class="tag">Flagship &mdash; VANTAGE</p>
               <h2 class="section-heading">See through walls. Stay invisible.</h2>
               <p class="text-white/40 text-lg leading-relaxed">
-                VANTAGE reads the distortions human bodies leave in ambient WiFi &mdash; Channel State Information &mdash; to detect presence through solid walls without transmitting a thing.
+                VANTAGE reads the distortions human bodies leave in the ambient RF field to detect presence through solid walls without transmitting a thing.
               </p>
             </div>
             <div class="rounded-xl overflow-hidden">
@@ -392,12 +427,12 @@
             <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
               <span class="text-xs font-semibold text-white/20 tracking-wider">01</span>
               <h3 class="font-semibold text-white">Listen</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Captures existing WiFi frames from ambient access points. No transmitter needed.</p>
+              <p class="text-sm text-white/40 leading-relaxed">Captures ambient RF signals already present in the environment. No transmitter needed.</p>
             </div>
             <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
               <span class="text-xs font-semibold text-white/20 tracking-wider">02</span>
               <h3 class="font-semibold text-white">Extract</h3>
-              <p class="text-sm text-white/40 leading-relaxed">Pulls CSI amplitude and phase data across subcarriers using commodity WiFi chipsets.</p>
+              <p class="text-sm text-white/40 leading-relaxed">Extracts amplitude and phase signatures from the ambient field on commodity hardware.</p>
             </div>
             <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
               <span class="text-xs font-semibold text-white/20 tracking-wider">03</span>

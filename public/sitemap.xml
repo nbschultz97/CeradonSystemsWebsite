@@ -32,7 +32,7 @@
   </url>
   <url>
     <loc>https://www.ceradonsystems.com/</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -43,14 +43,8 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.ceradonsystems.com/ip.html</loc>
-    <lastmod>2026-07-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://www.ceradonsystems.com/kestrel.html</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -109,20 +103,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.ceradonsystems.com/blog/2026-02-10-how-wifi-csi-through-wall-detection-works.html</loc>
-    <lastmod>2026-02-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://www.ceradonsystems.com/blog/2026-02-13-defense-tech-weekly.html</loc>
     <lastmod>2026-02-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ceradonsystems.com/blog/2026-02-22-wifi-sensing-goes-mainstream.html</loc>
-    <lastmod>2026-02-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
