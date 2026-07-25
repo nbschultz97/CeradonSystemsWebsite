@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://www.ceradonsystems.com/blog/</loc>
-    <lastmod>2026-07-12</lastmod>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -141,6 +141,12 @@
   <url>
     <loc>https://www.ceradonsystems.com/blog/2026-07-12-layered-counter-drone-defense-base-infrastructure.html</loc>
     <lastmod>2026-07-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.ceradonsystems.com/blog/2026-07-25-own-vs-rent-ai-small-govcons.html</loc>
+    <lastmod>2026-07-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
