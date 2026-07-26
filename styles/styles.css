@@ -525,8 +525,22 @@ header nav .group.is-open > div.hidden {
   z-index: -2;
 }
 
+/* Readability scrim over hero background images: darkens the text side
+   and the bottom edge so copy stays legible over bright imagery. */
 .hero-splash::after {
-  display: none;
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, rgba(4, 7, 13, 0.88) 0%, rgba(4, 7, 13, 0.62) 45%, rgba(4, 7, 13, 0.3) 100%),
+    linear-gradient(to top, rgba(4, 7, 13, 0.72), transparent 45%);
+}
+
+.hero-splash > div {
+  position: relative;
+  z-index: 2;
 }
 
 /* Grid background pattern */
