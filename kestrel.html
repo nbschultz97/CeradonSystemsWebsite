@@ -13,15 +13,15 @@
     <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>KESTREL Mission Rehearsal | Ceradon Systems</title>
-    <meta name="description" content="KESTREL helps public-safety, SAR, inspection, and training teams rehearse structured sUAS missions with aircraft-specific configuration and repeatable session scoring." />
+    <meta name="description" content="KESTREL loads any coordinate on Earth in photoreal terrain. Build the aircraft from real parts, build the mission on real ground, fly it day or night on the low-light camera, and get the run back scored." />
     <meta property="og:title" content="KESTREL Mission Rehearsal | Ceradon Systems" />
-    <meta property="og:description" content="Type a grid, build the aircraft from real parts, set the objective chain, and fly a scored rehearsal in photoreal terrain." />
+    <meta property="og:description" content="Any coordinate on Earth in photoreal terrain. Build the aircraft, build the mission, fly it day or night, get it back scored." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/kestrel.html" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/kestrel-trailer-poster.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="KESTREL Mission Rehearsal | Ceradon Systems" />
-    <meta name="twitter:description" content="Aircraft-configured sUAS mission rehearsal for public-safety, SAR, inspection, and training teams." />
+    <meta name="twitter:description" content="Any coordinate on Earth in photoreal terrain. Build the aircraft, build the mission, fly it day or night, get it back scored." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/kestrel-trailer-poster.jpg" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.ceradonsystems.com/kestrel.html" />    <link rel="icon" type="image/webp" href="./assets/Emblem.webp" />
@@ -34,7 +34,7 @@
       "applicationCategory": "SimulationApplication",
       "operatingSystem": "Windows",
       "url": "https://www.ceradonsystems.com/kestrel.html",
-      "description": "Windows-based sUAS mission-rehearsal simulator. Loads any coordinate on Earth in photoreal streamed terrain, models flight from real component specifications, renders an authentic Betaflight OSD, and keeps structured objectives and scored session records locally.",
+      "description": "Windows-based sUAS mission-rehearsal simulator. Loads any coordinate on Earth in photoreal streamed terrain, models flight from real component specifications, includes a mission builder for objectives and entities, supports daylight and low-light sensor flight, and keeps scored session records locally.",
       "publisher": {
         "@type": "Organization",
         "name": "Ceradon Systems, LLC",
@@ -95,16 +95,19 @@
               Fly the mission<br class="hidden sm:block" /> before you fly the mission.
             </h1>
             <p class="text-xl text-white/60 leading-relaxed max-w-2xl">
-              Drop a pin anywhere on Earth. That coordinate loads in photoreal terrain, your aircraft flies like the parts it is built from, and every run comes back scored.
+              Drop a pin anywhere on Earth. That coordinate loads in photoreal terrain. Build the aircraft from real parts, build the mission on the real ground, fly it, and get it back scored.
             </p>
             <div class="flex flex-wrap gap-3">
               <span class="badge">Any coordinate on Earth</span>
               <span class="badge">Physics from real parts</span>
+              <span class="badge">Build your own missions</span>
+              <span class="badge">Day, dusk, and night camera</span>
               <span class="badge">Every run scored</span>
             </div>
             <div class="flex flex-col sm:flex-row gap-3 pt-2">
               <a href="contact.html?product=kestrel" class="btn btn-primary text-sm uppercase tracking-wide">Apply for a Pilot</a>
               <a href="#trailer" class="btn btn-secondary text-sm uppercase tracking-wide">Watch the Trailer</a>
+              <a href="#builder" class="btn btn-secondary text-sm uppercase tracking-wide">See the Builder</a>
             </div>
           </div>
         </div>
@@ -140,8 +143,8 @@
               <p class="stat-label">Motor, prop, pack, and mass come off the spec sheet. It flies like what you built.</p>
             </div>
             <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
-              <p class="stat-number text-3xl lg:text-4xl text-white">REAL&nbsp;SUN</p>
-              <p class="stat-label">Light follows the actual solar position for that coordinate, date, and hour.</p>
+              <p class="stat-number text-3xl lg:text-4xl text-white">YOUR&nbsp;MISSION</p>
+              <p class="stat-label">Place objectives, OPFOR, and structures on the real ground, then fly what you built.</p>
             </div>
             <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
               <p class="stat-number text-3xl lg:text-4xl text-white">SCORED</p>
@@ -204,6 +207,71 @@
         </div>
       </section>
 
+      <!-- ============ MISSION BUILDER ============ -->
+      <section id="builder" class="scroll-mt-24 border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 space-y-10">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="max-w-2xl space-y-3">
+              <p class="tag">Mission builder</p>
+              <h2 class="section-heading text-3xl md:text-4xl">Build the mission you actually have to fly.</h2>
+            </div>
+            <p class="max-w-sm text-sm text-subtle">Objectives, OPFOR, SOF, support, vehicles, structures &mdash; placed on the real ground at the coordinate you chose, then saved and flown.</p>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-2" data-animate-stagger>
+            <figure class="space-y-3">
+              <div class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+                <img src="./assets/kestrel-builder-inventory.webp" alt="KESTREL builder inventory — objectives, OPFOR, SOF, support, vehicles and structures in the sidebar, a grid of vehicle models, and a 3D preview of an armed technical" class="w-full h-auto block" width="1600" height="900" loading="lazy" />
+              </div>
+              <figcaption class="text-sm text-subtle"><span class="font-semibold text-[color:var(--white)]">Pick what is out there.</span> Technicals, transports, jammers, tankers, structures. Every entity is something a crew has to recognise from the air.</figcaption>
+            </figure>
+            <figure class="space-y-3">
+              <div class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+                <img src="./assets/kestrel-builder-place.webp" alt="KESTREL builder placing a comms tower on a ridgeline in streamed photoreal terrain" class="w-full h-auto block" width="1600" height="900" loading="lazy" />
+              </div>
+              <figcaption class="text-sm text-subtle"><span class="font-semibold text-[color:var(--white)]">Put it on real ground.</span> Place it against the actual ridge, the actual road, the actual building &mdash; not a stand-in map.</figcaption>
+            </figure>
+          </div>
+
+          <div class="grid gap-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]" data-animate>
+              <img src="./assets/kestrel-builder-menu.webp" alt="KESTREL builder menu reading one objective, eight entities, launch point set, with Save and Fly highlighted" class="w-full h-auto block" width="1600" height="900" loading="lazy" />
+            </figure>
+            <div class="space-y-4" data-animate data-delay="200">
+              <h3 class="text-2xl font-semibold text-[color:var(--white)]">Save &amp; Fly.</h3>
+              <p class="text-subtle text-lg">Set the launch point and the facing, save the mission, and you are in the air on it. Missions export and import, so the scenario one instructor builds is the scenario the whole cadre flies &mdash; and scores against.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THE RUN ============ -->
+      <section id="run" class="scroll-mt-24 border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 space-y-10">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="max-w-2xl space-y-3">
+              <p class="tag">The run</p>
+              <h2 class="section-heading text-3xl md:text-4xl">Down in the weeds, then on the target.</h2>
+            </div>
+            <p class="max-w-sm text-sm text-subtle">The terminal leg flies like a one-way attack, because that is what it is. No avoidance, no speed brake, and the impact speed goes in the log.</p>
+          </div>
+          <div class="grid gap-5 lg:grid-cols-2" data-animate-stagger>
+            <figure class="space-y-3">
+              <div class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+                <img src="./assets/kestrel-strike-run.webp" alt="First-person KESTREL terminal run at six metres down a highway median toward a truck, OSD showing airspeed and current draw" class="w-full h-auto block" width="1600" height="900" loading="lazy" />
+              </div>
+              <figcaption class="text-sm text-subtle"><span class="font-semibold text-[color:var(--white)]">Six metres, full send.</span> Ground rush, current draw, and the handling of the aircraft you built &mdash; all of it honest at the speed it matters.</figcaption>
+            </figure>
+            <figure class="space-y-3">
+              <div class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+                <img src="./assets/kestrel-strike-bda.webp" alt="KESTREL overwatch sensor view in thermal mode, crosshair on a struck vehicle in a convoy, battle damage assessment reading target destroyed" class="w-full h-auto block" width="1600" height="900" loading="lazy" />
+              </div>
+              <figcaption class="text-sm text-subtle"><span class="font-semibold text-[color:var(--white)]">Somebody is watching it.</span> The overwatch sensor holds the target through the whole run and calls the damage assessment &mdash; the other half of the job.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <!-- ============ THE SCORE ============ -->
       <section class="border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
         <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
@@ -226,14 +294,11 @@
               <p class="tag">Anywhere</p>
               <h2 class="section-heading text-3xl md:text-4xl">Your operating area is already in it.</h2>
             </div>
-            <p class="max-w-sm text-sm text-subtle">City centre, coastline, industrial site, open ground &mdash; if it exists, you can rehearse over it.</p>
+            <p class="max-w-sm text-sm text-subtle">City centre, coastline, industrial site, desert road, open ground &mdash; day, dusk, or dark. If it exists, you can rehearse over it.</p>
           </div>
-          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-animate-stagger>
             <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
               <img src="./assets/kestrel-osd-taipei.webp" alt="KESTREL flight through a dense high-rise district in daylight" class="w-full h-56 object-cover block" width="1600" height="1000" loading="lazy" />
-            </figure>
-            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
-              <img src="./assets/kestrel-coast-haze.webp" alt="KESTREL flight along a hazy coastline" class="w-full h-56 object-cover object-bottom block" width="1600" height="1000" loading="lazy" />
             </figure>
             <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
               <img src="./assets/kestrel-recon-pass.webp" alt="KESTREL reconnaissance pass over a solar array and service road" class="w-full h-56 object-cover block" width="1600" height="900" loading="lazy" />
@@ -241,19 +306,28 @@
             <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
               <img src="./assets/kestrel-low-pass.webp" alt="KESTREL low pass over an industrial yard and rail siding" class="w-full h-56 object-cover block" width="1600" height="900" loading="lazy" />
             </figure>
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+              <img src="./assets/kestrel-dusk-skyline.webp" alt="KESTREL over a city skyline at dusk, buildings reduced to silhouettes" class="w-full h-56 object-cover block" width="1600" height="1000" loading="lazy" />
+            </figure>
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+              <img src="./assets/kestrel-night-llc.webp" alt="KESTREL night flight on the low-light camera, thirty metres off the deck between lit buildings" class="w-full h-56 object-cover block" width="1600" height="900" loading="lazy" />
+            </figure>
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+              <img src="./assets/kestrel-mission-map.webp" alt="KESTREL mission map over Simi Valley, California with the objective radius drawn on satellite terrain" class="w-full h-56 object-cover block" width="1600" height="900" loading="lazy" />
+            </figure>
           </div>
         </div>
       </section>
 
-      <!-- ============ DUSK BAND ============ -->
-      <section class="field-band border-b border-[color:var(--steel-700)]" aria-label="Low-light rehearsal">
-        <img class="field-band__img" src="./assets/kestrel-dusk-skyline.webp" alt="" aria-hidden="true" loading="lazy" width="1600" height="1000" />
+      <!-- ============ NIGHT BAND ============ -->
+      <section class="field-band border-b border-[color:var(--steel-700)]" aria-label="Low-light and night flight">
+        <img class="field-band__img" src="./assets/kestrel-night-band.webp" alt="" aria-hidden="true" loading="lazy" width="1600" height="442" />
         <div class="field-band__content mx-auto max-w-7xl px-4 py-24 lg:py-32">
           <div class="max-w-xl space-y-5" data-animate>
             <p class="tag">Low light</p>
-            <h2 class="section-heading text-3xl md:text-4xl">Dusk is actually dark.</h2>
+            <h2 class="section-heading text-3xl md:text-4xl">Then fly it on the night camera.</h2>
             <p class="text-white/70 text-lg leading-relaxed">
-              Set the clock past sunset for that coordinate and the city goes to silhouette. Night currency is something your crew can build here instead of burning an evening of airspace.
+              Past sunset the world actually goes dark, and you switch to the low-light sensor and keep flying &mdash; monochrome, blooming on every street light, thirty metres off the deck between buildings. Night currency your crew can build without burning an evening of airspace.
             </p>
           </div>
         </div>
@@ -268,12 +342,12 @@
           </div>
           <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
             <div class="card-glass p-6 space-y-2">
-              <h3 class="font-semibold text-[color:var(--white)]">Public safety</h3>
-              <p class="text-subtle text-sm">Rehearse the callout over the actual block before the callout comes.</p>
+              <h3 class="font-semibold text-[color:var(--white)]">Defense &amp; SOF</h3>
+              <p class="text-subtle text-sm">Rehearse the ingress, the overwatch, and the terminal leg on the ground you were handed.</p>
             </div>
             <div class="card-glass p-6 space-y-2">
-              <h3 class="font-semibold text-[color:var(--white)]">Search &amp; rescue</h3>
-              <p class="text-subtle text-sm">Run the search pattern over the real terrain, at the real hour, in the real light.</p>
+              <h3 class="font-semibold text-[color:var(--white)]">Public safety &amp; SAR</h3>
+              <p class="text-subtle text-sm">Fly the callout over the actual block, at the actual hour, before the callout comes.</p>
             </div>
             <div class="card-glass p-6 space-y-2">
               <h3 class="font-semibold text-[color:var(--white)]">Inspection</h3>
