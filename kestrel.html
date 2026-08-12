@@ -15,14 +15,14 @@
     <title>KESTREL Mission Rehearsal | Ceradon Systems</title>
     <meta name="description" content="KESTREL helps public-safety, SAR, inspection, and training teams rehearse structured sUAS missions with aircraft-specific configuration and repeatable session scoring." />
     <meta property="og:title" content="KESTREL Mission Rehearsal | Ceradon Systems" />
-    <meta property="og:description" content="Configure the aircraft, load the operating area, rehearse the objective chain, and review a scored session record." />
+    <meta property="og:description" content="Type a grid, build the aircraft from real parts, set the objective chain, and fly a scored rehearsal in photoreal terrain." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/kestrel.html" />
-    <meta property="og:image" content="https://www.ceradonsystems.com/assets/hero-kestrel.webp" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/kestrel-trailer-poster.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="KESTREL Mission Rehearsal | Ceradon Systems" />
     <meta name="twitter:description" content="Aircraft-configured sUAS mission rehearsal for public-safety, SAR, inspection, and training teams." />
-    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/hero-kestrel.webp" />
+    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/kestrel-trailer-poster.jpg" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.ceradonsystems.com/kestrel.html" />    <link rel="icon" type="image/webp" href="./assets/Emblem.webp" />
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -34,7 +34,7 @@
       "applicationCategory": "SimulationApplication",
       "operatingSystem": "Windows",
       "url": "https://www.ceradonsystems.com/kestrel.html",
-      "description": "Windows-based sUAS mission-rehearsal simulator with aircraft-specific configuration, location-based scenarios, structured objectives, and local session records.",
+      "description": "Windows-based sUAS mission-rehearsal simulator. Loads any coordinate on Earth in photoreal streamed terrain, models flight from real component specifications, renders an authentic Betaflight OSD, and keeps structured objectives and scored session records locally.",
       "publisher": {
         "@type": "Organization",
         "name": "Ceradon Systems, LLC",
@@ -84,187 +84,239 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content">
-      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)] kestrel-hero">
-        <img src="./assets/hero-kestrel.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-55 pointer-events-none" aria-hidden="true" loading="eager" />
-        <div class="relative mx-auto max-w-7xl px-4 py-16">
-          <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
-            <div class="space-y-6">
-              <img src="./assets/kestrel-logo.png" alt="KESTREL" class="h-24 md:h-32 mb-2" loading="eager" />
-              <p class="tag">Early Design-Partner Program</p>
-              <h1 class="text-4xl font-bold text-[color:var(--white)]">Rehearse the mission before the aircraft leaves the case.</h1>
-              <p class="text-lg text-subtle">KESTREL is a Windows-based sUAS mission-rehearsal simulator for public-safety, search-and-rescue, inspection, and training teams. Configure the aircraft you fly, load an operating area, and practice a structured run with repeatable objectives and scoring.</p>
-              <p class="text-subtle">Practice navigation gates, position holds, reconnaissance or inspection dwells, and precision landing using an RC transmitter. Selected component specifications inform simulator parameters, while core mission data and session records remain local.</p>
-              <p class="text-subtle">Configure &rarr; Rehearse &rarr; Compare &rarr; Improve.</p>
-              <div class="flex flex-wrap gap-3">
-                <span class="badge">Location-based rehearsal</span>
-                <span class="badge">Aircraft-specific configuration</span>
-                <span class="badge">Repeatable mission scoring</span>
-              </div>
+
+      <!-- ============ HERO ============ -->
+      <section class="relative overflow-hidden hero-splash border-b border-[color:var(--steel-700)]">
+        <img src="./assets/hero-kestrel.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none" aria-hidden="true" loading="eager" />
+        <div class="relative mx-auto max-w-7xl px-4 py-20 lg:py-28">
+          <div class="max-w-3xl space-y-7">
+            <img src="./assets/kestrel-lockup.webp" alt="KESTREL" class="h-16 md:h-24" width="1024" height="359" loading="eager" />
+            <h1 class="font-bold text-[color:var(--white)] leading-[1.05]" style="font-size:clamp(2.4rem,5.2vw,4.2rem)">
+              Fly the mission<br class="hidden sm:block" /> before you fly the mission.
+            </h1>
+            <p class="text-xl text-white/60 leading-relaxed max-w-2xl">
+              Drop a pin anywhere on Earth. That coordinate loads in photoreal terrain, your aircraft flies like the parts it is built from, and every run comes back scored.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span class="badge">Any coordinate on Earth</span>
+              <span class="badge">Physics from real parts</span>
+              <span class="badge">Every run scored</span>
             </div>
-            <div class="card-glass p-8 space-y-4">
-              <p class="text-sm text-subtle"><strong class="text-[color:var(--white)]">Bring one aircraft, one location, and one training problem.</strong> Design partners receive guided onboarding, early-build access, and direct input into scenario development.</p>
-              <div class="flex flex-wrap gap-3">
-                <a href="contact.html?product=kestrel" class="btn btn-primary text-sm uppercase tracking-wide">Apply for a Pilot</a>
-                <a href="#workflow" class="btn btn-secondary text-sm uppercase tracking-wide">See the Workflow</a>
-              </div>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="contact.html?product=kestrel" class="btn btn-primary text-sm uppercase tracking-wide">Apply for a Pilot</a>
+              <a href="#trailer" class="btn btn-secondary text-sm uppercase tracking-wide">Watch the Trailer</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- GAMEPLAY FILM — real capture, not a render -->
-      <section class="border-b border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-16 space-y-6">
-          <div class="flex flex-wrap items-end justify-between gap-4">
-            <div class="space-y-3">
-              <p class="tag">In-sim capture</p>
-              <h2 class="section-heading text-3xl">Forty seconds of actual flight.</h2>
-            </div>
-            <p class="max-w-sm text-sm text-subtle">Everything below is captured directly from KESTREL &mdash; streamed photoreal terrain, the flight OSD, and the handling you would rehearse with.</p>
+      <!-- ============ TRAILER ============ -->
+      <section id="trailer" class="scroll-mt-24 border-b border-[color:var(--steel-700)] bg-[#04070d]">
+        <div class="mx-auto max-w-6xl px-4 py-16 lg:py-20 space-y-8">
+          <div class="text-center space-y-3">
+            <p class="tag inline-flex">Not a render</p>
+            <h2 class="section-heading text-3xl md:text-4xl">Ninety seconds inside a live session.</h2>
           </div>
           <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
-            <video controls preload="none" playsinline poster="./assets/kestrel-teaser-poster.jpg" class="w-full h-auto block" width="1280" height="720">
-              <source src="./assets/kestrel-teaser.mp4" type="video/mp4" />
-              Your browser does not support embedded video. <a href="./assets/kestrel-teaser.mp4">Download the clip</a>.
+            <video controls preload="none" playsinline poster="./assets/kestrel-trailer-poster.jpg" class="w-full h-auto block" width="1280" height="720">
+              <source src="./assets/kestrel-trailer.mp4" type="video/mp4" />
+              Your browser does not support embedded video. <a href="./assets/kestrel-trailer.mp4">Download the trailer</a>.
             </video>
           </figure>
+          <p class="text-center text-sm text-subtle">Every frame captured from the current build. Sound on.</p>
         </div>
       </section>
 
-      <section class="mx-auto max-w-7xl px-4 py-16 space-y-10">
-        <div class="space-y-3">
-          <p class="tag">Mission workflow</p>
-          <h2 class="section-heading text-3xl">From mission plan to repeatable rehearsal.</h2>
-          <p class="text-subtle max-w-3xl">KESTREL connects an operating area, an aircraft configuration, an objective chain, and a session result in one practice loop. Design partners help us measure and improve that loop against the missions their teams actually perform.</p>
-        </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="product-card">
-            <div class="product-card__header">
-              <h3 class="product-title">Choose the Operating Area</h3>
-              <p class="product-tagline">Enter coordinates and create a location-based scenario.</p>
+      <!-- ============ CLAIMS ============ -->
+      <section class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-16">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/[0.06] rounded-xl overflow-hidden" data-animate-stagger>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">EARTH</p>
+              <p class="stat-label">Type a grid or drop a pin. That exact street loads in photoreal terrain.</p>
             </div>
-            <ul class="product-bullets">
-              <li>Streamed 3D terrain where service coverage and connectivity allow.</li>
-              <li>A generated training environment provides a fallback when streamed terrain is unavailable.</li>
-            </ul>
-          </article>
-          <article class="product-card">
-            <div class="product-card__header">
-              <h3 class="product-title">Configure the Aircraft</h3>
-              <p class="product-tagline">Mass, motor, propeller, battery, and radio parameters come from the selected build.</p>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">REAL&nbsp;PARTS</p>
+              <p class="stat-label">Motor, prop, pack, and mass come off the spec sheet. It flies like what you built.</p>
             </div>
-            <ul class="product-bullets">
-              <li>Component specifications inform thrust, energy, and control behavior.</li>
-              <li>Saved configurations keep comparison runs consistent.</li>
-            </ul>
-          </article>
-          <article class="product-card">
-            <div class="product-card__header">
-              <h3 class="product-title">Practice Contingencies</h3>
-              <p class="product-tagline">Introduce conditions an operator may need to recognize and manage.</p>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">REAL&nbsp;SUN</p>
+              <p class="stat-label">Light follows the actual solar position for that coordinate, date, and hour.</p>
             </div>
-            <ul class="product-bullets">
-              <li>Model battery use, link degradation, and damage conditions during a run.</li>
-              <li>Use scenario effects as training cues, not as airworthiness or certification evidence.</li>
-            </ul>
-          </article>
-          <article class="product-card">
-            <div class="product-card__header">
-              <h3 class="product-title">RC Transmitter &amp; Flight View</h3>
-              <p class="product-tagline">A familiar control loop for repeatable practice.</p>
+            <div class="depth-card bg-[color:var(--ink)] p-8 space-y-3">
+              <p class="stat-number text-3xl lg:text-4xl text-white">SCORED</p>
+              <p class="stat-label">Objectives, time, and result recorded locally so the next run has something to beat.</p>
             </div>
-            <ul class="product-bullets">
-              <li>Map a compatible RC transmitter over USB and save the control profile.</li>
-              <li>Configure rates and use a flight-controller-style on-screen display.</li>
-            </ul>
-          </article>
-          <article class="product-card">
-            <div class="product-card__header">
-              <h3 class="product-title">COTS ARCHITECT Handoff</h3>
-              <p class="product-tagline">Carry the selected configuration and mission into rehearsal.</p>
-            </div>
-            <ul class="product-bullets">
-              <li>Selected motor, propeller, battery, and radio identifiers stay attached to the handoff.</li>
-              <li>Keep the rehearsal configuration traceable to the source inventory.</li>
-            </ul>
-          </article>
-          <article class="product-card">
-            <div class="product-card__header">
-              <h3 class="product-title">Missions &amp; Records</h3>
-              <p class="product-tagline">Objectives, scoring, and a completion record.</p>
-            </div>
-            <ul class="product-bullets">
-              <li>Practice gates, holds, inspection dwells, return, and landing objectives.</li>
-              <li>A local session summary captures outcomes, elapsed time, and score for review.</li>
-            </ul>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section id="workflow" class="scroll-mt-24 border-t border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
-        <div class="mx-auto max-w-7xl px-4 py-16 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+      <!-- ============ THE LOOP — four screens, four verbs ============ -->
+      <section id="loop" class="scroll-mt-24 border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 space-y-10">
+          <div class="max-w-2xl space-y-3">
+            <p class="tag">Four screens</p>
+            <h2 class="section-heading text-3xl md:text-4xl">Pin to takeoff in about a minute.</h2>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2" data-animate-stagger>
+
+            <figure class="product-card block p-0 overflow-hidden">
+              <div class="product-card__media m-0">
+                <img src="./assets/kestrel-ui-location.webp" alt="KESTREL mission location screen — a grid reference typed into the entry field with a satellite plate alongside" loading="lazy" width="1600" height="900" />
+              </div>
+              <figcaption class="p-6 space-y-1">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">01 &middot; Pick the ground</p>
+                <p class="product-tagline">MGRS, lat/lon, or a pin on the map.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="product-card block p-0 overflow-hidden">
+              <div class="product-card__media m-0">
+                <img src="./assets/kestrel-ui-garage-airframe.webp" alt="KESTREL garage — an aircraft assembled from real components beside a live predicted-performance panel" loading="lazy" width="1600" height="900" />
+              </div>
+              <figcaption class="p-6 space-y-1">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">02 &middot; Build the aircraft</p>
+                <p class="product-tagline">Weight, thrust, and endurance resolve as you pick parts.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="product-card block p-0 overflow-hidden">
+              <div class="product-card__media m-0">
+                <img src="./assets/kestrel-ui-controller.webp" alt="KESTREL controller calibration screen with live channel bars and stick visualizers" loading="lazy" width="1600" height="900" />
+              </div>
+              <figcaption class="p-6 space-y-1">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">03 &middot; Bind your radio</p>
+                <p class="product-tagline">Your transmitter, your rates, saved once.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="product-card block p-0 overflow-hidden">
+              <div class="product-card__media m-0">
+                <img src="./assets/kestrel-osd-canyon.webp" alt="First-person KESTREL flight down an urban canyon with the authentic Betaflight OSD on screen" loading="lazy" width="1280" height="720" />
+              </div>
+              <figcaption class="p-6 space-y-1">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-[color:var(--ceradon-sky)]">04 &middot; Fly it</p>
+                <p class="product-tagline">Real OSD, real stick time, a score at the end.</p>
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THE SCORE ============ -->
+      <section class="border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]" data-animate>
+            <img src="./assets/kestrel-mission-score.webp" alt="KESTREL mission complete card over Tower Bridge — grade S, 974 of 1000 points, new best, objectives 2 of 2, time 0:20, zero crashes, zero link loss" class="w-full h-auto block" width="1600" height="900" loading="lazy" />
+          </figure>
+          <div class="space-y-4" data-animate data-delay="200">
+            <p class="tag">The point</p>
+            <h2 class="section-heading text-3xl md:text-4xl">A number to beat.</h2>
+            <p class="text-subtle text-lg">Objectives hit, time on target, crashes, link loss, pack burned &mdash; graded and saved on the machine. Same aircraft, same ground, same objectives, so the second run means something the first one did not.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ANYWHERE — the range of the thing ============ -->
+      <section class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 space-y-8">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div class="max-w-2xl space-y-3">
+              <p class="tag">Anywhere</p>
+              <h2 class="section-heading text-3xl md:text-4xl">Your operating area is already in it.</h2>
+            </div>
+            <p class="max-w-sm text-sm text-subtle">City centre, coastline, industrial site, open ground &mdash; if it exists, you can rehearse over it.</p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+              <img src="./assets/kestrel-osd-taipei.webp" alt="KESTREL flight through a dense high-rise district in daylight" class="w-full h-56 object-cover block" width="1600" height="1000" loading="lazy" />
+            </figure>
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+              <img src="./assets/kestrel-coast-haze.webp" alt="KESTREL flight along a hazy coastline" class="w-full h-56 object-cover object-bottom block" width="1600" height="1000" loading="lazy" />
+            </figure>
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+              <img src="./assets/kestrel-recon-pass.webp" alt="KESTREL reconnaissance pass over a solar array and service road" class="w-full h-56 object-cover block" width="1600" height="900" loading="lazy" />
+            </figure>
+            <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
+              <img src="./assets/kestrel-low-pass.webp" alt="KESTREL low pass over an industrial yard and rail siding" class="w-full h-56 object-cover block" width="1600" height="900" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DUSK BAND ============ -->
+      <section class="field-band border-b border-[color:var(--steel-700)]" aria-label="Low-light rehearsal">
+        <img class="field-band__img" src="./assets/kestrel-dusk-skyline.webp" alt="" aria-hidden="true" loading="lazy" width="1600" height="1000" />
+        <div class="field-band__content mx-auto max-w-7xl px-4 py-24 lg:py-32">
+          <div class="max-w-xl space-y-5" data-animate>
+            <p class="tag">Low light</p>
+            <h2 class="section-heading text-3xl md:text-4xl">Dusk is actually dark.</h2>
+            <p class="text-white/70 text-lg leading-relaxed">
+              Set the clock past sunset for that coordinate and the city goes to silhouette. Night currency is something your crew can build here instead of burning an evening of airspace.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ WHO IT IS FOR ============ -->
+      <section class="border-b border-[color:var(--steel-700)]">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 space-y-10">
+          <div class="max-w-2xl space-y-3">
+            <p class="tag">Who flies it</p>
+            <h2 class="section-heading text-3xl md:text-4xl">Stick time without burning packs, props, or airspace.</h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4" data-animate-stagger>
+            <div class="card-glass p-6 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Public safety</h3>
+              <p class="text-subtle text-sm">Rehearse the callout over the actual block before the callout comes.</p>
+            </div>
+            <div class="card-glass p-6 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Search &amp; rescue</h3>
+              <p class="text-subtle text-sm">Run the search pattern over the real terrain, at the real hour, in the real light.</p>
+            </div>
+            <div class="card-glass p-6 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Inspection</h3>
+              <p class="text-subtle text-sm">Practice the dwell and the approach on the site itself, with nothing to hit.</p>
+            </div>
+            <div class="card-glass p-6 space-y-2">
+              <h3 class="font-semibold text-[color:var(--white)]">Training cadres</h3>
+              <p class="text-subtle text-sm">Same aircraft, same ground, same objectives &mdash; so the scores mean something.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ARCHITECT HANDOFF ============ -->
+      <section class="border-b border-[color:var(--steel-700)] bg-[color:var(--steel-900)/60]">
+        <div class="mx-auto max-w-7xl px-4 py-16 lg:py-20 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)]">
-            <img src="./assets/kestrel-mission-flight.webp" alt="First-person KESTREL mission rehearsal banked over a civic plaza with the flight OSD and MGRS readout" class="w-full h-full object-cover" loading="lazy" />
+            <img src="./assets/kestrel-ui-garage-motors.webp" alt="KESTREL garage with propulsion components selected and predicted performance shown for the build" class="w-full h-auto block" width="1600" height="900" loading="lazy" />
           </figure>
           <div class="space-y-4">
-            <p class="tag">COTS ARCHITECT handoff</p>
+            <p class="tag">Pairs with COTS ARCHITECT</p>
             <h2 class="section-heading text-3xl">Plan what you have. Rehearse what you will fly.</h2>
-            <p class="text-subtle">Assemble a configuration from your organization's inventory in COTS ARCHITECT, define the operating area and objective chain, then export a versioned handoff package to KESTREL.</p>
-            <p class="text-subtle">The handoff keeps the aircraft configuration, mission metadata, operating area, and objectives together. Core file exchange and session records stay local; streamed terrain requires connectivity when that source is selected.</p>
+            <p class="text-subtle">Build the aircraft from your own inventory in COTS ARCHITECT, hand it to KESTREL, and the thing you rehearse with is the thing you will actually put in the air.</p>
             <a href="architect.html" class="inline-flex text-sm text-[color:var(--ceradon-blue)] hover:text-[color:var(--white)]">Explore COTS ARCHITECT &rarr;</a>
           </div>
         </div>
       </section>
 
-      <section class="scroll-mt-24 border-t border-[color:var(--steel-700)]">
-        <div class="mx-auto max-w-7xl px-4 py-16 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div class="space-y-4 lg:order-1 order-2">
-            <p class="tag">Environment</p>
-            <h2 class="section-heading text-3xl">Rehearse the light you will actually fly.</h2>
-            <p class="text-subtle">The sky, sun, and lighting are driven by the real solar position for the operating area's coordinate, date, and time &mdash; not a fixed skybox. Dawn and dusk are genuine low-light conditions; night is dark. Wind acts on airspeed and density altitude feeds the flight model, so conditions shift the aircraft the way they would downrange.</p>
-          </div>
-          <figure class="image-surface overflow-hidden rounded-xl border border-[color:var(--steel-700)] lg:order-2 order-1">
-            <img src="./assets/kestrel-osd-day.webp" alt="First-person KESTREL flight through the Taipei 101 district with the authentic Betaflight OSD burned in — altitude, speed, heading, home, MGRS" class="w-full h-full object-cover" width="1280" height="720" loading="lazy" />
-          </figure>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-7xl px-4 py-16 space-y-8">
-        <div class="space-y-3">
-          <p class="tag">How it runs</p>
-          <h2 class="section-heading text-3xl">A local Windows rehearsal loop.</h2>
-          <p class="text-subtle max-w-3xl">The core simulator, mission execution, and session record run on a supported Windows PC. Streamed terrain may require an active connection and is subject to provider coverage.</p>
-        </div>
-        <div class="grid gap-6 md:grid-cols-2">
-          <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">RC transmitter input</h3>
-            <p class="text-subtle text-sm">Use a compatible RC transmitter in USB mode. Map the sticks and arm control, then save the profile for repeatable sessions.</p>
-          </div>
-          <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">Location options</h3>
-            <p class="text-subtle text-sm">Use streamed 3D terrain where coverage permits, or run the mission loop in a generated training environment.</p>
-          </div>
-          <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">Structured objectives</h3>
-            <p class="text-subtle text-sm">Build a measurable sequence from gates, position holds, inspection dwells, return, landing, and disarm conditions.</p>
-          </div>
-          <div class="card-glass p-6 space-y-3">
-            <h3 class="font-semibold text-[color:var(--white)]">Reviewable results</h3>
-            <p class="text-subtle text-sm">Each completed run produces a local session summary with objective outcomes, elapsed time, and score for comparison.</p>
-          </div>
-        </div>
-      </section>
-
+      <!-- ============ CTA ============ -->
       <section class="relative min-h-[520px] overflow-hidden border-t border-[color:var(--steel-700)] bg-[#04070d] flex items-center">
         <div class="absolute inset-0 bg-gradient-to-r from-[#04070d] via-[#07111f]/95 to-[#0b1c31]/80" aria-hidden="true"></div>
         <div class="absolute -right-24 top-8 h-96 w-96 rounded-full bg-[color:var(--ceradon-blue)]/10 blur-3xl" aria-hidden="true"></div>
         <div class="absolute left-1/2 bottom-0 h-72 w-72 rounded-full bg-[color:var(--green-400)]/5 blur-3xl" aria-hidden="true"></div>
         <div class="relative mx-auto max-w-7xl w-full px-4 py-20">
           <div class="max-w-2xl space-y-5">
-            <p class="tag">Design-partner pilots</p>
+            <p class="tag">Early design-partner program</p>
             <h2 class="section-heading text-4xl">Bring one mission we can prove together.</h2>
-            <p class="text-subtle text-lg">Tell us what aircraft your team flies, the mission you want to rehearse, and one evaluation location. We will scope a controlled pilot with clear success criteria.</p>
-            <a href="contact.html?product=kestrel" class="btn btn-primary text-sm uppercase tracking-wide">Discuss a KESTREL Pilot</a>
+            <p class="text-subtle text-lg">Tell us the aircraft your team flies, the mission you want to rehearse, and one evaluation location. We will scope a controlled pilot with clear success criteria &mdash; guided onboarding, early-build access, and direct input into what gets built next.</p>
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <a href="contact.html?product=kestrel" class="btn btn-primary text-sm uppercase tracking-wide">Discuss a KESTREL Pilot</a>
+              <a href="#trailer" class="btn btn-secondary text-sm uppercase tracking-wide">Watch the Trailer Again</a>
+            </div>
+            <p class="text-xs text-white/25 pt-4 max-w-xl">Windows PC. Photoreal terrain streams over an active connection and is subject to provider coverage; a generated environment covers the gap. Mission files and session records stay on the machine. Scenario effects are training cues, not airworthiness or certification evidence.</p>
           </div>
         </div>
       </section>
