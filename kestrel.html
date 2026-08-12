@@ -90,7 +90,9 @@
         <img src="./assets/hero-kestrel.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-50 pointer-events-none" aria-hidden="true" loading="eager" />
         <div class="relative mx-auto max-w-7xl px-4 py-20 lg:py-28">
           <div class="max-w-3xl space-y-7">
-            <img src="./assets/kestrel-lockup.webp" alt="KESTREL" class="h-16 md:h-24" width="1024" height="359" loading="eager" />
+            <!-- w-auto is load-bearing: styles.css sets img{height:auto} but never width, so the
+                 width="1024" attribute stays in effect and the h-* class stretches the lockup. -->
+            <img src="./assets/kestrel-lockup.webp" alt="KESTREL" class="h-16 md:h-24 w-auto" width="1024" height="359" loading="eager" />
             <h1 class="font-bold text-[color:var(--white)] leading-[1.05]" style="font-size:clamp(2.4rem,5.2vw,4.2rem)">
               Fly the mission<br class="hidden sm:block" /> before you fly the mission.
             </h1>
