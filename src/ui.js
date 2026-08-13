@@ -30,6 +30,7 @@ const NAV_ITEMS = [
   { label: 'Technology', href: '/technology.html' },
   { label: 'Company', href: '/company.html' },
   { label: 'Insights', href: '/blog/' },
+  { label: 'Gear', href: '/shop.html' },
   { label: 'Contact', href: '/contact.html', isCTA: true }
 ];
 
@@ -44,6 +45,7 @@ const FOOTER_LINKS = [
   { label: 'Technology', href: '/technology.html' },
   { label: 'Company', href: '/company.html' },
   { label: 'Insights', href: '/blog/' },
+  { label: 'Gear', href: '/shop.html' },
   { label: 'Careers', href: '/careers.html' },
   { label: 'Contact', href: '/contact.html' },
   { label: 'Privacy', href: '/privacy.html' },
