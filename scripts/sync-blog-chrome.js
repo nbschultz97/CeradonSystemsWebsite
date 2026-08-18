@@ -4,8 +4,8 @@
  * Blog posts were generated with their chrome inlined rather than shared, so
  * each one froze whatever the site looked like on the day it was written. The
  * navs drifted into two stale variants -- both still linking the retired
- * SCOUT/AEGIS/FedResume, one linking an ai-services.html that never existed,
- * and neither listing LANTERN or KESTREL. The footers drifted into three
+ * AEGIS/FedResume, one linking an ai-services.html that never existed, and
+ * neither listing LANTERN or KESTREL. The footers drifted into three
  * different company taglines, and eight pages lost the links and legal block
  * altogether. Run this whenever the lineup or the legal boilerplate changes.
  */
@@ -25,7 +25,7 @@ const PRODUCTS = [
   ['architect', 'ARCHITECT', 'UxS Planning'],
   ['lantern', 'LANTERN', 'Video to floorplan'],
   ['kestrel', 'KESTREL', 'Mission Rehearsal'],
-  ['polygen', 'POLYGEN', 'Text to 3D']
+  ['scout', 'SCOUT', 'Contract intel']
 ];
 
 const NAV = `<nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
@@ -43,6 +43,7 @@ ${PRODUCTS.map(([slug, name, note]) =>
           <a href="../technology.html" class="navlink">Technology</a>
           <a href="../company.html" class="navlink">Company</a>
           <a href="/blog/" class="navlink" aria-current="page">Insights</a>
+          <a href="../shop.html" class="navlink">Gear</a>
           <a href="../contact.html" class="btn btn-primary">Contact</a>
         </nav>`;
 

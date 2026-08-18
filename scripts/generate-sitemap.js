@@ -23,7 +23,7 @@ const PRIORITIES = {
   'architect.html': { priority: '0.7', changefreq: 'monthly' },
   'lantern.html': { priority: '0.9', changefreq: 'monthly' },
   'kestrel.html': { priority: '0.8', changefreq: 'monthly' },
-  'polygen.html': { priority: '0.7', changefreq: 'monthly' },
+  'scout.html': { priority: '0.8', changefreq: 'monthly' },
   'technology.html': { priority: '0.7', changefreq: 'monthly' },
   'company.html': { priority: '0.6', changefreq: 'monthly' },
   'careers.html': { priority: '0.5', changefreq: 'monthly' },
@@ -33,10 +33,10 @@ const PRIORITIES = {
   'disclaimer.html': { priority: '0.2', changefreq: 'yearly' }
 };
 
-// Retired products. The pages still build so existing inbound links do not
-// break, but they are unlinked in the nav/footer and must not be submitted to
-// search engines as current offerings.
-const RETIRED = ['scout.html', 'aegis.html', 'fedresume.html'];
+// Retired products whose pages must not be submitted to search engines.
+// AEGIS, FedResume and POLYGEN were deleted outright; SCOUT was brought into the
+// portfolio, so nothing is currently retired.
+const RETIRED = [];
 
 const EXCLUDED = new Set(['404.html', ...RETIRED]);
 

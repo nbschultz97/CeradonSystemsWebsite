@@ -22,7 +22,6 @@
     <meta name="twitter:title" content="SCOUT | Defense Opportunity Scanner" />
     <meta name="twitter:description" content="AI-powered defense opportunity scanner. Stop missing contracts." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/Emblem.webp" />
-    <meta name="robots" content="noindex, nofollow" />
     <meta name="keywords" content="defense contract intelligence, SAM.gov scanner, SDVOSB opportunities, federal contract finder, government contract alerts, defense opportunity scanner, small business defense contracts, SBIR opportunity finder" />
     <link rel="canonical" href="https://www.ceradonsystems.com/scout.html" />
     <script type="application/ld+json">
@@ -35,6 +34,7 @@
       "url": "https://sentinel-scout.vercel.app",
       "description": "AI-powered defense opportunity scanner that monitors SAM.gov, Grants.gov, and SBIR.gov daily. Delivers scored, actionable contract matches for SDVOSBs and small defense businesses.",
       "offers": [
+        { "@type": "Offer", "name": "Recon", "price": "0", "priceCurrency": "USD", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock" },
         { "@type": "Offer", "name": "Scout", "price": "49", "priceCurrency": "USD", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock" },
         { "@type": "Offer", "name": "Commander", "price": "99", "priceCurrency": "USD", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock" },
         { "@type": "Offer", "name": "Sentinel", "price": "199", "priceCurrency": "USD", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock" }
@@ -386,12 +386,12 @@
             <button class="navlink">Products</button>
             <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
               <div class="bg-[#0a0f1a] border border-[#1e293b] rounded-lg py-2 min-w-[220px] shadow-xl">
-                <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">VANTAGE</a>
-                <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">RAPTOR</a>
-                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">ARCHITECT</a>
-                <a href="lantern.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">LANTERN <span class="text-xs text-[color:var(--ceradon-blue)]">Video to floorplan</span></a>
-                <a href="kestrel.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">KESTREL <span class="text-xs text-[color:var(--ceradon-blue)]">Trainer</span></a>
-                <a href="polygen.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">POLYGEN</a>
+                <a href="vantage.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">VANTAGE <span class="text-xs text-white/30">Through-Wall</span></a>
+                <a href="raptor.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">RAPTOR <span class="text-xs text-white/30">Edge AI Vision</span></a>
+                <a href="architect.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">ARCHITECT <span class="text-xs text-white/30">UxS Planning</span></a>
+                <a href="lantern.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">LANTERN <span class="text-xs text-white/30">Video to floorplan</span></a>
+                <a href="kestrel.html" class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#1e293b]">KESTREL <span class="text-xs text-white/30">Mission Rehearsal</span></a>
+                <a href="scout.html" class="block px-4 py-2 text-sm text-white hover:bg-[#1e293b]" aria-current="page">SCOUT <span class="text-xs text-white/30">Contract intel</span></a>
               </div>
             </div>
           </div>
@@ -526,8 +526,8 @@
               <div class="stat-label">Surveillance</div>
             </div>
             <div class="space-y-3">
-              <div class="stat-number">$49</div>
-              <div class="stat-label">Starting Price</div>
+              <div class="stat-number">Free</div>
+              <div class="stat-label">Starting Tier</div>
             </div>
           </div>
         </div>
@@ -597,7 +597,7 @@
             </h2>
           </div>
           <div class="rounded-xl overflow-hidden max-w-4xl mx-auto" data-animate>
-            <img src="./assets/section-scout-workflow.webp" alt="AI-powered contract opportunity monitoring workflow" class="w-full h-auto image-surface" loading="lazy" width="1600" height="1066" />
+            <img src="./assets/section-scout-workflow.webp" alt="AI-powered contract opportunity monitoring workflow" class="w-full h-auto image-surface" loading="lazy" width="1600" height="872" />
           </div>
           
           <div class="grid gap-6 lg:grid-cols-4" data-animate-stagger>
@@ -741,7 +741,50 @@
             </p>
           </div>
           
-          <div class="grid gap-8 lg:grid-cols-3 max-w-6xl mx-auto" data-animate-stagger>
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto" data-animate-stagger>
+            <!-- Recon Package -->
+            <div class="pricing-card">
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-2xl font-bold text-[color:var(--white)] mb-2">Recon</h3>
+                  <p class="text-subtle text-sm">Free Forever</p>
+                </div>
+                <div class="flex items-baseline gap-2">
+                  <span class="text-5xl font-black text-[color:var(--white)]">$0</span>
+                  <span class="text-subtle text-lg">/mo</span>
+                </div>
+                <ul class="space-y-4 text-sm">
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
+                    <span class="text-subtle">2 NAICS targeting codes</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
+                    <span class="text-subtle">Weekly digest</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
+                    <span class="text-subtle">SAM.gov scanning</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
+                    <span class="text-subtle">Basic relevance scoring</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
+                    <span class="text-subtle">7-day mission history</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="text-[color:var(--ceradon-blue)] mt-0.5">&#x2713;</span>
+                    <span class="text-subtle">10 results per scan</span>
+                  </li>
+                </ul>
+                <a href="https://sentinel-scout.vercel.app/signup" class="btn btn-secondary w-full text-sm py-3" target="_blank" rel="noopener noreferrer">
+                  Start Free
+                </a>
+              </div>
+            </div>
+
             <!-- Scout Package -->
             <div class="pricing-card">
               <div class="space-y-6">
@@ -899,7 +942,7 @@
             </div>
             
             <div class="feature-card">
-              <h3 class="text-lg font-semibent text-[color:var(--white)] mb-3">SBIR/STTR Hunters</h3>
+              <h3 class="text-lg font-semibold text-[color:var(--white)] mb-3">SBIR/STTR Hunters</h3>
               <p class="text-sm text-subtle leading-relaxed">R&D organizations pursuing Phase I/II opportunities across multiple federal agencies.</p>
             </div>
             
