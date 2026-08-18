@@ -53,3 +53,27 @@ export function hrefFor(href, prefix = '') {
   if (href.startsWith('/') || href.startsWith('http')) return href;
   return `${prefix}${href}`;
 }
+
+/**
+ * The footer link list, in display order: products, then the non-CTA
+ * top-level links, then the footer tail. Hrefs are site-absolute so the same
+ * list works from a root page and from /blog/ without a prefix.
+ *
+ * Composed here rather than in each consumer so the footer cannot drift from
+ * the nav. Consumed by scripts/sync-nav.js and scripts/sync-blog-chrome.js to
+ * emit static markup, and by src/ui.js as the fallback when that markup is
+ * missing.
+ */
+export function footerLinks() {
+  const abs = (href) => (href.startsWith('/') ? href : `/${href}`);
+  return [
+    ...PRODUCTS.map(({ slug, label }) => ({ label, href: `/${slug}.html` })),
+    ...SECONDARY.filter(({ isCTA }) => !isCTA).map(({ label, href }) => ({ label, href: abs(href) })),
+    ...FOOTER_EXTRA.map(({ label, href }) => ({ label, href: abs(href) }))
+  ];
+}
+
+// Markup for one footer link. Kept next to footerLinks() so the generated
+// static markup and the JS fallback stay visually identical.
+export const FOOTER_LINK_CLASS =
+  'hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]';

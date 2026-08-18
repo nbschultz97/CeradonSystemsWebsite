@@ -12,7 +12,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { dirname, join, resolve } from 'path';
 import { fileURLToPath } from 'url';
-import { PRODUCTS, SECONDARY, hrefFor } from './lineup.js';
+import { PRODUCTS, SECONDARY, hrefFor, footerLinks, FOOTER_LINK_CLASS } from './lineup.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const blogDir = resolve(__dirname, '..', 'blog');
@@ -47,7 +47,11 @@ const FOOTER = `<footer class="border-t border-white/[0.06]">
             <a href="mailto:contact@ceradonsystems.com">contact@ceradonsystems.com</a>
           </div>
         </div>
-        <div class="footer-links" data-footer-links></div>
+        <div class="footer-links" data-footer-links>
+${footerLinks().map(({ label, href }) =>
+  `          <a href="${href}" class="${FOOTER_LINK_CLASS}">${label}</a>`
+).join('\n')}
+        </div>
         <div class="gradient-divider"></div>
         <div class="space-y-1.5 text-xs text-white/25">
           <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>

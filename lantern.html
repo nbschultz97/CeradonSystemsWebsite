@@ -149,7 +149,7 @@
       <section id="how" class="mx-auto max-w-7xl px-4 py-16">
         <h2 class="section-heading text-3xl">Video in, floorplan on the map</h2>
         <p class="mt-4 max-w-3xl">Every panel below is real output from one handheld walkthrough of a single house. No staging, and no reference geometry supplied to the model at any point.</p>
-        <img src="./assets/lantern-pipeline.webp" alt="Lantern pipeline: capture, reconstruct, flatten, draw, place on map" class="mt-8 w-full rounded-lg border border-[color:var(--steel-700)]" loading="lazy" />
+        <img src="./assets/lantern-pipeline.webp" alt="Lantern pipeline: capture, reconstruct, flatten, draw, place on map" class="mt-8 w-full rounded-lg border border-[color:var(--steel-700)]" loading="lazy" width="1600" height="530" />
         <div class="mt-10 grid md:grid-cols-3 gap-6">
           <div class="card-glass p-7">
             <h3 class="text-[color:var(--white)] font-semibold">Reconstruct</h3>
@@ -176,7 +176,7 @@
               <p class="mt-4">The overlay reads itself against the imagery underneath &mdash; light strokes over a dark roof, dark strokes over bright concrete &mdash; so it stays legible wherever it is placed.</p>
               <p class="mt-4">Processing runs on an edge device on the tactical network. The video never leaves the objective and no connectivity is required.</p>
             </div>
-            <img src="./assets/lantern-atak.webp" alt="Lantern overlay rendered on satellite imagery in WinTAK" class="w-full rounded-lg border border-[color:var(--steel-700)]" loading="lazy" />
+            <img src="./assets/lantern-atak.webp" alt="Lantern overlay rendered on satellite imagery in WinTAK" class="w-full rounded-lg border border-[color:var(--steel-700)]" loading="lazy" width="1400" height="1101" />
           </div>
         </div>
       </section>
@@ -189,11 +189,11 @@
         <p class="mt-4 max-w-3xl text-subtle">A sub-250&nbsp;g first-person-view quadcopter flew one pass through a residential structure. The left image is an unretouched frame from its own video recorder &mdash; prop guards, telemetry overlay and all. The right image is the three-dimensional map LANTERN built from that single flight. No LiDAR, no GPS, no special camera.</p>
         <div class="mt-8 grid md:grid-cols-2 gap-6">
           <figure class="card-glass p-4">
-            <img src="./assets/lantern-real-fpv.webp" alt="Unretouched onboard video frame from a small FPV quadcopter flying through a building interior" class="w-full rounded" loading="lazy" />
+            <img src="./assets/lantern-real-fpv.webp" alt="Unretouched onboard video frame from a small FPV quadcopter flying through a building interior" class="w-full rounded" loading="lazy" width="1280" height="720" />
             <figcaption class="mt-3 text-sm text-subtle">What the drone saw &mdash; an actual DVR frame from the onboard camera, exactly as recorded.</figcaption>
           </figure>
           <figure class="card-glass p-4">
-            <img src="./assets/lantern-real-map.webp" alt="Three-dimensional interior map reconstructed by Lantern from the same flight" class="w-full rounded" loading="lazy" />
+            <img src="./assets/lantern-real-map.webp" alt="Three-dimensional interior map reconstructed by Lantern from the same flight" class="w-full rounded" loading="lazy" width="1280" height="720" />
             <figcaption class="mt-3 text-sm text-subtle">What the team gets &mdash; the interior rebuilt in three dimensions from that footage alone.</figcaption>
           </figure>
         </div>
@@ -204,11 +204,11 @@
         <h2 class="section-heading text-3xl">From a walk-through to a shared picture</h2>
         <div class="mt-8 grid md:grid-cols-2 gap-6">
           <figure class="card-glass p-4">
-            <img src="./assets/lantern-3d.webp" alt="Dense three-dimensional reconstruction of a building interior built from video" class="w-full rounded" loading="lazy" />
+            <img src="./assets/lantern-3d.webp" alt="Dense three-dimensional reconstruction of a building interior built from video" class="w-full rounded" loading="lazy" width="1200" height="894" />
             <figcaption class="mt-3 text-sm text-subtle">The interior rebuilt in three dimensions from video alone &mdash; walls, furniture and fixtures, with no depth sensor involved.</figcaption>
           </figure>
           <figure class="card-glass p-4">
-            <img src="./assets/lantern-floorplan.webp" alt="Interior floorplan produced by Lantern from video alone" class="w-full rounded" loading="lazy" />
+            <img src="./assets/lantern-floorplan.webp" alt="Interior floorplan produced by Lantern from video alone" class="w-full rounded" loading="lazy" width="753" height="1200" />
             <figcaption class="mt-3 text-sm text-subtle">The floorplan itself &mdash; rooms, walls and openings recovered from the video, ready to be shared to the group and briefed from.</figcaption>
           </figure>
         </div>
@@ -259,7 +259,7 @@
       <section class="border-y border-[color:var(--steel-700)] bg-[color:var(--steel-900)/40]">
         <div class="mx-auto max-w-7xl px-4 py-16">
           <div class="grid md:grid-cols-2 gap-10 items-center">
-            <img src="./assets/lantern-floorplan.webp" alt="Interior floorplan produced by Lantern from video alone" class="w-full rounded-lg border border-[color:var(--steel-700)]" loading="lazy" />
+            <img src="./assets/lantern-floorplan.webp" alt="Interior floorplan produced by Lantern from video alone" class="w-full rounded-lg border border-[color:var(--steel-700)]" loading="lazy" width="753" height="1200" />
             <div>
               <h2 class="section-heading text-3xl">Measured, not asserted</h2>
               <p class="mt-4">Accuracy is scored against an independent laser scan of the same building. The scan is used for measurement only &mdash; an automated check fails the build if any reference geometry reaches the product path.</p>
@@ -324,7 +324,23 @@
             </a>
           </div>
         </div>
-        <div class="footer-links" data-footer-links></div>
+        <div class="footer-links" data-footer-links>
+          <a href="/vantage.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">VANTAGE</a>
+          <a href="/raptor.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">RAPTOR</a>
+          <a href="/architect.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">ARCHITECT</a>
+          <a href="/lantern.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">LANTERN</a>
+          <a href="/kestrel.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">KESTREL</a>
+          <a href="/scout.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">SCOUT</a>
+          <a href="/intelligent-systems.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Intelligent Systems</a>
+          <a href="/technology.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Technology</a>
+          <a href="/company.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Company</a>
+          <a href="/blog/" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Insights</a>
+          <a href="/shop.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Gear</a>
+          <a href="/careers.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Careers</a>
+          <a href="/contact.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Contact</a>
+          <a href="/privacy.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Privacy</a>
+          <a href="/disclaimer.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Disclaimer</a>
+        </div>
         <div class="space-y-2 text-xs text-subtle">
           <p>COTS ARCHITECT is developed and maintained by Ceradon Systems.</p>
           <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>

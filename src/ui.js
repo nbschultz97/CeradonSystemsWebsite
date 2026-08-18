@@ -1,5 +1,5 @@
 import emblemLogo from '../assets/Emblem.webp';
-import { PRODUCTS, SECONDARY, FOOTER_EXTRA } from '../scripts/lineup.js';
+import { PRODUCTS, SECONDARY, footerLinks, FOOTER_LINK_CLASS } from '../scripts/lineup.js';
 
 // Constants
 const Z_INDEX = {
@@ -27,11 +27,9 @@ const NAV_ITEMS = [
   ...SECONDARY.map(({ label, href, group, isCTA }) => ({ label, href: abs(href), group, isCTA }))
 ];
 
-const FOOTER_LINKS = [
-  ...PRODUCTS.map(({ slug, label }) => ({ label, href: `/${slug}.html` })),
-  ...SECONDARY.filter(({ isCTA }) => !isCTA).map(({ label, href }) => ({ label, href: abs(href) })),
-  ...FOOTER_EXTRA.map(({ label, href }) => ({ label, href: abs(href) }))
-];
+// Fallback only: the build emits these links into the markup, so this runs
+// just for a page whose footer container is empty.
+const FOOTER_LINKS = footerLinks();
 
 const focusableSelector = [
   'a[href]',
@@ -350,7 +348,7 @@ function populateFooterLinks() {
       const anchor = document.createElement('a');
       anchor.href = link.href;
       anchor.textContent = link.label;
-      anchor.className = 'hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]';
+      anchor.className = FOOTER_LINK_CLASS;
       footerNav.appendChild(anchor);
     });
   } catch (error) {

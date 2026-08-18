@@ -17,7 +17,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { dirname, join, resolve } from 'path';
 import { fileURLToPath } from 'url';
-import { PRODUCTS, SECONDARY, hrefFor } from './lineup.js';
+import { PRODUCTS, SECONDARY, hrefFor, footerLinks, FOOTER_LINK_CLASS } from './lineup.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -38,26 +38,48 @@ ${SECONDARY.map(({ label, href, isCTA }) =>
 ).join('\n')}
         </nav>`;
 
+// The footer links used to be injected by ui.js into an empty div, so they
+// existed only after JS ran -- crawlers saw a footer with no links, and
+// careers/privacy/disclaimer had no static inbound link anywhere on the site.
+// Emit them into the markup instead; ui.js now only fills an empty container.
+const FOOTER_LINKS_HTML = `<div class="footer-links" data-footer-links>
+${footerLinks().map(({ label, href }) =>
+  `          <a href="${href}" class="${FOOTER_LINK_CLASS}">${label}</a>`
+).join('\n')}
+        </div>`;
+
+// 404.html carries a deliberately minimal footer -- a copyright line and
+// nothing else -- so it has no link container to fill. Anything else missing
+// one is a mistake worth warning about.
+const NO_FOOTER_LINKS = new Set(['404.html']);
+
 // Every variant of the hardcoded nav shares these boundaries.
 const NAV_RE = /<nav class="hidden md:flex[^>]*aria-label="Main navigation">[\s\S]*?<\/nav>/;
+const FOOTER_LINKS_RE = /<div class="footer-links" data-footer-links>[\s\S]*?<\/div>/;
 
 let changed = 0;
 const skipped = [];
+const noFooter = [];
 
 for (const file of readdirSync(root).filter((f) => f.endsWith('.html'))) {
   const path = join(root, file);
   const src = readFileSync(path, 'utf-8');
+  let out = src;
 
-  if (!NAV_RE.test(src)) {
-    skipped.push(file);
-    continue;
-  }
+  if (NAV_RE.test(out)) out = out.replace(NAV_RE, NAV);
+  else skipped.push(file);
 
-  const out = src.replace(NAV_RE, NAV);
+  if (FOOTER_LINKS_RE.test(out)) out = out.replace(FOOTER_LINKS_RE, FOOTER_LINKS_HTML);
+  else if (!NO_FOOTER_LINKS.has(file)) noFooter.push(file);
+
   if (out === src) continue;
 
   writeFileSync(path, out);
   changed++;
+}
+
+if (noFooter.length) {
+  console.warn(`  !! no footer-links container in: ${noFooter.join(', ')}`);
 }
 
 if (skipped.length) {
