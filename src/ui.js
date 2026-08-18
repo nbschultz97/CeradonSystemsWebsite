@@ -1,4 +1,5 @@
 import emblemLogo from '../assets/Emblem.webp';
+import { PRODUCTS, SECONDARY, FOOTER_EXTRA } from '../scripts/lineup.js';
 
 // Constants
 const Z_INDEX = {
@@ -16,39 +17,20 @@ const TIMEOUTS = {
   FORM_RESET: 3000
 };
 
-// The six shipping systems, in the order the homepage introduces them.
-// AEGIS, FedResume and POLYGEN are retired and their pages have been deleted.
+// The mobile drawer and the footer are built from the same lineup that
+// generates every desktop nav (scripts/lineup.js). Add or retire a product
+// there, not here.
+const abs = (href) => (href.startsWith('/') ? href : `/${href}`);
+
 const NAV_ITEMS = [
-  { label: 'VANTAGE', href: '/vantage.html', group: 'Products' },
-  { label: 'RAPTOR', href: '/raptor.html', group: 'Products' },
-  { label: 'ARCHITECT', href: '/architect.html', group: 'Products' },
-  { label: 'LANTERN', href: '/lantern.html', group: 'Products' },
-  { label: 'KESTREL', href: '/kestrel.html', group: 'Products' },
-  { label: 'SCOUT', href: '/scout.html', group: 'Products' },
-  { label: 'Intelligent Systems', href: '/intelligent-systems.html', group: 'Services' },
-  { label: 'Technology', href: '/technology.html' },
-  { label: 'Company', href: '/company.html' },
-  { label: 'Insights', href: '/blog/' },
-  { label: 'Gear', href: '/shop.html' },
-  { label: 'Contact', href: '/contact.html', isCTA: true }
+  ...PRODUCTS.map(({ slug, label }) => ({ label, href: `/${slug}.html`, group: 'Products' })),
+  ...SECONDARY.map(({ label, href, group, isCTA }) => ({ label, href: abs(href), group, isCTA }))
 ];
 
 const FOOTER_LINKS = [
-  { label: 'VANTAGE', href: '/vantage.html' },
-  { label: 'RAPTOR', href: '/raptor.html' },
-  { label: 'ARCHITECT', href: '/architect.html' },
-  { label: 'LANTERN', href: '/lantern.html' },
-  { label: 'KESTREL', href: '/kestrel.html' },
-  { label: 'SCOUT', href: '/scout.html' },
-  { label: 'Intelligent Systems', href: '/intelligent-systems.html' },
-  { label: 'Technology', href: '/technology.html' },
-  { label: 'Company', href: '/company.html' },
-  { label: 'Insights', href: '/blog/' },
-  { label: 'Gear', href: '/shop.html' },
-  { label: 'Careers', href: '/careers.html' },
-  { label: 'Contact', href: '/contact.html' },
-  { label: 'Privacy', href: '/privacy.html' },
-  { label: 'Disclaimer', href: '/disclaimer.html' }
+  ...PRODUCTS.map(({ slug, label }) => ({ label, href: `/${slug}.html` })),
+  ...SECONDARY.filter(({ isCTA }) => !isCTA).map(({ label, href }) => ({ label, href: abs(href) })),
+  ...FOOTER_EXTRA.map(({ label, href }) => ({ label, href: abs(href) }))
 ];
 
 const focusableSelector = [
