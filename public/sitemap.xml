@@ -92,7 +92,7 @@
   </url>
   <url>
     <loc>https://www.ceradonsystems.com/blog/</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -165,6 +165,12 @@
   <url>
     <loc>https://www.ceradonsystems.com/blog/2026-08-02-reveille-forge-integrate-first-defense-systems.html</loc>
     <lastmod>2026-08-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.ceradonsystems.com/blog/2026-08-23-dia-agent-to-agent-ai-trust-layer.html</loc>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
