@@ -26,77 +26,36 @@ h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; }
 h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
 h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 
-/* KESTREL product mark: one decisive boot-in, then a short systems scan with
-   a long idle beat. This is intentionally restrained, not a looping mascot. */
+/* KESTREL product mark: a single masked lock-on. No looping light streaks. */
 .kestrel-brand-lockup {
   position: relative;
   display: inline-block;
   width: fit-content;
   overflow: hidden;
   line-height: 0;
-  isolation: isolate;
   opacity: 0;
-  transform: translate3d(-0.65rem, 0.35rem, 0) scale(0.985);
-  filter: blur(3px);
-  animation: kestrel-lockup-arrive 760ms cubic-bezier(0.16, 1, 0.3, 1) 120ms forwards;
+  clip-path: inset(0 100% 0 0);
+  transform: translate3d(-0.45rem, 0.2rem, 0) scale(0.992);
+  animation: kestrel-lockup-arrive 680ms cubic-bezier(0.16, 1, 0.3, 1) 120ms forwards;
 }
 
 .kestrel-brand-lockup__image {
   display: block;
 }
 
-.kestrel-brand-lockup::after {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  left: 30.5%;
-  bottom: 18.2%;
-  width: 11.5%;
-  height: max(2px, 1.8%);
-  pointer-events: none;
-  opacity: 0;
-  transform: translate3d(-100%, 0, 0);
-  background: linear-gradient(90deg, transparent, #56b7ff 32%, #22d3ee 50%, #56b7ff 68%, transparent);
-  box-shadow: 0 0 12px rgb(43 120 255 / 45%);
-  animation: kestrel-lockup-scan 5.4s cubic-bezier(0.4, 0, 0.2, 1) 900ms infinite;
-}
-
 @keyframes kestrel-lockup-arrive {
   to {
     opacity: 1;
+    clip-path: inset(0 0 0 0);
     transform: translate3d(0, 0, 0) scale(1);
-    filter: blur(0);
-  }
-}
-
-@keyframes kestrel-lockup-scan {
-  0%, 2% {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-  6% {
-    opacity: 0.88;
-  }
-  17% {
-    opacity: 0;
-    transform: translate3d(520%, 0, 0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate3d(520%, 0, 0);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .kestrel-brand-lockup {
     opacity: 1;
+    clip-path: none;
     transform: none;
-    filter: none;
-    animation: none;
-  }
-
-  .kestrel-brand-lockup::after {
-    display: none;
     animation: none;
   }
 }
