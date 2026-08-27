@@ -30,7 +30,7 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 .kestrel-brand-lockup {
   position: relative;
   display: inline-block;
-  width: fit-content;
+  width: 100%;
   overflow: hidden;
   line-height: 0;
   opacity: 0;
