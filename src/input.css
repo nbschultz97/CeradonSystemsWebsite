@@ -41,6 +41,9 @@ h3 { font-size: clamp(1.125rem, 2vw, 1.375rem); }
 
 .kestrel-brand-lockup__image {
   display: block;
+  /* The approved master was authored on Ceradon Ink. Screen makes that ink
+     optically neutral over the hero while preserving every approved pixel. */
+  mix-blend-mode: screen;
 }
 
 @keyframes kestrel-lockup-arrive {
