@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DDV7FSG1G"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-1DDV7FSG1G');</script>
+    <meta charset="utf-8" />
+    <meta name="theme-color" content="#04070d">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+    <title>Project Griffin Treats Autonomous Cyber Defense as a Control-System Problem | Ceradon Systems</title>
+    <meta name="description" content="The Army's Project Griffin and IRON pilot show why autonomous cyber defense must be engineered around reversibility, observability, confidence, and cost." />
+    <meta property="og:title" content="Project Griffin Treats Autonomous Cyber Defense as a Control-System Problem" />
+    <meta property="og:description" content="Machine-speed cyber defense is useful only when operators can understand, constrain, stop, and reverse it at machine speed." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.ceradonsystems.com/blog/2026-08-30-project-griffin-autonomous-cyber-control-system.html" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://www.ceradonsystems.com/blog/2026-08-30-project-griffin-autonomous-cyber-control-system.html" />
+    <link rel="icon" type="image/png" href="../assets/Emblem.webp" />
+    <link rel="preload" href="../assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Project Griffin Treats Autonomous Cyber Defense as a Control-System Problem","datePublished":"2026-08-30","dateModified":"2026-08-30","author":{"@type":"Organization","name":"Ceradon Systems"},"publisher":{"@type":"Organization","name":"Ceradon Systems","logo":{"@type":"ImageObject","url":"https://www.ceradonsystems.com/assets/Emblem.webp"}},"description":"The Army's Project Griffin and IRON pilot show why autonomous cyber defense must be engineered around reversibility, observability, confidence, and cost.","mainEntityOfPage":"https://www.ceradonsystems.com/blog/2026-08-30-project-griffin-autonomous-cyber-control-system.html"}</script>
+  </head>
+  <body class="bg-[color:var(--ink)] text-[color:var(--silver)]">
+    <header class="backdrop-blur bg-[color:var(--steel-900)/70] sticky top-0 z-50 border-b border-[color:var(--steel-700)]" style="backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);">
+      <div class="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+        <a href="../index.html" class="flex items-center gap-2"><span class="hidden md:inline-flex logo-plate logo-plate--nav"><img class="logo-glow h-8" src="../assets/Horizontal_Logo.webp" alt="Ceradon Systems" width="1536" height="1024" /></span><span class="md:hidden inline-flex logo-plate logo-plate--nav"><img class="logo-glow" src="../assets/Emblem.webp" alt="Ceradon Systems" width="558" height="558" /></span></a>
+        <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
+          <div class="relative group">
+            <button class="navlink">Products</button>
+            <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
+              <div class="navdrop">
+                <a href="../vantage.html" class="navdrop-item">VANTAGE <span class="navdrop-note">Through-Wall</span></a>
+                <a href="../raptor.html" class="navdrop-item">RAPTOR <span class="navdrop-note">Edge AI Vision</span></a>
+                <a href="../architect.html" class="navdrop-item">ARCHITECT <span class="navdrop-note">UxS Planning</span></a>
+                <a href="../lantern.html" class="navdrop-item">LANTERN <span class="navdrop-note">Video to floorplan</span></a>
+                <a href="../kestrel.html" class="navdrop-item">KESTREL <span class="navdrop-note">Mission Rehearsal</span></a>
+                <a href="../scout.html" class="navdrop-item">SCOUT <span class="navdrop-note">Contract intel</span></a>
+              </div>
+            </div>
+          </div>
+          <a href="../intelligent-systems.html" class="navlink">Intelligent Systems</a>
+          <a href="../technology.html" class="navlink">Technology</a>
+          <a href="../company.html" class="navlink">Company</a>
+          <a href="/blog/" class="navlink">Insights</a>
+          <a href="../shop.html" class="navlink">Gear</a>
+          <a href="../contact.html" class="btn btn-primary">Contact</a>
+        </nav>
+        <button class="md:hidden icon-button" aria-label="Open menu" data-open-menu>&#9776;</button>
+      </div>
+    </header>
+    <main class="mx-auto max-w-3xl px-4 py-16 space-y-10"><article class="space-y-8"><header class="space-y-4"><a href="/blog/" class="text-sm text-[color:var(--ceradon-sky)] hover:text-[color:var(--white)] transition-colors">&larr; Back to Insights</a><p class="tag">Weekly Analysis</p><h1 class="text-4xl md:text-5xl font-black leading-tight">Project Griffin Treats Autonomous Cyber Defense as a Control-System Problem</h1><p class="text-subtle">August 30, 2026 &middot; Ceradon Systems</p></header>
+      <div class="prose prose-invert max-w-none space-y-6 text-[color:var(--silver)] leading-relaxed">
+        <p class="text-lg">Seven defensive functions, a master kill switch, adjustable confidence thresholds, and an undo command tell us more about the Army's autonomous cyber-defense direction than the word "agent." Project Griffin is framing the problem correctly: useful autonomy depends on a control system that operators can observe, constrain, interrupt, and reverse.</p>
+        <p><a href="https://defensescoop.com/2026/08/21/army-wants-fast-ai-cybersecurity-agents-wont-run-up-costs-create-vulnerabilities/" target="_blank" rel="noopener">DefenseScoop reported</a> that the Army's Cyber Command is pursuing an Intelligent Resilient Operations Network, or IRON, pilot under Project Griffin. The envisioned system would ingest network-sensor feeds and use multiple AI agents to carry out defensive actions with human oversight. The requirements reach beyond detection: every action needs an automated audit trail, operators must be able to adjust confidence thresholds, and the architecture must control token cost without opening new attack surfaces.</p>
+        <p>That combination matters. Cyber defenders already operate in an environment where the time between observation and consequence can be measured in seconds. Automation can compress that response loop, but it can also compress the time available to catch a mistaken assumption. The engineering objective is therefore not maximum autonomy. It is bounded autonomy that remains legible under pressure.</p>
+        <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">Speed Creates a Control Requirement</h2>
+        <p>A traditional security workflow often separates sensing, analysis, approval, and remediation. An autonomous agent can cross those boundaries: identify anomalous behavior, correlate it with other telemetry, isolate a device, alter a configuration, or trigger another tool. Each removed handoff saves time. Each removed handoff also eliminates a moment when a person might notice that the data is stale, the identity is wrong, or the proposed action will disrupt a mission-critical service.</p>
+        <p>This is why the kill switch and undo capability are not accessories. They are part of the operational interface. A stop control must work even when the agent is busy, network conditions are degraded, or one component believes its task is too important to interrupt. Undo must mean more than issuing an opposite command. The system needs to know what state existed before the action, what dependencies changed afterward, and whether reversal will create a second failure.</p>
+        <p>Cyber autonomy should be evaluated like any other control system. What can it sense? What can it change? How quickly does it react? Which conditions force a safe state? How does an operator regain authority? Those questions are more durable than a benchmark score because they describe how the system behaves when its model, data, or environment is imperfect.</p>
+        <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">An Audit Trail Is Operational Telemetry</h2>
+        <p>Project Griffin's emphasis on automated audit trails addresses a common weakness in agent demonstrations: the output appears, but the decision path is hard to reconstruct. For a defensive cyber system, a useful record must capture more than the final action. It should identify the agent and model version, the evidence considered, confidence at decision time, tools invoked, authorization used, policies applied, and state changes produced.</p>
+        <p>That evidence serves three purposes. Operators need it in real time to decide whether an agent should continue. Incident responders need it afterward to distinguish an adversary's activity from the system's own changes. Program teams need it across many events to discover where thresholds, prompts, tools, or policies consistently fail.</p>
+        <p>The <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">NIST AI Risk Management Framework</a> emphasizes governing, mapping, measuring, and managing AI risk throughout a system's life cycle. In an agentic cyber platform, the audit stream is what makes those activities concrete. Without structured telemetry, governance becomes a policy document detached from operations, and post-event learning becomes guesswork.</p>
+        <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">Confidence Must Map to Authority</h2>
+        <p>Adjustable confidence thresholds can help operators tune the system to mission conditions, but a single threshold is not enough. Confidence should map to specific classes of action. A low-risk action, such as gathering another diagnostic artifact, can tolerate more uncertainty than isolating a server or changing an identity policy. The same numerical confidence may imply different authority depending on operational impact.</p>
+        <p>Programs should define an action ladder. At one level, an agent observes and recommends. At another, it performs reversible collection or containment. Higher levels allow changes with broader consequences, stronger evidence requirements, and explicit human authorization. That structure keeps autonomy from becoming an all-or-nothing switch and gives commanders a way to adapt the system when the threat, mission, or network state changes.</p>
+        <p>Thresholds also require calibration. A model that reports 90 percent confidence should be tested to determine whether similar decisions are actually correct at that rate under representative conditions. Calibration can drift when networks, tools, or adversary behavior change. Monitoring must therefore ask not only whether the agent completed tasks, but whether its expressed certainty remained reliable.</p>
+        <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">Cost and Security Share the Same Boundary</h2>
+        <p>Token cost may sound like an administrative concern beside cyber defense, but it is also a control signal. An agent caught in a loop can consume budget, delay other work, overload connected tools, and generate noise that hides real activity. An adversary may intentionally create inputs that provoke excessive reasoning or repeated calls. Resource exhaustion becomes both a financial risk and a denial-of-service path.</p>
+        <p>Useful limits include per-task budgets, maximum tool calls, timeouts, concurrency caps, and explicit termination conditions. Agents should expose why they are continuing and what evidence would let them stop. When a budget is reached, the system should fail into a known state and preserve context for a human, not silently truncate a defensive workflow or keep spending through a fallback route.</p>
+        <p>The same least-privilege principle applies to tools. Each agent should receive only the data and actions needed for its role. Tool outputs should be treated as untrusted inputs, and agent-generated commands should pass deterministic policy checks before execution. Autonomy does not remove the need for access control; it makes access control more dynamic and more important.</p>
+        <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">What an Operational Test Should Prove</h2>
+        <p>A polished demonstration with clean sensor data is a starting point, not evidence of operational readiness. Testing should inject ambiguous alerts, corrupted context, conflicting recommendations, unavailable tools, revoked permissions, and attempts to manipulate the agent through data it reads. It should measure whether the system stops safely, escalates clearly, and preserves enough evidence for an operator to understand the event.</p>
+        <p>The most useful metrics will combine mission performance and control performance: time to detect, time to contain, false-action rate, unauthorized-action prevention, audit completeness, operator intervention time, recovery success, calibration error, and cost per resolved event. A system that reacts quickly but cannot explain or reverse its actions is not fast defense. It is fast uncertainty.</p>
+        <h2 class="text-2xl font-bold text-[color:var(--white)] mt-10">Ceradon's Take</h2>
+        <p>Ceradon's take is that autonomous cyber defense should be built as a layered control architecture, not a collection of impressive agents. Sensors establish what is happening. Agents interpret and propose. Deterministic policy gates decide what is permitted. Execution services make bounded changes. Independent telemetry records the entire chain. Human operators retain controls that do not depend on the agent agreeing to surrender authority.</p>
+        <p>This pattern extends beyond cyber operations. Any intelligent system that senses, reasons, and acts at the edge must make confidence, authority, reversibility, and resource use visible. The closer software gets to operational effects, the less acceptable it is for those boundaries to live only inside a prompt or model.</p>
+        <p>Project Griffin is valuable because its requirements point toward that discipline. The Army is not merely asking whether agents can detect and respond faster. It is asking whether their actions can be audited, thresholds adjusted, costs bounded, operations stopped, and changes undone. Those are the questions that turn autonomy from a laboratory capability into infrastructure operators can trust.</p>
+        <div class="card-glass p-6 mt-8 space-y-3"><h3 class="text-lg font-semibold text-[color:var(--white)]">Intelligent systems built around operational control</h3><p class="text-sm text-subtle">Ceradon Systems develops sensing, edge AI, and autonomy concepts around fieldable compute, clear interfaces, and operator-centered mission workflows.</p><a href="../contact.html" class="btn btn-primary text-sm inline-flex">Talk With Ceradon</a></div>
+      </div></article></main>
+    <footer class="border-t border-white/[0.06]">
+      <div class="mx-auto max-w-7xl px-4 py-14 space-y-10">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-4">
+            <img src="../assets/Emblem.webp" alt="Ceradon Systems" class="h-10 w-10 image-surface" loading="lazy" width="558" height="558" />
+            <div>
+              <p class="font-semibold text-white text-sm">Ceradon Systems</p>
+              <p class="text-xs text-white/30">Sensing, mapping, and mission systems. Veteran-founded SDVOSB.</p>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4 items-center text-sm text-white/40">
+            <a href="mailto:contact@ceradonsystems.com">contact@ceradonsystems.com</a>
+          </div>
+        </div>
+        <div class="footer-links" data-footer-links>
+          <a href="/vantage.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">VANTAGE</a>
+          <a href="/raptor.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">RAPTOR</a>
+          <a href="/architect.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">ARCHITECT</a>
+          <a href="/lantern.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">LANTERN</a>
+          <a href="/kestrel.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">KESTREL</a>
+          <a href="/scout.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">SCOUT</a>
+          <a href="/intelligent-systems.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Intelligent Systems</a>
+          <a href="/technology.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Technology</a>
+          <a href="/company.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Company</a>
+          <a href="/blog/" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Insights</a>
+          <a href="/shop.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Gear</a>
+          <a href="/careers.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Careers</a>
+          <a href="/contact.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Contact</a>
+          <a href="/privacy.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Privacy</a>
+          <a href="/disclaimer.html" class="hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]">Disclaimer</a>
+        </div>
+        <div class="gradient-divider"></div>
+        <div class="space-y-1.5 text-xs text-white/25">
+          <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
+          <p>Socio-economic status: SDVOSB &middot; VOSB &middot; NAICS: 541715, 541330 &middot; PSC: K058, AJ11.</p>
+          <p>Not affiliated with or endorsed by the U.S. Government or Department of Defense.</p>
+          <p>&copy; <span data-year></span> Ceradon Systems. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
