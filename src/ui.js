@@ -1,4 +1,5 @@
 import emblemLogo from '../assets/Emblem.webp';
+import { PRODUCTS, SECONDARY, footerLinks, FOOTER_LINK_CLASS } from '../scripts/lineup.js';
 
 // Constants
 const Z_INDEX = {
@@ -16,41 +17,19 @@ const TIMEOUTS = {
   FORM_RESET: 3000
 };
 
-// The six shipping systems, in the order the homepage introduces them.
-// SCOUT, AEGIS and FedResume are retired: their pages still exist but must
-// not be linked or advertised anywhere.
+// The mobile drawer and the footer are built from the same lineup that
+// generates every desktop nav (scripts/lineup.js). Add or retire a product
+// there, not here.
+const abs = (href) => (href.startsWith('/') ? href : `/${href}`);
+
 const NAV_ITEMS = [
-  { label: 'VANTAGE', href: '/vantage.html', group: 'Products' },
-  { label: 'RAPTOR', href: '/raptor.html', group: 'Products' },
-  { label: 'ARCHITECT', href: '/architect.html', group: 'Products' },
-  { label: 'LANTERN', href: '/lantern.html', group: 'Products' },
-  { label: 'KESTREL', href: '/kestrel.html', group: 'Products' },
-  { label: 'POLYGEN', href: '/polygen.html', group: 'Products' },
-  { label: 'Intelligent Systems', href: '/intelligent-systems.html', group: 'Services' },
-  { label: 'Technology', href: '/technology.html' },
-  { label: 'Company', href: '/company.html' },
-  { label: 'Gear', href: '/gear.html' },
-  { label: 'Insights', href: '/blog/' },
-  { label: 'Contact', href: '/contact.html', isCTA: true }
+  ...PRODUCTS.map(({ slug, label }) => ({ label, href: `/${slug}.html`, group: 'Products' })),
+  ...SECONDARY.map(({ label, href, group, isCTA }) => ({ label, href: abs(href), group, isCTA }))
 ];
 
-const FOOTER_LINKS = [
-  { label: 'VANTAGE', href: '/vantage.html' },
-  { label: 'RAPTOR', href: '/raptor.html' },
-  { label: 'ARCHITECT', href: '/architect.html' },
-  { label: 'LANTERN', href: '/lantern.html' },
-  { label: 'KESTREL', href: '/kestrel.html' },
-  { label: 'POLYGEN', href: '/polygen.html' },
-  { label: 'Intelligent Systems', href: '/intelligent-systems.html' },
-  { label: 'Technology', href: '/technology.html' },
-  { label: 'Company', href: '/company.html' },
-  { label: 'Gear', href: '/gear.html' },
-  { label: 'Insights', href: '/blog/' },
-  { label: 'Careers', href: '/careers.html' },
-  { label: 'Contact', href: '/contact.html' },
-  { label: 'Privacy', href: '/privacy.html' },
-  { label: 'Disclaimer', href: '/disclaimer.html' }
-];
+// Fallback only: the build emits these links into the markup, so this runs
+// just for a page whose footer container is empty.
+const FOOTER_LINKS = footerLinks();
 
 const focusableSelector = [
   'a[href]',
@@ -369,7 +348,7 @@ function populateFooterLinks() {
       const anchor = document.createElement('a');
       anchor.href = link.href;
       anchor.textContent = link.label;
-      anchor.className = 'hover:text-[color:var(--white)] focus-visible:text-[color:var(--white)]';
+      anchor.className = FOOTER_LINK_CLASS;
       footerNav.appendChild(anchor);
     });
   } catch (error) {

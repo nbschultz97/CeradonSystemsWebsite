@@ -4,46 +4,33 @@
  * Blog posts were generated with their chrome inlined rather than shared, so
  * each one froze whatever the site looked like on the day it was written. The
  * navs drifted into two stale variants -- both still linking the retired
- * SCOUT/AEGIS/FedResume, one linking an ai-services.html that never existed,
- * and neither listing LANTERN or KESTREL. The footers drifted into three
+ * AEGIS/FedResume, one linking an ai-services.html that never existed, and
+ * neither listing LANTERN or KESTREL. The footers drifted into three
  * different company taglines, and eight pages lost the links and legal block
  * altogether. Run this whenever the lineup or the legal boilerplate changes.
  */
 import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { dirname, join, resolve } from 'path';
 import { fileURLToPath } from 'url';
+import { PRODUCTS, SECONDARY, hrefFor, footerLinks, FOOTER_LINK_CLASS } from './lineup.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const blogDir = resolve(__dirname, '..', 'blog');
-
-const ITEM = 'class="block px-4 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/[0.04]"';
-const NOTE = 'class="text-xs text-white/30"';
-
-const PRODUCTS = [
-  ['vantage', 'VANTAGE', 'Through-Wall'],
-  ['raptor', 'RAPTOR', 'Edge AI Vision'],
-  ['architect', 'ARCHITECT', 'UxS Planning'],
-  ['lantern', 'LANTERN', 'Video to floorplan'],
-  ['kestrel', 'KESTREL', 'Mission Rehearsal'],
-  ['polygen', 'POLYGEN', 'Text to 3D']
-];
 
 const NAV = `<nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
           <div class="relative group">
             <button class="navlink">Products</button>
             <div class="absolute left-0 top-full hidden group-hover:block pt-2 z-50">
-              <div class="bg-[#080c16] border border-white/[0.06] rounded-lg py-2 min-w-[220px] shadow-2xl">
-${PRODUCTS.map(([slug, name, note]) =>
-  `                <a href="../${slug}.html" ${ITEM}>${name} <span ${NOTE}>${note}</span></a>`
+              <div class="navdrop">
+${PRODUCTS.map(({ slug, label, note }) =>
+  `                <a href="../${slug}.html" class="navdrop-item">${label} <span class="navdrop-note">${note}</span></a>`
 ).join('\n')}
               </div>
             </div>
           </div>
-          <a href="../intelligent-systems.html" class="navlink">Intelligent Systems</a>
-          <a href="../technology.html" class="navlink">Technology</a>
-          <a href="../company.html" class="navlink">Company</a>
-          <a href="/blog/" class="navlink" aria-current="page">Insights</a>
-          <a href="../contact.html" class="btn btn-primary">Contact</a>
+${SECONDARY.map(({ label, href, isCTA }) =>
+  `          <a href="${hrefFor(href, '../')}" class="${isCTA ? 'btn btn-primary' : 'navlink'}">${label}</a>`
+).join('\n')}
         </nav>`;
 
 const FOOTER = `<footer class="border-t border-white/[0.06]">
@@ -60,7 +47,11 @@ const FOOTER = `<footer class="border-t border-white/[0.06]">
             <a href="mailto:contact@ceradonsystems.com">contact@ceradonsystems.com</a>
           </div>
         </div>
-        <div class="footer-links" data-footer-links></div>
+        <div class="footer-links" data-footer-links>
+${footerLinks().map(({ label, href }) =>
+  `          <a href="${href}" class="${FOOTER_LINK_CLASS}">${label}</a>`
+).join('\n')}
+        </div>
         <div class="gradient-divider"></div>
         <div class="space-y-1.5 text-xs text-white/25">
           <p>Ceradon Systems, LLC (Utah) &middot; CAGE 179U9 &middot; UEI UZA9PFJ9RDL6 &middot; Active in SAM.gov through Dec 5, 2026.</p>
