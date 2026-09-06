@@ -27,6 +27,7 @@ const PRIORITIES = {
   'technology.html': { priority: '0.7', changefreq: 'monthly' },
   'company.html': { priority: '0.6', changefreq: 'monthly' },
   'careers.html': { priority: '0.5', changefreq: 'monthly' },
+  'gear.html': { priority: '0.6', changefreq: 'monthly' },
   'contact.html': { priority: '0.6', changefreq: 'monthly' },
   'ip.html': { priority: '0.4', changefreq: 'yearly' },
   'privacy.html': { priority: '0.2', changefreq: 'yearly' },

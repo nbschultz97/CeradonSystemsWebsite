@@ -29,6 +29,7 @@ const NAV_ITEMS = [
   { label: 'Intelligent Systems', href: '/intelligent-systems.html', group: 'Services' },
   { label: 'Technology', href: '/technology.html' },
   { label: 'Company', href: '/company.html' },
+  { label: 'Gear', href: '/gear.html' },
   { label: 'Insights', href: '/blog/' },
   { label: 'Contact', href: '/contact.html', isCTA: true }
 ];
@@ -43,6 +44,7 @@ const FOOTER_LINKS = [
   { label: 'Intelligent Systems', href: '/intelligent-systems.html' },
   { label: 'Technology', href: '/technology.html' },
   { label: 'Company', href: '/company.html' },
+  { label: 'Gear', href: '/gear.html' },
   { label: 'Insights', href: '/blog/' },
   { label: 'Careers', href: '/careers.html' },
   { label: 'Contact', href: '/contact.html' },
