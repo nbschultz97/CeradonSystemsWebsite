@@ -116,26 +116,30 @@
 
           <!-- 4S Dual-Power Battery Pack -->
           <article class="card-glass overflow-hidden flex flex-col">
-            <div class="relative h-56 flex items-center justify-center bg-gradient-to-br from-[#0a0f1a] to-[#101b30] border-b border-[color:var(--steel-700)]">
-              <svg viewBox="0 0 120 60" class="h-24 w-auto text-[color:var(--ceradon-blue)] opacity-80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="14" y="12" width="76" height="36" rx="5" />
-                <rect x="90" y="22" width="10" height="16" rx="2" />
-                <path d="M56 18 L 46 32 L 54 32 L 48 42 L 60 28 L 52 28 Z" fill="currentColor" stroke="none" />
-                <path d="M24 18 L 24 42 M 34 18 L 34 42" stroke-width="1.5" stroke-dasharray="3 4" />
-              </svg>
-              <span class="absolute top-3 right-3 text-[10px] uppercase tracking-[0.25em] text-subtle">Product photo coming soon</span>
+            <div class="relative h-56 border-b border-[color:var(--steel-700)] bg-[#0a0f1a]">
+              <img src="./assets/gear-pouch-battery-product.webp"
+                   alt="4S Dual-Power Goggle Battery Pack with XT60 output and balance lead"
+                   class="h-56 w-full object-cover object-center"
+                   width="1122" height="1402" loading="lazy" />
             </div>
             <div class="p-8 space-y-4 flex-1 flex flex-col">
               <div class="flex items-start justify-between gap-4">
                 <h2 class="text-2xl font-semibold text-[color:var(--white)]">4S Dual-Power Goggle Battery Pack</h2>
-                <span class="text-xs uppercase tracking-[0.15em] text-[color:var(--ceradon-blue)] whitespace-nowrap self-center" data-price="battery">Pricing coming soon</span>
+                <span class="text-xl font-bold text-[color:var(--white)] whitespace-nowrap self-center" data-price="battery">$150</span>
               </div>
               <p class="text-sm text-subtle">4S li-ion pack sized for a standard NVG battery pouch on your helmet or plate carrier. Runs FPV goggles all day &mdash; or dual-powers NVGs and goggles from the same pouch.</p>
               <ul class="space-y-2 text-sm text-subtle">
                 <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Drops into a standard NVG battery pouch &mdash; no new mounting.</li>
                 <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Powers FPV goggles, or NVGs and goggles simultaneously.</li>
                 <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> Ships ground within the US per lithium battery regulations.</li>
+                <li class="flex gap-3"><span class="text-[color:var(--ceradon-blue)]">&#9657;</span> $10 flat US ground shipping, added at checkout.</li>
               </ul>
+              <figure class="pt-2">
+                <img src="./assets/gear-pouch-battery-hero.webp"
+                     alt="The battery pack installed in a rear helmet pouch, powering FPV goggles"
+                     class="w-full h-auto rounded image-surface"
+                     width="1122" height="1402" loading="lazy" />
+              </figure>
               <div class="mt-auto pt-4">
                 <a href="#" class="btn btn-primary text-sm uppercase tracking-wide w-full text-center" data-buy="battery">Buy Now</a>
               </div>
@@ -214,7 +218,7 @@
       // falls back to an email reservation link so the page never dead-ends.
       const PAYMENT_LINKS = {
         strap: "",
-        battery: ""
+        battery: "https://buy.stripe.com/5kQcMYf4FbVTdgd2tH24000"
       };
       document.querySelectorAll("[data-buy]").forEach((btn) => {
         const url = PAYMENT_LINKS[btn.dataset.buy];
@@ -222,7 +226,7 @@
           btn.href = url;
         } else {
           btn.textContent = "Reserve via Email";
-          btn.href = "mailto:contact@ceradonsystems.com?subject=Gear%20order%20request&body=I%27d%20like%20to%20order%3A%20" +
+          btn.href = "mailto:orders@ceradonsystems.com?subject=Gear%20order%20request&body=I%27d%20like%20to%20order%3A%20" +
             encodeURIComponent(btn.closest("article").querySelector("h2").textContent);
         }
       });
