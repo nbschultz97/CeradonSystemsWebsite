@@ -12,17 +12,19 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KESTREL FPV Simulator | Features &amp; Release Status | Ceradon Systems</title>
-    <meta name="description" content="Configure an aircraft, set up your controls and practice location-based FPV flights. Explore KESTREL features, public Windows downloads, candidate updates and known limits." />
-    <meta property="og:title" content="KESTREL FPV Simulator | Ceradon Systems" />
-    <meta property="og:description" content="From the workbench to the world. Explore aircraft setup, location-based simulation, public downloads and clearly marked candidate features." />
+    <title>KESTREL v0.42.11 | FPV Flight Simulator | Ceradon Systems</title>
+    <meta name="description" content="See KESTREL v0.42.11 in flight, the Work Bench, Mission Builder and LAN lobby. Download the Windows FPV simulator and review features and known limitations." />
+    <meta property="og:title" content="KESTREL v0.42.11 | Ceradon Systems" />
+    <meta property="og:description" content="The current Windows FPV simulator, shown in real game captures. Explore aircraft setup, Mission Builder, LAN testing and the v0.42.11 release." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/kestrel.html" />
-    <meta property="og:image" content="https://www.ceradonsystems.com/assets/kestrel-trailer-poster.jpg" />
+    <meta property="og:image" content="https://www.ceradonsystems.com/assets/kestrel-v04211-flight.png" />
+    <meta property="og:image:alt" content="FPV flight captured in KESTREL v0.42.11" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="KESTREL FPV Simulator | Ceradon Systems" />
-    <meta name="twitter:description" content="Aircraft setup, location-based FPV practice and repeatable scenarios. Public downloads and candidate features, with their limits made clear." />
-    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/kestrel-trailer-poster.jpg" />
+    <meta name="twitter:title" content="KESTREL v0.42.11 | Ceradon Systems" />
+    <meta name="twitter:description" content="See the current FPV simulator in flight, the Work Bench, Mission Builder and LAN lobby. Features and known limits for the v0.42.11 Windows release." />
+    <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/kestrel-v04211-flight.png" />
+    <meta name="twitter:image:alt" content="FPV flight captured in KESTREL v0.42.11" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.ceradonsystems.com/kestrel.html" />
     <link rel="icon" type="image/webp" href="./assets/Emblem.webp" />
@@ -36,7 +38,8 @@
       "applicationCategory": "SimulationApplication",
       "operatingSystem": "Windows",
       "url": "https://www.ceradonsystems.com/kestrel.html",
-      "description": "Windows FPV simulator with component-based aircraft configuration, controller setup, location-based flight, scenario building and local session records. Streamed terrain depends on coverage and connectivity. Public downloads are separate from candidate features.",
+      "description": "Windows FPV simulator with parts-based aircraft setup, custom catalogs, location-based flight, Mission Builder and LAN multiplayer. Streamed terrain needs coverage and connectivity; physical two-PC acceptance remains open.",
+      "softwareVersion": "0.42.11-alpha",
       "publisher": {
         "@type": "Organization",
         "name": "Ceradon Systems, LLC",
@@ -87,181 +90,182 @@
       <!-- mobile panel injected by /src/ui.js -->
     </header>
     <main id="main-content" class="kestrel-page">
-      <section class="kestrel-intro">
-        <img src="./assets/hero-kestrel.webp" alt="" class="kestrel-intro__backdrop" aria-hidden="true" width="1600" height="900" fetchpriority="high" />
-        <div class="kestrel-wrap kestrel-intro__content">
-          <img src="./assets/kestrel-lockup-approved.png" alt="KESTREL" class="kestrel-mark" width="2172" height="724" fetchpriority="high" />
-          <div class="kestrel-intro__text">
-            <h1>Build it.<br />Take it flying.</h1>
-            <p class="kestrel-lead">FPV simulation, from the workbench to the world. Configure an aircraft, set up your controls, and practice location-based flights and repeatable scenarios on Windows.</p>
-            <div class="kestrel-actions">
-              <a href="https://github.com/nbschultz97/kestrel/releases/latest" class="btn btn-primary">Get the public alpha</a>
-              <a href="#features" class="btn btn-secondary">Explore the simulator</a>
+      <section class="kestrel-intro" aria-labelledby="kestrel-heading">
+        <div class="kestrel-wrap">
+          <div class="kestrel-intro__content">
+            <img src="./assets/kestrel-lockup-approved.png" alt="KESTREL" class="kestrel-mark" width="2172" height="724" />
+            <div class="kestrel-intro__text">
+              <h1 id="kestrel-heading">Build an aircraft.<br />Take it flying.</h1>
+              <p class="kestrel-lead">Parts-based FPV simulation on real-world terrain. Configure your aircraft, bring your controls and build a flight you can repeat.</p>
+              <div class="kestrel-actions">
+                <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.11-alpha-unsigned.1" class="btn btn-primary">Get KESTREL v0.42.11</a>
+                <a href="#features" class="btn btn-secondary">See the simulator</a>
+              </div>
+              <p class="kestrel-note">Windows x64 alpha. Streamed terrain needs internet access and provider coverage. <a href="#limits">Read the known limits</a>.</p>
             </div>
-            <p class="kestrel-note">Free Windows x64 alpha. Streamed terrain depends on connectivity and provider coverage. <a href="#release-status">Check versions and limitations</a>.</p>
           </div>
+          <figure class="kestrel-capture kestrel-capture--flight">
+            <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-flight.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution KESTREL flight capture in a new tab">
+              <img src="./assets/kestrel-v04211-flight.png" alt="FPV flight view captured in KESTREL v0.42.11" width="1920" height="1080" fetchpriority="high" />
+            </a>
+            <figcaption>
+              <span>In flight with v0.42.11. An actual game capture, not a concept render.</span>
+              <a href="./assets/kestrel-v04211-flight.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section id="release-status" class="kestrel-section kestrel-release" aria-labelledby="release-heading">
         <div class="kestrel-wrap">
-          <div class="kestrel-section-heading">
-            <h2 id="release-heading">Choose the right build.</h2>
-            <p>Release status as of <time datetime="2026-09-14">September 14, 2026</time>. A candidate is not a public download.</p>
+          <div class="kestrel-release__summary">
+            <div>
+              <h2 id="release-heading">KESTREL v0.42.11</h2>
+              <p>Public release and default updater channel. Published <time datetime="2026-09-15">September 15, 2026</time>.</p>
+            </div>
+            <div class="kestrel-release__links">
+              <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.11-alpha-unsigned.1">Release notes and download</a>
+              <a href="https://github.com/nbschultz97/kestrel/blob/main/FEATURES.md">Full features</a>
+              <a href="https://github.com/nbschultz97/kestrel/blob/main/ROADMAP.md">Unfinished roadmap</a>
+            </div>
           </div>
-          <div class="kestrel-release-grid">
-            <article>
-              <p class="kestrel-status">Latest public release</p>
-              <h3>v0.42.4 alpha</h3>
-              <p>The current GitHub Latest release and in-app update channel. This is an unsigned Windows build.</p>
-              <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.4-alpha-unsigned.1">Release notes, ZIP and checksum</a>
-            </article>
-            <article>
-              <p class="kestrel-status">Public evaluation</p>
-              <h3>v0.42.9 alpha</h3>
-              <p>A separately published prerelease for evaluation. Install in its own folder; it does not replace the Latest channel.</p>
-              <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.9-alpha-eval.1">Evaluation notes and download</a>
-            </article>
-            <article class="kestrel-release__candidate">
-              <p class="kestrel-status">Candidate, not released</p>
-              <h3>v0.42.11 alpha</h3>
-              <p>Catalog, data, map and Work Bench updates are being validated. A successful build or cook is not completed packaged acceptance.</p>
-              <a href="#candidate">What the candidate adds</a>
-            </article>
-          </div>
-          <p class="kestrel-safety">Unsigned software may be blocked by Windows or your organization. Use only where it is permitted; do not disable security protections. See the release page for the exact artifact and verification record.</p>
+          <p class="kestrel-safety">This is an alpha with known defects. Windows signing note: the package is not publisher-signed; use only where permitted and do not disable protections.</p>
         </div>
       </section>
 
       <nav class="kestrel-section-nav" aria-label="KESTREL page sections">
         <div class="kestrel-wrap">
-          <a href="#features">Flight and setup</a>
-          <a href="#builder">Scenarios</a>
-          <a href="#candidate">Candidate additions</a>
+          <a href="#features">Work Bench</a>
+          <a href="#builder">Mission Builder</a>
+          <a href="#multiplayer">LAN multiplayer</a>
+          <a href="#updates">What changed</a>
           <a href="#limits">Known limits</a>
           <a href="#documentation">Documentation</a>
         </div>
       </nav>
 
-      <section id="features" class="kestrel-section">
+      <section id="features" class="kestrel-section" aria-labelledby="workbench-heading">
         <div class="kestrel-wrap">
           <div class="kestrel-section-heading">
-            <h2>An aircraft you configure.<br />A flight you can repeat.</h2>
-            <p>The core simulator brings aircraft configuration, controls, location selection and session review into one practice loop.</p>
+            <h2 id="workbench-heading">Your aircraft,<br />part by part.</h2>
+            <p>Choose a frame, motors, props, battery and electronics. Save aircraft for repeatable flights, with the current catalog and each build's source inventory kept in view.</p>
           </div>
-          <div class="kestrel-workflow">
-            <figure class="kestrel-workflow__visual">
-              <img src="./assets/kestrel-ui-garage-airframe.webp" alt="Earlier KESTREL garage interface showing an aircraft preview, component selection and predicted performance" width="1600" height="900" loading="lazy" />
-              <figcaption>Earlier-build capture. Screens illustrate the workflow, not the final appearance of the candidate.</figcaption>
-            </figure>
-            <div class="kestrel-workflow__copy">
-              <h3>Start at the workbench</h3>
-              <p>Choose an airframe, motors, propellers, battery and other catalog components. Their specifications inform simulated mass, thrust and power use. Save builds for repeatable comparisons.</p>
-              <p>Predictions are simulator estimates, not measured flight performance or proof that real parts fit together.</p>
+          <figure class="kestrel-capture">
+            <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-workbench.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution Work Bench capture in a new tab">
+              <img src="./assets/kestrel-v04211-workbench.png" alt="KESTREL v0.42.11 Work Bench with antenna selection and a close-up component view" width="1920" height="1080" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>
+              <span>Component inspection in v0.42.11, with the antenna selected. Models and predictions are simulation aids, not proof of exact real-world fit or performance.</span>
+              <a href="./assets/kestrel-v04211-workbench.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+            </figcaption>
+          </figure>
+          <div class="kestrel-supporting-copy">
+            <div>
               <h3>Bring your controls</h3>
-              <p>Use keyboard, gamepad or a compatible USB-joystick RC transmitter. Calibrate flight axes, adjust inversion and rates, and save the setup. Supported Betaflight settings can inform the simulated control feel.</p>
-              <p>Device support varies. Map-button capture in the candidate is not full action rebinding.</p>
+              <p>Use keyboard, gamepad or a compatible USB-joystick RC transmitter. Calibrate flight axes, adjust inversion and rates, and save the setup. Device support varies; map-action binding is not a full action-binding suite.</p>
             </div>
-          </div>
-          <div class="kestrel-feature-grid">
-            <article>
-              <h3>Choose your ground</h3>
-              <p>Select a location using coordinates or a map. Streamed photoreal terrain is available where the provider has coverage; a generated environment supports the basic practice loop.</p>
-            </article>
-            <article>
-              <h3>Fly the conditions</h3>
-              <p>Location and time shape the lighting. Practice daylight and low-light views, with simulated wind, battery use, link degradation and damage cues.</p>
-            </article>
-            <article>
-              <h3>Read the flight</h3>
-              <p>An FPV flight-controller-style OSD presents flight information. A local line-of-sight camera offers another view. These are simulator views, not a certification of real camera optics.</p>
-            </article>
-            <article>
-              <h3>Compare your runs</h3>
-              <p>Structured objectives and local session records help compare completion, time and score. Repeat a scenario with the same aircraft and settings to see what changed.</p>
-            </article>
+            <div>
+              <h3>Choose the ground and conditions</h3>
+              <p>Preview a city or coordinate search, adjust the launch pin, then continue. Practice with configured time, weather and wind, an FPV view or a local line-of-sight camera. Configured weather is not a live weather service.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="builder" class="kestrel-section kestrel-panel">
-        <div class="kestrel-wrap kestrel-split">
-          <div>
-            <h2>Make the practice<br />your own.</h2>
-            <p class="kestrel-lead">Build a scenario around a route, a position hold, an observation dwell or a landing objective. Place scene objects, choose a launch point, then save and fly.</p>
-            <p>Mission file import and export support repeatable scenarios. Terrain loading and placement still need to be checked in the selected environment.</p>
-            <a class="kestrel-text-link" href="https://github.com/nbschultz97/kestrel/blob/main/FEATURES.md">Read the full feature guide</a>
+      <section id="builder" class="kestrel-section kestrel-panel" aria-labelledby="builder-heading">
+        <div class="kestrel-wrap">
+          <div class="kestrel-section-heading">
+            <h2 id="builder-heading">Make a scenario<br />you can return to.</h2>
+            <p>Choose a launch point, place scene objects and set objectives in Mission Builder. Save, import and export mission files to repeat a scenario with different aircraft and settings.</p>
           </div>
-          <figure class="kestrel-video">
-            <video controls preload="none" playsinline poster="./assets/kestrel-trailer-poster.jpg" width="1280" height="720">
-              <source src="./assets/kestrel-trailer.mp4" type="video/mp4" />
-              <a href="./assets/kestrel-trailer.mp4">Download the gameplay trailer</a>.
-            </video>
-            <figcaption>Archive gameplay trailer from earlier builds. It is not evidence of current candidate acceptance.</figcaption>
+          <figure class="kestrel-capture">
+            <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-mission-builder.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution Mission Builder capture in a new tab">
+              <img src="./assets/kestrel-v04211-mission-builder.png" alt="Mission Builder with a reconnaissance objective editor in KESTREL v0.42.11" width="1920" height="1080" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>
+              <span>A reconnaissance objective being edited in Mission Builder. Check terrain loading and object placement in your chosen environment before flying.</span>
+              <a href="./assets/kestrel-v04211-mission-builder.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+            </figcaption>
           </figure>
         </div>
       </section>
 
-      <section id="candidate" class="kestrel-section kestrel-candidate" aria-labelledby="candidate-heading">
+      <section id="multiplayer" class="kestrel-section" aria-labelledby="multiplayer-heading">
         <div class="kestrel-wrap">
           <div class="kestrel-section-heading">
-            <div>
-              <p class="kestrel-status">v0.42.11 candidate only</p>
-              <h2 id="candidate-heading">More control over<br />what you bring into the sim.</h2>
-            </div>
-            <p>These additions are not in the public v0.42.9 evaluation. They remain subject to fresh packaged validation and are not a promise that every device, dataset or aircraft combination is supported.</p>
+            <h2 id="multiplayer-heading">A shared flight,<br />still in testing.</h2>
+            <p>Host or join a LAN lobby, select an aircraft and ready up before launch. Discovery, separate spawns, armed input and reciprocal movement passed a two-process test on one PC.</p>
           </div>
-          <div class="kestrel-candidate-list">
+          <figure class="kestrel-capture">
+            <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-multiplayer.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution LAN lobby capture in a new tab">
+              <img src="./assets/kestrel-v04211-multiplayer.png" alt="LAN multiplayer lobby captured in KESTREL v0.42.11" width="1920" height="1080" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>
+              <span>The current LAN lobby. Physical two-PC play, mission networking, reconnect and host-loss acceptance remain open.</span>
+              <a href="./assets/kestrel-v04211-multiplayer.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="updates" class="kestrel-section kestrel-updates" aria-labelledby="updates-heading">
+        <div class="kestrel-wrap">
+          <div class="kestrel-section-heading">
+            <h2 id="updates-heading">What changed<br />in v0.42.11.</h2>
+            <p>Catalog, data, map and Work Bench updates are now in the public release. The published notes separate shipped changes from unfinished work.</p>
+          </div>
+          <div class="kestrel-update-list">
             <article>
               <h3>Your catalogs,<br />without changing the base</h3>
               <div>
-                <p>Create, import, export, copy, rename and switch custom catalogs. Clone the read-only bundled catalog to make your own. Edit a validated JSON draft; a per-part form editor is not included.</p>
-                <p>Work Bench distinguishes the current inventory from a saved aircraft's source inventory. Missing source catalogs are reported rather than silently substituting components. Explicit receiver-supplied antenna metadata keeps ownership and included mass clear.</p>
+                <p>Create, import, export, copy, rename and switch custom catalogs. Clone the read-only bundled catalog to make your own, then edit a validated JSON draft.</p>
+                <p>Work Bench distinguishes the current inventory from a saved aircraft's source inventory and reports missing source catalogs. A per-part form editor is not included.</p>
               </div>
             </article>
             <article>
               <h3>Local data,<br />with explicit placement</h3>
               <div>
-                <p>Organize local data collections, add supported image overlays with placement sidecars, and run an explicit Cesium connection check.</p>
-                <p>Raw point clouds, GIS files and archives are not ready-to-fly terrain imports. They need conversion and suitable placement metadata first.</p>
+                <p>Organize named local data collections, place supported image overlays and run an explicit Cesium connection check. The intended public terrain configuration is included.</p>
+                <p>Raw point clouds, GIS files and archives still need conversion and suitable placement metadata. They are not ready-to-fly terrain imports.</p>
               </div>
             </article>
             <article>
               <h3>Find a place.<br />Keep your bearings.</h3>
               <div>
-                <p>Preview city or coordinate searches, move the launch pin, then explicitly choose where to fly or build. A coarse offline overview supports orientation.</p>
-                <p>The in-flight C2 map adds available city labels and a compass. City coverage is not neighborhood, street-address or online point-of-interest search; offline overview data is not detailed terrain.</p>
+                <p>City or coordinate search previews a movable pin before launch. Major-city labels and a coarse offline overview aid orientation. Free Flight also has a C2 map with place labels and a compass.</p>
+                <p>This is not online street-address or point-of-interest search, live weather or an offline worldwide street map. The live mission C2 missing-marker regression remains open.</p>
               </div>
             </article>
             <article>
-              <h3>A clearer Work Bench</h3>
+              <h3>A clearer aircraft setup</h3>
               <div>
-                <p>Click-only saved-aircraft selection, predictions for the selected build, starter aircraft and targeted prop compatibility checks make aircraft selection easier to follow.</p>
-                <p>Visual mount labels distinguish representative supports, unverified geometry and placement conflicts. Targeted mounting and thumbnail-residency fixes improve the preview without claiming exact geometry for every product.</p>
+                <p>Click-only aircraft selection, selected-build predictions, stock starters, targeted ten-inch prop compatibility and thumbnail-residency changes make setup easier to follow.</p>
+                <p>Frame-grounded supports, stack spacers and selected board mounts carry representative, unverified or conflict labels. Exact mounts, straps, wiring and artwork still need work.</p>
               </div>
             </article>
           </div>
-          <p class="kestrel-note">Also under validation: audio teardown, terrain-loading lifecycle, window/display behavior and loading guidance. <a href="https://github.com/nbschultz97/kestrel/blob/main/CHANGELOG.md">Read the detailed changelog</a>.</p>
+          <p class="kestrel-note">Targeted fixes also cover per-aircraft audio teardown, terrain requests, Cesium lifecycle handling and Settings readability. <a href="https://github.com/nbschultz97/kestrel/blob/main/CHANGELOG.md">Read the detailed changelog</a>.</p>
         </div>
       </section>
 
-      <section id="limits" class="kestrel-section kestrel-panel">
+      <section id="limits" class="kestrel-section kestrel-panel" aria-labelledby="limits-heading">
         <div class="kestrel-wrap kestrel-split">
           <div>
-            <h2>Know the limits<br />before you download.</h2>
-            <p class="kestrel-lead">KESTREL is alpha software. Automated checks and a completed cook do not prove a complete hands-on playtest.</p>
-            <p>Component data, predicted performance and representative models are aids to simulation. They are not real-world fit, airworthiness or flight-calibration evidence.</p>
+            <h2 id="limits-heading">Know the limits<br />before you download.</h2>
+            <p class="kestrel-lead">KESTREL is alpha software, not a finished roadmap. The published package passed a fresh cook, 70 native tests, 218 launcher tests and targeted packaged checks.</p>
+            <p>That does not certify every controller, display mode, aircraft combination or multiplayer session. Screenshots show the current game, including its remaining UI and art defects.</p>
           </div>
           <div class="kestrel-limits">
             <h3>Not included yet</h3>
             <ul>
               <li>Full action rebinding across keyboard, gamepad and radio.</li>
-              <li>An OSD editor and rotating multiplayer aircraft cards.</li>
+              <li>A Work Bench OSD editor or rotating multiplayer aircraft cards.</li>
               <li>Live weather or online address and point-of-interest lookup.</li>
               <li>Exact models and complete mechanical-fit validation for every catalog item.</li>
             </ul>
-            <h3>Still separate acceptance work</h3>
-            <p>Physical-radio behavior, two-computer LAN, complete camera behavior, updater behavior and end-to-end packaged catalog, display and data workflows. Map binding tests are not proof of hardware input.</p>
+            <h3>Still being verified or corrected</h3>
+            <p>Live mission C2 may omit launch and objective markers or the connecting route. Some UI still overlaps or clips. Battery artwork, carbon appearance, part mounting, straps and wiring need further work.</p>
+            <p>Physical USB-radio and display-mode checks, two-PC LAN, mission networking and host loss, calibrated camera/prop/flight-feel comparisons, terrain stress and actual-install updater/rollback checks remain open.</p>
           </div>
         </div>
       </section>
@@ -275,11 +279,11 @@
           <div class="kestrel-docs">
             <a href="https://github.com/nbschultz97/kestrel/blob/main/README.md"><strong>Get started</strong><span>Download, setup and current release status.</span></a>
             <a href="https://github.com/nbschultz97/kestrel/blob/main/FEATURES.md"><strong>Full features</strong><span>Capabilities, workflow and limitations.</span></a>
-            <a href="https://github.com/nbschultz97/kestrel/blob/main/CHANGELOG.md"><strong>Changelog</strong><span>Published changes and candidate notes.</span></a>
+            <a href="https://github.com/nbschultz97/kestrel/blob/main/CHANGELOG.md"><strong>Changelog</strong><span>Published changes and verification details.</span></a>
             <a href="https://github.com/nbschultz97/kestrel/blob/main/ROADMAP.md"><strong>Roadmap</strong><span>Open work, not promises of shipped features.</span></a>
           </div>
           <div class="kestrel-bottom-actions">
-            <a href="https://github.com/nbschultz97/kestrel/releases/latest" class="btn btn-primary">Get the public alpha</a>
+            <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.11-alpha-unsigned.1" class="btn btn-primary">Get KESTREL v0.42.11</a>
             <a href="contact.html?product=kestrel" class="kestrel-text-link">Discuss an evaluation</a>
           </div>
         </div>
