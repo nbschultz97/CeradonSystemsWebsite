@@ -136,7 +136,9 @@
       <nav class="kestrel-section-nav" aria-label="KESTREL page sections">
         <div class="kestrel-wrap">
           <a href="#features">Work Bench</a>
+          <a href="#conditions">Flight conditions</a>
           <a href="#builder">Mission Builder</a>
+          <a href="#strike-isr">Strike / ISR</a>
           <a href="#multiplayer">LAN multiplayer</a>
           <a href="#updates">What changed</a>
           <a href="#limits">Known limits</a>
@@ -172,6 +174,53 @@
         </div>
       </section>
 
+      <section id="conditions" class="kestrel-section" aria-labelledby="conditions-heading">
+        <div class="kestrel-wrap">
+          <div class="kestrel-section-heading">
+            <h2 id="conditions-heading">Change the light.<br />Change the conditions.</h2>
+            <p>Compare configured morning, noon, afternoon and rain. Time of day and weather change the simulated environment; these settings are not observations from a live weather service.</p>
+          </div>
+          <div class="kestrel-condition-grid">
+            <figure class="kestrel-capture">
+              <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-flight-morning.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution morning, clear capture in a new tab">
+                <img src="./assets/kestrel-v04211-flight-morning.png" alt="FPV flight with configured morning lighting and clear weather in KESTREL v0.42.11" width="1920" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <span>Morning &mdash; clear</span>
+                <a href="./assets/kestrel-v04211-flight-morning.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+              </figcaption>
+            </figure>
+            <figure class="kestrel-capture">
+              <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-flight-daylight.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution noon, clear capture in a new tab">
+                <img src="./assets/kestrel-v04211-flight-daylight.png" alt="FPV flight with configured noon lighting and clear weather in KESTREL v0.42.11" width="1920" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <span>Noon &mdash; clear</span>
+                <a href="./assets/kestrel-v04211-flight-daylight.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+              </figcaption>
+            </figure>
+            <figure class="kestrel-capture">
+              <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-flight-afternoon.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution afternoon, clear capture in a new tab">
+                <img src="./assets/kestrel-v04211-flight-afternoon.png" alt="FPV flight with configured afternoon lighting and clear weather in KESTREL v0.42.11" width="1920" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <span>Afternoon &mdash; clear</span>
+                <a href="./assets/kestrel-v04211-flight-afternoon.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+              </figcaption>
+            </figure>
+            <figure class="kestrel-capture">
+              <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-flight-rain.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution noon, rain capture in a new tab">
+                <img src="./assets/kestrel-v04211-flight-rain.png" alt="FPV flight with configured noon lighting and rain in KESTREL v0.42.11" width="1920" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <span>Noon &mdash; rain</span>
+                <a href="./assets/kestrel-v04211-flight-rain.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section id="builder" class="kestrel-section kestrel-panel" aria-labelledby="builder-heading">
         <div class="kestrel-wrap">
           <div class="kestrel-section-heading">
@@ -187,6 +236,48 @@
               <a href="./assets/kestrel-v04211-mission-builder.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
             </figcaption>
           </figure>
+          <div class="kestrel-capture-heading">
+            <h3>Review the loading brief</h3>
+            <p>See the launch location, objective and route before entering the scene.</p>
+          </div>
+          <figure class="kestrel-capture">
+            <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-loading-brief.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution mission loading brief in a new tab">
+              <img src="./assets/kestrel-v04211-loading-brief.png" alt="KESTREL v0.42.11 loading brief with launch and objective symbols, a connecting route and a flight tip" width="1280" height="720" loading="lazy" decoding="async" />
+            </a>
+            <figcaption>
+              <span>The loading brief, not the in-flight C2 map. Missing mission markers in the live C2 view remain a known issue.</span>
+              <a href="./assets/kestrel-v04211-loading-brief.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="strike-isr" class="kestrel-section" aria-labelledby="strike-isr-heading">
+        <div class="kestrel-wrap">
+          <div class="kestrel-section-heading">
+            <h2 id="strike-isr-heading">Strike scenarios.<br />An ISR view.</h2>
+            <p>FPV approach and ISR aftermath from a scripted in-game capture. The separate camera shows the scene after the effect; the outcome is not confirmed.</p>
+          </div>
+          <div class="kestrel-capture-stack">
+            <figure class="kestrel-capture">
+              <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-strike.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution FPV approach in a new tab">
+                <img src="./assets/kestrel-v04211-strike.png" alt="FPV approach in the stock strike scenario in KESTREL v0.42.11" width="1920" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <span>FPV approach in the stock strike scenario.</span>
+                <a href="./assets/kestrel-v04211-strike.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+              </figcaption>
+            </figure>
+            <figure class="kestrel-capture">
+              <a class="kestrel-capture__image-link" href="./assets/kestrel-v04211-isr.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution ISR sensor view in a new tab">
+                <img src="./assets/kestrel-v04211-isr.png" alt="ISR view of fire and smoke after a scripted effect in KESTREL v0.42.11, with the outcome not confirmed" width="1920" height="1080" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>
+                <span>ISR view of fire and smoke after the scripted effect. Outcome is not confirmed.</span>
+                <a href="./assets/kestrel-v04211-isr.png" target="_blank" rel="noopener noreferrer">Open full resolution</a>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

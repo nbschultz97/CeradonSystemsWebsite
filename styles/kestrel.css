@@ -25,6 +25,10 @@
 .kestrel-capture figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: .25rem 2rem; flex-wrap: wrap; margin-top: .85rem; color: var(--kestrel-muted); font-size: .9rem; line-height: 1.65; text-align: left; }
 .kestrel-capture figcaption > span { max-width: 76ch; flex: 1 1 30rem; }
 .kestrel-capture figcaption > a { display: inline-flex; align-items: center; min-height: 44px; flex: 0 0 auto; }
+.kestrel-condition-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.kestrel-capture-stack { display: grid; gap: 2.5rem; }
+.kestrel-capture-heading { margin-block: 2.5rem 1.25rem; }
+.kestrel-capture-heading p { margin-top: .65rem; color: var(--kestrel-muted); }
 .kestrel-section { padding-block: clamp(3.5rem, 7vw, 6rem); border-top: 1px solid var(--steel-700); scroll-margin-top: 6rem; }
 .kestrel-section-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem 4rem; align-items: end; margin-bottom: 2.5rem; }
 .kestrel-section-heading > p { color: var(--kestrel-muted); }
@@ -62,7 +66,8 @@
 }
 @media (max-width: 800px) {
   .kestrel-intro__content, .kestrel-section-heading, .kestrel-release__summary,
-  .kestrel-supporting-copy, .kestrel-split, .kestrel-update-list article { grid-template-columns: 1fr; gap: 1.5rem; }
+  .kestrel-supporting-copy, .kestrel-split, .kestrel-update-list article,
+  .kestrel-condition-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .kestrel-mark { max-width: 22rem; }
   .kestrel-intro__content { padding-top: 2.5rem; gap: 2rem; }
   .kestrel-release__links { justify-content: flex-start; }
