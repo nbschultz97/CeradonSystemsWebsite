@@ -14,6 +14,12 @@ function ready(fn) {
 }
 
 ready(() => {
+  // Vite rewrites image sources to hashed asset URLs, but not anchor hrefs.
+  document.querySelectorAll('.kestrel-capture__image-link').forEach((link) => {
+    const image = link.querySelector('img');
+    if (image) link.href = image.src;
+  });
+
   initUI();
   initAnalytics();
 });
