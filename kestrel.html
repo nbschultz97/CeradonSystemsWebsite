@@ -12,17 +12,17 @@
     <meta charset="utf-8" />
     <meta name="theme-color" content="#04070d">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>KESTREL v0.42.12 | FPV Flight Simulator | Ceradon Systems</title>
-    <meta name="description" content="Download KESTREL v0.42.12 with separate monitor and window-mode controls, mixed-DPI sizing and Keep/Revert confirmation. Explore features, known limits and retained v0.42.11 game captures." />
-    <meta property="og:title" content="KESTREL v0.42.12 | Ceradon Systems" />
-    <meta property="og:description" content="The v0.42.12 Windows FPV simulator adds display-selection and window-mode improvements. Explore aircraft setup, Mission Builder and LAN through labeled v0.42.11 captures." />
+    <title>KESTREL v0.42.13 | FPV Flight Simulator | Ceradon Systems</title>
+    <meta name="description" content="KESTREL v0.42.13 adds saved keyboard and gamepad bindings for Map and camera tilt. Explore the Windows FPV simulator, release captures and unfinished roadmap." />
+    <meta property="og:title" content="KESTREL v0.42.13 | Ceradon Systems" />
+    <meta property="og:description" content="Map and camera tilt controls join separate display settings, custom catalogs, Mission Builder and LAN. Review actual captures and known limits." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ceradonsystems.com/kestrel.html" />
     <meta property="og:image" content="https://www.ceradonsystems.com/assets/kestrel-v04211-flight.png" />
     <meta property="og:image:alt" content="FPV flight captured in KESTREL v0.42.11" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="KESTREL v0.42.12 | Ceradon Systems" />
-    <meta name="twitter:description" content="KESTREL v0.42.12 improves monitor selection, window modes and display confirmation. Review features, known limits and the retained v0.42.11 gameplay gallery." />
+    <meta name="twitter:title" content="KESTREL v0.42.13 | Ceradon Systems" />
+    <meta name="twitter:description" content="KESTREL v0.42.13 adds saved Map and camera tilt controls. Review release features, actual captures and known limits." />
     <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/kestrel-v04211-flight.png" />
     <meta name="twitter:image:alt" content="FPV flight captured in KESTREL v0.42.11" />
     <meta name="robots" content="index, follow" />
@@ -39,7 +39,7 @@
       "operatingSystem": "Windows",
       "url": "https://www.ceradonsystems.com/kestrel.html",
       "description": "Windows FPV simulator with parts-based aircraft setup, custom catalogs, location-based flight, Mission Builder and LAN multiplayer. Streamed terrain needs coverage and connectivity; physical two-PC acceptance remains open.",
-      "softwareVersion": "0.42.12-alpha",
+      "softwareVersion": "0.42.13-alpha",
       "publisher": {
         "@type": "Organization",
         "name": "Ceradon Systems, LLC",
@@ -98,7 +98,7 @@
               <h1 id="kestrel-heading">Build an aircraft.<br />Take it flying.</h1>
               <p class="kestrel-lead">Parts-based FPV simulation on real-world terrain. Configure your aircraft, bring your controls and build a flight you can repeat.</p>
               <div class="kestrel-actions">
-                <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.12-alpha-unsigned.1" class="btn btn-primary">Get KESTREL v0.42.12</a>
+                <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.13-alpha.1" class="btn btn-primary">Get KESTREL v0.42.13</a>
                 <a href="#features" class="btn btn-secondary">See the simulator</a>
               </div>
               <p class="kestrel-note">Windows x64 alpha. Streamed terrain needs internet access and provider coverage. <a href="#limits">Read the known limits</a>.</p>
@@ -120,11 +120,11 @@
         <div class="kestrel-wrap">
           <div class="kestrel-release__summary">
             <div>
-              <h2 id="release-heading">KESTREL v0.42.12</h2>
-              <p>A focused display-settings update. <time datetime="2026-09-16">September 16, 2026</time>. The official release page records publication and download availability.</p>
+              <h2 id="release-heading">KESTREL v0.42.13</h2>
+              <p>A focused flight-controls update. <time datetime="2026-09-17">September 17, 2026</time>. The official release page records publication and download availability.</p>
             </div>
             <div class="kestrel-release__links">
-              <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.12-alpha-unsigned.1">Release notes and download</a>
+              <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.13-alpha.1">Release notes and download</a>
               <a href="https://github.com/nbschultz97/kestrel/blob/main/FEATURES.md">Full features</a>
               <a href="https://github.com/nbschultz97/kestrel/blob/main/ROADMAP.md">Unfinished roadmap</a>
             </div>
@@ -302,10 +302,17 @@
       <section id="updates" class="kestrel-section kestrel-updates" aria-labelledby="updates-heading">
         <div class="kestrel-wrap">
           <div class="kestrel-section-heading">
-            <h2 id="updates-heading">Display settings,<br />improved in v0.42.12.</h2>
-            <p>The display update retains the catalog, data, map and Work Bench additions from v0.42.11 shown below. Published notes separate shipped changes from unfinished work.</p>
+            <h2 id="updates-heading">Flight controls,<br />expanded in v0.42.13.</h2>
+            <p>Map and camera tilt now share a saved action editor. The update retains v0.42.12 display settings and the earlier catalog, data, map and Work Bench additions.</p>
           </div>
           <div class="kestrel-update-list">
+            <article>
+              <h3>Map and camera tilt,<br />on your controls.</h3>
+              <div>
+                <p>Settings &gt; Flight controls offers keyboard and digital gamepad bindings for Map, Camera tilt up and Camera tilt down. Clear an assignment, restore defaults, then save or cancel. Conflicting assignments are rejected.</p>
+                <p>Tilt defaults to Up/Down, with one two-degree step per press. Existing Map USB-radio button capture remains; radio tilt and radio axis-switch actions are not supported. Arm, restart, view and the rest of the action editor remain unfinished.</p>
+              </div>
+            </article>
             <article>
               <h3>Your monitor.<br />Your window mode.</h3>
               <div>
@@ -342,6 +349,15 @@
               </div>
             </article>
           </div>
+          <figure class="kestrel-capture">
+            <a class="kestrel-capture__image-link" href="./assets/kestrel-v04213-flight-controls.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-resolution v0.42.13 Flight controls capture">
+              <img src="./assets/kestrel-v04213-flight-controls.png" alt="Actual v0.42.13 Flight controls panel showing Map, camera tilt up and camera tilt down keyboard and controller bindings" width="1920" height="1080" loading="lazy" />
+            </a>
+            <figcaption>
+              <span>Flight controls in the actual v0.42.13 package. Default-state capture; no transmitter is connected.</span>
+              <a href="https://github.com/nbschultz97/kestrel/blob/main/media/v0.42.13/README.md">Capture provenance</a>
+            </figcaption>
+          </figure>
           <p class="kestrel-note">Retained v0.42.11 fixes cover per-aircraft audio teardown, terrain requests, Cesium lifecycle handling and Settings readability. <a href="https://github.com/nbschultz97/kestrel/blob/main/CHANGELOG.md">Read the detailed changelog</a>.</p>
         </div>
       </section>
@@ -350,8 +366,8 @@
         <div class="kestrel-wrap kestrel-split">
           <div>
             <h2 id="limits-heading">Know the limits<br />before you download.</h2>
-            <p class="kestrel-lead">KESTREL is alpha software, not a finished roadmap. The v0.42.12 package passed a fresh full cook, 218 launcher tests and rendered display-transition, confirmation and saved-monitor restart checks on two mixed-DPI monitors.</p>
-            <p>That does not certify every controller, display, aircraft combination or multiplayer session. This page retains actual v0.42.11 captures, including their visible UI and art defects; they are not new v0.42.12 screenshots.</p>
+            <p class="kestrel-lead">KESTREL is alpha software, not a finished roadmap. The v0.42.13 package passed a fresh full cook, 218 launcher tests and all 4,451 archive-file checks. Packaged controls captures were inspected at 720p and 1080p. The controls source passed 13 native controller tests, 16 display regressions and 136 focused source checks.</p>
+            <p>That does not certify every controller, display, aircraft combination or multiplayer session. Gameplay captures here retain their v0.42.11 labels, including visible UI and art defects; they are not new v0.42.13 gameplay screenshots.</p>
           </div>
           <div class="kestrel-limits">
             <h3>Not included yet</h3>
@@ -381,7 +397,7 @@
             <a href="https://github.com/nbschultz97/kestrel/blob/main/ROADMAP.md"><strong>Roadmap</strong><span>Open work, not promises of shipped features.</span></a>
           </div>
           <div class="kestrel-bottom-actions">
-            <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.12-alpha-unsigned.1" class="btn btn-primary">Get KESTREL v0.42.12</a>
+            <a href="https://github.com/nbschultz97/kestrel/releases/tag/v0.42.13-alpha.1" class="btn btn-primary">Get KESTREL v0.42.13</a>
             <a href="contact.html?product=kestrel" class="kestrel-text-link">Discuss an evaluation</a>
           </div>
         </div>
