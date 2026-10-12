@@ -1,1 +1,29 @@
-{"name":"Ceradon Systems","short_name":"Ceradon","icons":[{"src":"/icon-192.png","sizes":"192x192","type":"image/png"},{"src":"/icon-512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#04070d","background_color":"#04070d","display":"browser"}
+{
+  "name": "Ceradon Systems",
+  "short_name": "Ceradon",
+  "description": "Mission-rehearsal software for small unmanned aircraft.",
+  "start_url": "/",
+  "display": "browser",
+  "theme_color": "#f4f6f8",
+  "background_color": "#f4f6f8",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
