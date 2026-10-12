@@ -112,15 +112,18 @@
   if (topic && sel) { [].forEach.call(sel.options, function (o) { if (o.value === topic) sel.value = topic; }); }
 
   // Contact form: post to the existing Formspree endpoint without leaving the page.
-  var form = d.querySelector('form[data-contact]');
-  if (form && window.fetch) {
-    var status = form.querySelector('[data-status]');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      status.textContent = 'Sending…';
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-        .then(function (r) { if (!r.ok) throw 0; form.reset(); status.textContent = 'Sent. A person will reply by email, usually within one business day.'; })
-        .catch(function () { status.textContent = 'That didn’t send. Email contact@ceradonsystems.com instead.'; });
+  // Forms (contact, signup, feedback): post in place and report the result.
+  if (window.fetch) {
+    Array.prototype.forEach.call(d.querySelectorAll('form[data-contact], form[data-capture]'), function (form) {
+      var status = form.querySelector('[data-status]');
+      var ok = form.getAttribute('data-ok') || 'Sent. A person will reply by email, usually within one business day.';
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (status) status.textContent = 'Sending…';
+        fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
+          .then(function (r) { if (!r.ok) throw 0; form.reset(); if (status) status.textContent = ok; })
+          .catch(function () { if (status) status.textContent = 'That didn’t send. Email contact@ceradonsystems.com instead.'; });
+      });
     });
   }
 })();
