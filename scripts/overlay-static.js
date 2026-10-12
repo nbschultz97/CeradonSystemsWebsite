@@ -1,7 +1,5 @@
-// Copies static-overlay/ over dist/ after the Vite build.
-// The pages in static-overlay/ are prebuilt (new homepage and EARSHOT page) and
-// replace the Vite-built files of the same name. Their assets live in
-// assets/{css,js,img,media,fonts,brand,og}, which do not collide with Vite's hashed files.
+// Builds dist/ from static-overlay/, which holds the complete prebuilt site.
+// The old Vite build is no longer part of the deploy (kept as `npm run build:legacy`).
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -18,6 +16,7 @@ function copyDir(from, to) {
   }
 }
 
+fs.rmSync(dst, { recursive: true, force: true });
 if (!fs.existsSync(src)) {
   console.log('overlay-static: no static-overlay directory, nothing to do');
 } else {
