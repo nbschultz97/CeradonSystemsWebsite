@@ -18,3 +18,7 @@ Owner request: remove stale interface-led marketing and restore real video and p
 Removed orbit video from the KESTREL hero and both homepage placements after the owner rejected the polygonal trees. Temporary hero uses the existing generic Blender motor study, explicitly labeled as non-gameplay. No replacement flight footage has been accepted.
 
 The repeated lower motor image on the KESTREL page is removed; the parts explanation remains in a compact text layout. Feature limitations remain unchanged.
+
+## Feature-status correction
+
+The release owner?s source audit confirms v0.44.1 already includes experimental LAN hosting, discovery, direct-IP connection, lobby/Ready controls and six configurable keyboard/digital-gamepad actions (map, camera tilt up/down, restart, view and motor arm/disarm). Only map supports radio-button binding. The public list now distinguishes these existing capabilities from unfinished complete input rebinding and physical two-PC validation. A prior one-PC/two-process pass is not physical two-PC acceptance. TAK/C2, real-aircraft calibration, live-weather and online-address gaps remain unchanged. This is a documentation correction, not a new game release.
