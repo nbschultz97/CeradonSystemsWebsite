@@ -12,3 +12,9 @@ Owner request: remove stale interface-led marketing and restore real video and p
 - Reproduction sources are in `kestrel-motor/`; `bl_bench.py` uses `bl_common.py` and `parts.json`. Original Blender 5.2 Cycles staging job completed October 12.
 - Kept download, trial contact, release signup, flight-report links, and alpha limitations.
 - This does not finish the separate stopped beauty-capture job or backup Alien12's footage.
+
+## Owner rejection follow-up
+
+Removed orbit video from the KESTREL hero and both homepage placements after the owner rejected the polygonal trees. Temporary hero uses the existing generic Blender motor study, explicitly labeled as non-gameplay. No replacement flight footage has been accepted.
+
+The repeated lower motor image on the KESTREL page is removed; the parts explanation remains in a compact text layout. Feature limitations remain unchanged.

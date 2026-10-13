@@ -40,3 +40,5 @@
  .flight-toggle{min-width:92px;padding-inline:10px}
  .flight-process,.component-study{padding-block:48px}
 }
+
+.flight-screen img{display:block;width:100%;height:auto}
