@@ -1,0 +1,9 @@
+/* Keep the original gameplay frames and flight displays visible. */
+.gameplay-hero img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:contain}
+.gameplay-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px 24px}
+.gameplay-gallery .fig{min-width:0}
+.gameplay-photo{display:block;background:var(--media-bg);overflow:hidden}
+.gameplay-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.gameplay-photo:focus-visible{outline-offset:5px}
+.gameplay-gallery figcaption{align-items:baseline}
+@media(max-width:800px){.gameplay-gallery{grid-template-columns:minmax(0,1fr)}}
