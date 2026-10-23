@@ -102,3 +102,4 @@
 .kx-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin-top:20px;max-width:none;font-size:.875rem;color:var(--fg-2)}
 .kx-hero .kx-price{color:rgba(232,237,242,.8)}
 .kx-hero .kx-price .tlink{color:#e8edf2;border-color:rgba(232,237,242,.4)}
+.kx-ch-text .kx-row{grid-template-columns:minmax(0,1fr)}.kx-ch-text .kx-copy .lede{max-width:52ch}
