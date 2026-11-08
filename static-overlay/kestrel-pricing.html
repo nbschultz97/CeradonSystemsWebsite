@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KESTREL Pricing · Ceradon Systems</title>
-<meta name="description" content="KESTREL is free for U.S. Government and personal use. Agencies, contractors, schools and businesses: $299 per seat per year, license key by email.">
+<meta name="description" content="KESTREL is $299 per seat, per year, with the license key by email. Military members can request a free one-year evaluation license, reviewed by Ceradon Systems.">
 <link rel="canonical" href="https://www.ceradonsystems.com/kestrel-pricing.html">
 <meta name="color-scheme" content="dark light">
 <meta name="theme-color" content="#04070d" media="(prefers-color-scheme: dark)">
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ceradon Systems">
 <meta property="og:title" content="KESTREL Pricing · Ceradon Systems">
-<meta property="og:description" content="KESTREL is free for U.S. Government and personal use. Agencies, contractors, schools and businesses: $299 per seat per year, license key by email.">
+<meta property="og:description" content="KESTREL is $299 per seat, per year, with the license key by email. Military members can request a free one-year evaluation license, reviewed by Ceradon Systems.">
 <meta property="og:url" content="https://www.ceradonsystems.com/kestrel-pricing.html">
 <meta property="og:image" content="https://www.ceradonsystems.com/assets/og/og-default.jpg">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="KESTREL Pricing · Ceradon Systems">
-<meta name="twitter:description" content="KESTREL is free for U.S. Government and personal use. Agencies, contractors, schools and businesses: $299 per seat per year, license key by email.">
+<meta name="twitter:description" content="KESTREL is $299 per seat, per year, with the license key by email. Military members can request a free one-year evaluation license, reviewed by Ceradon Systems.">
 <meta name="twitter:image" content="https://www.ceradonsystems.com/assets/og/og-default.jpg">
 <meta name="twitter:image:alt" content="Ceradon Systems: the KESTREL work bench screen with a drone built from real parts, beside the Ceradon wordmark.">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -45,6 +45,15 @@
 .seat-total span{font-family:var(--display);font-size:1.9rem;color:var(--fg);margin-right:6px;font-feature-settings:"tnum"}
 .plan .cta-row{margin-top:8px}
 @media (max-width:800px){.plans-2{grid-template-columns:minmax(0,1fr)}}
+.eval-specs{margin-top:28px}
+#eval-form{max-width:none}
+#eval-form textarea{resize:vertical}
+#eval-form [aria-invalid="true"]{border-color:var(--warn)}
+.field-err{color:var(--warn);margin:0}
+#eval-status:empty{display:none}
+#eval-status[data-kind="ok"]{color:var(--fg)}
+#eval-status[data-kind="error"]{color:var(--warn)}
+.eval-fine{color:var(--fg-3);margin-top:-8px}
 </style>
 </head>
 <body class="">
@@ -68,36 +77,26 @@
 </header>
 <main id="main">
 
-<section class="phero simple"><div class="wrap"><p class="label">KESTREL pricing</p><h1 class="h1" id="ph-h">Free for government. $299 a seat for everyone&nbsp;else.</h1><p class="lede">U.S. Government use and personal use stay free. Agencies, contractors, schools and businesses buy a yearly seat license, and the license key arrives by email right after checkout.</p></div></section>
+<section class="phero simple"><div class="wrap"><p class="label">KESTREL pricing</p><h1 class="h1" id="ph-h">$299 a seat, per&nbsp;year.</h1><p class="lede">One price for every agency, unit, contractor, school, business and individual. Pay by card and the license key arrives by email. Military members can ask for a free evaluation license, which we review.</p></div></section>
 
 <section class="sec"><div class="wrap">
 <dl class="stats">
 <div><dt>per seat, per year</dt><dd>$299</dd></div>
 <div><dt>computer per seat; move it any time</dt><dd>1</dd></div>
 <div><dt>seats you can buy online</dt><dd>1&ndash;100</dd></div>
-<div><dt>for U.S. Government and personal use</dt><dd>$0</dd></div>
+<div><dt>year of free evaluation, if we approve your request</dt><dd>1</dd></div>
 </dl>
 </div></section>
 
-<section class="sec" id="plans"><div class="wrap"><div class="shead"><p class="label">Who pays</p><h2 class="h2">Two licenses. One of them is&nbsp;free.</h2></div>
+<section class="sec" id="plans"><div class="wrap"><div class="shead"><p class="label">Licenses</p><h2 class="h2">Everyone buys a seat. Military members can ask to evaluate&nbsp;first.</h2></div>
 <div class="plans plans-2">
-
-<article class="plan reveal"><p class="label">Evaluation License</p><p class="plan-price">Free</p>
-<ul class="ticks">
-<li><strong>U.S. Government</strong> personnel, military and civilian: training, familiarization, evaluation and mission rehearsal.</li>
-<li><strong>Contractors supporting a U.S. Government activity</strong>, for that same training and rehearsal use.</li>
-<li><strong>Individuals</strong> flying for personal, non-commercial use.</li>
-<li>Nothing to sign, nothing to buy. <a href="https://github.com/nbschultz97/kestrel/blob/main/LICENSE.txt">Read the Evaluation License</a>.</li>
-</ul>
-<div class="cta-row"><a class="btn btn-secondary" href="https://github.com/nbschultz97/kestrel/releases/latest" rel="noopener">Download KESTREL<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></div>
-</article>
 
 <article class="plan reveal"><p class="label">Commercial Seat License</p><p class="plan-price">$299<span>per seat / year</span></p>
 <ul class="ticks">
-<li><strong>State and local agencies</strong>: police, fire, search and rescue, emergency management. These are not "U.S. Government" under the free license.</li>
-<li><strong>Contractors</strong> putting KESTREL, or its imagery or data, into a paid service, product or funded deliverable.</li>
-<li><strong>Training companies and schools</strong> teaching with KESTREL.</li>
-<li><strong>Businesses</strong> using KESTREL for their work. <a href="/kestrel-commercial-license.html">Read the Commercial License</a>.</li>
+<li><strong>Everyone</strong>: federal, state and local agencies, military units, contractors, schools, training companies, businesses and individuals.</li>
+<li><strong>One seat</strong> runs KESTREL on one computer at a time. Move it to another computer whenever you like.</li>
+<li><strong>Key by email</strong> within minutes of checkout. Renews yearly; cancel any time.</li>
+<li><a href="/kestrel-commercial-license.html">Read the Commercial License</a>.</li>
 </ul>
 <div class="seat-row">
 <label class="seat-field" for="seat-count"><span class="label">Seats</span><input id="seat-count" type="number" min="1" max="100" step="1" value="1" inputmode="numeric"></label>
@@ -107,15 +106,47 @@
 <p class="small" id="buy-note">Secure checkout by Stripe. Confirm the seat count on the checkout page.</p>
 </article>
 
+<article class="plan reveal"><p class="label">Military evaluation</p><p class="plan-price">Free<span>1 seat / 1 year, if approved</span></p>
+<ul class="ticks">
+<li><strong>For military members</strong> who want to train, familiarize, evaluate or rehearse missions with KESTREL.</li>
+<li><strong>Reviewed by hand.</strong> Ceradon Systems reads every request and decides. It is not automatic, and not every request is approved.</li>
+<li><strong>One computer, one year.</strong> If approved, the key arrives by email. Either way, we reply.</li>
+<li>Covered by the <a href="https://github.com/nbschultz97/kestrel/blob/main/LICENSE.txt">KESTREL Evaluation License v2.0</a>, included with the download.</li>
+</ul>
+<div class="cta-row"><a class="btn btn-secondary" href="#evaluation">Request an evaluation<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></a></div>
+</article>
+
 </div></div></section>
 
 <section class="sec"><div class="wrap"><div class="grid12 two-up"><div class="reveal"><p class="label">How buying works</p><h2 class="h2">Pay, get a key, fly.</h2></div><div class="reveal">
 <ol class="steps-plain">
 <li>Pick seats and pay by card. Enter your organization's name at checkout.</li>
 <li>Your license certificate and key arrive by email within minutes.</li>
-<li><a href="https://github.com/nbschultz97/kestrel/releases/latest">Download KESTREL</a> and keep the key on file.</li>
+<li><a href="https://github.com/nbschultz97/kestrel/releases/latest">Download KESTREL</a>, start it, and paste the key on its License screen.</li>
 <li>It renews yearly with a new key. Cancel any time; the license stays valid until the end of the year you paid for.</li>
 </ol>
+</div></div></div></section>
+
+<section class="sec" id="evaluation"><div class="wrap"><div class="grid12 two-up"><div class="reveal"><p class="label">Military evaluation</p><h2 class="h2">Free for a year, if we approve&nbsp;it.</h2>
+<p class="note-plain">For military members who want to try KESTREL for training, familiarization, evaluation or mission rehearsal before their unit buys seats. We read every request and reply by email, usually within a few business days.</p>
+<dl class="specs eval-specs">
+<div><dt>Who</dt><dd>Military members, for now. Ceradon Systems decides who gets an evaluation.</dd></div>
+<div><dt>Cost</dt><dd>Free</dd></div>
+<div><dt>Covers</dt><dd>One computer, one year, for the person it is issued to</dd></div>
+<div><dt>Decision</dt><dd>By email. Not automatic.</dd></div>
+</dl>
+</div><div class="reveal">
+<form class="form" id="eval-form" action="mailto:noah@ceradonsystems.com?subject=KESTREL%20evaluation%20request" method="POST" enctype="text/plain" novalidate>
+<div class="field"><label for="ev-name">Name</label><input id="ev-name" name="name" autocomplete="name" maxlength="100" required></div>
+<div class="field"><label for="ev-email">Email <span>(the key goes here if approved)</span></label><input id="ev-email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+<div class="field"><label for="ev-org">Unit or organization</label><input id="ev-org" name="organization" autocomplete="organization" maxlength="150" required></div>
+<div class="field"><label for="ev-role">Role</label><input id="ev-role" name="role" maxlength="100" placeholder="e.g. squad leader, UAS instructor" required></div>
+<div class="field"><label for="ev-use">How you'll use KESTREL</label><textarea id="ev-use" name="use" rows="5" maxlength="1500" required></textarea></div>
+<input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+<button class="btn btn-primary" type="submit">Request an evaluation<svg class="arr" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+<p class="small" id="eval-status" role="status" aria-live="polite"></p>
+<p class="small eval-fine">We use these details only to review your request and reply.</p>
+</form>
 </div></div></div></section>
 
 <section class="sec"><div class="wrap"><div class="grid12 two-up"><div class="reveal"><p class="label">Quotes and POs</p><h2 class="h2">Need a quote, invoice or&nbsp;PO?</h2></div><div class="reveal">
@@ -124,8 +155,11 @@
 </div></div></div></section>
 
 <section class="sec"><div class="wrap"><div class="grid12 two-up"><div class="reveal"><p class="label">Questions</p><h2 class="h2">Short answers.</h2></div><div class="faq reveal">
-<details><summary>Is U.S. Government use really free?</summary><p>Yes. Military and civilian U.S. Government personnel, and contractors supporting a U.S. Government activity, use KESTREL for training, familiarization, evaluation and mission rehearsal at no cost.</p></details>
-<details><summary>We're a county sheriff's office. Is that government?</summary><p>Not for this purpose. The free license covers the U.S. (federal) Government. State, county and city agencies, including police, fire and SAR teams, need a commercial seat license.</p></details>
+<details><summary>Do I need a license key to run KESTREL?</summary><p>Yes. The download is public, but KESTREL asks for a license key when it starts. The key comes by email after you buy a seat, or after we approve an evaluation request.</p></details>
+<details><summary>How do I put my key into KESTREL?</summary><p>Start KESTREL. On the License screen, paste the whole key from your email (one line, including the dot) and confirm. Do this once on each licensed computer.</p></details>
+<details><summary>Do government agencies and military units pay?</summary><p>Yes. Every organization buys seats: federal, state and local agencies, units, contractors and businesses alike. For a quote or a purchase order, email us.</p></details>
+<details><summary>What does a military evaluation cover?</summary><p>One computer, for one year, for the person it is issued to, for training, familiarization, evaluation and mission rehearsal. It is free. The full terms are the KESTREL Evaluation License v2.0, in LICENSE.txt in the download.</p></details>
+<details><summary>What happens when an evaluation ends?</summary><p>The key stops working on its end date. Email us if you need more time; renewal is our call and is not automatic. To keep flying without a gap, buy a seat.</p></details>
 <details><summary>What is a seat?</summary><p>One computer with KESTREL installed. Replace or reassign that computer whenever you like; just don't run more computers than you have seats.</p></details>
 <details><summary>How do I add seats or cancel?</summary><p>Email noah@ceradonsystems.com. Added seats get a new key. A cancelled license stays valid until the end of the year you paid for.</p></details>
 </div></div></div></section>
@@ -216,6 +250,100 @@ const PRICE = 299;
   input.addEventListener("input", update);
   input.addEventListener("change", function () { input.value = seats(); update(); });
   update();
+})();
+// Evaluation request form. EVAL_ENDPOINT is the licensing service's
+// /api/eval-request URL; golive.sh in the kestrel-licensing repo prints it.
+// Empty string = not live yet: the form opens a pre-filled email to
+// noah@ceradonsystems.com instead, so the page never dead-ends. If the service
+// is down or refuses, the form offers the same email.
+const EVAL_ENDPOINT = "";
+const EVAL_MAILTO = "noah@ceradonsystems.com";
+(function () {
+  var form = document.getElementById("eval-form");
+  var status = document.getElementById("eval-status");
+  if (!form) return;
+  var LABELS = { name: "Name", email: "Email", organization: "Unit or organization", role: "Role", use: "How you'll use KESTREL" };
+  var MAP = { org: "organization" }; // service field name -> form field name
+
+  function values() {
+    var v = {};
+    Object.keys(LABELS).forEach(function (k) { v[k] = (form.elements[k].value || "").trim(); });
+    v.website = form.elements.website.value;
+    return v;
+  }
+  function mailtoHref(v) {
+    var body = Object.keys(LABELS).map(function (k) { return LABELS[k] + ": " + (v[k] || ""); }).join("\n");
+    return "mailto:" + EVAL_MAILTO + "?subject=" + encodeURIComponent("KESTREL evaluation request") + "&body=" + encodeURIComponent(body + "\n");
+  }
+  function say(html, kind) { status.innerHTML = html; status.dataset.kind = kind || ""; }
+  function clearErrors() {
+    Array.prototype.forEach.call(form.querySelectorAll("[aria-invalid]"), function (el) { el.removeAttribute("aria-invalid"); });
+    Array.prototype.forEach.call(form.querySelectorAll(".field-err"), function (el) { el.remove(); });
+  }
+  function markError(name, msg) {
+    var el = form.elements[name];
+    if (!el) return;
+    el.setAttribute("aria-invalid", "true");
+    var p = document.createElement("p");
+    p.className = "small field-err";
+    p.id = "err-" + name;
+    p.textContent = msg;
+    el.setAttribute("aria-describedby", p.id);
+    el.parentNode.appendChild(p);
+  }
+  function localCheck(v) {
+    var bad = {};
+    Object.keys(LABELS).forEach(function (k) { if (v[k].length < 2) bad[k] = LABELS[k] + " is required."; });
+    if (!/^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/.test(v.email)) bad.email = "Enter a valid email address.";
+    return bad;
+  }
+  function fallback(v, lead) {
+    var a = '<a href="' + mailtoHref(v).replace(/"/g, "&quot;") + '">email your request to ' + EVAL_MAILTO + "</a>";
+    say(lead + " Please " + a + " instead.", "error");
+  }
+  function done() {
+    form.reset();
+    say("Request sent. A confirmation is on its way to your email. We review every request and reply either way.", "ok");
+  }
+
+  if (EVAL_ENDPOINT) { form.action = EVAL_ENDPOINT; form.enctype = "application/x-www-form-urlencoded"; }
+  var q = /[?&]eval=(sent|error)\b/.exec(location.search);
+  if (q) say(q[1] === "sent" ? "Request sent. Check your email for a confirmation." : "We could not send that request. Please email " + EVAL_MAILTO + ".", q[1] === "sent" ? "ok" : "error");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    clearErrors();
+    var v = values();
+    var bad = localCheck(v);
+    var keys = Object.keys(bad);
+    if (keys.length) {
+      keys.forEach(function (k) { markError(k, bad[k]); });
+      form.elements[keys[0]].focus();
+      say("Please fill in the highlighted fields.", "error");
+      return;
+    }
+    if (!EVAL_ENDPOINT) {
+      window.location.href = mailtoHref(v);
+      say('Your email app should open with the request filled in. Send it to <a href="mailto:' + EVAL_MAILTO + '">' + EVAL_MAILTO + "</a>.", "ok");
+      return;
+    }
+    var btn = form.querySelector("button[type=submit]");
+    btn.disabled = true;
+    say("Sending…");
+    // Form-encoded so the browser sends it without a CORS preflight.
+    fetch(EVAL_ENDPOINT, { method: "POST", headers: { Accept: "application/json" }, body: new URLSearchParams(v) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { return { status: r.status, body: b }; }); })
+      .then(function (r) {
+        if (r.status === 200 && r.body.ok) return done();
+        if (r.status === 400 && r.body.fields) {
+          Object.keys(r.body.fields).forEach(function (k) { markError(MAP[k] || k, r.body.fields[k]); });
+          return say("Please fix the highlighted fields.", "error");
+        }
+        fallback(v, r.status === 429 ? "Too many requests from this network right now." : "We could not send your request.");
+      })
+      .catch(function () { fallback(v, "We could not reach the request service."); })
+      .then(function () { btn.disabled = false; });
+  });
 })();
 </script>
 </body>
