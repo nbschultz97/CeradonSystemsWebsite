@@ -106,3 +106,12 @@
 .kx-frame-wide{aspect-ratio:1440/456}.kx-ch-text .kx-media{margin-top:8px}
 
 .kx-lockup{display:block;width:clamp(200px,22vw,300px);height:auto;margin:0 0 clamp(4px,1vw,12px) calc(clamp(200px,22vw,300px) * -.07)}
+
+/* v0.46 approved stills */
+.kx-shots{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(24px,3vw,40px);margin-top:clamp(32px,4vw,64px)}
+.kx-shots-2{grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+.kx-shots-1{grid-template-columns:minmax(0,1fr);max-width:960px}
+.kx-frame-tall{aspect-ratio:760/1040;max-width:380px}
+.kx-frame-tall img{object-fit:contain}
+.kx-portrait{grid-column:span 1}
+@media (max-width:760px){.kx-shots-2{grid-template-columns:minmax(0,1fr)}}
